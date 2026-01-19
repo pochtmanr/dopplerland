@@ -19,11 +19,11 @@ export async function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/images/iosdopplerlogo.png"
+            src="/images/roundeddopplerlogo.png"
             alt="Doppler VPN"
             width={36}
             height={36}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full"
             priority
           />
           <span className="hidden sm:inline font-display text-lg font-semibold text-text-primary">

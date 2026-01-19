@@ -27,7 +27,7 @@ function StoreButton({ store, label, href, variant = "primary" }: StoreButtonPro
         focus-visible:ring-accent-teal focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary
         ${
           isPrimary
-            ? "bg-accent-teal hover:bg-accent-teal-light text-bg-primary"
+            ? "bg-accent-teal hover:bg-accent-teal-light text-bg-white"
             : "bg-white/10 hover:bg-white/15 border border-white/20 text-text-primary"
         }
       `}
