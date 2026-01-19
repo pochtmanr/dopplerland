@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors from PRD */
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #141414;
+  --color-bg-card: oklch(0.1 0 0 / 0.8);
+  --color-text-primary: #f5f5f5;
+  --color-text-muted: #9a9a9a;
+  --color-accent-gold: #E1DECF;
+  --color-accent-teal: #5390A8;
+  --color-accent-teal-light: #73B0C8;
+
+  /* Typography - Font variables are set by next/font in layout.tsx */
+  /* Space Grotesk - main site font */
+  --font-family-body: var(--font-body), "Space Grotesk", system-ui, sans-serif;
+  /* Instrument Serif - hero headline */
+  --font-family-serif: var(--font-serif), "Instrument Serif", Georgia, serif;
+  /* FK Raster - "Stay protected" accent text */
+  --font-family-raster: var(--font-raster), "FK Raster Roman Compact", monospace;
+
+  /* Container */
+  --container-max: 1280px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-primary);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent-teal);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-accent-teal);
+  color: var(--color-text-primary);
+}
