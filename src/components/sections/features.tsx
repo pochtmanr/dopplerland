@@ -26,12 +26,12 @@ const featureImages: Record<(typeof visualFeatureKeys)[number], string> = {
   minimalData: "/images/features/minimal.jpg",
 };
 
-// Visual headline text for each feature card (with "Designed" prefix)
-const visualHeadlines: Record<(typeof visualFeatureKeys)[number], { designed: string; rest: string }> = {
-  noRegistration: { designed: "Designed for", rest: "Privacy" },
-  wireguard: { designed: "Designed for", rest: "Security" },
-  adBlocker: { designed: "Designed to", rest: "Block" },
-  minimalData: { designed: "Designed for Minimal", rest: "Data" },
+// Visual headline text for each feature card (3-style typography like CTA)
+const visualHeadlines: Record<(typeof visualFeatureKeys)[number], { italic: string; middle: string; playful: string }> = {
+  noRegistration: { italic: "Designed", middle: "for", playful: "Privacy" },
+  wireguard: { italic: "Designed", middle: "for", playful: "Security" },
+  adBlocker: { italic: "Designed", middle: "to", playful: "Block" },
+  minimalData: { italic: "Designed for", middle: "Minimal", playful: "Data" },
 };
 
 // Icons for text-only feature cards
@@ -97,16 +97,25 @@ function VisualFeatureCard({
 
       {/* Text Content Overlay */}
       <div className="absolute inset-0 flex flex-col justify-end p-6">
-        {/* Feature Headline with Typography Treatment */}
+        {/* Feature Headline with 3-style Typography Treatment */}
         <h3 className="text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-3 leading-tight">
+          {/* Instrument Serif Italic */}
           <span
             className="italic"
             style={{ fontFamily: "var(--font-serif)" }}
           >
-            {headline.designed}
+            {headline.italic}
           </span>{" "}
-          <span style={{ fontFamily: "var(--font-raster)" }}>
-            {headline.rest}
+          {/* Instrument Serif Regular */}
+          <span style={{ fontFamily: "var(--font-serif)" }}>
+            {headline.middle}
+          </span>{" "}
+          {/* FK Raster (playful) with gradient */}
+          <span
+            className="bg-gradient-to-t from-text-muted to-white bg-clip-text text-transparent"
+            style={{ fontFamily: "var(--font-raster)" }}
+          >
+            {headline.playful}
           </span>
         </h3>
 
