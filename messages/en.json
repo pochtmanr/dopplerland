@@ -7,6 +7,7 @@
     "features": "Features",
     "pricing": "Pricing",
     "faq": "FAQ",
+    "blog": "Blog",
     "download": "Download"
   },
   "hero": {
@@ -229,6 +230,46 @@
       "contact": {
         "title": "Contact",
         "content": "For questions about these Terms of Service, please contact us at legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Privacy tips, VPN guides, and security insights from the Doppler team.",
+    "title": "Doppler VPN Blog",
+    "subtitle": "Privacy tips, security insights, and VPN guides",
+    "allPosts": "All Posts",
+    "filterByTag": "Filter by tag",
+    "readMore": "Read more",
+    "readingTime": "{minutes} min read",
+    "publishedOn": "Published on",
+    "by": "by",
+    "relatedPosts": "Related Articles",
+    "viewAllPosts": "View All Posts",
+    "latestPosts": "Latest from Our Blog",
+    "latestPostsSubtitle": "Privacy tips and VPN insights",
+    "noPosts": "No posts found",
+    "noPostsDescription": "Check back soon for new content.",
+    "backToBlog": "Back to Blog",
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Ready to protect your privacy?",
+      "subtitle": "Download Doppler VPN and start browsing securely today.",
+      "button": "Get Started",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "Privacy-first VPN with no registration required",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Global eSIM data for travelers worldwide",
+        "appStore": "App Store",
+        "playStore": "Google Play"
       }
     }
   }

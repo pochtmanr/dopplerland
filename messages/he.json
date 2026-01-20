@@ -7,6 +7,7 @@
     "features": "תכונות",
     "pricing": "מחירים",
     "faq": "שאלות נפוצות",
+    "blog": "בלוג",
     "download": "הורדה"
   },
   "hero": {
@@ -229,6 +230,46 @@
       "contact": {
         "title": "יצירת קשר",
         "content": "לשאלות על תנאי שימוש אלה, אנא צור איתנו קשר בכתובת legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "בלוג",
+    "indexDescription": "טיפים לפרטיות, מדריכי VPN ותובנות אבטחה מצוות Doppler.",
+    "title": "בלוג Doppler VPN",
+    "subtitle": "טיפים לפרטיות, תובנות אבטחה ומדריכי VPN",
+    "allPosts": "כל הפוסטים",
+    "filterByTag": "סנן לפי תגית",
+    "readMore": "קרא עוד",
+    "readingTime": "{minutes} דקות קריאה",
+    "publishedOn": "פורסם ב",
+    "by": "מאת",
+    "relatedPosts": "מאמרים קשורים",
+    "viewAllPosts": "צפה בכל הפוסטים",
+    "latestPosts": "החדש בבלוג שלנו",
+    "latestPostsSubtitle": "טיפים לפרטיות ותובנות VPN",
+    "noPosts": "לא נמצאו פוסטים",
+    "noPostsDescription": "בדוק שוב בקרוב לתוכן חדש.",
+    "backToBlog": "חזרה לבלוג",
+    "breadcrumb": {
+      "home": "בית",
+      "blog": "בלוג"
+    },
+    "cta": {
+      "title": "מוכן להגן על הפרטיות שלך?",
+      "subtitle": "הורד את Doppler VPN והתחל לגלוש בבטחה היום.",
+      "button": "התחל עכשיו",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "VPN פרטיות-ראשונה ללא צורך ברישום",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "חבילות eSIM גלובליות למטיילים בכל העולם",
+        "appStore": "App Store",
+        "playStore": "Google Play"
       }
     }
   }

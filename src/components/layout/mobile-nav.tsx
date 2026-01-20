@@ -13,6 +13,7 @@ export function MobileNav() {
     { href: "#features", label: t("features") },
     { href: "#pricing", label: t("pricing") },
     { href: "#faq", label: t("faq") },
+    { href: "/blog", label: t("blog"), isPage: true },
   ];
 
   return (
@@ -52,16 +53,27 @@ export function MobileNav() {
       {isOpen && (
         <div className="absolute top-full start-0 end-0 bg-bg-secondary/95 backdrop-blur-lg border-t border-white/5 p-4">
           <nav className="flex flex-col gap-4">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="text-text-primary hover:text-accent-gold transition-colors py-2 text-lg"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.isPage ? (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-text-primary hover:text-accent-gold transition-colors py-2 text-lg"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-text-primary hover:text-accent-gold transition-colors py-2 text-lg"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
             <div className="pt-4 border-t border-white/10">
               <LanguageSwitcher />
             </div>

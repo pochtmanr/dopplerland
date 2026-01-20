@@ -9,14 +9,89 @@ import {
   FAQ,
   CTA,
 } from "@/components/sections";
+import { HomeBlogSection } from "@/components/blog";
+import { createClient } from "@/lib/supabase/server";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
+interface HomePostData {
+  slug: string;
+  image_url: string | null;
+  image_alt_en: string | null;
+  image_alt_he: string | null;
+  published_at: string | null;
+  blog_post_translations: { locale: string; title: string; excerpt: string }[];
+  blog_post_tags: {
+    blog_tags: {
+      slug: string;
+      blog_tag_translations: { locale: string; name: string }[];
+    };
+  }[];
+}
+
+async function getLatestPosts(locale: string) {
+  const supabase = await createClient();
+
+  const { data: postsRaw } = await supabase
+    .from("blog_posts")
+    .select(
+      `
+      slug,
+      image_url,
+      image_alt_en,
+      image_alt_he,
+      published_at,
+      blog_post_translations!inner (
+        locale,
+        title,
+        excerpt
+      ),
+      blog_post_tags (
+        blog_tags (
+          slug,
+          blog_tag_translations (
+            locale,
+            name
+          )
+        )
+      )
+    `
+    )
+    .eq("status", "published")
+    .eq("blog_post_translations.locale", locale)
+    .order("published_at", { ascending: false })
+    .limit(3);
+
+  const postsData = postsRaw as HomePostData[] | null;
+
+  return (postsData || []).map((post) => {
+    const translation = post.blog_post_translations[0];
+    const tags = (post.blog_post_tags || []).map((pt) => ({
+      slug: pt.blog_tags.slug,
+      name:
+        pt.blog_tags.blog_tag_translations.find((t) => t.locale === locale)
+          ?.name || pt.blog_tags.slug,
+    }));
+
+    return {
+      slug: post.slug,
+      title: translation.title,
+      excerpt: translation.excerpt,
+      imageUrl: post.image_url,
+      imageAlt: locale === "he" ? post.image_alt_he : post.image_alt_en,
+      publishedAt: post.published_at,
+      tags,
+    };
+  });
+}
+
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const posts = await getLatestPosts(locale);
 
   return (
     <>
@@ -28,6 +103,7 @@ export default async function HomePage({ params }: PageProps) {
         <Pricing />
         <FAQ />
         <CTA />
+        <HomeBlogSection posts={posts} locale={locale} />
       </main>
       <Footer />
     </>

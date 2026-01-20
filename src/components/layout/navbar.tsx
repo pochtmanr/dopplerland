@@ -11,6 +11,7 @@ export async function Navbar() {
     { href: "#features", label: t("features") },
     { href: "#pricing", label: t("pricing") },
     { href: "#faq", label: t("faq") },
+    { href: "/blog", label: t("blog"), isPage: true },
   ];
 
   return (
@@ -33,15 +34,25 @@ export async function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isPage ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </div>
 
         {/* Right Side - Language Switcher & CTA */}
