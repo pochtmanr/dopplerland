@@ -92,6 +92,9 @@ export async function generateMetadata({
         he: "https://dopplervpn.com/he",
       },
     },
+    verification: {
+      google: "vfzTLNRXO6Wqg4yP5UTzG8jlnVilqSxwsW4cEAOvqx8",
+    },
   };
 }
 
