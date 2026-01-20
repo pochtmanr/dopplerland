@@ -20,10 +20,10 @@ const textFeatureKeys = ["contentFilter", "completelyFree"] as const;
 
 // Image paths for visual feature cards
 const featureImages: Record<(typeof visualFeatureKeys)[number], string> = {
-  noRegistration: "/images/features/privacy.jpg",
-  wireguard: "/images/features/security.jpg",
-  adBlocker: "/images/features/adblock.jpg",
-  minimalData: "/images/features/minimal.jpg",
+  noRegistration: "/images/features/1.avif",
+  wireguard: "/images/features/3.avif",
+  adBlocker: "/images/features/2.avif",
+  minimalData: "/images/features/4.avif",
 };
 
 // Visual headline text for each feature card (3-style typography like CTA)
