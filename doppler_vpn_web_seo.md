@@ -77,7 +77,7 @@ ad blocker,block ads,tracker blocker,no ads,ad free browsing,popup blocker,remov
 
 ### Cluster 6: Use Cases
 ```
-public wifi,travel vpn,streaming vpn,work vpn,hotel wifi,airport wifi,cafe wifi,secure hotspot,remote work
+public wifi,travel vpn,work vpn,hotel wifi,airport wifi,cafe wifi,secure hotspot,remote work,privacy vpn
 ```
 
 ### Cluster 7: Free & Unlimited

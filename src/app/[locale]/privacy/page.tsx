@@ -26,8 +26,10 @@ export async function generateMetadata({
 const sectionKeys = [
   "noLogs",
   "collect",
+  "vpnData",
   "security",
   "thirdParty",
+  "children",
   "contact",
 ] as const;
 

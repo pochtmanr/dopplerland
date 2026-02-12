@@ -72,7 +72,7 @@ Here''s what that protection looks like in practice:
 
 - **Your IP address stays hidden** — Websites see the VPN server''s IP, not yours, making you virtually untraceable
 
-- **Geo-restrictions become irrelevant** — Access content from anywhere in the world without artificial barriers
+- **Your digital privacy is protected** — Browse with confidence knowing your connection is encrypted end-to-end
 
 ---
 
@@ -146,7 +146,7 @@ INSERT INTO blog_post_translations (post_id, locale, title, excerpt, content, me
 
 - **כתובת ה-IP שלך נשארת מוסתרת** — אתרים רואים את ה-IP של שרת ה-VPN, לא שלך, מה שהופך אותך כמעט בלתי ניתן לאיתור
 
-- **הגבלות גיאוגרפיות הופכות לא רלוונטיות** — גש לתוכן מכל מקום בעולם ללא מחסומים מלאכותיים
+- **הפרטיות הדיגיטלית שלך מוגנת** — גלוש בביטחון כשאתה יודע שהחיבור שלך מוצפן מקצה לקצה
 
 ---
 
