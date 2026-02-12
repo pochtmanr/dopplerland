@@ -50,6 +50,8 @@ export function PostForm({
   const [error, setError] = useState<string | null>(null);
   const [showSeo, setShowSeo] = useState(false);
   const [slugManual, setSlugManual] = useState(mode === "edit");
+  const [aiLoading, setAiLoading] = useState<string | null>(null);
+  const [extractUrl, setExtractUrl] = useState("");
 
   const [form, setForm] = useState({
     slug: initialData?.slug || "",
@@ -86,6 +88,61 @@ export function PostForm({
         ? prev.tag_ids.filter((id) => id !== tagId)
         : [...prev.tag_ids, tagId],
     }));
+  }
+
+  async function handleAiRewrite() {
+    if (!form.content) return;
+    setAiLoading("rewrite");
+    setError(null);
+
+    try {
+      const res = await fetch("/api/admin/ai/rewrite", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: form.content }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "AI rewrite failed");
+        return;
+      }
+      updateField("content", data.content);
+    } catch {
+      setError("AI rewrite failed. Check your OpenAI API key.");
+    } finally {
+      setAiLoading(null);
+    }
+  }
+
+  async function handleExtractUrl() {
+    if (!extractUrl) return;
+    setAiLoading("extract");
+    setError(null);
+
+    try {
+      const res = await fetch("/api/admin/ai/extract-url", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: extractUrl }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "URL extraction failed");
+        return;
+      }
+      setForm((prev) => ({
+        ...prev,
+        title: data.title || prev.title,
+        excerpt: data.excerpt || prev.excerpt,
+        content: data.content || prev.content,
+        slug: prev.slug || slugify(data.title || ""),
+      }));
+      setExtractUrl("");
+    } catch {
+      setError("URL extraction failed. Check the URL and try again.");
+    } finally {
+      setAiLoading(null);
+    }
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -154,6 +211,30 @@ export function PostForm({
         </div>
       )}
 
+      {/* URL Extract */}
+      <div className="bg-bg-secondary border border-white/10 rounded-lg p-4 space-y-3">
+        <label className="block text-sm font-medium text-text-muted">
+          Generate from URL (Perplexity, news article, etc.)
+        </label>
+        <div className="flex gap-2">
+          <input
+            type="url"
+            value={extractUrl}
+            onChange={(e) => setExtractUrl(e.target.value)}
+            placeholder="https://www.perplexity.ai/page/..."
+            className="flex-1 bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
+          />
+          <button
+            type="button"
+            onClick={handleExtractUrl}
+            disabled={!extractUrl || aiLoading !== null}
+            className="px-4 py-2.5 bg-accent-teal/20 text-accent-teal rounded-lg text-sm font-medium hover:bg-accent-teal/30 transition-colors disabled:opacity-50 cursor-pointer whitespace-nowrap"
+          >
+            {aiLoading === "extract" ? "Extracting..." : "Extract & Generate"}
+          </button>
+        </div>
+      </div>
+
       {/* Image Upload */}
       <ImageUploader
         currentUrl={form.image_url || null}
@@ -213,9 +294,19 @@ export function PostForm({
 
       {/* Content */}
       <div className="space-y-2">
-        <label className="block text-sm font-medium text-text-muted">
-          Content — Markdown (English)
-        </label>
+        <div className="flex items-center justify-between">
+          <label className="block text-sm font-medium text-text-muted">
+            Content — Markdown (English)
+          </label>
+          <button
+            type="button"
+            onClick={handleAiRewrite}
+            disabled={!form.content || aiLoading !== null}
+            className="text-xs px-3 py-1.5 bg-accent-teal/20 text-accent-teal rounded-lg hover:bg-accent-teal/30 transition-colors disabled:opacity-50 cursor-pointer"
+          >
+            {aiLoading === "rewrite" ? "Rewriting..." : "AI Rewrite & Fix Typos"}
+          </button>
+        </div>
         <textarea
           value={form.content}
           onChange={(e) => updateField("content", e.target.value)}
