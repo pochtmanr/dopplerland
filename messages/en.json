@@ -136,11 +136,27 @@
       },
       "cancel": {
         "question": "How do I cancel my subscription?",
-        "answer": "You can cancel your subscription anytime through your device's app store (App Store for iOS/macOS or Google Play for Android). Your access continues until the end of your billing period."
+        "answer": "You can cancel your subscription anytime through your device's app store (App Store for iOS/macOS or Google Play for Android). Your access continues until the end of your billing period. You will not be charged after cancellation."
       },
       "trial": {
         "question": "Is there a free trial?",
-        "answer": "Yes! Every new user gets a 7-day free trial with full access to all features. Plus, we offer a 30-day money-back guarantee if you're not satisfied."
+        "answer": "Yes! Every new user gets a 7-day free trial with full access to all Premium features. The trial converts to a paid subscription unless canceled at least 24 hours before it ends. We also offer a 30-day money-back guarantee."
+      },
+      "whatIsIncluded": {
+        "question": "What is included in Premium?",
+        "answer": "Premium includes VPN servers in 50+ locations with WireGuard encryption, DNS-level ad blocker that works across all apps, content filter with parental controls, and connection on up to 10 devices simultaneously."
+      },
+      "plans": {
+        "question": "What subscription plans are available?",
+        "answer": "We offer three plans: Monthly, 6-Month, and Yearly. All plans include the same Premium features. Longer plans offer a lower per-month price. Subscriptions auto-renew unless canceled at least 24 hours before the end of the billing period."
+      },
+      "restore": {
+        "question": "I subscribed but my features aren't working",
+        "answer": "Open the app, go to Profile > Subscription and tap Restore Purchases. This will re-sync your subscription with our servers. If the issue persists, contact our support team at support@simnetiq.store."
+      },
+      "refund": {
+        "question": "How do I request a refund?",
+        "answer": "Refunds are processed by Apple or Google. For iOS, visit reportaproblem.apple.com and sign in with your Apple ID. For Android, open Google Play > Account > Order history. Refunds are typically processed within 48 hours."
       }
     }
   },
@@ -225,7 +241,7 @@
       },
       "subscription": {
         "title": "Subscriptions & Payments",
-        "content": "Doppler VPN Premium includes access to premium VPN servers in 50+ locations, DNS-level ad blocking, content filtering with parental controls, connection on up to 5 devices simultaneously, and priority customer support. Subscriptions are billed through the Apple App Store or Google Play Store. Plans are available on a monthly, 6-month, or annual basis and auto-renew unless canceled at least 24 hours before the end of the current billing period. You can cancel your subscription at any time through your device's app store settings. Refunds are subject to the respective app store's refund policies."
+        "content": "Doppler VPN Premium includes access to premium VPN servers in 50+ locations, DNS-level ad blocking, content filtering with parental controls, and connection on up to 10 devices simultaneously. Subscriptions are billed through the Apple App Store or Google Play Store. Plans are available on a monthly, 6-month, or annual basis and auto-renew unless canceled at least 24 hours before the end of the current billing period. You can cancel your subscription at any time through your device's app store settings. Refunds are subject to the respective app store's refund policies."
       },
       "liability": {
         "title": "Limitation of Liability",

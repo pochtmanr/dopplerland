@@ -12,8 +12,12 @@ const faqKeys = [
   "categories",
   "devices",
   "platforms",
-  "cancel",
+  "whatIsIncluded",
+  "plans",
   "trial",
+  "cancel",
+  "restore",
+  "refund",
 ] as const;
 
 export function FAQ() {
