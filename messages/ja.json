@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — 登録不要の無料VPN | プライベート＆安全",
+    "description": "メールや登録不要の無料VPN。WireGuard暗号化、内蔵広告ブロッカー＆コンテンツフィルターで即座に接続。ログなし。データ制限なし。"
+  },
+  "nav": {
+    "features": "機能",
+    "pricing": "料金",
+    "faq": "FAQ",
+    "blog": "ブログ",
+    "download": "ダウンロード"
+  },
+  "hero": {
+    "tagline": "プライバシー最優先VPN。永久無料。",
+    "headlinePart1a": "どこへでも自由に",
+    "headlinePart1b": "オンライン",
+    "headlinePart2": "痕跡を残さない。",
+    "subheadline": "WireGuard暗号化で即座に接続。デバイスがアカウントです。",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "個人情報不要",
+    "trustBadges": {
+      "noData": "個人情報不要",
+      "noLogs": "ログなし",
+      "unlimited": "無制限帯域幅",
+      "wireguard": "WireGuard暗号化"
+    }
+  },
+  "features": {
+    "title": "完全なプライバシーのために設計",
+    "subtitle": "ほとんどのVPNはプライバシーを保護する前にメールを求めます。Dopplerは違います。",
+    "items": {
+      "noRegistration": {
+        "title": "登録不要のプライバシー",
+        "description": "デバイスがアカウントです。メール不要。電話番号不要。個人情報不要。プライバシーは接続した瞬間から始まります。"
+      },
+      "wireguard": {
+        "title": "WireGuard暗号化",
+        "description": "セキュリティ専門家が信頼する最新のVPNプロトコル。より高速な接続、より優れたバッテリー効率、軍事グレードの暗号化。"
+      },
+      "adBlocker": {
+        "title": "内蔵広告ブロッカー",
+        "description": "ネットワークレベルのブロックで広告、トラッカー、ポップアップの最大75%を除去。ページ読み込みが高速化、データ使用量削減、クリーンなブラウジング。"
+      },
+      "contentFilter": {
+        "title": "コンテンツフィルター＆ペアレンタルコントロール",
+        "description": "特定のウェブサイトやカテゴリ全体をブロック。パスワードで設定を保護。家族のためのより安全なインターネットを作りましょう。"
+      },
+      "minimalData": {
+        "title": "最小限のデータ収集",
+        "description": "ブラウジング活動を記録しません。訪問サイトを追跡しません。アーキテクチャ設計上、最小限のデータのみ必要です。"
+      },
+      "completelyFree": {
+        "title": "完全無料",
+        "description": "すべてのサーバーがフル機能で無料。完全な暗号化、高速、無制限帯域幅。速度制限やデータ制限なし。"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "数秒で始められます",
+    "subtitle": "登録不要、手間なし — ダウンロードして接続するだけ",
+    "steps": {
+      "download": {
+        "title": "ダウンロード",
+        "description": "デバイスのアプリストアからDoppler VPNを入手"
+      },
+      "connect": {
+        "title": "接続",
+        "description": "アプリを開いて接続をタップ — アカウント不要"
+      },
+      "browse": {
+        "title": "ブラウジング",
+        "description": "プライベートで広告のないブラウジングを即座にお楽しみください"
+      }
+    }
+  },
+  "pricing": {
+    "title": "シンプルで透明な料金設定",
+    "subtitle": "7日間の無料トライアルから始めましょう。いつでもキャンセル可能。",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "すべてのプレミアム機能を含む",
+    "cardSubtitle": "同じ強力な機能、期間をお選びください",
+    "durationSelector": "サブスクリプション期間を選択",
+    "durations": {
+      "monthly": "1ヶ月",
+      "sixMonth": "6ヶ月",
+      "annual": "年間"
+    },
+    "bestValue": "最高",
+    "billedMonthly": "月額請求",
+    "billed": "請求",
+    "every6Months": "6ヶ月ごと",
+    "perYear": "年間",
+    "save": "節約",
+    "allFeaturesIncluded": "すべてのプランにすべての機能を含む",
+    "features": {
+      "noLogs": "ノーログVPN",
+      "adBlocker": "広告ブロッカー",
+      "categoryFilter": "カテゴリフィルター",
+      "customBlocklist": "ブロックリスト",
+      "devices": "10台のデバイス",
+      "support": "24時間年中無休サポート"
+    },
+    "cta": "無料トライアルを開始",
+    "cancelAnytime": "いつでもキャンセル。質問なし。",
+    "guarantee": "30日間返金保証",
+    "pricesIn": "表示通貨"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "Doppler VPNについて知っておくべきすべてのこと",
+    "items": {
+      "what": {
+        "question": "Doppler VPNとは？",
+        "answer": "Doppler VPNはプライバシー重視の仮想プライベートネットワークサービスで、インターネット接続を暗号化しIPアドレスを隠します。内蔵広告ブロック、カテゴリ別コンテンツフィルタリング、カスタムブロックリストのサポートが含まれ — すべて登録不要です。"
+      },
+      "noLogs": {
+        "question": "Doppler VPNは本当にログを記録しませんか？",
+        "answer": "はい、厳格なノーログポリシーを実施しています。ブラウジング活動、接続タイムスタンプ、IPアドレス、その他の個人データを追跡、保存、共有しません。プライバシーが最優先です。"
+      },
+      "adBlocker": {
+        "question": "広告ブロッカーはどのように機能しますか？",
+        "answer": "広告ブロッカーはDNSレベルで動作し、広告、トラッカー、悪意のあるドメインを読み込み前にブロックします。より高速なブラウジング、少ないデータ使用量、すべてのアプリでの保護を意味します — ブラウザだけではありません。"
+      },
+      "categories": {
+        "question": "どのコンテンツカテゴリをフィルタリングできますか？",
+        "answer": "アダルトコンテンツ、ギャンブル、ソーシャルメディア、ゲーム、ストリーミングなど、複数のカテゴリのコンテンツをフィルタリングできます。追加のコンテンツフィルタリング制御のためにカスタムブロックリストをインポートすることもできます。"
+      },
+      "devices": {
+        "question": "何台のデバイスで使用できますか？",
+        "answer": "1つのDoppler VPNサブスクリプションで最大10台のデバイスを同時に使用できます。スマートフォン、タブレット、コンピューターで使用 — すべて同時に保護されます。"
+      },
+      "platforms": {
+        "question": "どのプラットフォームがサポートされていますか？",
+        "answer": "Doppler VPNはiOS（iPhone＆iPad）、macOS、Androidで利用可能です。プラットフォームサポートを継続的に拡大しています。"
+      },
+      "cancel": {
+        "question": "サブスクリプションをキャンセルするには？",
+        "answer": "デバイスのアプリストア（iOS/macOS用App StoreまたはAndroid用Google Play）からいつでもサブスクリプションをキャンセルできます。請求期間の終わりまでアクセスが続きます。キャンセル後は料金が発生しません。"
+      },
+      "trial": {
+        "question": "無料トライアルはありますか？",
+        "answer": "はい！すべての新規ユーザーは、すべてのプレミアム機能へのフルアクセス付きの7日間無料トライアルを受けられます。トライアルは終了の少なくとも24時間前にキャンセルしない限り、有料サブスクリプションに移行します。30日間の返金保証も提供しています。"
+      },
+      "whatIsIncluded": {
+        "question": "プレミアムには何が含まれますか？",
+        "answer": "プレミアムには、WireGuard暗号化による50以上のロケーションのVPNサーバー、すべてのアプリで動作するDNSレベルの広告ブロッカー、ペアレンタルコントロール付きコンテンツフィルター、最大10台のデバイスの同時接続が含まれます。"
+      },
+      "plans": {
+        "question": "どのサブスクリプションプランがありますか？",
+        "answer": "月間、6ヶ月、年間の3つのプランを提供しています。すべてのプランに同じプレミアム機能が含まれます。長期プランは月額料金がより安くなります。サブスクリプションは、現在の請求期間の終了の少なくとも24時間前にキャンセルしない限り自動更新されます。"
+      },
+      "restore": {
+        "question": "購読したのに機能が動作しません",
+        "answer": "アプリを開き、プロフィール > サブスクリプションに移動して「購入を復元」をタップしてください。これにより、サブスクリプションがサーバーと再同期されます。問題が解決しない場合は、support@simnetiq.storeのサポートチームにお問い合わせください。"
+      },
+      "refund": {
+        "question": "返金をリクエストするには？",
+        "answer": "返金はAppleまたはGoogleによって処理されます。iOSの場合、reportaproblem.apple.comにアクセスしてApple IDでサインインしてください。Androidの場合、Google Play > アカウント > 注文履歴を開いてください。返金は通常48時間以内に処理されます。"
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "提供",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "始めましょう",
+      "titleMiddle": "",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "登録不要のプライバシー最優先VPN。WireGuard暗号化で即座に接続。",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "旅しよう",
+      "titleMiddle": "",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "旅行者向けグローバルeSIMデータプラン。世界中どこでも接続を維持。",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "高度な広告ブロックとコンテンツフィルタリングを備えたプライバシー最優先VPN。",
+    "product": "製品",
+    "features": "機能",
+    "pricing": "料金",
+    "download": "ダウンロード",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "Doppler VPN. All rights reserved."
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新：2026年2月",
+    "intro": "Doppler VPNでは、お客様のプライバシーが最優先事項です。このプライバシーポリシーは、VPN、広告ブロック、コンテンツフィルタリングサービスの利用時に情報をどのように取り扱うかを説明します。",
+    "sections": {
+      "noLogs": {
+        "title": "ノーログポリシー",
+        "content": "厳格なノーログポリシーを運用しています。ブラウジング活動、接続タイムスタンプ、元のIPアドレス、DNSクエリ、帯域幅使用量、またはお客様やオンライン活動を特定できるその他のデータを追跡、保存、共有しません。VPNトラフィックはエンドツーエンドで暗号化され、検査、記録、保存されることはありません。"
+      },
+      "collect": {
+        "title": "収集する情報",
+        "content": "サービス提供に必要な最小限の情報のみ収集します：ランダムに生成されたデバイス識別子（個人のアイデンティティとは紐付けられません）、支払い情報（Apple App StoreまたはGoogle Playにより安全に処理 — 支払い詳細は一切見ることができません）、パフォーマンス維持のための匿名集計サーバー負荷統計、自発的にサポートに連絡した場合のみメールアドレス。"
+      },
+      "vpnData": {
+        "title": "VPNデータの取り扱い",
+        "content": "VPNサービスに接続すると、インターネットトラフィックはWireGuardプロトコルで暗号化され、サーバーを経由してルーティングされます。VPNトンネルを通過するデータの検査、記録、保存、変更、販売は行いません。DNSレベルの広告ブロッカーとコンテンツフィルターはDNSリゾルバーで動作し、個々のクエリやブラウジングパターンを記録しません。"
+      },
+      "security": {
+        "title": "データセキュリティ",
+        "content": "WireGuardを含む業界標準の暗号化プロトコルを使用して接続を保護します。デバイスとサーバー間のすべてのデータ転送はエンドツーエンドで暗号化されます。サーバーインフラは設計上データ保持を最小限にするよう構成されています。"
+      },
+      "thirdParty": {
+        "title": "第三者",
+        "content": "個人情報を第三者に販売、取引、共有しません。サブスクリプション管理にRevenueCat（匿名購入識別子のみ処理）を、支払い処理にApple/Googleアプリストアを使用しています。これらのプロバイダーはそれぞれのプライバシーポリシーと契約上の義務に拘束されます。"
+      },
+      "children": {
+        "title": "子供のプライバシー",
+        "content": "コンテンツフィルタリング機能にはペアレンタルコントロール機能が含まれています。13歳未満の子供から意図的に個人情報を収集することはありません。コンテンツフィルターはDNSレベルで動作し、あらゆる年齢のユーザーの個人データを収集・保存しません。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "このプライバシーポリシーに関するご質問は、privacy@dopplervpn.comまでご連絡ください"
+      }
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "lastUpdated": "最終更新：2026年2月",
+    "intro": "Doppler VPNを使用することにより、本利用規約に同意したものとみなされます。注意深くお読みください。",
+    "sections": {
+      "service": {
+        "title": "サービスの説明",
+        "content": "Doppler VPNは、インターネット接続を暗号化し、プライバシー保護のためにIPアドレスを隠す仮想プライベートネットワークサービスを提供します。DNSレベルの広告ブロックとペアレンタルコントロール付きコンテンツフィルタリングも含まれます。サービスは「現状のまま」および「利用可能な範囲で」提供されます。"
+      },
+      "usage": {
+        "title": "許容される利用",
+        "content": "Doppler VPNを合法的な目的でのみ使用し、適用されるすべての法律を遵守することに同意します。違法活動、地理的制限の回避、他者への害、マルウェアの配布、知的財産権の侵害、またはサービス運営の妨害のためにサービスを使用することはできません。これらの条件に違反するアカウントを終了する権利を留保します。"
+      },
+      "subscription": {
+        "title": "サブスクリプションと支払い",
+        "content": "Doppler VPNプレミアムには、50以上のロケーションのプレミアムVPNサーバーへのアクセス、DNSレベルの広告ブロック、ペアレンタルコントロール付きコンテンツフィルタリング、最大10台のデバイスの同時接続が含まれます。サブスクリプションはApple App StoreまたはGoogle Play Storeを通じて請求されます。プランは月間、6ヶ月、年間で利用可能で、現在の請求期間の終了の少なくとも24時間前にキャンセルしない限り自動更新されます。デバイスのアプリストア設定からいつでもサブスクリプションをキャンセルできます。返金は各アプリストアの返金ポリシーに従います。"
+      },
+      "liability": {
+        "title": "責任の制限",
+        "content": "法律で許容される最大限の範囲で、Doppler VPNはサービスの利用から生じる間接的、付随的、特別、結果的、または懲罰的損害に対して責任を負いません。"
+      },
+      "changes": {
+        "title": "規約の変更",
+        "content": "本利用規約を随時更新することがあります。重要な変更についてはアプリまたはメールを通じてお知らせします。変更後もサービスを継続使用することは、新しい規約への同意を意味します。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "本利用規約に関するご質問は、legal@dopplervpn.comまでご連絡ください"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "ブログ",
+    "indexDescription": "Dopplerチームからのプライバシーのヒント、VPNガイド、セキュリティインサイト。",
+    "title": "Doppler VPNブログ",
+    "subtitle": "プライバシーのヒント、セキュリティインサイト、VPNガイド",
+    "allPosts": "すべての記事",
+    "filterByTag": "タグでフィルター",
+    "readMore": "続きを読む",
+    "readingTime": "{minutes}分で読めます",
+    "publishedOn": "公開日",
+    "by": "著者",
+    "relatedPosts": "関連記事",
+    "viewAllPosts": "すべての記事を見る",
+    "latestPosts": "ブログの最新記事",
+    "latestPostsSubtitle": "プライバシーのヒントとVPNインサイト",
+    "noPosts": "記事が見つかりません",
+    "noPostsDescription": "新しいコンテンツをお楽しみに。",
+    "backToBlog": "ブログに戻る",
+    "breadcrumb": {
+      "home": "ホーム",
+      "blog": "ブログ"
+    },
+    "cta": {
+      "title": "プライバシーを守る準備はできましたか？",
+      "subtitle": "Doppler VPNをダウンロードして、今日から安全にブラウジングしましょう。",
+      "button": "始める",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "登録不要のプライバシー最優先VPN",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "世界中の旅行者向けグローバルeSIMデータ",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

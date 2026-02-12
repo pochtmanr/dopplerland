@@ -19,10 +19,13 @@ interface PageProps {
 interface HomePostData {
   slug: string;
   image_url: string | null;
-  image_alt_en: string | null;
-  image_alt_he: string | null;
   published_at: string | null;
-  blog_post_translations: { locale: string; title: string; excerpt: string }[];
+  blog_post_translations: {
+    locale: string;
+    title: string;
+    excerpt: string;
+    image_alt: string | null;
+  }[];
   blog_post_tags: {
     blog_tags: {
       slug: string;
@@ -40,13 +43,12 @@ async function getLatestPosts(locale: string) {
       `
       slug,
       image_url,
-      image_alt_en,
-      image_alt_he,
       published_at,
       blog_post_translations!inner (
         locale,
         title,
-        excerpt
+        excerpt,
+        image_alt
       ),
       blog_post_tags (
         blog_tags (
@@ -80,7 +82,7 @@ async function getLatestPosts(locale: string) {
       title: translation.title,
       excerpt: translation.excerpt,
       imageUrl: post.image_url,
-      imageAlt: locale === "he" ? post.image_alt_he : post.image_alt_en,
+      imageAlt: translation.image_alt,
       publishedAt: post.published_at,
       tags,
     };

@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — VPN Percuma Tanpa Pendaftaran | Peribadi & Selamat",
+    "description": "VPN percuma tanpa e-mel atau pendaftaran. Sambung serta-merta dengan penyulitan WireGuard, penyekat iklan terbina dalam & penapis kandungan. Tanpa log. Tanpa had data."
+  },
+  "nav": {
+    "features": "Ciri-ciri",
+    "pricing": "Harga",
+    "faq": "Soalan Lazim",
+    "blog": "Blog",
+    "download": "Muat Turun"
+  },
+  "hero": {
+    "tagline": "VPN Mengutamakan Privasi. Percuma Selamanya.",
+    "headlinePart1a": "Pergi ke mana sahaja",
+    "headlinePart1b": "dalam talian",
+    "headlinePart2": "Tanpa meninggalkan jejak.",
+    "subheadline": "Sambung serta-merta dengan penyulitan WireGuard. Peranti anda ialah akaun anda.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Tiada Data Peribadi Diperlukan",
+    "trustBadges": {
+      "noData": "Tiada Data Peribadi",
+      "noLogs": "Tiada Log",
+      "unlimited": "Lebar Jalur Tanpa Had",
+      "wireguard": "Penyulitan WireGuard"
+    }
+  },
+  "features": {
+    "title": "Direka untuk Privasi Sepenuhnya",
+    "subtitle": "Kebanyakan VPN meminta e-mel anda sebelum melindungi privasi. Doppler tidak.",
+    "items": {
+      "noRegistration": {
+        "title": "Privasi Tanpa Pendaftaran",
+        "description": "Peranti anda ialah akaun anda. Tiada e-mel. Tiada nombor telefon. Tiada maklumat peribadi. Privasi bermula saat anda disambungkan."
+      },
+      "wireguard": {
+        "title": "Penyulitan WireGuard",
+        "description": "Protokol VPN moden yang dipercayai oleh profesional keselamatan. Sambungan lebih pantas, kecekapan bateri lebih baik, dan penyulitan gred tentera."
+      },
+      "adBlocker": {
+        "title": "Penyekat Iklan Terbina Dalam",
+        "description": "Penyekatan peringkat rangkaian menghapuskan sehingga 75% iklan, penjejak, dan pop timbul. Pemuatan halaman lebih pantas, penggunaan data kurang, pelayaran lebih bersih."
+      },
+      "contentFilter": {
+        "title": "Penapis Kandungan & Kawalan Ibu Bapa",
+        "description": "Sekat laman web tertentu atau seluruh kategori. Lindungi tetapan dengan kata laluan. Cipta internet yang lebih selamat untuk keluarga anda."
+      },
+      "minimalData": {
+        "title": "Pengumpulan Data Minimum",
+        "description": "Kami tidak merekod aktiviti pelayaran anda. Kami tidak menjejaki laman web yang anda lawati. Seni bina kami memerlukan data minimum secara reka bentuk."
+      },
+      "completelyFree": {
+        "title": "Percuma Sepenuhnya",
+        "description": "Semua pelayan percuma dengan fungsi penuh. Penyulitan penuh, kelajuan tinggi, lebar jalur tanpa had. Tiada pendikit atau had data."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Mula dalam beberapa saat",
+    "subtitle": "Tiada pendaftaran, tiada kerumitan — hanya muat turun dan sambung",
+    "steps": {
+      "download": {
+        "title": "Muat Turun",
+        "description": "Dapatkan Doppler VPN dari gedung aplikasi peranti anda"
+      },
+      "connect": {
+        "title": "Sambung",
+        "description": "Buka aplikasi dan ketik sambung — tiada akaun diperlukan"
+      },
+      "browse": {
+        "title": "Layari",
+        "description": "Nikmati pelayaran peribadi tanpa iklan serta-merta"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Harga mudah dan telus",
+    "subtitle": "Mulakan dengan percubaan percuma 7 hari. Batal bila-bila masa.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Semua ciri Premium termasuk",
+    "cardSubtitle": "Ciri-ciri berkuasa yang sama, pilih komitmen anda",
+    "durationSelector": "Pilih tempoh langganan",
+    "durations": {
+      "monthly": "1 Bulan",
+      "sixMonth": "6 Bulan",
+      "annual": "Tahunan"
+    },
+    "bestValue": "Terbaik",
+    "billedMonthly": "Dibilkan bulanan",
+    "billed": "Dibilkan",
+    "every6Months": "setiap 6 bulan",
+    "perYear": "setahun",
+    "save": "Jimat",
+    "allFeaturesIncluded": "Semua ciri termasuk dalam setiap pelan",
+    "features": {
+      "noLogs": "VPN tanpa log",
+      "adBlocker": "Penyekat iklan",
+      "categoryFilter": "Penapis kategori",
+      "customBlocklist": "Senarai sekat",
+      "devices": "10 peranti",
+      "support": "Sokongan 24/7"
+    },
+    "cta": "Mulakan Percubaan Percuma",
+    "cancelAnytime": "Batal bila-bila masa. Tanpa soalan.",
+    "guarantee": "Jaminan wang dikembalikan 30 hari",
+    "pricesIn": "Harga ditunjukkan dalam"
+  },
+  "faq": {
+    "title": "Soalan lazim",
+    "subtitle": "Semua yang anda perlu tahu tentang Doppler VPN",
+    "items": {
+      "what": {
+        "question": "Apakah Doppler VPN?",
+        "answer": "Doppler VPN ialah perkhidmatan rangkaian peribadi maya yang mengutamakan privasi yang menyulitkan sambungan internet anda dan menyembunyikan alamat IP anda. Ia termasuk penyekatan iklan terbina dalam, penapisan kandungan mengikut kategori, dan sokongan untuk senarai sekat tersuai — semuanya tanpa pendaftaran."
+      },
+      "noLogs": {
+        "question": "Adakah Doppler VPN benar-benar tanpa log?",
+        "answer": "Ya, kami menjalankan dasar tanpa log yang ketat. Kami tidak menjejak, menyimpan, atau berkongsi aktiviti pelayaran, cap masa sambungan, alamat IP, atau sebarang data peribadi lain. Privasi anda ialah keutamaan kami."
+      },
+      "adBlocker": {
+        "question": "Bagaimana penyekat iklan berfungsi?",
+        "answer": "Penyekat iklan kami berfungsi di peringkat DNS, menyekat iklan, penjejak, dan domain berniat jahat sebelum ia dimuatkan. Ini bermakna pelayaran lebih pantas, penggunaan data kurang, dan perlindungan di semua aplikasi — bukan hanya pelayar."
+      },
+      "categories": {
+        "question": "Apakah kategori kandungan yang boleh ditapis?",
+        "answer": "Anda boleh menapis kandungan merentasi pelbagai kategori termasuk kandungan dewasa, perjudian, media sosial, permainan, penstriman, dan banyak lagi. Anda juga boleh mengimport senarai sekat tersuai untuk kawalan penapisan kandungan tambahan."
+      },
+      "devices": {
+        "question": "Berapa banyak peranti yang boleh digunakan?",
+        "answer": "Satu langganan Doppler VPN meliputi sehingga 10 peranti serentak. Gunakan pada telefon, tablet, dan komputer — semuanya dilindungi sekaligus."
+      },
+      "platforms": {
+        "question": "Apakah platform yang disokong?",
+        "answer": "Doppler VPN tersedia di iOS (iPhone & iPad), macOS, dan Android. Kami sentiasa berusaha untuk memperluaskan sokongan platform."
+      },
+      "cancel": {
+        "question": "Bagaimana cara membatalkan langganan?",
+        "answer": "Anda boleh membatalkan langganan pada bila-bila masa melalui gedung aplikasi peranti anda (App Store untuk iOS/macOS atau Google Play untuk Android). Akses anda berterusan sehingga akhir tempoh pengebilan. Anda tidak akan dikenakan bayaran selepas pembatalan."
+      },
+      "trial": {
+        "question": "Adakah percubaan percuma?",
+        "answer": "Ya! Setiap pengguna baharu mendapat percubaan percuma 7 hari dengan akses penuh ke semua ciri Premium. Percubaan bertukar kepada langganan berbayar kecuali dibatalkan sekurang-kurangnya 24 jam sebelum tamat. Kami juga menawarkan jaminan wang dikembalikan 30 hari."
+      },
+      "whatIsIncluded": {
+        "question": "Apa yang termasuk dalam Premium?",
+        "answer": "Premium termasuk pelayan VPN di 50+ lokasi dengan penyulitan WireGuard, penyekat iklan peringkat DNS yang berfungsi di semua aplikasi, penapis kandungan dengan kawalan ibu bapa, dan sambungan sehingga 10 peranti serentak."
+      },
+      "plans": {
+        "question": "Apakah pelan langganan yang tersedia?",
+        "answer": "Kami menawarkan tiga pelan: Bulanan, 6 Bulan, dan Tahunan. Semua pelan termasuk ciri Premium yang sama. Pelan lebih panjang menawarkan harga bulanan lebih rendah. Langganan diperbaharui secara automatik kecuali dibatalkan sekurang-kurangnya 24 jam sebelum akhir tempoh pengebilan."
+      },
+      "restore": {
+        "question": "Saya melanggan tetapi ciri tidak berfungsi",
+        "answer": "Buka aplikasi, pergi ke Profil > Langganan dan ketik Pulihkan Pembelian. Ini akan menyegerakkan langganan anda dengan pelayan kami. Jika masalah berterusan, hubungi pasukan sokongan kami di support@simnetiq.store."
+      },
+      "refund": {
+        "question": "Bagaimana cara meminta bayaran balik?",
+        "answer": "Bayaran balik diproses oleh Apple atau Google. Untuk iOS, lawati reportaproblem.apple.com dan log masuk dengan Apple ID anda. Untuk Android, buka Google Play > Akaun > Sejarah pesanan. Bayaran balik biasanya diproses dalam 48 jam."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "oleh",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Mulakan",
+      "titleMiddle": "dengan",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "VPN mengutamakan privasi tanpa pendaftaran. Sambung serta-merta dengan penyulitan WireGuard.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Mengembara",
+      "titleMiddle": "dengan",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Pelan data eSIM global untuk pelancong. Kekal berhubung di mana sahaja di dunia.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "VPN mengutamakan privasi dengan penyekatan iklan lanjutan dan penapisan kandungan.",
+    "product": "Produk",
+    "features": "Ciri-ciri",
+    "pricing": "Harga",
+    "download": "Muat Turun",
+    "legal": "Undang-undang",
+    "privacy": "Dasar Privasi",
+    "terms": "Terma Perkhidmatan",
+    "copyright": "Doppler VPN. Hak cipta terpelihara."
+  },
+  "privacy": {
+    "title": "Dasar Privasi",
+    "lastUpdated": "Kemas kini terakhir: Februari 2026",
+    "intro": "Di Doppler VPN, privasi anda adalah keutamaan tertinggi kami. Dasar Privasi ini menerangkan cara kami mengendalikan maklumat anda apabila menggunakan perkhidmatan VPN, penyekatan iklan, dan penapisan kandungan kami.",
+    "sections": {
+      "noLogs": {
+        "title": "Dasar Tanpa Log",
+        "content": "Kami menjalankan dasar tanpa log yang ketat. Kami tidak menjejak, menyimpan, atau berkongsi: aktiviti pelayaran anda, cap masa sambungan, alamat IP asal, pertanyaan DNS, penggunaan lebar jalur, atau sebarang data lain yang boleh mengenal pasti anda atau aktiviti dalam talian anda. Trafik VPN disulitkan hujung ke hujung dan tidak pernah diperiksa, direkodkan, atau disimpan."
+      },
+      "collect": {
+        "title": "Apa Yang Kami Kumpulkan",
+        "content": "Kami hanya mengumpul maklumat minimum yang diperlukan untuk menyediakan perkhidmatan: pengecam peranti yang dijana secara rawak (tidak dikaitkan dengan identiti peribadi anda), maklumat pembayaran (diproses dengan selamat oleh Apple App Store atau Google Play — kami tidak pernah melihat butiran pembayaran anda), statistik beban pelayan agregat tanpa nama untuk mengekalkan prestasi, dan alamat e-mel anda hanya jika anda secara sukarela menghubungi sokongan."
+      },
+      "vpnData": {
+        "title": "Pengendalian Data VPN",
+        "content": "Apabila anda bersambung ke perkhidmatan VPN kami, trafik internet anda disulitkan menggunakan protokol WireGuard dan dialihkan melalui pelayan kami. Kami tidak memeriksa, merekod, menyimpan, mengubah suai, atau menjual sebarang data yang melalui terowong VPN kami. Penyekat iklan peringkat DNS dan penapis kandungan kami beroperasi pada penyelesai DNS kami dan tidak merekodkan pertanyaan individu atau corak pelayaran."
+      },
+      "security": {
+        "title": "Keselamatan Data",
+        "content": "Kami menggunakan protokol penyulitan standard industri termasuk WireGuard untuk melindungi sambungan anda. Semua penghantaran data antara peranti anda dan pelayan kami disulitkan hujung ke hujung. Infrastruktur pelayan kami dikonfigurasi untuk meminimumkan penyimpanan data secara reka bentuk."
+      },
+      "thirdParty": {
+        "title": "Pihak Ketiga",
+        "content": "Kami tidak menjual, memperdagangkan, atau berkongsi maklumat peribadi anda dengan pihak ketiga. Kami menggunakan RevenueCat untuk pengurusan langganan (mereka hanya memproses pengecam pembelian tanpa nama) dan gedung aplikasi Apple/Google untuk pemprosesan pembayaran. Penyedia ini terikat oleh dasar privasi dan obligasi kontrak mereka sendiri."
+      },
+      "children": {
+        "title": "Privasi Kanak-kanak",
+        "content": "Ciri penapisan kandungan kami termasuk keupayaan kawalan ibu bapa. Kami tidak secara sengaja mengumpul maklumat peribadi daripada kanak-kanak di bawah 13 tahun. Penapis kandungan beroperasi di peringkat DNS tanpa mengumpul atau menyimpan data peribadi pengguna dari sebarang umur."
+      },
+      "contact": {
+        "title": "Hubungi Kami",
+        "content": "Jika anda mempunyai sebarang soalan tentang Dasar Privasi ini, sila hubungi kami di privacy@dopplervpn.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terma Perkhidmatan",
+    "lastUpdated": "Kemas kini terakhir: Februari 2026",
+    "intro": "Dengan menggunakan Doppler VPN, anda bersetuju dengan Terma Perkhidmatan ini. Sila baca dengan teliti.",
+    "sections": {
+      "service": {
+        "title": "Penerangan Perkhidmatan",
+        "content": "Doppler VPN menyediakan perkhidmatan rangkaian peribadi maya yang menyulitkan sambungan internet anda dan menyembunyikan alamat IP anda untuk tujuan privasi. Perkhidmatan ini juga termasuk penyekatan iklan peringkat DNS dan penapisan kandungan dengan kawalan ibu bapa. Perkhidmatan disediakan \"seadanya\" dan \"sebagaimana tersedia\"."
+      },
+      "usage": {
+        "title": "Penggunaan Yang Boleh Diterima",
+        "content": "Anda bersetuju untuk menggunakan Doppler VPN hanya untuk tujuan yang sah dan mematuhi semua undang-undang tempatan, kebangsaan, dan antarabangsa yang berkenaan. Anda tidak boleh menggunakan perkhidmatan untuk aktiviti haram, memintas sekatan geografi atau perjanjian pelesenan kandungan, membahayakan orang lain, mengedarkan perisian hasad, melanggar hak harta intelek, atau mengganggu operasi perkhidmatan kami. Kami berhak untuk menamatkan akaun yang melanggar terma ini."
+      },
+      "subscription": {
+        "title": "Langganan & Pembayaran",
+        "content": "Doppler VPN Premium termasuk akses ke pelayan VPN premium di 50+ lokasi, penyekatan iklan peringkat DNS, penapisan kandungan dengan kawalan ibu bapa, dan sambungan sehingga 10 peranti serentak. Langganan dibilkan melalui Apple App Store atau Google Play Store. Pelan tersedia secara bulanan, 6 bulan, atau tahunan dan diperbaharui secara automatik kecuali dibatalkan sekurang-kurangnya 24 jam sebelum akhir tempoh pengebilan semasa. Anda boleh membatalkan langganan pada bila-bila masa melalui tetapan gedung aplikasi peranti anda. Bayaran balik tertakluk kepada dasar bayaran balik gedung aplikasi masing-masing."
+      },
+      "liability": {
+        "title": "Had Liabiliti",
+        "content": "Setakat yang dibenarkan oleh undang-undang, Doppler VPN tidak bertanggungjawab atas sebarang kerosakan tidak langsung, sampingan, khas, akibat, atau punitif yang timbul daripada penggunaan perkhidmatan oleh anda."
+      },
+      "changes": {
+        "title": "Perubahan Terma",
+        "content": "Kami mungkin mengemas kini Terma Perkhidmatan ini dari semasa ke semasa. Kami akan memberitahu anda tentang sebarang perubahan material melalui aplikasi atau e-mel. Penggunaan berterusan perkhidmatan selepas perubahan menandakan penerimaan terma baharu."
+      },
+      "contact": {
+        "title": "Hubungi",
+        "content": "Untuk soalan tentang Terma Perkhidmatan ini, sila hubungi kami di legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Petua privasi, panduan VPN, dan pandangan keselamatan daripada pasukan Doppler.",
+    "title": "Blog Doppler VPN",
+    "subtitle": "Petua privasi, pandangan keselamatan, dan panduan VPN",
+    "allPosts": "Semua Artikel",
+    "filterByTag": "Tapis mengikut tag",
+    "readMore": "Baca lagi",
+    "readingTime": "{minutes} min baca",
+    "publishedOn": "Diterbitkan pada",
+    "by": "oleh",
+    "relatedPosts": "Artikel Berkaitan",
+    "viewAllPosts": "Lihat Semua Artikel",
+    "latestPosts": "Terkini dari Blog Kami",
+    "latestPostsSubtitle": "Petua privasi dan pandangan VPN",
+    "noPosts": "Tiada artikel dijumpai",
+    "noPostsDescription": "Semak semula nanti untuk kandungan baharu.",
+    "backToBlog": "Kembali ke Blog",
+    "breadcrumb": {
+      "home": "Laman Utama",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Bersedia untuk melindungi privasi anda?",
+      "subtitle": "Muat turun Doppler VPN dan mula melayari dengan selamat hari ini.",
+      "button": "Mulakan",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "VPN mengutamakan privasi tanpa pendaftaran diperlukan",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Data eSIM global untuk pelancong di seluruh dunia",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

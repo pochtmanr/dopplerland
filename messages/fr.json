@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — VPN Gratuit Sans Inscription | Privé et Sécurisé",
+    "description": "VPN gratuit sans e-mail ni inscription. Connectez-vous instantanément avec le chiffrement WireGuard, bloqueur de publicités intégré et filtre de contenu. Sans journaux. Sans limites."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "download": "Télécharger"
+  },
+  "hero": {
+    "tagline": "VPN axé sur la confidentialité. Gratuit pour toujours.",
+    "headlinePart1a": "Naviguez partout",
+    "headlinePart1b": "en ligne",
+    "headlinePart2": "Sans laisser de traces.",
+    "subheadline": "Connectez-vous instantanément avec le chiffrement WireGuard. Votre appareil est votre compte.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Aucune donnée personnelle requise",
+    "trustBadges": {
+      "noData": "Aucune donnée personnelle",
+      "noLogs": "Sans journaux",
+      "unlimited": "Bande passante illimitée",
+      "wireguard": "Chiffrement WireGuard"
+    }
+  },
+  "features": {
+    "title": "Conçu pour une confidentialité totale",
+    "subtitle": "La plupart des VPN demandent votre e-mail avant de protéger votre vie privée. Pas Doppler.",
+    "items": {
+      "noRegistration": {
+        "title": "Confidentialité sans inscription",
+        "description": "Votre appareil sert de compte. Sans e-mail. Sans numéro de téléphone. Sans informations personnelles. La confidentialité commence dès votre connexion."
+      },
+      "wireguard": {
+        "title": "Chiffrement WireGuard",
+        "description": "Protocole VPN moderne auquel font confiance les professionnels de la sécurité. Connexions plus rapides, meilleure autonomie de batterie et chiffrement de niveau militaire."
+      },
+      "adBlocker": {
+        "title": "Bloqueur de publicités intégré",
+        "description": "Le blocage au niveau du réseau supprime jusqu'à 75% des publicités, trackers et pop-ups. Chargement des pages plus rapide, moins de données utilisées, navigation plus propre."
+      },
+      "contentFilter": {
+        "title": "Filtre de contenu et contrôle parental",
+        "description": "Bloquez des sites web spécifiques ou des catégories entières. Protégez les paramètres par mot de passe. Créez un internet plus sûr pour votre famille."
+      },
+      "minimalData": {
+        "title": "Collecte minimale de données",
+        "description": "Nous n'enregistrons pas votre activité de navigation. Nous ne suivons pas les sites que vous visitez. Notre architecture nécessite un minimum de données par conception."
+      },
+      "completelyFree": {
+        "title": "Entièrement gratuit",
+        "description": "Tous les serveurs sont gratuits avec toutes les fonctionnalités. Chiffrement complet, vitesses élevées, bande passante illimitée. Sans limitation de débit ni plafond de données."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Commencez en quelques secondes",
+    "subtitle": "Sans inscription, sans tracas — téléchargez et connectez-vous simplement",
+    "steps": {
+      "download": {
+        "title": "Téléchargez",
+        "description": "Obtenez Doppler VPN sur la boutique d'applications de votre appareil"
+      },
+      "connect": {
+        "title": "Connectez-vous",
+        "description": "Ouvrez l'application et appuyez sur se connecter — aucun compte nécessaire"
+      },
+      "browse": {
+        "title": "Naviguez",
+        "description": "Profitez d'une navigation privée et sans publicités instantanément"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Tarifs simples et transparents",
+    "subtitle": "Commencez avec un essai gratuit de 7 jours. Annulez à tout moment.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Toutes les fonctionnalités Premium incluses",
+    "cardSubtitle": "Les mêmes fonctionnalités puissantes, choisissez votre engagement",
+    "durationSelector": "Choisissez la durée d'abonnement",
+    "durations": {
+      "monthly": "1 Mois",
+      "sixMonth": "6 Mois",
+      "annual": "An"
+    },
+    "bestValue": "Meilleur",
+    "billedMonthly": "Facturation mensuelle",
+    "billed": "Facturé",
+    "every6Months": "tous les 6 mois",
+    "perYear": "par an",
+    "save": "Économisez",
+    "allFeaturesIncluded": "Toutes les fonctionnalités incluses dans chaque plan",
+    "features": {
+      "noLogs": "VPN sans journaux",
+      "adBlocker": "Bloqueur de publicités",
+      "categoryFilter": "Filtre de catégories",
+      "customBlocklist": "Listes de blocage",
+      "devices": "10 appareils",
+      "support": "Support 24/7"
+    },
+    "cta": "Commencer l'essai gratuit",
+    "cancelAnytime": "Annulez à tout moment. Sans questions.",
+    "guarantee": "Garantie satisfait ou remboursé de 30 jours",
+    "pricesIn": "Prix affichés en"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur Doppler VPN",
+    "items": {
+      "what": {
+        "question": "Qu'est-ce que Doppler VPN ?",
+        "answer": "Doppler VPN est un service de réseau privé virtuel axé sur la confidentialité qui chiffre votre connexion internet et masque votre adresse IP. Il comprend le blocage de publicités intégré, le filtrage de contenu par catégorie et le support des listes de blocage personnalisées — le tout sans inscription."
+      },
+      "noLogs": {
+        "question": "Doppler VPN est-il vraiment sans journaux ?",
+        "answer": "Oui, nous appliquons une politique stricte de zéro journal. Nous ne suivons, stockons ni partageons votre activité de navigation, horodatages de connexion, adresses IP ou toute autre donnée personnelle. Votre confidentialité est notre priorité."
+      },
+      "adBlocker": {
+        "question": "Comment fonctionne le bloqueur de publicités ?",
+        "answer": "Notre bloqueur de publicités fonctionne au niveau DNS, bloquant les publicités, trackers et domaines malveillants avant même qu'ils ne se chargent. Cela signifie une navigation plus rapide, moins de données utilisées et une protection dans toutes vos applications — pas seulement votre navigateur."
+      },
+      "categories": {
+        "question": "Quelles catégories de contenu puis-je filtrer ?",
+        "answer": "Vous pouvez filtrer le contenu dans plusieurs catégories, y compris le contenu pour adultes, les jeux d'argent, les réseaux sociaux, les jeux, le streaming et plus encore. Vous pouvez également importer des listes de blocage personnalisées pour un contrôle supplémentaire du filtrage de contenu."
+      },
+      "devices": {
+        "question": "Combien d'appareils puis-je utiliser ?",
+        "answer": "Un seul abonnement Doppler VPN couvre jusqu'à 10 appareils simultanément. Utilisez-le sur vos téléphones, tablettes et ordinateurs — tous protégés en même temps."
+      },
+      "platforms": {
+        "question": "Quelles plateformes sont prises en charge ?",
+        "answer": "Doppler VPN est disponible sur iOS (iPhone et iPad), macOS et Android. Nous travaillons constamment à l'élargissement de notre support de plateformes."
+      },
+      "cancel": {
+        "question": "Comment annuler mon abonnement ?",
+        "answer": "Vous pouvez annuler votre abonnement à tout moment via la boutique d'applications de votre appareil (App Store pour iOS/macOS ou Google Play pour Android). Votre accès continue jusqu'à la fin de votre période de facturation. Vous ne serez pas facturé après l'annulation."
+      },
+      "trial": {
+        "question": "Y a-t-il un essai gratuit ?",
+        "answer": "Oui ! Chaque nouvel utilisateur bénéficie d'un essai gratuit de 7 jours avec un accès complet à toutes les fonctionnalités Premium. L'essai se convertit en abonnement payant sauf annulation au moins 24 heures avant sa fin. Nous offrons également une garantie satisfait ou remboursé de 30 jours."
+      },
+      "whatIsIncluded": {
+        "question": "Que comprend Premium ?",
+        "answer": "Premium comprend des serveurs VPN dans plus de 50 emplacements avec chiffrement WireGuard, un bloqueur de publicités au niveau DNS fonctionnant dans toutes les applications, un filtre de contenu avec contrôle parental et la connexion sur jusqu'à 10 appareils simultanément."
+      },
+      "plans": {
+        "question": "Quels plans d'abonnement sont disponibles ?",
+        "answer": "Nous proposons trois plans : Mensuel, 6 Mois et Annuel. Tous les plans incluent les mêmes fonctionnalités Premium. Les plans plus longs offrent un prix mensuel plus bas. Les abonnements se renouvellent automatiquement sauf annulation au moins 24 heures avant la fin de la période de facturation."
+      },
+      "restore": {
+        "question": "Je me suis abonné mais mes fonctionnalités ne fonctionnent pas",
+        "answer": "Ouvrez l'application, allez dans Profil > Abonnement et appuyez sur Restaurer les achats. Cela resynchronisera votre abonnement avec nos serveurs. Si le problème persiste, contactez notre équipe de support à support@simnetiq.store."
+      },
+      "refund": {
+        "question": "Comment demander un remboursement ?",
+        "answer": "Les remboursements sont traités par Apple ou Google. Pour iOS, visitez reportaproblem.apple.com et connectez-vous avec votre Apple ID. Pour Android, ouvrez Google Play > Compte > Historique des commandes. Les remboursements sont généralement traités sous 48 heures."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "par",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Commencez",
+      "titleMiddle": "avec",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "VPN axé sur la confidentialité sans inscription. Connectez-vous instantanément avec le chiffrement WireGuard.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Voyagez",
+      "titleMiddle": "avec",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Forfaits de données eSIM mondiaux pour les voyageurs. Restez connecté partout dans le monde.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "VPN axé sur la confidentialité avec blocage avancé des publicités et filtrage de contenu.",
+    "product": "Produit",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "download": "Télécharger",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "Doppler VPN. Tous droits réservés."
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : février 2026",
+    "intro": "Chez Doppler VPN, votre confidentialité est notre priorité absolue. Cette Politique de Confidentialité explique comment nous traitons vos informations lorsque vous utilisez nos services VPN, de blocage de publicités et de filtrage de contenu.",
+    "sections": {
+      "noLogs": {
+        "title": "Politique sans journaux",
+        "content": "Nous appliquons une politique stricte de zéro journal. Nous ne suivons, stockons ni partageons : votre activité de navigation, horodatages de connexion, adresses IP d'origine, requêtes DNS, utilisation de la bande passante ou toute autre donnée pouvant vous identifier ou identifier vos activités en ligne. Le trafic VPN est chiffré de bout en bout et n'est jamais inspecté, enregistré ou stocké."
+      },
+      "collect": {
+        "title": "Ce que nous collectons",
+        "content": "Nous ne collectons que les informations minimales nécessaires pour fournir notre service : un identifiant d'appareil généré aléatoirement (non lié à votre identité personnelle), des informations de paiement (traitées de manière sécurisée par l'Apple App Store ou Google Play — nous ne voyons jamais vos données de paiement), des statistiques anonymes agrégées de charge de serveur pour maintenir les performances, et votre adresse e-mail uniquement si vous contactez volontairement le support."
+      },
+      "vpnData": {
+        "title": "Traitement des données VPN",
+        "content": "Lorsque vous vous connectez à notre service VPN, votre trafic internet est chiffré à l'aide du protocole WireGuard et acheminé via nos serveurs. Nous n'inspectons, n'enregistrons, ne stockons, ne modifions ni ne vendons aucune donnée passant par notre tunnel VPN. Notre bloqueur de publicités au niveau DNS et notre filtre de contenu fonctionnent sur notre résolveur DNS et n'enregistrent pas les requêtes individuelles ni les habitudes de navigation."
+      },
+      "security": {
+        "title": "Sécurité des données",
+        "content": "Nous utilisons des protocoles de chiffrement standard de l'industrie, y compris WireGuard, pour protéger votre connexion. Toute la transmission de données entre votre appareil et nos serveurs est chiffrée de bout en bout. Notre infrastructure serveur est configurée pour minimiser la rétention de données par conception."
+      },
+      "thirdParty": {
+        "title": "Tiers",
+        "content": "Nous ne vendons, n'échangeons ni ne partageons vos informations personnelles avec des tiers. Nous utilisons RevenueCat pour la gestion des abonnements (ils ne traitent que des identifiants d'achat anonymes) et les boutiques d'applications Apple/Google pour le traitement des paiements. Ces fournisseurs sont liés par leurs propres politiques de confidentialité et obligations contractuelles."
+      },
+      "children": {
+        "title": "Confidentialité des enfants",
+        "content": "Notre fonctionnalité de filtrage de contenu inclut des capacités de contrôle parental. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Le filtre de contenu fonctionne au niveau DNS sans collecter ni stocker de données personnelles sur les utilisateurs de tout âge."
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "content": "Si vous avez des questions concernant cette Politique de Confidentialité, contactez-nous à privacy@dopplervpn.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : février 2026",
+    "intro": "En utilisant Doppler VPN, vous acceptez ces Conditions d'Utilisation. Veuillez les lire attentivement.",
+    "sections": {
+      "service": {
+        "title": "Description du service",
+        "content": "Doppler VPN fournit un service de réseau privé virtuel qui chiffre votre connexion internet et masque votre adresse IP à des fins de confidentialité. Le service comprend également le blocage de publicités au niveau DNS et le filtrage de contenu avec contrôle parental. Le service est fourni « tel quel » et « selon disponibilité »."
+      },
+      "usage": {
+        "title": "Utilisation acceptable",
+        "content": "Vous acceptez d'utiliser Doppler VPN uniquement à des fins légales et en conformité avec toutes les lois locales, nationales et internationales applicables. Vous ne pouvez pas utiliser le service pour des activités illégales, pour contourner les restrictions géographiques ou les accords de licence de contenu, pour nuire à autrui, pour distribuer des logiciels malveillants, pour enfreindre les droits de propriété intellectuelle ou pour interférer avec les opérations de notre service. Nous nous réservons le droit de résilier les comptes qui enfreignent ces conditions."
+      },
+      "subscription": {
+        "title": "Abonnements et paiements",
+        "content": "Doppler VPN Premium comprend l'accès aux serveurs VPN premium dans plus de 50 emplacements, le blocage de publicités au niveau DNS, le filtrage de contenu avec contrôle parental et la connexion sur jusqu'à 10 appareils simultanément. Les abonnements sont facturés via l'Apple App Store ou le Google Play Store. Les plans sont disponibles sur une base mensuelle, semestrielle ou annuelle et se renouvellent automatiquement sauf annulation au moins 24 heures avant la fin de la période de facturation en cours. Vous pouvez annuler votre abonnement à tout moment via les paramètres de la boutique d'applications de votre appareil. Les remboursements sont soumis aux politiques de remboursement de la boutique d'applications respective."
+      },
+      "liability": {
+        "title": "Limitation de responsabilité",
+        "content": "Dans la mesure maximale permise par la loi, Doppler VPN ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs découlant de votre utilisation du service."
+      },
+      "changes": {
+        "title": "Modifications des conditions",
+        "content": "Nous pouvons mettre à jour ces Conditions d'Utilisation de temps en temps. Nous vous informerons de tout changement important via l'application ou par e-mail. L'utilisation continue du service après les modifications constitue l'acceptation des nouvelles conditions."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "Pour toute question concernant ces Conditions d'Utilisation, contactez-nous à legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Conseils de confidentialité, guides VPN et informations sur la sécurité de l'équipe Doppler.",
+    "title": "Blog Doppler VPN",
+    "subtitle": "Conseils de confidentialité, informations sur la sécurité et guides VPN",
+    "allPosts": "Tous les articles",
+    "filterByTag": "Filtrer par tag",
+    "readMore": "Lire la suite",
+    "readingTime": "{minutes} min de lecture",
+    "publishedOn": "Publié le",
+    "by": "par",
+    "relatedPosts": "Articles connexes",
+    "viewAllPosts": "Voir tous les articles",
+    "latestPosts": "Derniers articles de notre blog",
+    "latestPostsSubtitle": "Conseils de confidentialité et informations VPN",
+    "noPosts": "Aucun article trouvé",
+    "noPostsDescription": "Revenez bientôt pour du nouveau contenu.",
+    "backToBlog": "Retour au blog",
+    "breadcrumb": {
+      "home": "Accueil",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Prêt à protéger votre vie privée ?",
+      "subtitle": "Téléchargez Doppler VPN et commencez à naviguer en toute sécurité dès aujourd'hui.",
+      "button": "Commencer",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "VPN axé sur la confidentialité sans inscription requise",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Données eSIM mondiales pour les voyageurs du monde entier",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

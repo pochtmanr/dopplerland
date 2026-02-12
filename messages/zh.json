@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — 免费VPN无需注册 | 私密且安全",
+    "description": "免费VPN，无需邮箱或注册。通过WireGuard加密即时连接，内置广告拦截器和内容过滤。无日志。无限制。"
+  },
+  "nav": {
+    "features": "功能",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "blog": "博客",
+    "download": "下载"
+  },
+  "hero": {
+    "tagline": "隐私至上的VPN。永久免费。",
+    "headlinePart1a": "畅游",
+    "headlinePart1b": "互联网",
+    "headlinePart2": "不留任何痕迹。",
+    "subheadline": "通过WireGuard加密即时连接。您的设备就是您的账户。",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "无需个人信息",
+    "trustBadges": {
+      "noData": "无个人数据",
+      "noLogs": "零日志",
+      "unlimited": "无限带宽",
+      "wireguard": "WireGuard加密"
+    }
+  },
+  "features": {
+    "title": "为完全隐私而设计",
+    "subtitle": "大多数VPN在保护您的隐私之前要求您的邮箱。Doppler不会。",
+    "items": {
+      "noRegistration": {
+        "title": "无需注册的隐私保护",
+        "description": "您的设备就是您的账户。无需邮箱。无需手机号。无需个人信息。连接的那一刻起隐私即开始。"
+      },
+      "wireguard": {
+        "title": "WireGuard加密",
+        "description": "安全专家信赖的现代VPN协议。更快的连接速度、更好的电池效率和军事级加密。"
+      },
+      "adBlocker": {
+        "title": "内置广告拦截器",
+        "description": "网络级拦截可移除多达75%的广告、追踪器和弹窗。更快的页面加载、更少的数据使用、更清爽的浏览体验。"
+      },
+      "contentFilter": {
+        "title": "内容过滤与家长控制",
+        "description": "屏蔽特定网站或整个分类。密码保护设置。为您的家人创建更安全的网络环境。"
+      },
+      "minimalData": {
+        "title": "最少数据收集",
+        "description": "我们不记录您的浏览活动。我们不追踪您访问的网站。我们的架构在设计上要求最少的数据。"
+      },
+      "completelyFree": {
+        "title": "完全免费",
+        "description": "所有服务器免费提供完整功能。完整加密、高速连接、无限带宽。无限速或数据上限。"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "几秒钟即可开始",
+    "subtitle": "无需注册，无需麻烦——下载即可连接",
+    "steps": {
+      "download": {
+        "title": "下载",
+        "description": "从您设备的应用商店获取Doppler VPN"
+      },
+      "connect": {
+        "title": "连接",
+        "description": "打开应用点击连接——无需账户"
+      },
+      "browse": {
+        "title": "浏览",
+        "description": "立即享受私密、无广告的浏览体验"
+      }
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "7天免费试用。随时取消。",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "包含所有高级功能",
+    "cardSubtitle": "相同的强大功能，选择您的订阅方案",
+    "durationSelector": "选择订阅时长",
+    "durations": {
+      "monthly": "1个月",
+      "sixMonth": "6个月",
+      "annual": "1年"
+    },
+    "bestValue": "最划算",
+    "billedMonthly": "按月计费",
+    "billed": "计费",
+    "every6Months": "每6个月",
+    "perYear": "每年",
+    "save": "节省",
+    "allFeaturesIncluded": "每个方案都包含所有功能",
+    "features": {
+      "noLogs": "零日志VPN",
+      "adBlocker": "广告拦截器",
+      "categoryFilter": "分类过滤",
+      "customBlocklist": "拦截列表",
+      "devices": "10台设备",
+      "support": "24/7支持"
+    },
+    "cta": "开始免费试用",
+    "cancelAnytime": "随时取消。无需理由。",
+    "guarantee": "30天退款保证",
+    "pricesIn": "价格显示为"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于Doppler VPN您需要知道的一切",
+    "items": {
+      "what": {
+        "question": "什么是Doppler VPN？",
+        "answer": "Doppler VPN是一款注重隐私的虚拟专用网络服务，可加密您的互联网连接并隐藏您的IP地址。它包括内置广告拦截、按类别的内容过滤以及自定义拦截列表支持——所有这些都无需注册。"
+      },
+      "noLogs": {
+        "question": "Doppler VPN真的不保存日志吗？",
+        "answer": "是的，我们执行严格的零日志政策。我们不追踪、存储或分享您的任何浏览活动、连接时间戳、IP地址或任何其他个人数据。您的隐私是我们的首要任务。"
+      },
+      "adBlocker": {
+        "question": "广告拦截器如何工作？",
+        "answer": "我们的广告拦截器在DNS级别工作，在广告、追踪器和恶意域名加载之前就将其拦截。这意味着更快的浏览速度、更少的数据使用，以及所有应用中的保护——不仅仅是浏览器。"
+      },
+      "categories": {
+        "question": "我可以过滤哪些内容分类？",
+        "answer": "您可以过滤多个类别的内容，包括成人内容、赌博、社交媒体、游戏、流媒体等。您还可以导入自定义拦截列表以获得额外的内容过滤控制。"
+      },
+      "devices": {
+        "question": "我可以使用多少台设备？",
+        "answer": "一个Doppler VPN订阅可同时覆盖多达10台设备。在您的手机、平板电脑和电脑上使用——全部同时受到保护。"
+      },
+      "platforms": {
+        "question": "支持哪些平台？",
+        "answer": "Doppler VPN支持iOS（iPhone和iPad）、macOS和Android。我们正在不断扩大平台支持。"
+      },
+      "cancel": {
+        "question": "如何取消订阅？",
+        "answer": "您可以随时通过设备的应用商店取消订阅（iOS/macOS使用App Store，Android使用Google Play）。您的访问权限将持续到当前计费周期结束。取消后不会再收费。"
+      },
+      "trial": {
+        "question": "有免费试用吗？",
+        "answer": "有！每位新用户都可获得7天免费试用，完全访问所有高级功能。试用期结束后将自动转为付费订阅，除非在到期前至少24小时取消。我们还提供30天退款保证。"
+      },
+      "whatIsIncluded": {
+        "question": "高级版包含什么？",
+        "answer": "高级版包括50多个位置的VPN服务器（WireGuard加密）、适用于所有应用的DNS级广告拦截器、带家长控制的内容过滤，以及最多10台设备同时连接。"
+      },
+      "plans": {
+        "question": "有哪些订阅方案？",
+        "answer": "我们提供三种方案：月度、6个月和年度。所有方案都包含相同的高级功能。较长的方案提供更低的月均价格。除非在计费周期结束前至少24小时取消，否则订阅将自动续费。"
+      },
+      "restore": {
+        "question": "我已订阅但功能不起作用",
+        "answer": "打开应用，进入个人资料 > 订阅，点击恢复购买。这将重新同步您的订阅与我们的服务器。如果问题仍然存在，请联系我们的支持团队：support@simnetiq.store。"
+      },
+      "refund": {
+        "question": "如何申请退款？",
+        "answer": "退款由Apple或Google处理。对于iOS，请访问reportaproblem.apple.com并使用您的Apple ID登录。对于Android，打开Google Play > 账户 > 订单记录。退款通常在48小时内处理完成。"
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "来自",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "开始使用",
+      "titleMiddle": "",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "隐私至上的VPN，无需注册。通过WireGuard加密即时连接。",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "旅行",
+      "titleMiddle": "选择",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "为旅行者提供全球eSIM数据套餐。在世界任何地方保持连接。",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "隐私至上的VPN，配备高级广告拦截和内容过滤功能。",
+    "product": "产品",
+    "features": "功能",
+    "pricing": "价格",
+    "download": "下载",
+    "legal": "法律信息",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "Doppler VPN。保留所有权利。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2026年2月",
+    "intro": "在Doppler VPN，您的隐私是我们的首要任务。本隐私政策解释了当您使用我们的VPN、广告拦截和内容过滤服务时，我们如何处理您的信息。",
+    "sections": {
+      "noLogs": {
+        "title": "零日志政策",
+        "content": "我们执行严格的零日志政策。我们不追踪、存储或分享以下内容：您的浏览活动、连接时间戳、原始IP地址、DNS查询、带宽使用或任何其他可能识别您或您在线活动的数据。VPN流量是端到端加密的，从不被检查、记录或存储。"
+      },
+      "collect": {
+        "title": "我们收集什么",
+        "content": "我们只收集提供服务所需的最少信息：随机生成的设备标识符（不与您的个人身份关联）、支付信息（由Apple App Store或Google Play安全处理——我们从不看到您的支付详情）、用于维护性能的匿名汇总服务器负载统计信息，以及仅当您自愿联系支持时的电子邮件地址。"
+      },
+      "vpnData": {
+        "title": "VPN数据处理",
+        "content": "当您连接到我们的VPN服务时，您的互联网流量使用WireGuard协议加密并通过我们的服务器路由。我们不检查、记录、存储、修改或出售任何通过VPN隧道的数据。我们的DNS级广告拦截器和内容过滤器在DNS解析器上运行，不记录单个查询或浏览模式。"
+      },
+      "security": {
+        "title": "数据安全",
+        "content": "我们使用行业标准加密协议（包括WireGuard）来保护您的连接。您的设备与我们服务器之间的所有数据传输都是端到端加密的。我们的服务器基础设施在设计上配置为最小化数据保留。"
+      },
+      "thirdParty": {
+        "title": "第三方",
+        "content": "我们不会出售、交易或与第三方分享您的个人信息。我们使用RevenueCat进行订阅管理（他们仅处理匿名购买标识符），以及Apple/Google应用商店进行支付处理。这些提供商受其自身隐私政策和合同义务的约束。"
+      },
+      "children": {
+        "title": "儿童隐私",
+        "content": "我们的内容过滤功能包含家长控制功能。我们不会故意收集13岁以下儿童的个人信息。内容过滤器在DNS级别运行，不收集或存储任何年龄用户的个人数据。"
+      },
+      "contact": {
+        "title": "联系我们",
+        "content": "如果您对本隐私政策有任何疑问，请通过privacy@dopplervpn.com联系我们"
+      }
+    }
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新：2026年2月",
+    "intro": "使用Doppler VPN即表示您同意这些服务条款。请仔细阅读。",
+    "sections": {
+      "service": {
+        "title": "服务描述",
+        "content": "Doppler VPN提供虚拟专用网络服务，加密您的互联网连接并隐藏您的IP地址以保护隐私。该服务还包括DNS级广告拦截和带家长控制的内容过滤。服务按\"现状\"和\"可用\"提供。"
+      },
+      "usage": {
+        "title": "可接受的使用",
+        "content": "您同意仅将Doppler VPN用于合法目的，并遵守所有适用的当地、国家和国际法律。您不得将该服务用于非法活动、绕过地理限制或内容许可协议、伤害他人、传播恶意软件、侵犯知识产权或干扰我们的服务运营。我们保留终止违反这些条款的账户的权利。"
+      },
+      "subscription": {
+        "title": "订阅和付款",
+        "content": "Doppler VPN高级版包括访问50多个位置的高级VPN服务器、DNS级广告拦截、带家长控制的内容过滤，以及最多10台设备同时连接。订阅通过Apple App Store或Google Play Store计费。方案提供月度、6个月或年度选择，除非在当前计费周期结束前至少24小时取消，否则自动续费。您可以随时通过设备的应用商店设置取消订阅。退款受相应应用商店退款政策的约束。"
+      },
+      "liability": {
+        "title": "责任限制",
+        "content": "在法律允许的最大范围内，Doppler VPN不对因您使用服务而产生的任何间接、附带、特殊、后果性或惩罚性损害负责。"
+      },
+      "changes": {
+        "title": "条款变更",
+        "content": "我们可能会不时更新这些服务条款。我们将通过应用程序或电子邮件通知您任何重大变更。变更后继续使用服务即表示接受新条款。"
+      },
+      "contact": {
+        "title": "联系方式",
+        "content": "如有关于这些服务条款的问题，请通过legal@dopplervpn.com联系我们"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "博客",
+    "indexDescription": "来自Doppler团队的隐私提示、VPN指南和安全洞察。",
+    "title": "Doppler VPN博客",
+    "subtitle": "隐私提示、安全洞察和VPN指南",
+    "allPosts": "所有文章",
+    "filterByTag": "按标签筛选",
+    "readMore": "阅读更多",
+    "readingTime": "{minutes}分钟阅读",
+    "publishedOn": "发布于",
+    "by": "作者",
+    "relatedPosts": "相关文章",
+    "viewAllPosts": "查看所有文章",
+    "latestPosts": "最新博客文章",
+    "latestPostsSubtitle": "隐私提示和VPN洞察",
+    "noPosts": "未找到文章",
+    "noPostsDescription": "请稍后再来查看新内容。",
+    "backToBlog": "返回博客",
+    "breadcrumb": {
+      "home": "首页",
+      "blog": "博客"
+    },
+    "cta": {
+      "title": "准备好保护您的隐私了吗？",
+      "subtitle": "下载Doppler VPN，今天就开始安全浏览。",
+      "button": "立即开始",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "隐私至上的VPN，无需注册",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "为全球旅行者提供eSIM数据服务",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — Libreng VPN Walang Pagpaparehistro | Pribado at Secure",
+    "description": "Libreng VPN na walang email o pag-sign up. Kumonekta agad sa WireGuard encryption, built-in ad blocker at content filter. Walang logs. Walang data caps."
+  },
+  "nav": {
+    "features": "Mga Tampok",
+    "pricing": "Presyo",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "download": "I-download"
+  },
+  "hero": {
+    "tagline": "Privacy-First VPN. Libre Magpakailanman.",
+    "headlinePart1a": "Pumunta kahit saan",
+    "headlinePart1b": "online",
+    "headlinePart2": "Walang iniiwanang bakas.",
+    "subheadline": "Kumonekta agad sa WireGuard encryption. Ang device mo ang iyong account.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Hindi Kailangan ng Personal na Data",
+    "trustBadges": {
+      "noData": "Walang Personal na Data",
+      "noLogs": "Walang Logs",
+      "unlimited": "Walang Limitasyong Bandwidth",
+      "wireguard": "WireGuard Encryption"
+    }
+  },
+  "features": {
+    "title": "Dinisenyo para sa Kumpletong Privacy",
+    "subtitle": "Karamihan ng VPN humihingi ng email bago protektahan ang privacy mo. Hindi ganyan ang Doppler.",
+    "items": {
+      "noRegistration": {
+        "title": "Privacy na Walang Pagpaparehistro",
+        "description": "Ang device mo ang iyong account. Walang email. Walang phone number. Walang personal na impormasyon. Nagsisimula ang privacy sa sandaling kumonekta ka."
+      },
+      "wireguard": {
+        "title": "WireGuard Encryption",
+        "description": "Modernong VPN protocol na pinagkakatiwalaan ng mga security professional. Mas mabilis na koneksyon, mas mahusay na baterya, at military-grade encryption."
+      },
+      "adBlocker": {
+        "title": "Built-in na Ad Blocker",
+        "description": "Ang network-level blocking ay nag-aalis ng hanggang 75% ng ads, trackers, at pop-ups. Mas mabilis na pag-load ng page, mas kaunting data usage, mas malinis na browsing."
+      },
+      "contentFilter": {
+        "title": "Content Filter at Parental Controls",
+        "description": "I-block ang mga partikular na website o buong kategorya. I-password-protect ang settings. Lumikha ng mas ligtas na internet para sa iyong pamilya."
+      },
+      "minimalData": {
+        "title": "Minimal na Pagkolekta ng Data",
+        "description": "Hindi namin inilalagay sa log ang iyong browsing activity. Hindi namin tinatrack ang mga website na binibisita mo. Ang aming architecture ay nangangailangan ng minimal na data ayon sa disenyo."
+      },
+      "completelyFree": {
+        "title": "Ganap na Libre",
+        "description": "Lahat ng server ay libre na may buong functionality. Kumpletong encryption, mabilis na bilis, walang limitasyong bandwidth. Walang throttling o data caps."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Magsimula sa ilang segundo",
+    "subtitle": "Walang registration, walang abala — i-download at kumonekta lang",
+    "steps": {
+      "download": {
+        "title": "I-download",
+        "description": "Kunin ang Doppler VPN mula sa app store ng iyong device"
+      },
+      "connect": {
+        "title": "Kumonekta",
+        "description": "Buksan ang app at i-tap ang connect — hindi kailangan ng account"
+      },
+      "browse": {
+        "title": "Mag-browse",
+        "description": "Mag-enjoy ng pribado at walang ad na browsing agad"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple at transparent na presyo",
+    "subtitle": "Magsimula sa 7-araw na libreng trial. Kanselahin anumang oras.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Lahat ng Premium feature ay kasama",
+    "cardSubtitle": "Parehong makapangyarihang features, piliin ang iyong commitment",
+    "durationSelector": "Pumili ng tagal ng subscription",
+    "durations": {
+      "monthly": "1 Buwan",
+      "sixMonth": "6 na Buwan",
+      "annual": "Taon"
+    },
+    "bestValue": "Pinakamahusay",
+    "billedMonthly": "Bina-bill monthly",
+    "billed": "Bina-bill",
+    "every6Months": "tuwing 6 na buwan",
+    "perYear": "bawat taon",
+    "save": "Makatipid",
+    "allFeaturesIncluded": "Lahat ng feature ay kasama sa bawat plan",
+    "features": {
+      "noLogs": "Zero-log VPN",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Mga blocklist",
+      "devices": "10 device",
+      "support": "24/7 support"
+    },
+    "cta": "Simulan ang Libreng Trial",
+    "cancelAnytime": "Kanselahin anumang oras. Walang tanong.",
+    "guarantee": "30-araw na money-back guarantee",
+    "pricesIn": "Presyo ay ipinapakita sa"
+  },
+  "faq": {
+    "title": "Mga madalas itanong",
+    "subtitle": "Lahat ng kailangan mong malaman tungkol sa Doppler VPN",
+    "items": {
+      "what": {
+        "question": "Ano ang Doppler VPN?",
+        "answer": "Ang Doppler VPN ay isang privacy-focused na virtual private network service na nag-e-encrypt ng iyong internet connection at nagtatago ng iyong IP address. Kasama ang built-in na ad blocking, content filtering ayon sa kategorya, at suporta para sa custom blocklists — lahat nang hindi kailangan ng registration."
+      },
+      "noLogs": {
+        "question": "Totoong walang logs ang Doppler VPN?",
+        "answer": "Oo, nagpapatupad kami ng mahigpit na no-logs policy. Hindi namin tinatrack, iniimbak, o ibinabahagi ang iyong browsing activity, connection timestamps, IP addresses, o anumang personal data. Ang privacy mo ang aming prayoridad."
+      },
+      "adBlocker": {
+        "question": "Paano gumagana ang ad blocker?",
+        "answer": "Ang aming ad blocker ay gumagana sa DNS level, bina-block ang ads, trackers, at malicious domains bago pa sila mag-load. Ibig sabihin mas mabilis na browsing, mas kaunting data usage, at proteksyon sa lahat ng apps — hindi lang sa browser."
+      },
+      "categories": {
+        "question": "Anong mga content category ang pwedeng i-filter?",
+        "answer": "Maaari mong i-filter ang content sa maraming kategorya kabilang ang adult content, gambling, social media, gaming, streaming, at marami pa. Maaari ka ring mag-import ng custom blocklists para sa karagdagang content filtering control."
+      },
+      "devices": {
+        "question": "Ilang device ang pwedeng gamitin?",
+        "answer": "Ang isang Doppler VPN subscription ay sumasaklaw sa hanggang 10 device nang sabay-sabay. Gamitin sa iyong mga phone, tablet, at computer — lahat ay protektado nang sabay-sabay."
+      },
+      "platforms": {
+        "question": "Anong mga platform ang sinusuportahan?",
+        "answer": "Ang Doppler VPN ay available sa iOS (iPhone at iPad), macOS, at Android. Patuloy kaming nagtatrabaho upang palawakin ang suporta sa platform."
+      },
+      "cancel": {
+        "question": "Paano ko kakanselahin ang subscription?",
+        "answer": "Maaari mong kanselahin ang iyong subscription anumang oras sa pamamagitan ng app store ng iyong device (App Store para sa iOS/macOS o Google Play para sa Android). Ang access mo ay magpapatuloy hanggang sa katapusan ng billing period. Hindi ka na sisingilin matapos ang pagkansela."
+      },
+      "trial": {
+        "question": "May libreng trial ba?",
+        "answer": "Oo! Bawat bagong user ay makakakuha ng 7-araw na libreng trial na may buong access sa lahat ng Premium features. Ang trial ay magiging bayad na subscription maliban kung kakanselahin nang hindi bababa sa 24 oras bago matapos. Nag-aalok din kami ng 30-araw na money-back guarantee."
+      },
+      "whatIsIncluded": {
+        "question": "Ano ang kasama sa Premium?",
+        "answer": "Kasama sa Premium ang VPN servers sa 50+ lokasyon na may WireGuard encryption, DNS-level ad blocker na gumagana sa lahat ng apps, content filter na may parental controls, at koneksyon sa hanggang 10 device nang sabay-sabay."
+      },
+      "plans": {
+        "question": "Anong mga subscription plan ang available?",
+        "answer": "Nag-aalok kami ng tatlong plan: Monthly, 6-Month, at Yearly. Lahat ng plan ay may kasamang parehong Premium features. Ang mas mahabang plan ay nag-aalok ng mas mababang presyo bawat buwan. Ang mga subscription ay awtomatikong nagre-renew maliban kung kakanselahin nang hindi bababa sa 24 oras bago matapos ang billing period."
+      },
+      "restore": {
+        "question": "Nag-subscribe ako pero hindi gumagana ang features",
+        "answer": "Buksan ang app, pumunta sa Profile > Subscription at i-tap ang Restore Purchases. I-re-sync nito ang iyong subscription sa aming servers. Kung magpapatuloy ang isyu, kontakin ang aming support team sa support@simnetiq.store."
+      },
+      "refund": {
+        "question": "Paano mag-request ng refund?",
+        "answer": "Ang mga refund ay pinoproseso ng Apple o Google. Para sa iOS, bisitahin ang reportaproblem.apple.com at mag-sign in gamit ang iyong Apple ID. Para sa Android, buksan ang Google Play > Account > Order history. Ang mga refund ay karaniwang pinoproseso sa loob ng 48 oras."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "ng",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Magsimula",
+      "titleMiddle": "sa",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "Privacy-first VPN na walang registration. Kumonekta agad sa WireGuard encryption.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Maglakbay",
+      "titleMiddle": "sa",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Global eSIM data plans para sa mga manlalakbay. Manatiling konektado kahit saan sa mundo.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "Privacy-first VPN na may advanced ad blocking at content filtering.",
+    "product": "Produkto",
+    "features": "Mga Tampok",
+    "pricing": "Presyo",
+    "download": "I-download",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "Doppler VPN. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Huling na-update: Pebrero 2026",
+    "intro": "Sa Doppler VPN, ang iyong privacy ang aming pangunahing prayoridad. Ipinapaliwanag ng Privacy Policy na ito kung paano namin hinahawakan ang iyong impormasyon kapag ginagamit mo ang aming VPN, ad blocking, at content filtering services.",
+    "sections": {
+      "noLogs": {
+        "title": "No-Logs Policy",
+        "content": "Nagpapatupad kami ng mahigpit na no-logs policy. Hindi namin tinatrack, iniimbak, o ibinabahagi: ang iyong browsing activity, connection timestamps, originating IP addresses, DNS queries, bandwidth usage, o anumang data na maaaring tumukoy sa iyo o sa iyong online activities. Ang VPN traffic ay naka-encrypt mula simula hanggang dulo at hindi kailanman sinisiyasat, nire-record, o iniimbak."
+      },
+      "collect": {
+        "title": "Ano ang Kinokolekta Namin",
+        "content": "Kinokolekta lang namin ang minimum na impormasyong kailangan para maibigay ang aming serbisyo: randomly generated device identifier (hindi konektado sa iyong personal na pagkakakilanlan), impormasyon sa pagbabayad (ligtas na pinoproseso ng Apple App Store o Google Play — hindi namin nakikita ang iyong payment details), anonymous aggregated server load statistics para mapanatili ang performance, at ang iyong email address kung kusang-loob kang makipag-ugnayan sa support."
+      },
+      "vpnData": {
+        "title": "VPN Data Handling",
+        "content": "Kapag kumonekta ka sa aming VPN service, ang iyong internet traffic ay naka-encrypt gamit ang WireGuard protocol at dinaraan sa aming servers. Hindi namin sinisiyasat, nire-record, iniimbak, binabago, o ibinebenta ang anumang data na dumadaan sa aming VPN tunnel. Ang aming DNS-level ad blocker at content filter ay gumagana sa aming DNS resolver at hindi nagla-log ng mga indibidwal na query o browsing pattern."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "Gumagamit kami ng industry-standard encryption protocols kasama ang WireGuard upang protektahan ang iyong koneksyon. Lahat ng data transmission sa pagitan ng iyong device at aming servers ay naka-encrypt mula simula hanggang dulo. Ang aming server infrastructure ay naka-configure upang i-minimize ang data retention ayon sa disenyo."
+      },
+      "thirdParty": {
+        "title": "Mga Third Party",
+        "content": "Hindi namin ibinebenta, ipinagpapalit, o ibinabahagi ang iyong personal na impormasyon sa mga third party. Gumagamit kami ng RevenueCat para sa subscription management (anonymous purchase identifiers lang ang pinoproseso nila) at Apple/Google app stores para sa payment processing. Ang mga provider na ito ay nakatali sa kanilang sariling privacy policies at contractual obligations."
+      },
+      "children": {
+        "title": "Privacy ng mga Bata",
+        "content": "Ang aming content filtering feature ay may kasamang parental control capabilities. Hindi kami sadyang nangongolekta ng personal na impormasyon mula sa mga batang wala pang 13 taong gulang. Ang content filter ay gumagana sa DNS level nang walang pagkolekta o pag-iimbak ng personal data ng mga user sa anumang edad."
+      },
+      "contact": {
+        "title": "Makipag-ugnayan sa Amin",
+        "content": "Kung may tanong ka tungkol sa Privacy Policy na ito, mangyaring makipag-ugnayan sa amin sa privacy@dopplervpn.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Huling na-update: Pebrero 2026",
+    "intro": "Sa paggamit ng Doppler VPN, sumasang-ayon ka sa Terms of Service na ito. Mangyaring basahin nang mabuti.",
+    "sections": {
+      "service": {
+        "title": "Paglalarawan ng Serbisyo",
+        "content": "Ang Doppler VPN ay nagbibigay ng virtual private network service na nag-e-encrypt ng iyong internet connection at nagtatago ng iyong IP address para sa privacy. Kasama rin sa serbisyo ang DNS-level ad blocking at content filtering na may parental controls. Ang serbisyo ay ibinibigay \"as is\" at \"as available.\""
+      },
+      "usage": {
+        "title": "Katanggap-tanggap na Paggamit",
+        "content": "Sumasang-ayon ka na gagamitin ang Doppler VPN para lamang sa legal na layunin at alinsunod sa lahat ng naaangkop na batas. Hindi mo maaaring gamitin ang serbisyo para sa anumang ilegal na aktibidad, pag-circumvent ng geo-restrictions, pagdamay sa iba, pagpapalaganap ng malware, paglabag sa intellectual property rights, o panghihimasok sa aming service operations. Inilalaan namin ang karapatang i-terminate ang mga account na lumalabag sa mga terms na ito."
+      },
+      "subscription": {
+        "title": "Mga Subscription at Pagbabayad",
+        "content": "Kasama sa Doppler VPN Premium ang access sa premium VPN servers sa 50+ lokasyon, DNS-level ad blocking, content filtering na may parental controls, at koneksyon sa hanggang 10 device nang sabay-sabay. Ang mga subscription ay bina-bill sa pamamagitan ng Apple App Store o Google Play Store. Ang mga plan ay available sa monthly, 6-month, o annual basis at awtomatikong nagre-renew maliban kung kakanselahin nang hindi bababa sa 24 oras bago matapos ang kasalukuyang billing period. Maaari mong kanselahin ang iyong subscription anumang oras sa pamamagitan ng app store settings ng iyong device. Ang mga refund ay ayon sa refund policy ng kani-kanilang app store."
+      },
+      "liability": {
+        "title": "Limitasyon ng Liability",
+        "content": "Sa maximum na lawak na pinapayagan ng batas, ang Doppler VPN ay hindi mananagot para sa anumang indirect, incidental, special, consequential, o punitive damages na nagmumula sa iyong paggamit ng serbisyo."
+      },
+      "changes": {
+        "title": "Mga Pagbabago sa Terms",
+        "content": "Maaari naming i-update ang Terms of Service na ito paminsan-minsan. Aabisuhan ka namin tungkol sa anumang material na pagbabago sa pamamagitan ng app o email. Ang patuloy na paggamit ng serbisyo pagkatapos ng mga pagbabago ay nangangahulugan ng pagtanggap sa mga bagong terms."
+      },
+      "contact": {
+        "title": "Makipag-ugnayan",
+        "content": "Para sa mga tanong tungkol sa Terms of Service na ito, mangyaring makipag-ugnayan sa amin sa legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Mga tip sa privacy, VPN guides, at security insights mula sa Doppler team.",
+    "title": "Doppler VPN Blog",
+    "subtitle": "Mga tip sa privacy, security insights, at VPN guides",
+    "allPosts": "Lahat ng Post",
+    "filterByTag": "I-filter ayon sa tag",
+    "readMore": "Magbasa pa",
+    "readingTime": "{minutes} min basahin",
+    "publishedOn": "Na-publish noong",
+    "by": "ni",
+    "relatedPosts": "Mga Kaugnay na Artikulo",
+    "viewAllPosts": "Tingnan Lahat ng Post",
+    "latestPosts": "Pinakabago mula sa Aming Blog",
+    "latestPostsSubtitle": "Mga tip sa privacy at VPN insights",
+    "noPosts": "Walang nahanap na post",
+    "noPostsDescription": "Bumalik muli para sa bagong content.",
+    "backToBlog": "Bumalik sa Blog",
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Handa ka na bang protektahan ang iyong privacy?",
+      "subtitle": "I-download ang Doppler VPN at simulang mag-browse nang ligtas ngayon.",
+      "button": "Magsimula",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "Privacy-first VPN na walang registration",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Global eSIM data para sa mga manlalakbay sa buong mundo",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

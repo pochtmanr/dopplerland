@@ -27,17 +27,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("indexDescription"),
     alternates: {
       canonical: `${baseUrl}/${locale}/blog`,
-      languages: {
-        en: `${baseUrl}/en/blog`,
-        he: `${baseUrl}/he/blog`,
-        "x-default": `${baseUrl}/en/blog`,
-      },
+      languages: Object.fromEntries([
+        ...routing.locales.map((loc) => [loc, `${baseUrl}/${loc}/blog`]),
+        ["x-default", `${baseUrl}/en/blog`],
+      ]),
     },
     openGraph: {
       title: t("title"),
       description: t("indexDescription"),
       url: `${baseUrl}/${locale}/blog`,
-      locale: locale === "he" ? "he_IL" : "en_US",
+      locale: locale,
       type: "website",
     },
   };
@@ -51,10 +50,13 @@ interface TagData {
 interface PostData {
   slug: string;
   image_url: string | null;
-  image_alt_en: string | null;
-  image_alt_he: string | null;
   published_at: string | null;
-  blog_post_translations: { locale: string; title: string; excerpt: string }[];
+  blog_post_translations: {
+    locale: string;
+    title: string;
+    excerpt: string;
+    image_alt: string | null;
+  }[];
   blog_post_tags: {
     blog_tags: {
       slug: string;
@@ -92,13 +94,12 @@ async function getBlogData(locale: string, tagSlug: string | undefined) {
     .select(`
       slug,
       image_url,
-      image_alt_en,
-      image_alt_he,
       published_at,
       blog_post_translations!inner (
         locale,
         title,
-        excerpt
+        excerpt,
+        image_alt
       ),
       blog_post_tags (
         blog_tags (
@@ -131,7 +132,7 @@ async function getBlogData(locale: string, tagSlug: string | undefined) {
       title: translation.title,
       excerpt: translation.excerpt,
       imageUrl: post.image_url,
-      imageAlt: locale === "he" ? post.image_alt_he : post.image_alt_en,
+      imageAlt: translation.image_alt,
       publishedAt: post.published_at,
       tags: postTags,
     };

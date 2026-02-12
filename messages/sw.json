@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — VPN Bure Bila Usajili | Faragha na Usalama",
+    "description": "VPN bure bila barua pepe au usajili. Unganisha mara moja na usimbaji wa WireGuard, kizuia matangazo kilichojengwa ndani na kichujio cha maudhui. Hakuna kumbukumbu. Hakuna kikomo cha data."
+  },
+  "nav": {
+    "features": "Vipengele",
+    "pricing": "Bei",
+    "faq": "Maswali",
+    "blog": "Blogu",
+    "download": "Pakua"
+  },
+  "hero": {
+    "tagline": "VPN ya Faragha Kwanza. Bure Milele.",
+    "headlinePart1a": "Nenda popote",
+    "headlinePart1b": "mtandaoni",
+    "headlinePart2": "Usiache alama yoyote.",
+    "subheadline": "Unganisha mara moja na usimbaji wa WireGuard. Kifaa chako ni akaunti yako.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Hakuna Data ya Kibinafsi Inayohitajika",
+    "trustBadges": {
+      "noData": "Hakuna Data ya Kibinafsi",
+      "noLogs": "Hakuna Kumbukumbu",
+      "unlimited": "Bandwidth Bila Kikomo",
+      "wireguard": "Usimbaji wa WireGuard"
+    }
+  },
+  "features": {
+    "title": "Imeundwa kwa Faragha Kamili",
+    "subtitle": "VPN nyingi zinauliza barua pepe yako kabla ya kulinda faragha yako. Doppler haifanyi hivyo.",
+    "items": {
+      "noRegistration": {
+        "title": "Faragha Bila Usajili",
+        "description": "Kifaa chako ni akaunti yako. Bila barua pepe. Bila nambari ya simu. Bila taarifa za kibinafsi. Faragha inaanza wakati unapounganisha."
+      },
+      "wireguard": {
+        "title": "Usimbaji wa WireGuard",
+        "description": "Itifaki ya VPN ya kisasa inayoaminiwa na wataalamu wa usalama. Muunganisho wa haraka zaidi, ufanisi bora wa betri, na usimbaji wa kiwango cha kijeshi."
+      },
+      "adBlocker": {
+        "title": "Kizuia Matangazo Kilichojengwa Ndani",
+        "description": "Kuzuia kiwango cha mtandao kunaondoa hadi 75% ya matangazo, vifuatiliaji, na pop-ups. Kupakia kurasa haraka zaidi, matumizi ya data kidogo, kuvinjari safi zaidi."
+      },
+      "contentFilter": {
+        "title": "Kichujio cha Maudhui na Udhibiti wa Wazazi",
+        "description": "Zuia tovuti maalum au kategoria nzima. Linda mipangilio kwa nenosiri. Unda intaneti salama zaidi kwa familia yako."
+      },
+      "minimalData": {
+        "title": "Ukusanyaji wa Data Kidogo",
+        "description": "Hatuweki kumbukumbu za shughuli zako za kuvinjari. Hatufuatilii tovuti unazozitembelea. Usanifu wetu unahitaji data kidogo kwa muundo."
+      },
+      "completelyFree": {
+        "title": "Bure Kabisa",
+        "description": "Seva zote ni bure na utendakazi kamili. Usimbaji kamili, kasi ya juu, bandwidth bila kikomo. Hakuna kupunguza kasi au vikomo vya data."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Anza kwa sekunde chache",
+    "subtitle": "Hakuna usajili, hakuna usumbufu — pakua na uunganishe tu",
+    "steps": {
+      "download": {
+        "title": "Pakua",
+        "description": "Pata Doppler VPN kutoka duka la programu la kifaa chako"
+      },
+      "connect": {
+        "title": "Unganisha",
+        "description": "Fungua programu na uguse unganisha — hakuna akaunti inayohitajika"
+      },
+      "browse": {
+        "title": "Vinjari",
+        "description": "Furahia kuvinjari kwa faragha, bila matangazo mara moja"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Bei rahisi na wazi",
+    "subtitle": "Anza na jaribio la bure la siku 7. Sitisha wakati wowote.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Vipengele vyote vya Premium vimejumuishwa",
+    "cardSubtitle": "Vipengele sawa vyenye nguvu, chagua ahadi yako",
+    "durationSelector": "Chagua muda wa usajili",
+    "durations": {
+      "monthly": "Mwezi 1",
+      "sixMonth": "Miezi 6",
+      "annual": "Mwaka"
+    },
+    "bestValue": "Bora",
+    "billedMonthly": "Unatozwa kila mwezi",
+    "billed": "Unatozwa",
+    "every6Months": "kila miezi 6",
+    "perYear": "kwa mwaka",
+    "save": "Okoa",
+    "allFeaturesIncluded": "Vipengele vyote vimejumuishwa katika kila mpango",
+    "features": {
+      "noLogs": "VPN bila kumbukumbu",
+      "adBlocker": "Kizuia matangazo",
+      "categoryFilter": "Kichujio cha kategoria",
+      "customBlocklist": "Orodha za kuzuia",
+      "devices": "Vifaa 10",
+      "support": "Msaada 24/7"
+    },
+    "cta": "Anza Jaribio la Bure",
+    "cancelAnytime": "Sitisha wakati wowote. Hakuna maswali.",
+    "guarantee": "Dhamana ya kurudishiwa pesa siku 30",
+    "pricesIn": "Bei zinaonyeshwa kwa"
+  },
+  "faq": {
+    "title": "Maswali yanayoulizwa mara kwa mara",
+    "subtitle": "Kila kitu unachohitaji kujua kuhusu Doppler VPN",
+    "items": {
+      "what": {
+        "question": "Doppler VPN ni nini?",
+        "answer": "Doppler VPN ni huduma ya mtandao wa kibinafsi wa kawaida inayolenga faragha ambayo inasimba muunganisho wako wa intaneti na kuficha anwani yako ya IP. Inajumuisha kuzuia matangazo kilichojengwa ndani, uchujaji wa maudhui kwa kategoria, na msaada wa orodha za kuzuia maalum — yote bila usajili."
+      },
+      "noLogs": {
+        "question": "Doppler VPN kweli haiweki kumbukumbu?",
+        "answer": "Ndiyo, tunatekeleza sera kali ya kutoweka kumbukumbu. Hatufuatilii, kuhifadhi, au kushiriki shughuli zako za kuvinjari, alama za wakati za muunganisho, anwani za IP, au data nyingine yoyote ya kibinafsi. Faragha yako ni kipaumbele chetu."
+      },
+      "adBlocker": {
+        "question": "Kizuia matangazo kinafanya kazi vipi?",
+        "answer": "Kizuia matangazo chetu kinafanya kazi katika kiwango cha DNS, kuzuia matangazo, vifuatiliaji, na vikoa vibaya kabla havijapakia. Hii inamaanisha kuvinjari haraka zaidi, matumizi ya data kidogo, na ulinzi katika programu zako zote — si kivinjari tu."
+      },
+      "categories": {
+        "question": "Kategoria zipi za maudhui zinaweza kuchujwa?",
+        "answer": "Unaweza kuchuja maudhui katika kategoria nyingi ikiwa ni pamoja na maudhui ya watu wazima, kamari, mitandao ya kijamii, michezo, utiririshaji, na zaidi. Unaweza pia kuagiza orodha za kuzuia maalum kwa udhibiti wa ziada wa uchujaji wa maudhui."
+      },
+      "devices": {
+        "question": "Vifaa vingapi vinaweza kutumika?",
+        "answer": "Usajili mmoja wa Doppler VPN unashughulikia hadi vifaa 10 kwa wakati mmoja. Tumia kwenye simu, kompyuta kibao, na kompyuta zako — vyote vinalindwa kwa wakati mmoja."
+      },
+      "platforms": {
+        "question": "Mifumo ipi inasaidiwa?",
+        "answer": "Doppler VPN inapatikana kwenye iOS (iPhone na iPad), macOS, na Android. Tunafanya kazi kwa kuendelea kupanua msaada wa mifumo."
+      },
+      "cancel": {
+        "question": "Ninasitishaje usajili?",
+        "answer": "Unaweza kusitisha usajili wako wakati wowote kupitia duka la programu la kifaa chako (App Store kwa iOS/macOS au Google Play kwa Android). Ufikiaji wako unaendelea hadi mwisho wa kipindi chako cha malipo. Hutarozwa baada ya kusitisha."
+      },
+      "trial": {
+        "question": "Kuna jaribio la bure?",
+        "answer": "Ndiyo! Kila mtumiaji mpya anapata jaribio la bure la siku 7 na ufikiaji kamili wa vipengele vyote vya Premium. Jaribio linageuka kuwa usajili wa kulipwa isipokuwa lisitishwe angalau saa 24 kabla ya kumalizika. Pia tunatoa dhamana ya kurudishiwa pesa ya siku 30."
+      },
+      "whatIsIncluded": {
+        "question": "Nini kimejumuishwa katika Premium?",
+        "answer": "Premium inajumuisha seva za VPN katika maeneo 50+ yenye usimbaji wa WireGuard, kizuia matangazo cha kiwango cha DNS kinachofanya kazi katika programu zote, kichujio cha maudhui chenye udhibiti wa wazazi, na muunganisho wa hadi vifaa 10 kwa wakati mmoja."
+      },
+      "plans": {
+        "question": "Mipango ipi ya usajili inapatikana?",
+        "answer": "Tunatoa mipango mitatu: Ya kila mwezi, Miezi 6, na Ya kila mwaka. Mipango yote inajumuisha vipengele sawa vya Premium. Mipango ya muda mrefu inatoa bei ya chini kwa mwezi. Usajili unajirudia kiotomatiki isipokuwa usitishwe angalau saa 24 kabla ya mwisho wa kipindi cha malipo."
+      },
+      "restore": {
+        "question": "Nimesajili lakini vipengele havifanyi kazi",
+        "answer": "Fungua programu, nenda kwa Profaili > Usajili na uguse Rejesha Ununuzi. Hii itasawazisha usajili wako na seva zetu. Ikiwa tatizo linaendelea, wasiliana na timu yetu ya msaada kwa support@simnetiq.store."
+      },
+      "refund": {
+        "question": "Ninaiombaje kurudishiwa pesa?",
+        "answer": "Kurudishiwa pesa kunashughulikiwa na Apple au Google. Kwa iOS, tembelea reportaproblem.apple.com na uingie kwa Apple ID yako. Kwa Android, fungua Google Play > Akaunti > Historia ya maagizo. Kurudishiwa pesa kawaida kunashughulikiwa ndani ya saa 48."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "na",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Anza",
+      "titleMiddle": "na",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "VPN ya faragha kwanza bila usajili. Unganisha mara moja na usimbaji wa WireGuard.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Safiri",
+      "titleMiddle": "na",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Mipango ya data ya eSIM ya kimataifa kwa wasafiri. Endelea kuunganishwa popote duniani.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "VPN ya faragha kwanza yenye kuzuia matangazo ya hali ya juu na uchujaji wa maudhui.",
+    "product": "Bidhaa",
+    "features": "Vipengele",
+    "pricing": "Bei",
+    "download": "Pakua",
+    "legal": "Kisheria",
+    "privacy": "Sera ya Faragha",
+    "terms": "Masharti ya Huduma",
+    "copyright": "Doppler VPN. Haki zote zimehifadhiwa."
+  },
+  "privacy": {
+    "title": "Sera ya Faragha",
+    "lastUpdated": "Imesasishwa mwisho: Februari 2026",
+    "intro": "Katika Doppler VPN, faragha yako ni kipaumbele chetu cha juu zaidi. Sera hii ya Faragha inaeleza jinsi tunavyoshughulikia taarifa zako unapotumia huduma zetu za VPN, kuzuia matangazo, na uchujaji wa maudhui.",
+    "sections": {
+      "noLogs": {
+        "title": "Sera ya Kutoweka Kumbukumbu",
+        "content": "Tunatekeleza sera kali ya kutoweka kumbukumbu. Hatufuatilii, kuhifadhi, au kushiriki: shughuli zako za kuvinjari, alama za wakati za muunganisho, anwani za IP za asili, maombi ya DNS, matumizi ya bandwidth, au data nyingine yoyote inayoweza kukutambulisha wewe au shughuli zako za mtandaoni. Trafiki ya VPN inasimbwa mwisho hadi mwisho na kamwe haichunguzwi, kurekodiwa, au kuhifadhiwa."
+      },
+      "collect": {
+        "title": "Tunachokusanya",
+        "content": "Tunakusanya tu taarifa ya chini kabisa inayohitajika kutoa huduma yetu: kitambulisho cha kifaa kilichotengenezwa kwa nasibu (hakijaunganishwa na utambulisho wako wa kibinafsi), taarifa za malipo (zinashughulikiwa kwa usalama na Apple App Store au Google Play — kamwe hatuoni maelezo yako ya malipo), takwimu za jumla za mzigo wa seva zisizojulikana kudumisha utendakazi, na anwani yako ya barua pepe tu ikiwa unawasiliana na msaada kwa hiari."
+      },
+      "vpnData": {
+        "title": "Ushughulikiaji wa Data ya VPN",
+        "content": "Unapounganisha kwenye huduma yetu ya VPN, trafiki yako ya intaneti inasimbwa kwa kutumia itifaki ya WireGuard na kupitishwa kupitia seva zetu. Hatuchunguzi, kurekodi, kuhifadhi, kubadilisha, au kuuza data yoyote inayopitia handaki yetu ya VPN. Kizuia matangazo chetu cha kiwango cha DNS na kichujio cha maudhui vinafanya kazi kwenye kisuluhishi chetu cha DNS na haviweki kumbukumbu za maombi ya mtu binafsi au mifumo ya kuvinjari."
+      },
+      "security": {
+        "title": "Usalama wa Data",
+        "content": "Tunatumia itifaki za usimbaji za kiwango cha tasnia ikiwa ni pamoja na WireGuard kulinda muunganisho wako. Uhamishaji wote wa data kati ya kifaa chako na seva zetu umesimbwa mwisho hadi mwisho. Miundombinu yetu ya seva imeundwa kupunguza uhifadhi wa data kwa muundo."
+      },
+      "thirdParty": {
+        "title": "Wahusika wa Tatu",
+        "content": "Hatuuzi, kubadilishana, au kushiriki taarifa zako za kibinafsi na wahusika wa tatu. Tunatumia RevenueCat kwa usimamizi wa usajili (wanashughulikia tu vitambulisho vya ununuzi visivyojulikana) na maduka ya programu ya Apple/Google kwa usindikaji wa malipo. Watoa huduma hawa wamefungwa na sera zao za faragha na wajibu wa kimkataba."
+      },
+      "children": {
+        "title": "Faragha ya Watoto",
+        "content": "Kipengele chetu cha uchujaji wa maudhui kinajumuisha uwezo wa udhibiti wa wazazi. Hatukusanyi kwa makusudi taarifa za kibinafsi kutoka kwa watoto walio chini ya umri wa miaka 13. Kichujio cha maudhui kinafanya kazi katika kiwango cha DNS bila kukusanya au kuhifadhi data ya kibinafsi ya watumiaji wa umri wowote."
+      },
+      "contact": {
+        "title": "Wasiliana Nasi",
+        "content": "Ikiwa una maswali yoyote kuhusu Sera hii ya Faragha, tafadhali wasiliana nasi kwa privacy@dopplervpn.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Masharti ya Huduma",
+    "lastUpdated": "Imesasishwa mwisho: Februari 2026",
+    "intro": "Kwa kutumia Doppler VPN, unakubaliana na Masharti haya ya Huduma. Tafadhali yasome kwa makini.",
+    "sections": {
+      "service": {
+        "title": "Maelezo ya Huduma",
+        "content": "Doppler VPN inatoa huduma ya mtandao wa kibinafsi wa kawaida ambayo inasimba muunganisho wako wa intaneti na kuficha anwani yako ya IP kwa madhumuni ya faragha. Huduma pia inajumuisha kuzuia matangazo ya kiwango cha DNS na uchujaji wa maudhui wenye udhibiti wa wazazi. Huduma inatolewa \"kama ilivyo\" na \"kama inavyopatikana.\""
+      },
+      "usage": {
+        "title": "Matumizi Yanayokubalika",
+        "content": "Unakubaliana kutumia Doppler VPN kwa madhumuni halali tu na kwa mujibu wa sheria zote zinazotumika za ndani, kitaifa, na kimataifa. Huwezi kutumia huduma kwa shughuli zozote haramu, kuzunguka vizuizi vya kijiografia, kuwadhuru wengine, kusambaza programu hasidi, kukiuka haki za mali ya kiakili, au kuingilia kati shughuli zetu za huduma. Tunahifadhi haki ya kusitisha akaunti zinazokiuka masharti haya."
+      },
+      "subscription": {
+        "title": "Usajili na Malipo",
+        "content": "Doppler VPN Premium inajumuisha ufikiaji wa seva za VPN za premium katika maeneo 50+, kuzuia matangazo ya kiwango cha DNS, uchujaji wa maudhui wenye udhibiti wa wazazi, na muunganisho wa hadi vifaa 10 kwa wakati mmoja. Usajili unatozwa kupitia Apple App Store au Google Play Store. Mipango inapatikana kwa mwezi, miezi 6, au kwa mwaka na inajirudia kiotomatiki isipokuwa isitishwe angalau saa 24 kabla ya mwisho wa kipindi cha sasa cha malipo. Unaweza kusitisha usajili wako wakati wowote kupitia mipangilio ya duka la programu la kifaa chako. Kurudishiwa pesa kunategemea sera ya kurudishiwa pesa ya duka husika la programu."
+      },
+      "liability": {
+        "title": "Kikomo cha Dhima",
+        "content": "Kwa kiwango cha juu zaidi kinachoruhusiwa na sheria, Doppler VPN haitawajibika kwa uharibifu wowote usio wa moja kwa moja, wa bahati mbaya, maalum, wa matokeo, au wa adhabu unaotokana na matumizi yako ya huduma."
+      },
+      "changes": {
+        "title": "Mabadiliko ya Masharti",
+        "content": "Tunaweza kusasisha Masharti haya ya Huduma mara kwa mara. Tutakuarifu kuhusu mabadiliko yoyote muhimu kupitia programu au barua pepe. Kuendelea kutumia huduma baada ya mabadiliko kunamaanisha kukubali masharti mapya."
+      },
+      "contact": {
+        "title": "Mawasiliano",
+        "content": "Kwa maswali kuhusu Masharti haya ya Huduma, tafadhali wasiliana nasi kwa legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blogu",
+    "indexDescription": "Vidokezo vya faragha, miongozo ya VPN, na maarifa ya usalama kutoka kwa timu ya Doppler.",
+    "title": "Blogu ya Doppler VPN",
+    "subtitle": "Vidokezo vya faragha, maarifa ya usalama, na miongozo ya VPN",
+    "allPosts": "Machapisho Yote",
+    "filterByTag": "Chuja kwa lebo",
+    "readMore": "Soma zaidi",
+    "readingTime": "dakika {minutes} za kusoma",
+    "publishedOn": "Ilichapishwa",
+    "by": "na",
+    "relatedPosts": "Makala Zinazohusiana",
+    "viewAllPosts": "Tazama Machapisho Yote",
+    "latestPosts": "Mapya Zaidi kutoka Blogu Yetu",
+    "latestPostsSubtitle": "Vidokezo vya faragha na maarifa ya VPN",
+    "noPosts": "Hakuna machapisho yaliyopatikana",
+    "noPostsDescription": "Rudi hivi karibuni kwa maudhui mapya.",
+    "backToBlog": "Rudi kwenye Blogu",
+    "breadcrumb": {
+      "home": "Nyumbani",
+      "blog": "Blogu"
+    },
+    "cta": {
+      "title": "Uko tayari kulinda faragha yako?",
+      "subtitle": "Pakua Doppler VPN na uanze kuvinjari kwa usalama leo.",
+      "button": "Anza",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "VPN ya faragha kwanza bila usajili unaohitajika",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Data ya eSIM ya kimataifa kwa wasafiri duniani kote",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

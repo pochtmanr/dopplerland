@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — Kayıt Gerektirmeyen Ücretsiz VPN | Gizli & Güvenli",
+    "description": "E-posta veya kayıt gerektirmeyen ücretsiz VPN. WireGuard şifreleme, yerleşik reklam engelleyici ve içerik filtresi ile anında bağlanın. Kayıt yok. Veri sınırı yok."
+  },
+  "nav": {
+    "features": "Özellikler",
+    "pricing": "Fiyatlar",
+    "faq": "SSS",
+    "blog": "Blog",
+    "download": "İndir"
+  },
+  "hero": {
+    "tagline": "Gizlilik Öncelikli VPN. Sonsuza Kadar Ücretsiz.",
+    "headlinePart1a": "Her yere git",
+    "headlinePart1b": "çevrimiçi",
+    "headlinePart2": "Geride hiçbir şey bırakma.",
+    "subheadline": "WireGuard şifreleme ile anında bağlanın. Cihazınız hesabınızdır.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Kişisel Veri Gerekmez",
+    "trustBadges": {
+      "noData": "Kişisel Veri Yok",
+      "noLogs": "Kayıt Tutulmaz",
+      "unlimited": "Sınırsız Bant Genişliği",
+      "wireguard": "WireGuard Şifreleme"
+    }
+  },
+  "features": {
+    "title": "Tam Gizlilik İçin Tasarlandı",
+    "subtitle": "Çoğu VPN gizliliğinizi korumadan önce e-postanızı ister. Doppler istemez.",
+    "items": {
+      "noRegistration": {
+        "title": "Kayıt Gerektirmeyen Gizlilik",
+        "description": "Cihazınız hesabınız olarak çalışır. E-posta yok. Telefon numarası yok. Kişisel bilgi yok. Gizlilik bağlandığınız anda başlar."
+      },
+      "wireguard": {
+        "title": "WireGuard Şifreleme",
+        "description": "Güvenlik uzmanlarının güvendiği modern VPN protokolü. Daha hızlı bağlantılar, daha iyi pil verimliliği ve askeri düzeyde şifreleme."
+      },
+      "adBlocker": {
+        "title": "Yerleşik Reklam Engelleyici",
+        "description": "Ağ düzeyinde engelleme, reklamların, izleyicilerin ve açılır pencerelerin %75'ine kadarını kaldırır. Daha hızlı sayfa yükleme, daha az veri kullanımı, daha temiz gezinme."
+      },
+      "contentFilter": {
+        "title": "İçerik Filtresi & Ebeveyn Kontrolü",
+        "description": "Belirli web sitelerini veya tüm kategorileri engelleyin. Ayarları parola ile koruyun. Aileniz için daha güvenli bir internet oluşturun."
+      },
+      "minimalData": {
+        "title": "Minimum Veri Toplama",
+        "description": "Gezinme etkinliğinizi kaydetmiyoruz. Ziyaret ettiğiniz web sitelerini takip etmiyoruz. Mimarimiz tasarım gereği minimum veri gerektirir."
+      },
+      "completelyFree": {
+        "title": "Tamamen Ücretsiz",
+        "description": "Tüm sunucular tam işlevsellik ile ücretsizdir. Tam şifreleme, hızlı bağlantılar, sınırsız bant genişliği. Hız kısıtlama veya veri sınırı yok."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Saniyeler içinde başlayın",
+    "subtitle": "Kayıt yok, zahmet yok — sadece indirin ve bağlanın",
+    "steps": {
+      "download": {
+        "title": "İndirin",
+        "description": "Doppler VPN'i cihazınızın uygulama mağazasından edinin"
+      },
+      "connect": {
+        "title": "Bağlanın",
+        "description": "Uygulamayı açın ve bağlan'a dokunun — hesap gerekmez"
+      },
+      "browse": {
+        "title": "Gezinin",
+        "description": "Anında gizli, reklamsız gezinmenin keyfini çıkarın"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Basit, şeffaf fiyatlandırma",
+    "subtitle": "7 günlük ücretsiz deneme ile başlayın. İstediğiniz zaman iptal edin.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Tüm Premium özellikler dahil",
+    "cardSubtitle": "Aynı güçlü özellikler, taahhüdünüzü seçin",
+    "durationSelector": "Abonelik süresini seçin",
+    "durations": {
+      "monthly": "1 Ay",
+      "sixMonth": "6 Ay",
+      "annual": "Yıllık"
+    },
+    "bestValue": "En İyi",
+    "billedMonthly": "Aylık faturalandırılır",
+    "billed": "Faturalandırılır",
+    "every6Months": "her 6 ayda bir",
+    "perYear": "yıllık",
+    "save": "Tasarruf",
+    "allFeaturesIncluded": "Tüm özellikler her plana dahil",
+    "features": {
+      "noLogs": "Kayıt tutmayan VPN",
+      "adBlocker": "Reklam engelleyici",
+      "categoryFilter": "Kategori filtresi",
+      "customBlocklist": "Engel listeleri",
+      "devices": "10 cihaz",
+      "support": "7/24 destek"
+    },
+    "cta": "Ücretsiz Denemeyi Başlat",
+    "cancelAnytime": "İstediğiniz zaman iptal edin. Soru sorulmaz.",
+    "guarantee": "30 gün para iade garantisi",
+    "pricesIn": "Fiyatlar şu birimde gösterilir"
+  },
+  "faq": {
+    "title": "Sıkça sorulan sorular",
+    "subtitle": "Doppler VPN hakkında bilmeniz gereken her şey",
+    "items": {
+      "what": {
+        "question": "Doppler VPN nedir?",
+        "answer": "Doppler VPN, internet bağlantınızı şifreleyen ve IP adresinizi gizleyen gizlilik odaklı bir sanal özel ağ hizmetidir. Yerleşik reklam engelleme, kategoriye göre içerik filtreleme ve özel engel listeleri desteği içerir — hepsi kayıt gerektirmeden."
+      },
+      "noLogs": {
+        "question": "Doppler VPN gerçekten kayıt tutmuyor mu?",
+        "answer": "Evet, katı bir kayıt tutmama politikası uyguluyoruz. Gezinme etkinliğinizi, bağlantı zaman damgalarınızı, IP adreslerinizi veya diğer kişisel verilerinizi takip etmiyor, saklamıyor veya paylaşmıyoruz. Gizliliğiniz önceliğimizdir."
+      },
+      "adBlocker": {
+        "question": "Reklam engelleyici nasıl çalışır?",
+        "answer": "Reklam engelleyicimiz DNS düzeyinde çalışır, reklamları, izleyicileri ve kötü amaçlı alan adlarını yüklenmeden önce engeller. Bu, daha hızlı gezinme, daha az veri kullanımı ve tüm uygulamalarınızda koruma anlamına gelir — sadece tarayıcınızda değil."
+      },
+      "categories": {
+        "question": "Hangi içerik kategorileri filtrelenebilir?",
+        "answer": "Yetişkin içeriği, kumar, sosyal medya, oyun, akış ve daha fazlası dahil olmak üzere birden fazla kategoride içerik filtreleyebilirsiniz. Ek içerik filtreleme kontrolü için özel engel listeleri de içe aktarabilirsiniz."
+      },
+      "devices": {
+        "question": "Kaç cihaz kullanabilirim?",
+        "answer": "Tek bir Doppler VPN aboneliği aynı anda 10 cihazı kapsar. Telefonlarınızda, tabletlerinizde ve bilgisayarlarınızda kullanın — hepsi aynı anda korunur."
+      },
+      "platforms": {
+        "question": "Hangi platformlar desteklenir?",
+        "answer": "Doppler VPN iOS (iPhone & iPad), macOS ve Android'de kullanılabilir. Platform desteğimizi sürekli genişletmek için çalışıyoruz."
+      },
+      "cancel": {
+        "question": "Aboneliğimi nasıl iptal ederim?",
+        "answer": "Aboneliğinizi cihazınızın uygulama mağazası (iOS/macOS için App Store veya Android için Google Play) üzerinden istediğiniz zaman iptal edebilirsiniz. Erişiminiz fatura döneminizin sonuna kadar devam eder. İptalden sonra ücret alınmaz."
+      },
+      "trial": {
+        "question": "Ücretsiz deneme var mı?",
+        "answer": "Evet! Her yeni kullanıcı tüm Premium özelliklere tam erişimle 7 günlük ücretsiz deneme alır. Deneme, sona ermeden en az 24 saat önce iptal edilmezse ücretli aboneliğe dönüşür. Ayrıca 30 gün para iade garantisi sunuyoruz."
+      },
+      "whatIsIncluded": {
+        "question": "Premium'a neler dahil?",
+        "answer": "Premium, WireGuard şifreleme ile 50+ konumda VPN sunucuları, tüm uygulamalarda çalışan DNS düzeyinde reklam engelleyici, ebeveyn kontrolü ile içerik filtresi ve aynı anda 10 cihaza kadar bağlantı içerir."
+      },
+      "plans": {
+        "question": "Hangi abonelik planları mevcut?",
+        "answer": "Üç plan sunuyoruz: Aylık, 6 Aylık ve Yıllık. Tüm planlar aynı Premium özellikleri içerir. Uzun süreli planlar daha düşük aylık fiyat sunar. Abonelikler, mevcut fatura döneminin bitiminden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir."
+      },
+      "restore": {
+        "question": "Abone oldum ama özellikler çalışmıyor",
+        "answer": "Uygulamayı açın, Profil > Abonelik'e gidin ve Satın Alımları Geri Yükle'ye dokunun. Bu, aboneliğinizi sunucularımızla yeniden senkronize eder. Sorun devam ederse, destek ekibimizle support@simnetiq.store adresinden iletişime geçin."
+      },
+      "refund": {
+        "question": "Para iadesi nasıl talep ederim?",
+        "answer": "Para iadeleri Apple veya Google tarafından işlenir. iOS için reportaproblem.apple.com adresini ziyaret edin ve Apple ID'nizle giriş yapın. Android için Google Play > Hesap > Sipariş geçmişi'ni açın. Para iadeleri genellikle 48 saat içinde işlenir."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "tarafından",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Başlayın",
+      "titleMiddle": "ile",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "Kayıt gerektirmeyen gizlilik öncelikli VPN. WireGuard şifreleme ile anında bağlanın.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Seyahat edin",
+      "titleMiddle": "ile",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Gezginler için global eSIM veri planları. Dünyanın her yerinde bağlı kalın.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "Gelişmiş reklam engelleme ve içerik filtreleme ile gizlilik öncelikli VPN.",
+    "product": "Ürün",
+    "features": "Özellikler",
+    "pricing": "Fiyatlar",
+    "download": "İndir",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Hizmet Koşulları",
+    "copyright": "Doppler VPN. Tüm hakları saklıdır."
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Şubat 2026",
+    "intro": "Doppler VPN'de gizliliğiniz en büyük önceliğimizdir. Bu Gizlilik Politikası, VPN, reklam engelleme ve içerik filtreleme hizmetlerimizi kullanırken bilgilerinizi nasıl işlediğimizi açıklar.",
+    "sections": {
+      "noLogs": {
+        "title": "Kayıt Tutmama Politikası",
+        "content": "Katı bir kayıt tutmama politikası uyguluyoruz. Gezinme etkinliğinizi, bağlantı zaman damgalarınızı, kaynak IP adreslerinizi, DNS sorgularınızı, bant genişliği kullanımınızı veya sizi ya da çevrimiçi etkinliklerinizi tanımlayabilecek diğer verileri takip etmiyor, saklamıyor veya paylaşmıyoruz. VPN trafiği uçtan uca şifrelenir ve asla incelenmez, kaydedilmez veya saklanmaz."
+      },
+      "collect": {
+        "title": "Ne Topluyoruz",
+        "content": "Yalnızca hizmetimizi sağlamak için gereken minimum bilgiyi topluyoruz: rastgele oluşturulmuş bir cihaz tanımlayıcısı (kişisel kimliğinize bağlı değil), ödeme bilgileri (Apple App Store veya Google Play tarafından güvenli şekilde işlenir — ödeme detaylarınızı asla görmeyiz), performansı sürdürmek için anonim toplu sunucu yük istatistikleri ve yalnızca gönüllü olarak destek ile iletişime geçerseniz e-posta adresiniz."
+      },
+      "vpnData": {
+        "title": "VPN Veri İşleme",
+        "content": "VPN hizmetimize bağlandığınızda, internet trafiğiniz WireGuard protokolü kullanılarak şifrelenir ve sunucularımız üzerinden yönlendirilir. VPN tünelimizden geçen verileri incelemiyoruz, kaydetmiyoruz, saklamıyoruz, değiştirmiyoruz veya satmıyoruz. DNS düzeyindeki reklam engelleyicimiz ve içerik filtremiz DNS çözücümüzde çalışır ve bireysel sorguları veya gezinme kalıplarını kaydetmez."
+      },
+      "security": {
+        "title": "Veri Güvenliği",
+        "content": "Bağlantınızı korumak için WireGuard dahil endüstri standardı şifreleme protokolleri kullanıyoruz. Cihazınız ile sunucularımız arasındaki tüm veri aktarımı uçtan uca şifrelenir. Sunucu altyapımız tasarım gereği veri saklama süresini en aza indirecek şekilde yapılandırılmıştır."
+      },
+      "thirdParty": {
+        "title": "Üçüncü Taraflar",
+        "content": "Kişisel bilgilerinizi üçüncü taraflarla satmıyoruz, takas etmiyoruz veya paylaşmıyoruz. Abonelik yönetimi için RevenueCat (yalnızca anonim satın alma tanımlayıcılarını işler) ve ödeme işleme için Apple/Google uygulama mağazalarını kullanıyoruz. Bu sağlayıcılar kendi gizlilik politikaları ve sözleşme yükümlülükleri ile bağlıdır."
+      },
+      "children": {
+        "title": "Çocukların Gizliliği",
+        "content": "İçerik filtreleme özelliğimiz ebeveyn kontrolü yetenekleri içerir. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. İçerik filtresi DNS düzeyinde çalışır ve herhangi bir yaştaki kullanıcıdan kişisel veri toplamaz veya saklamaz."
+      },
+      "contact": {
+        "title": "Bize Ulaşın",
+        "content": "Bu Gizlilik Politikası hakkında sorularınız varsa, lütfen privacy@dopplervpn.com adresinden bizimle iletişime geçin"
+      }
+    }
+  },
+  "terms": {
+    "title": "Hizmet Koşulları",
+    "lastUpdated": "Son güncelleme: Şubat 2026",
+    "intro": "Doppler VPN'i kullanarak bu Hizmet Koşullarını kabul etmiş olursunuz. Lütfen dikkatli bir şekilde okuyun.",
+    "sections": {
+      "service": {
+        "title": "Hizmet Açıklaması",
+        "content": "Doppler VPN, internet bağlantınızı şifreleyen ve gizlilik amacıyla IP adresinizi gizleyen bir sanal özel ağ hizmeti sağlar. Hizmet ayrıca DNS düzeyinde reklam engelleme ve ebeveyn kontrolü ile içerik filtreleme içerir. Hizmet \"olduğu gibi\" ve \"mevcut olduğu şekilde\" sağlanır."
+      },
+      "usage": {
+        "title": "Kabul Edilebilir Kullanım",
+        "content": "Doppler VPN'i yalnızca yasal amaçlar için ve tüm geçerli yerel, ulusal ve uluslararası yasalara uygun olarak kullanmayı kabul edersiniz. Hizmeti yasadışı faaliyetler, coğrafi kısıtlamaları veya içerik lisans anlaşmalarını aşmak, başkalarına zarar vermek, kötü amaçlı yazılım dağıtmak, fikri mülkiyet haklarını ihlal etmek veya hizmet operasyonlarımıza müdahale etmek için kullanamazsınız. Bu koşulları ihlal eden hesapları sonlandırma hakkını saklı tutarız."
+      },
+      "subscription": {
+        "title": "Abonelikler & Ödemeler",
+        "content": "Doppler VPN Premium, 50+ konumda premium VPN sunucularına erişim, DNS düzeyinde reklam engelleme, ebeveyn kontrolü ile içerik filtreleme ve aynı anda 10 cihaza kadar bağlantı içerir. Abonelikler Apple App Store veya Google Play Store üzerinden faturalandırılır. Planlar aylık, 6 aylık veya yıllık olarak mevcuttur ve mevcut fatura döneminin bitiminden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir. Aboneliğinizi cihazınızın uygulama mağazası ayarlarından istediğiniz zaman iptal edebilirsiniz. Para iadeleri ilgili uygulama mağazasının iade politikasına tabidir."
+      },
+      "liability": {
+        "title": "Sorumluluk Sınırlaması",
+        "content": "Yasaların izin verdiği azami ölçüde, Doppler VPN hizmeti kullanımınızdan kaynaklanan dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai zararlardan sorumlu olmayacaktır."
+      },
+      "changes": {
+        "title": "Koşul Değişiklikleri",
+        "content": "Bu Hizmet Koşullarını zaman zaman güncelleyebiliriz. Önemli değişiklikleri uygulama veya e-posta yoluyla size bildireceğiz. Değişikliklerden sonra hizmeti kullanmaya devam etmeniz yeni koşulları kabul ettiğiniz anlamına gelir."
+      },
+      "contact": {
+        "title": "İletişim",
+        "content": "Bu Hizmet Koşulları hakkında sorularınız için lütfen legal@dopplervpn.com adresinden bizimle iletişime geçin"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Doppler ekibinden gizlilik ipuçları, VPN rehberleri ve güvenlik içgörüleri.",
+    "title": "Doppler VPN Blog",
+    "subtitle": "Gizlilik ipuçları, güvenlik içgörüleri ve VPN rehberleri",
+    "allPosts": "Tüm Yazılar",
+    "filterByTag": "Etikete göre filtrele",
+    "readMore": "Devamını oku",
+    "readingTime": "{minutes} dk okuma",
+    "publishedOn": "Yayınlanma tarihi",
+    "by": "yazar",
+    "relatedPosts": "İlgili Makaleler",
+    "viewAllPosts": "Tüm Yazıları Gör",
+    "latestPosts": "Blogumuzdan Son Yazılar",
+    "latestPostsSubtitle": "Gizlilik ipuçları ve VPN içgörüleri",
+    "noPosts": "Yazı bulunamadı",
+    "noPostsDescription": "Yakında yeni içerikler için tekrar kontrol edin.",
+    "backToBlog": "Bloga Dön",
+    "breadcrumb": {
+      "home": "Ana Sayfa",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Gizliliğinizi korumaya hazır mısınız?",
+      "subtitle": "Doppler VPN'i indirin ve bugün güvenli gezinmeye başlayın.",
+      "button": "Başlayın",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "Kayıt gerektirmeyen gizlilik öncelikli VPN",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Dünya çapında gezginler için global eSIM verisi",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}

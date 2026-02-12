@@ -93,11 +93,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: {
       canonical: `${baseUrl}/${locale}/blog/${slug}`,
-      languages: {
-        en: `${baseUrl}/en/blog/${slug}`,
-        he: `${baseUrl}/he/blog/${slug}`,
-        "x-default": `${baseUrl}/en/blog/${slug}`,
-      },
+      languages: Object.fromEntries([
+        ...routing.locales.map((loc) => [loc, `${baseUrl}/${loc}/blog/${slug}`]),
+        ["x-default", `${baseUrl}/en/blog/${slug}`],
+      ]),
     },
     openGraph: {
       title: translation.og_title || title,
@@ -121,8 +120,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 interface PostFull {
   slug: string;
   image_url: string | null;
-  image_alt_en: string | null;
-  image_alt_he: string | null;
   author_name: string;
   published_at: string | null;
   updated_at: string;
@@ -130,6 +127,7 @@ interface PostFull {
     title: string;
     excerpt: string;
     content: string;
+    image_alt: string | null;
     meta_title: string | null;
     meta_description: string | null;
     locale: string;
@@ -146,10 +144,13 @@ interface PostFull {
     blog_posts: {
       slug: string;
       image_url: string | null;
-      image_alt_en: string | null;
-      image_alt_he: string | null;
       published_at: string | null;
-      blog_post_translations: { locale: string; title: string; excerpt: string }[];
+      blog_post_translations: {
+        locale: string;
+        title: string;
+        excerpt: string;
+        image_alt: string | null;
+      }[];
     };
   }[];
 }
@@ -163,8 +164,6 @@ async function getPostData(locale: string, slug: string) {
       `
       slug,
       image_url,
-      image_alt_en,
-      image_alt_he,
       author_name,
       published_at,
       updated_at,
@@ -172,6 +171,7 @@ async function getPostData(locale: string, slug: string) {
         title,
         excerpt,
         content,
+        image_alt,
         meta_title,
         meta_description,
         locale
@@ -191,13 +191,12 @@ async function getPostData(locale: string, slug: string) {
         blog_posts!target_post_id (
           slug,
           image_url,
-          image_alt_en,
-          image_alt_he,
           published_at,
           blog_post_translations (
             locale,
             title,
-            excerpt
+            excerpt,
+            image_alt
           )
         )
       )
@@ -233,9 +232,9 @@ async function getPostData(locale: string, slug: string) {
         excerpt: relatedTranslation?.excerpt || "",
         imageUrl: link.blog_posts.image_url,
         imageAlt:
-          locale === "he"
-            ? link.blog_posts.image_alt_he
-            : link.blog_posts.image_alt_en,
+          link.blog_posts.blog_post_translations.find(
+            (t) => t.locale === locale
+          )?.image_alt ?? null,
         publishedAt: link.blog_posts.published_at,
       };
     })
@@ -249,7 +248,7 @@ async function getPostData(locale: string, slug: string) {
     metaTitle: translation.meta_title,
     metaDescription: translation.meta_description,
     imageUrl: post.image_url,
-    imageAlt: locale === "he" ? post.image_alt_he : post.image_alt_en,
+    imageAlt: translation.image_alt,
     authorName: post.author_name,
     publishedAt: post.published_at,
     updatedAt: post.updated_at,

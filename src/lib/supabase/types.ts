@@ -6,6 +6,11 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[];
 
+export type Locale =
+  | "en" | "he" | "ru" | "es" | "pt" | "fr" | "zh" | "de"
+  | "fa" | "ar" | "hi" | "id" | "tr" | "vi" | "th" | "ms"
+  | "ko" | "ja" | "tl" | "ur" | "sw";
+
 export type Database = {
   public: {
     Tables: {
@@ -14,8 +19,6 @@ export type Database = {
           id: string;
           slug: string;
           image_url: string | null;
-          image_alt_en: string | null;
-          image_alt_he: string | null;
           author_name: string;
           status: "draft" | "published" | "archived";
           published_at: string | null;
@@ -26,8 +29,6 @@ export type Database = {
           id?: string;
           slug: string;
           image_url?: string | null;
-          image_alt_en?: string | null;
-          image_alt_he?: string | null;
           author_name?: string;
           status?: "draft" | "published" | "archived";
           published_at?: string | null;
@@ -38,23 +39,31 @@ export type Database = {
           id?: string;
           slug?: string;
           image_url?: string | null;
-          image_alt_en?: string | null;
-          image_alt_he?: string | null;
           author_name?: string;
           status?: "draft" | "published" | "archived";
           published_at?: string | null;
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "blog_post_translations_post_id_fkey";
+            columns: ["id"];
+            isOneToOne: false;
+            referencedRelation: "blog_post_translations";
+            referencedColumns: ["post_id"];
+          },
+        ];
       };
       blog_post_translations: {
         Row: {
           id: string;
           post_id: string;
-          locale: "en" | "he";
+          locale: string;
           title: string;
           excerpt: string;
           content: string;
+          image_alt: string | null;
           meta_title: string | null;
           meta_description: string | null;
           og_title: string | null;
@@ -65,10 +74,11 @@ export type Database = {
         Insert: {
           id?: string;
           post_id: string;
-          locale: "en" | "he";
+          locale: string;
           title: string;
           excerpt: string;
           content: string;
+          image_alt?: string | null;
           meta_title?: string | null;
           meta_description?: string | null;
           og_title?: string | null;
@@ -79,10 +89,11 @@ export type Database = {
         Update: {
           id?: string;
           post_id?: string;
-          locale?: "en" | "he";
+          locale?: string;
           title?: string;
           excerpt?: string;
           content?: string;
+          image_alt?: string | null;
           meta_title?: string | null;
           meta_description?: string | null;
           og_title?: string | null;
@@ -90,6 +101,15 @@ export type Database = {
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "blog_post_translations_post_id_fkey";
+            columns: ["post_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_posts";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       blog_tags: {
         Row: {
@@ -107,26 +127,36 @@ export type Database = {
           slug?: string;
           created_at?: string;
         };
+        Relationships: [];
       };
       blog_tag_translations: {
         Row: {
           id: string;
           tag_id: string;
-          locale: "en" | "he";
+          locale: string;
           name: string;
         };
         Insert: {
           id?: string;
           tag_id: string;
-          locale: "en" | "he";
+          locale: string;
           name: string;
         };
         Update: {
           id?: string;
           tag_id?: string;
-          locale?: "en" | "he";
+          locale?: string;
           name?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "blog_tag_translations_tag_id_fkey";
+            columns: ["tag_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_tags";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       blog_post_tags: {
         Row: {
@@ -141,6 +171,22 @@ export type Database = {
           post_id?: string;
           tag_id?: string;
         };
+        Relationships: [
+          {
+            foreignKeyName: "blog_post_tags_post_id_fkey";
+            columns: ["post_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_posts";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "blog_post_tags_tag_id_fkey";
+            columns: ["tag_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_tags";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       blog_internal_links: {
         Row: {
@@ -161,6 +207,90 @@ export type Database = {
           target_post_id?: string;
           link_order?: number;
         };
+        Relationships: [
+          {
+            foreignKeyName: "blog_internal_links_source_post_id_fkey";
+            columns: ["source_post_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_posts";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "blog_internal_links_target_post_id_fkey";
+            columns: ["target_post_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_posts";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      admins: {
+        Row: {
+          id: string;
+          user_id: string | null;
+          email: string;
+          role: "admin" | "editor";
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id?: string | null;
+          email: string;
+          role?: "admin" | "editor";
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string | null;
+          email?: string;
+          role?: "admin" | "editor";
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      translation_jobs: {
+        Row: {
+          id: string;
+          post_id: string;
+          locale: string;
+          status: "pending" | "processing" | "completed" | "failed";
+          model: string | null;
+          tokens_used: number | null;
+          error_message: string | null;
+          created_at: string;
+          completed_at: string | null;
+        };
+        Insert: {
+          id?: string;
+          post_id: string;
+          locale: string;
+          status?: "pending" | "processing" | "completed" | "failed";
+          model?: string | null;
+          tokens_used?: number | null;
+          error_message?: string | null;
+          created_at?: string;
+          completed_at?: string | null;
+        };
+        Update: {
+          id?: string;
+          post_id?: string;
+          locale?: string;
+          status?: "pending" | "processing" | "completed" | "failed";
+          model?: string | null;
+          tokens_used?: number | null;
+          error_message?: string | null;
+          created_at?: string;
+          completed_at?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "translation_jobs_post_id_fkey";
+            columns: ["post_id"];
+            isOneToOne: false;
+            referencedRelation: "blog_posts";
+            referencedColumns: ["id"];
+          },
+        ];
       };
     };
     Views: Record<string, never>;
@@ -176,6 +306,9 @@ export type BlogPostTranslation =
 export type BlogTag = Database["public"]["Tables"]["blog_tags"]["Row"];
 export type BlogTagTranslation =
   Database["public"]["Tables"]["blog_tag_translations"]["Row"];
+export type Admin = Database["public"]["Tables"]["admins"]["Row"];
+export type TranslationJob =
+  Database["public"]["Tables"]["translation_jobs"]["Row"];
 
 export type BlogPostWithTranslation = BlogPost & {
   blog_post_translations: BlogPostTranslation[];

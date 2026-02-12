@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Instrument_Serif, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import { routing, isRtlLocale } from "@/i18n/routing";
@@ -40,29 +40,51 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const ogLocaleMap: Record<string, string> = {
+  en: "en_US",
+  ru: "ru_RU",
+  es: "es_ES",
+  pt: "pt_BR",
+  fr: "fr_FR",
+  zh: "zh_CN",
+  de: "de_DE",
+  he: "he_IL",
+  fa: "fa_IR",
+  ar: "ar_SA",
+  hi: "hi_IN",
+  id: "id_ID",
+  tr: "tr_TR",
+  vi: "vi_VN",
+  th: "th_TH",
+  ms: "ms_MY",
+  ko: "ko_KR",
+  ja: "ja_JP",
+  tl: "tl_PH",
+  ur: "ur_PK",
+  sw: "sw_KE",
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
-  const titles: Record<string, string> = {
-    en: "Doppler VPN — Free VPN No Registration | Private & Secure",
-    he: "Doppler VPN — VPN חינמי ללא רישום | פרטי ומאובטח",
-  };
+  const title = t("title");
+  const description = t("description");
 
-  const descriptions: Record<string, string> = {
-    en: "Free VPN with no email or sign up required. Connect instantly with WireGuard encryption, built-in ad blocker & content filter. No logs. No data caps.",
-    he: "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן. ללא יומנים. ללא הגבלות.",
-  };
+  const alternateLanguages = Object.fromEntries(
+    routing.locales.map((loc) => [loc, `https://dopplervpn.com/${loc}`])
+  );
 
   return {
     title: {
-      default: titles[locale] || titles.en,
+      default: title,
       template: "%s | Doppler VPN",
     },
-    description: descriptions[locale] || descriptions.en,
+    description,
     icons: {
       icon: [
         { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -73,24 +95,21 @@ export async function generateMetadata({
     },
     manifest: "/site.webmanifest",
     openGraph: {
-      title: titles[locale] || titles.en,
-      description: descriptions[locale] || descriptions.en,
+      title,
+      description,
       url: `https://dopplervpn.com/${locale}`,
       siteName: "Doppler VPN",
-      locale: locale === "he" ? "he_IL" : "en_US",
+      locale: ogLocaleMap[locale] || "en_US",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale] || titles.en,
-      description: descriptions[locale] || descriptions.en,
+      title,
+      description,
     },
     alternates: {
       canonical: `https://dopplervpn.com/${locale}`,
-      languages: {
-        en: "https://dopplervpn.com/en",
-        he: "https://dopplervpn.com/he",
-      },
+      languages: alternateLanguages,
     },
     verification: {
       google: "vfzTLNRXO6Wqg4yP5UTzG8jlnVilqSxwsW4cEAOvqx8",

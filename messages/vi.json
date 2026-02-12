@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Doppler VPN — VPN Miễn Phí Không Cần Đăng Ký | Riêng Tư & An Toàn",
+    "description": "VPN miễn phí không cần email hoặc đăng ký. Kết nối ngay với mã hóa WireGuard, trình chặn quảng cáo tích hợp & bộ lọc nội dung. Không nhật ký. Không giới hạn dữ liệu."
+  },
+  "nav": {
+    "features": "Tính năng",
+    "pricing": "Bảng giá",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "download": "Tải xuống"
+  },
+  "hero": {
+    "tagline": "VPN Ưu Tiên Quyền Riêng Tư. Miễn Phí Mãi Mãi.",
+    "headlinePart1a": "Đi bất cứ đâu",
+    "headlinePart1b": "trực tuyến",
+    "headlinePart2": "Không để lại dấu vết.",
+    "subheadline": "Kết nối ngay với mã hóa WireGuard. Thiết bị của bạn là tài khoản của bạn.",
+    "downloadIos": "App Store",
+    "downloadAndroid": "Google Play",
+    "trustedBy": "Không Cần Dữ Liệu Cá Nhân",
+    "trustBadges": {
+      "noData": "Không Dữ Liệu Cá Nhân",
+      "noLogs": "Không Nhật Ký",
+      "unlimited": "Băng Thông Không Giới Hạn",
+      "wireguard": "Mã Hóa WireGuard"
+    }
+  },
+  "features": {
+    "title": "Thiết Kế Cho Quyền Riêng Tư Toàn Diện",
+    "subtitle": "Hầu hết VPN yêu cầu email trước khi bảo vệ quyền riêng tư. Doppler thì không.",
+    "items": {
+      "noRegistration": {
+        "title": "Quyền Riêng Tư Không Cần Đăng Ký",
+        "description": "Thiết bị của bạn là tài khoản của bạn. Không email. Không số điện thoại. Không thông tin cá nhân. Quyền riêng tư bắt đầu ngay khi bạn kết nối."
+      },
+      "wireguard": {
+        "title": "Mã Hóa WireGuard",
+        "description": "Giao thức VPN hiện đại được các chuyên gia bảo mật tin tưởng. Kết nối nhanh hơn, hiệu quả pin tốt hơn và mã hóa cấp quân sự."
+      },
+      "adBlocker": {
+        "title": "Trình Chặn Quảng Cáo Tích Hợp",
+        "description": "Chặn ở cấp mạng loại bỏ tới 75% quảng cáo, trình theo dõi và cửa sổ bật lên. Tải trang nhanh hơn, sử dụng dữ liệu ít hơn, duyệt web sạch hơn."
+      },
+      "contentFilter": {
+        "title": "Bộ Lọc Nội Dung & Kiểm Soát Phụ Huynh",
+        "description": "Chặn các trang web cụ thể hoặc toàn bộ danh mục. Bảo vệ cài đặt bằng mật khẩu. Tạo internet an toàn hơn cho gia đình bạn."
+      },
+      "minimalData": {
+        "title": "Thu Thập Dữ Liệu Tối Thiểu",
+        "description": "Chúng tôi không ghi lại hoạt động duyệt web của bạn. Chúng tôi không theo dõi các trang web bạn truy cập. Kiến trúc của chúng tôi yêu cầu dữ liệu tối thiểu theo thiết kế."
+      },
+      "completelyFree": {
+        "title": "Hoàn Toàn Miễn Phí",
+        "description": "Tất cả máy chủ miễn phí với đầy đủ tính năng. Mã hóa đầy đủ, tốc độ cao, băng thông không giới hạn. Không giảm tốc hoặc giới hạn dữ liệu."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Bắt đầu trong vài giây",
+    "subtitle": "Không đăng ký, không phiền phức — chỉ cần tải xuống và kết nối",
+    "steps": {
+      "download": {
+        "title": "Tải xuống",
+        "description": "Tải Doppler VPN từ cửa hàng ứng dụng của thiết bị"
+      },
+      "connect": {
+        "title": "Kết nối",
+        "description": "Mở ứng dụng và nhấn kết nối — không cần tài khoản"
+      },
+      "browse": {
+        "title": "Duyệt web",
+        "description": "Tận hưởng duyệt web riêng tư, không quảng cáo ngay lập tức"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Giá đơn giản, minh bạch",
+    "subtitle": "Bắt đầu với bản dùng thử miễn phí 7 ngày. Hủy bất cứ lúc nào.",
+    "plusBadge": "Doppler Plus",
+    "cardTitle": "Tất cả tính năng Premium đều bao gồm",
+    "cardSubtitle": "Cùng tính năng mạnh mẽ, chọn cam kết của bạn",
+    "durationSelector": "Chọn thời hạn đăng ký",
+    "durations": {
+      "monthly": "1 Tháng",
+      "sixMonth": "6 Tháng",
+      "annual": "Năm"
+    },
+    "bestValue": "Tốt nhất",
+    "billedMonthly": "Thanh toán hàng tháng",
+    "billed": "Thanh toán",
+    "every6Months": "mỗi 6 tháng",
+    "perYear": "mỗi năm",
+    "save": "Tiết kiệm",
+    "allFeaturesIncluded": "Tất cả tính năng bao gồm trong mọi gói",
+    "features": {
+      "noLogs": "VPN không nhật ký",
+      "adBlocker": "Chặn quảng cáo",
+      "categoryFilter": "Lọc danh mục",
+      "customBlocklist": "Danh sách chặn",
+      "devices": "10 thiết bị",
+      "support": "Hỗ trợ 24/7"
+    },
+    "cta": "Bắt Đầu Dùng Thử Miễn Phí",
+    "cancelAnytime": "Hủy bất cứ lúc nào. Không hỏi lý do.",
+    "guarantee": "Đảm bảo hoàn tiền 30 ngày",
+    "pricesIn": "Giá hiển thị bằng"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Mọi thứ bạn cần biết về Doppler VPN",
+    "items": {
+      "what": {
+        "question": "Doppler VPN là gì?",
+        "answer": "Doppler VPN là dịch vụ mạng riêng ảo tập trung vào quyền riêng tư, mã hóa kết nối internet và ẩn địa chỉ IP của bạn. Bao gồm chặn quảng cáo tích hợp, lọc nội dung theo danh mục và hỗ trợ danh sách chặn tùy chỉnh — tất cả không cần đăng ký."
+      },
+      "noLogs": {
+        "question": "Doppler VPN có thực sự không lưu nhật ký không?",
+        "answer": "Có, chúng tôi áp dụng chính sách không nhật ký nghiêm ngặt. Chúng tôi không theo dõi, lưu trữ hoặc chia sẻ hoạt động duyệt web, dấu thời gian kết nối, địa chỉ IP hoặc bất kỳ dữ liệu cá nhân nào khác. Quyền riêng tư của bạn là ưu tiên của chúng tôi."
+      },
+      "adBlocker": {
+        "question": "Trình chặn quảng cáo hoạt động như thế nào?",
+        "answer": "Trình chặn quảng cáo của chúng tôi hoạt động ở cấp DNS, chặn quảng cáo, trình theo dõi và tên miền độc hại trước khi chúng tải. Điều này có nghĩa là duyệt web nhanh hơn, sử dụng dữ liệu ít hơn và bảo vệ trên tất cả ứng dụng — không chỉ trình duyệt."
+      },
+      "categories": {
+        "question": "Những danh mục nội dung nào có thể lọc?",
+        "answer": "Bạn có thể lọc nội dung theo nhiều danh mục bao gồm nội dung người lớn, cờ bạc, mạng xã hội, trò chơi, phát trực tuyến và hơn thế nữa. Bạn cũng có thể nhập danh sách chặn tùy chỉnh để kiểm soát lọc nội dung bổ sung."
+      },
+      "devices": {
+        "question": "Tôi có thể sử dụng bao nhiêu thiết bị?",
+        "answer": "Một đăng ký Doppler VPN bao gồm tối đa 10 thiết bị đồng thời. Sử dụng trên điện thoại, máy tính bảng và máy tính — tất cả được bảo vệ cùng lúc."
+      },
+      "platforms": {
+        "question": "Những nền tảng nào được hỗ trợ?",
+        "answer": "Doppler VPN có sẵn trên iOS (iPhone & iPad), macOS và Android. Chúng tôi liên tục mở rộng hỗ trợ nền tảng."
+      },
+      "cancel": {
+        "question": "Làm thế nào để hủy đăng ký?",
+        "answer": "Bạn có thể hủy đăng ký bất cứ lúc nào qua cửa hàng ứng dụng (App Store cho iOS/macOS hoặc Google Play cho Android). Quyền truy cập tiếp tục đến cuối kỳ thanh toán. Bạn sẽ không bị tính phí sau khi hủy."
+      },
+      "trial": {
+        "question": "Có bản dùng thử miễn phí không?",
+        "answer": "Có! Mỗi người dùng mới được dùng thử miễn phí 7 ngày với quyền truy cập đầy đủ vào tất cả tính năng Premium. Bản dùng thử chuyển thành đăng ký trả phí trừ khi hủy ít nhất 24 giờ trước khi kết thúc. Chúng tôi cũng cung cấp đảm bảo hoàn tiền 30 ngày."
+      },
+      "whatIsIncluded": {
+        "question": "Premium bao gồm những gì?",
+        "answer": "Premium bao gồm máy chủ VPN ở hơn 50 địa điểm với mã hóa WireGuard, trình chặn quảng cáo cấp DNS hoạt động trên tất cả ứng dụng, bộ lọc nội dung với kiểm soát phụ huynh và kết nối tối đa 10 thiết bị đồng thời."
+      },
+      "plans": {
+        "question": "Có những gói đăng ký nào?",
+        "answer": "Chúng tôi cung cấp ba gói: Hàng tháng, 6 Tháng và Hàng năm. Tất cả gói bao gồm cùng tính năng Premium. Gói dài hạn cung cấp giá hàng tháng thấp hơn. Đăng ký tự động gia hạn trừ khi hủy ít nhất 24 giờ trước khi kết thúc kỳ thanh toán."
+      },
+      "restore": {
+        "question": "Tôi đã đăng ký nhưng tính năng không hoạt động",
+        "answer": "Mở ứng dụng, vào Hồ sơ > Đăng ký và nhấn Khôi phục mua hàng. Điều này sẽ đồng bộ đăng ký với máy chủ của chúng tôi. Nếu vấn đề vẫn tiếp tục, liên hệ đội hỗ trợ tại support@simnetiq.store."
+      },
+      "refund": {
+        "question": "Làm thế nào để yêu cầu hoàn tiền?",
+        "answer": "Hoàn tiền được xử lý bởi Apple hoặc Google. Đối với iOS, truy cập reportaproblem.apple.com và đăng nhập bằng Apple ID. Đối với Android, mở Google Play > Tài khoản > Lịch sử đơn hàng. Hoàn tiền thường được xử lý trong 48 giờ."
+      }
+    }
+  },
+  "cta": {
+    "byLabel": "bởi",
+    "simnetiqName": "Simnetiq",
+    "doppler": {
+      "titleItalic": "Bắt đầu",
+      "titleMiddle": "với",
+      "titlePlayful": "Doppler VPN",
+      "subtitle": "VPN ưu tiên quyền riêng tư không cần đăng ký. Kết nối ngay với mã hóa WireGuard.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "simnetiq": {
+      "titleItalic": "Du lịch",
+      "titleMiddle": "với",
+      "titlePlayful": "Simnetiq",
+      "subtitle": "Gói dữ liệu eSIM toàn cầu cho du khách. Kết nối ở bất cứ đâu trên thế giới.",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "VPN ưu tiên quyền riêng tư với chặn quảng cáo nâng cao và lọc nội dung.",
+    "product": "Sản phẩm",
+    "features": "Tính năng",
+    "pricing": "Bảng giá",
+    "download": "Tải xuống",
+    "legal": "Pháp lý",
+    "privacy": "Chính Sách Bảo Mật",
+    "terms": "Điều Khoản Dịch Vụ",
+    "copyright": "Doppler VPN. Bảo lưu mọi quyền."
+  },
+  "privacy": {
+    "title": "Chính Sách Bảo Mật",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 2 năm 2026",
+    "intro": "Tại Doppler VPN, quyền riêng tư của bạn là ưu tiên hàng đầu. Chính Sách Bảo Mật này giải thích cách chúng tôi xử lý thông tin của bạn khi sử dụng dịch vụ VPN, chặn quảng cáo và lọc nội dung.",
+    "sections": {
+      "noLogs": {
+        "title": "Chính Sách Không Nhật Ký",
+        "content": "Chúng tôi áp dụng chính sách không nhật ký nghiêm ngặt. Chúng tôi không theo dõi, lưu trữ hoặc chia sẻ: hoạt động duyệt web, dấu thời gian kết nối, địa chỉ IP nguồn, truy vấn DNS, sử dụng băng thông hoặc bất kỳ dữ liệu nào có thể xác định bạn hoặc hoạt động trực tuyến. Lưu lượng VPN được mã hóa đầu cuối và không bao giờ bị kiểm tra, ghi lại hoặc lưu trữ."
+      },
+      "collect": {
+        "title": "Chúng Tôi Thu Thập Gì",
+        "content": "Chúng tôi chỉ thu thập thông tin tối thiểu cần thiết: mã định danh thiết bị ngẫu nhiên (không liên kết với danh tính cá nhân), thông tin thanh toán (được xử lý an toàn bởi Apple App Store hoặc Google Play — chúng tôi không bao giờ thấy chi tiết thanh toán), thống kê tải máy chủ tổng hợp ẩn danh để duy trì hiệu suất và địa chỉ email chỉ khi bạn tự nguyện liên hệ hỗ trợ."
+      },
+      "vpnData": {
+        "title": "Xử Lý Dữ Liệu VPN",
+        "content": "Khi bạn kết nối với dịch vụ VPN, lưu lượng internet được mã hóa bằng giao thức WireGuard và định tuyến qua máy chủ của chúng tôi. Chúng tôi không kiểm tra, ghi lại, lưu trữ, sửa đổi hoặc bán dữ liệu đi qua đường hầm VPN. Trình chặn quảng cáo cấp DNS và bộ lọc nội dung hoạt động trên trình phân giải DNS và không ghi lại truy vấn riêng lẻ hoặc mẫu duyệt web."
+      },
+      "security": {
+        "title": "Bảo Mật Dữ Liệu",
+        "content": "Chúng tôi sử dụng các giao thức mã hóa tiêu chuẩn ngành bao gồm WireGuard để bảo vệ kết nối. Tất cả truyền dữ liệu giữa thiết bị và máy chủ được mã hóa đầu cuối. Cơ sở hạ tầng máy chủ được cấu hình để giảm thiểu lưu trữ dữ liệu theo thiết kế."
+      },
+      "thirdParty": {
+        "title": "Bên Thứ Ba",
+        "content": "Chúng tôi không bán, trao đổi hoặc chia sẻ thông tin cá nhân với bên thứ ba. Chúng tôi sử dụng RevenueCat để quản lý đăng ký (họ chỉ xử lý mã định danh mua ẩn danh) và cửa hàng ứng dụng Apple/Google để xử lý thanh toán. Các nhà cung cấp này bị ràng buộc bởi chính sách bảo mật và nghĩa vụ hợp đồng riêng."
+      },
+      "children": {
+        "title": "Quyền Riêng Tư Trẻ Em",
+        "content": "Tính năng lọc nội dung bao gồm khả năng kiểm soát phụ huynh. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em dưới 13 tuổi. Bộ lọc nội dung hoạt động ở cấp DNS mà không thu thập hoặc lưu trữ dữ liệu cá nhân của người dùng ở mọi lứa tuổi."
+      },
+      "contact": {
+        "title": "Liên Hệ",
+        "content": "Nếu bạn có câu hỏi về Chính Sách Bảo Mật này, vui lòng liên hệ privacy@dopplervpn.com"
+      }
+    }
+  },
+  "terms": {
+    "title": "Điều Khoản Dịch Vụ",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 2 năm 2026",
+    "intro": "Bằng việc sử dụng Doppler VPN, bạn đồng ý với các Điều Khoản Dịch Vụ này. Vui lòng đọc kỹ.",
+    "sections": {
+      "service": {
+        "title": "Mô Tả Dịch Vụ",
+        "content": "Doppler VPN cung cấp dịch vụ mạng riêng ảo mã hóa kết nối internet và ẩn địa chỉ IP để bảo vệ quyền riêng tư. Dịch vụ cũng bao gồm chặn quảng cáo cấp DNS và lọc nội dung với kiểm soát phụ huynh. Dịch vụ được cung cấp \"nguyên trạng\" và \"khi có sẵn\"."
+      },
+      "usage": {
+        "title": "Sử Dụng Chấp Nhận Được",
+        "content": "Bạn đồng ý sử dụng Doppler VPN chỉ cho mục đích hợp pháp và tuân thủ tất cả luật pháp địa phương, quốc gia và quốc tế. Bạn không được sử dụng dịch vụ cho hoạt động bất hợp pháp, vượt qua hạn chế địa lý hoặc thỏa thuận cấp phép nội dung, gây hại cho người khác, phân phối phần mềm độc hại, vi phạm quyền sở hữu trí tuệ hoặc can thiệp vào hoạt động dịch vụ. Chúng tôi bảo lưu quyền chấm dứt tài khoản vi phạm các điều khoản này."
+      },
+      "subscription": {
+        "title": "Đăng Ký & Thanh Toán",
+        "content": "Doppler VPN Premium bao gồm truy cập máy chủ VPN premium ở hơn 50 địa điểm, chặn quảng cáo cấp DNS, lọc nội dung với kiểm soát phụ huynh và kết nối tối đa 10 thiết bị đồng thời. Đăng ký được thanh toán qua Apple App Store hoặc Google Play Store. Các gói có sẵn hàng tháng, 6 tháng hoặc hàng năm và tự động gia hạn trừ khi hủy ít nhất 24 giờ trước khi kết thúc kỳ thanh toán hiện tại. Bạn có thể hủy đăng ký bất cứ lúc nào qua cài đặt cửa hàng ứng dụng. Hoàn tiền theo chính sách của cửa hàng ứng dụng tương ứng."
+      },
+      "liability": {
+        "title": "Giới Hạn Trách Nhiệm",
+        "content": "Trong phạm vi tối đa được pháp luật cho phép, Doppler VPN không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hậu quả hoặc trừng phạt nào phát sinh từ việc bạn sử dụng dịch vụ."
+      },
+      "changes": {
+        "title": "Thay Đổi Điều Khoản",
+        "content": "Chúng tôi có thể cập nhật các Điều Khoản Dịch Vụ này theo thời gian. Chúng tôi sẽ thông báo về các thay đổi quan trọng qua ứng dụng hoặc email. Tiếp tục sử dụng dịch vụ sau khi thay đổi có nghĩa là chấp nhận điều khoản mới."
+      },
+      "contact": {
+        "title": "Liên Hệ",
+        "content": "Mọi câu hỏi về Điều Khoản Dịch Vụ, vui lòng liên hệ legal@dopplervpn.com"
+      }
+    }
+  },
+  "blog": {
+    "indexTitle": "Blog",
+    "indexDescription": "Mẹo bảo mật, hướng dẫn VPN và thông tin an ninh từ đội Doppler.",
+    "title": "Blog Doppler VPN",
+    "subtitle": "Mẹo bảo mật, thông tin an ninh và hướng dẫn VPN",
+    "allPosts": "Tất Cả Bài Viết",
+    "filterByTag": "Lọc theo thẻ",
+    "readMore": "Đọc thêm",
+    "readingTime": "{minutes} phút đọc",
+    "publishedOn": "Đăng ngày",
+    "by": "bởi",
+    "relatedPosts": "Bài Viết Liên Quan",
+    "viewAllPosts": "Xem Tất Cả Bài Viết",
+    "latestPosts": "Mới Nhất Từ Blog",
+    "latestPostsSubtitle": "Mẹo bảo mật và thông tin VPN",
+    "noPosts": "Không tìm thấy bài viết",
+    "noPostsDescription": "Quay lại sau để xem nội dung mới.",
+    "backToBlog": "Quay Lại Blog",
+    "breadcrumb": {
+      "home": "Trang Chủ",
+      "blog": "Blog"
+    },
+    "cta": {
+      "title": "Sẵn sàng bảo vệ quyền riêng tư?",
+      "subtitle": "Tải Doppler VPN và bắt đầu duyệt web an toàn ngay hôm nay.",
+      "button": "Bắt Đầu",
+      "doppler": {
+        "name": "Doppler VPN",
+        "tagline": "VPN ưu tiên quyền riêng tư không cần đăng ký",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      },
+      "simnetiq": {
+        "name": "Simnetiq",
+        "tagline": "Dữ liệu eSIM toàn cầu cho du khách khắp thế giới",
+        "appStore": "App Store",
+        "playStore": "Google Play"
+      }
+    }
+  }
+}
