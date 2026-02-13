@@ -52,35 +52,85 @@ export function TranslationGrid({
 }: TranslationGridProps) {
   const router = useRouter();
   const [translating, setTranslating] = useState<string | null>(null);
+  const [batchTranslating, setBatchTranslating] = useState(false);
+  const [batchProgress, setBatchProgress] = useState({ done: 0, total: 0, failed: 0 });
+  const [completedLocales, setCompletedLocales] = useState<Set<string>>(new Set());
   const [editing, setEditing] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const translationMap = new Map(translations.map((t) => [t.locale, t]));
+
+  async function translateOne(locale: string): Promise<boolean> {
+    const res = await fetch("/api/admin/ai/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ post_id: postId, locale }),
+    });
+    return res.ok;
+  }
 
   async function handleTranslate(locale: string) {
     setTranslating(locale);
     setError(null);
 
     try {
-      const res = await fetch("/api/admin/ai/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ post_id: postId, locale }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        setError(`${locale}: ${data.error}`);
+      const ok = await translateOne(locale);
+      if (!ok) {
+        setError(`Failed to translate to ${locale}`);
         return;
       }
-
       router.refresh();
     } catch {
       setError(`Failed to translate to ${locale}`);
     } finally {
       setTranslating(null);
     }
+  }
+
+  async function handleTranslateAll() {
+    const missing = ALL_LOCALES
+      .filter((loc) => loc.code !== "en" && !translationMap.has(loc.code))
+      .map((loc) => loc.code);
+
+    if (missing.length === 0) return;
+
+    setBatchTranslating(true);
+    setBatchProgress({ done: 0, total: missing.length, failed: 0 });
+    setCompletedLocales(new Set());
+    setError(null);
+
+    const CONCURRENCY = 4;
+    let done = 0;
+    let failed = 0;
+
+    // Process in batches of CONCURRENCY
+    for (let i = 0; i < missing.length; i += CONCURRENCY) {
+      const batch = missing.slice(i, i + CONCURRENCY);
+      const results = await Promise.allSettled(
+        batch.map(async (locale) => {
+          const ok = await translateOne(locale);
+          if (!ok) throw new Error(locale);
+          return locale;
+        })
+      );
+
+      for (const result of results) {
+        if (result.status === "fulfilled") {
+          done++;
+          setCompletedLocales((prev) => new Set([...prev, result.value]));
+        } else {
+          failed++;
+        }
+      }
+      setBatchProgress({ done, total: missing.length, failed });
+    }
+
+    if (failed > 0) {
+      setError(`${failed} translation(s) failed`);
+    }
+
+    setBatchTranslating(false);
+    router.refresh();
   }
 
   function formatDate(dateString: string): string {
@@ -118,11 +168,50 @@ export function TranslationGrid({
     );
   }
 
+  const missingCount = ALL_LOCALES.filter(
+    (loc) => loc.code !== "en" && !translationMap.has(loc.code)
+  ).length;
+
   return (
     <div className="space-y-4">
       {error && (
         <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-sm text-red-400">
           {error}
+        </div>
+      )}
+
+      {/* Translate All button */}
+      {missingCount > 0 && (
+        <div className="flex items-center justify-between">
+          <p className="text-sm text-text-muted">
+            {missingCount} language{missingCount !== 1 ? "s" : ""} missing
+          </p>
+          <button
+            onClick={handleTranslateAll}
+            disabled={batchTranslating || translating !== null}
+            className="px-4 py-2 bg-accent-teal/20 text-accent-teal rounded-lg text-sm font-medium hover:bg-accent-teal/30 transition-colors disabled:opacity-50 cursor-pointer"
+          >
+            {batchTranslating
+              ? `Translating ${batchProgress.done}/${batchProgress.total}...`
+              : `Translate All Missing (${missingCount})`}
+          </button>
+        </div>
+      )}
+
+      {/* Batch progress bar */}
+      {batchTranslating && batchProgress.total > 0 && (
+        <div className="space-y-2">
+          <div className="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+            <div
+              className="h-full bg-accent-teal rounded-full transition-all duration-300"
+              style={{ width: `${(batchProgress.done / batchProgress.total) * 100}%` }}
+            />
+          </div>
+          <p className="text-xs text-text-muted">
+            {batchProgress.done} of {batchProgress.total} completed
+            {batchProgress.failed > 0 && `, ${batchProgress.failed} failed`}
+            {" — processing 4 at a time"}
+          </p>
         </div>
       )}
 
@@ -152,7 +241,8 @@ export function TranslationGrid({
               const trans = translationMap.get(loc.code);
               const isSource = loc.code === "en";
               const hasTranslation = !!trans;
-              const isTranslating = translating === loc.code;
+              const isTranslating = translating === loc.code || (batchTranslating && !hasTranslation && loc.code !== "en");
+              const justCompleted = batchTranslating && completedLocales.has(loc.code);
 
               return (
                 <tr
@@ -174,6 +264,14 @@ export function TranslationGrid({
                     {isSource ? (
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
                         Source
+                      </span>
+                    ) : justCompleted ? (
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
+                        Done
+                      </span>
+                    ) : isTranslating && !hasTranslation ? (
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-teal/10 text-accent-teal border border-accent-teal/20 animate-pulse">
+                        Translating...
                       </span>
                     ) : hasTranslation ? (
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
@@ -200,24 +298,22 @@ export function TranslationGrid({
                       ) : (
                         <>
                           <button
+                            onClick={() => setEditing(loc.code)}
+                            className="text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"
+                          >
+                            {hasTranslation ? "Edit" : "Manual"}
+                          </button>
+                          <button
                             onClick={() => handleTranslate(loc.code)}
-                            disabled={isTranslating || translating !== null}
+                            disabled={isTranslating || translating !== null || batchTranslating}
                             className="text-sm text-accent-teal hover:text-accent-teal-light transition-colors disabled:opacity-50 cursor-pointer"
                           >
                             {isTranslating
                               ? "Translating..."
                               : hasTranslation
                                 ? "Re-translate"
-                                : "Translate"}
+                                : "AI Translate"}
                           </button>
-                          {hasTranslation && (
-                            <button
-                              onClick={() => setEditing(loc.code)}
-                              className="text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"
-                            >
-                              Edit
-                            </button>
-                          )}
                         </>
                       )}
                     </div>

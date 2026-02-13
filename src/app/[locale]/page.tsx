@@ -44,7 +44,7 @@ async function getLatestPosts(locale: string) {
       slug,
       image_url,
       published_at,
-      blog_post_translations!inner (
+      blog_post_translations (
         locale,
         title,
         excerpt,
@@ -62,31 +62,37 @@ async function getLatestPosts(locale: string) {
     `
     )
     .eq("status", "published")
-    .eq("blog_post_translations.locale", locale)
+    .in("blog_post_translations.locale", locale === "en" ? ["en"] : [locale, "en"])
     .order("published_at", { ascending: false })
     .limit(3);
 
   const postsData = postsRaw as HomePostData[] | null;
 
-  return (postsData || []).map((post) => {
-    const translation = post.blog_post_translations[0];
-    const tags = (post.blog_post_tags || []).map((pt) => ({
-      slug: pt.blog_tags.slug,
-      name:
-        pt.blog_tags.blog_tag_translations.find((t) => t.locale === locale)
-          ?.name || pt.blog_tags.slug,
-    }));
+  return (postsData || [])
+    .map((post) => {
+      const translation =
+        post.blog_post_translations.find((t) => t.locale === locale) ||
+        post.blog_post_translations.find((t) => t.locale === "en");
+      if (!translation) return null;
 
-    return {
-      slug: post.slug,
-      title: translation.title,
-      excerpt: translation.excerpt,
-      imageUrl: post.image_url,
-      imageAlt: translation.image_alt,
-      publishedAt: post.published_at,
-      tags,
-    };
-  });
+      const tags = (post.blog_post_tags || []).map((pt) => ({
+        slug: pt.blog_tags.slug,
+        name:
+          pt.blog_tags.blog_tag_translations.find((t) => t.locale === locale)
+            ?.name || pt.blog_tags.slug,
+      }));
+
+      return {
+        slug: post.slug,
+        title: translation.title,
+        excerpt: translation.excerpt,
+        imageUrl: post.image_url,
+        imageAlt: translation.image_alt,
+        publishedAt: post.published_at,
+        tags,
+      };
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
 }
 
 export default async function HomePage({ params }: PageProps) {

@@ -24,6 +24,7 @@ export async function POST(request: Request) {
     const result = await extractFromUrl(url);
     return NextResponse.json(result);
   } catch (err) {
+    console.error("[extract-url] Error:", err);
     const message =
       err instanceof Error ? err.message : "URL extraction failed";
     return NextResponse.json({ error: message }, { status: 500 });

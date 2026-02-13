@@ -65,26 +65,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `
       slug,
       image_url,
-      blog_post_translations!inner (
+      blog_post_translations (
         title,
         excerpt,
         meta_title,
         meta_description,
         og_title,
-        og_description
+        og_description,
+        locale
       )
     `
     )
     .eq("slug", slug)
     .eq("status", "published")
-    .eq("blog_post_translations.locale", locale)
+    .in("blog_post_translations.locale", locale === "en" ? ["en"] : [locale, "en"])
     .single();
 
-  const post = data as PostMetadata | null;
+  const post = data as (PostMetadata & { blog_post_translations: (PostMetadata["blog_post_translations"][0] & { locale: string })[] }) | null;
 
-  if (!post) return { title: "Not Found" };
+  if (!post || post.blog_post_translations.length === 0) return { title: "Not Found" };
 
-  const translation = post.blog_post_translations[0];
+  const translation =
+    post.blog_post_translations.find((t) => t.locale === locale) ||
+    post.blog_post_translations[0];
   const title = translation.meta_title || translation.title;
   const description = translation.meta_description || translation.excerpt;
 
@@ -167,7 +170,7 @@ async function getPostData(locale: string, slug: string) {
       author_name,
       published_at,
       updated_at,
-      blog_post_translations!inner (
+      blog_post_translations (
         title,
         excerpt,
         content,
@@ -204,14 +207,16 @@ async function getPostData(locale: string, slug: string) {
     )
     .eq("slug", slug)
     .eq("status", "published")
-    .eq("blog_post_translations.locale", locale)
+    .in("blog_post_translations.locale", locale === "en" ? ["en"] : [locale, "en"])
     .single();
 
   const post = data as PostFull | null;
 
-  if (!post || error) return null;
+  if (!post || error || post.blog_post_translations.length === 0) return null;
 
-  const translation = post.blog_post_translations[0];
+  const translation =
+    post.blog_post_translations.find((t) => t.locale === locale) ||
+    post.blog_post_translations.find((t) => t.locale === "en")!;
 
   const tags = (post.blog_post_tags || []).map((pt) => ({
     slug: pt.blog_tags.slug,
@@ -223,18 +228,15 @@ async function getPostData(locale: string, slug: string) {
   const relatedPosts = (post.blog_internal_links || [])
     .sort((a, b) => a.link_order - b.link_order)
     .map((link) => {
-      const relatedTranslation = link.blog_posts.blog_post_translations.find(
-        (t) => t.locale === locale
-      );
+      const relatedTranslation =
+        link.blog_posts.blog_post_translations.find((t) => t.locale === locale) ||
+        link.blog_posts.blog_post_translations.find((t) => t.locale === "en");
       return {
         slug: link.blog_posts.slug,
         title: relatedTranslation?.title || "",
         excerpt: relatedTranslation?.excerpt || "",
         imageUrl: link.blog_posts.image_url,
-        imageAlt:
-          link.blog_posts.blog_post_translations.find(
-            (t) => t.locale === locale
-          )?.image_alt ?? null,
+        imageAlt: relatedTranslation?.image_alt ?? null,
         publishedAt: link.blog_posts.published_at,
       };
     })

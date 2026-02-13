@@ -88,14 +88,14 @@ async function getBlogData(locale: string, tagSlug: string | undefined) {
       tag.slug,
   }));
 
-  // Build posts query
+  // Build posts query — fetch target locale + English for fallback
   const { data: postsRaw } = await supabase
     .from("blog_posts")
     .select(`
       slug,
       image_url,
       published_at,
-      blog_post_translations!inner (
+      blog_post_translations (
         locale,
         title,
         excerpt,
@@ -112,31 +112,37 @@ async function getBlogData(locale: string, tagSlug: string | undefined) {
       )
     `)
     .eq("status", "published")
-    .eq("blog_post_translations.locale", locale)
+    .in("blog_post_translations.locale", locale === "en" ? ["en"] : [locale, "en"])
     .order("published_at", { ascending: false });
 
   const postsData = postsRaw as PostData[] | null;
 
-  // Filter by tag if specified
-  let posts = (postsData || []).map((post) => {
-    const translation = post.blog_post_translations[0];
-    const postTags = (post.blog_post_tags || []).map((pt) => ({
-      slug: pt.blog_tags.slug,
-      name:
-        pt.blog_tags.blog_tag_translations.find((t) => t.locale === locale)
-          ?.name || pt.blog_tags.slug,
-    }));
+  // Filter by tag if specified — prefer target locale, fall back to English
+  let posts = (postsData || [])
+    .map((post) => {
+      const translation =
+        post.blog_post_translations.find((t) => t.locale === locale) ||
+        post.blog_post_translations.find((t) => t.locale === "en");
+      if (!translation) return null;
 
-    return {
-      slug: post.slug,
-      title: translation.title,
-      excerpt: translation.excerpt,
-      imageUrl: post.image_url,
-      imageAlt: translation.image_alt,
-      publishedAt: post.published_at,
-      tags: postTags,
-    };
-  });
+      const postTags = (post.blog_post_tags || []).map((pt) => ({
+        slug: pt.blog_tags.slug,
+        name:
+          pt.blog_tags.blog_tag_translations.find((t) => t.locale === locale)
+            ?.name || pt.blog_tags.slug,
+      }));
+
+      return {
+        slug: post.slug,
+        title: translation.title,
+        excerpt: translation.excerpt,
+        imageUrl: post.image_url,
+        imageAlt: translation.image_alt,
+        publishedAt: post.published_at,
+        tags: postTags,
+      };
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
 
   // Filter by tag
   if (tagSlug) {

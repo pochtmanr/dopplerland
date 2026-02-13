@@ -136,6 +136,10 @@ export function PostForm({
         excerpt: data.excerpt || prev.excerpt,
         content: data.content || prev.content,
         slug: prev.slug || slugify(data.title || ""),
+        meta_title: data.meta_title || prev.meta_title,
+        meta_description: data.meta_description || prev.meta_description,
+        og_title: data.og_title || prev.og_title,
+        og_description: data.og_description || prev.og_description,
       }));
       setExtractUrl("");
     } catch {

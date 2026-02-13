@@ -24,7 +24,7 @@ function LoginContent() {
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-semibold">Doppler Admin</h1>
           <p className="text-text-muted text-sm">
-            Sign in with your authorized Google account
+            Sign in to manage your blog
           </p>
         </div>
 
