@@ -99,28 +99,20 @@ export function TranslationGrid({
     setCompletedLocales(new Set());
     setError(null);
 
-    const CONCURRENCY = 4;
     let done = 0;
     let failed = 0;
 
-    // Process in batches of CONCURRENCY
-    for (let i = 0; i < missing.length; i += CONCURRENCY) {
-      const batch = missing.slice(i, i + CONCURRENCY);
-      const results = await Promise.allSettled(
-        batch.map(async (locale) => {
-          const ok = await translateOne(locale);
-          if (!ok) throw new Error(locale);
-          return locale;
-        })
-      );
-
-      for (const result of results) {
-        if (result.status === "fulfilled") {
+    for (const locale of missing) {
+      try {
+        const ok = await translateOne(locale);
+        if (ok) {
           done++;
-          setCompletedLocales((prev) => new Set([...prev, result.value]));
+          setCompletedLocales((prev) => new Set([...prev, locale]));
         } else {
           failed++;
         }
+      } catch {
+        failed++;
       }
       setBatchProgress({ done, total: missing.length, failed });
     }
@@ -210,7 +202,6 @@ export function TranslationGrid({
           <p className="text-xs text-text-muted">
             {batchProgress.done} of {batchProgress.total} completed
             {batchProgress.failed > 0 && `, ${batchProgress.failed} failed`}
-            {" — processing 4 at a time"}
           </p>
         </div>
       )}
