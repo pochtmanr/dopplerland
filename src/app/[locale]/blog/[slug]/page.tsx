@@ -45,6 +45,7 @@ interface PostMetadata {
   slug: string;
   image_url: string | null;
   blog_post_translations: {
+    locale: string;
     title: string;
     excerpt: string;
     meta_title: string | null;
@@ -81,7 +82,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .in("blog_post_translations.locale", locale === "en" ? ["en"] : [locale, "en"])
     .single();
 
-  const post = data as (PostMetadata & { blog_post_translations: (PostMetadata["blog_post_translations"][0] & { locale: string })[] }) | null;
+  const post = data as PostMetadata | null;
 
   if (!post || post.blog_post_translations.length === 0) return { title: "Not Found" };
 
