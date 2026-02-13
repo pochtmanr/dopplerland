@@ -100,6 +100,7 @@ export async function POST(request: Request) {
       tokensUsed: result.tokensUsed,
     });
   } catch (err) {
+    console.error("[translate] Error:", err);
     const message = err instanceof Error ? err.message : "Translation failed";
 
     // Mark job as failed

@@ -38,6 +38,12 @@ interface TranslationOutput extends TranslationInput {
   tokensUsed: number;
 }
 
+const MAX_RETRIES = 3;
+
+async function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function translateContent(
   source: TranslationInput,
   targetLocale: string
@@ -45,12 +51,14 @@ export async function translateContent(
   const openai = getOpenAI();
   const languageName = LANGUAGE_NAMES[targetLocale] || targetLocale;
 
-  const response = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
-    messages: [
-      {
-        role: "system",
-        content: `You are a professional translator for a VPN/privacy technology blog. Translate the following blog post content to ${languageName}.
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const response = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+          {
+            role: "system",
+            content: `You are a professional translator for a VPN/privacy technology blog. Translate the following blog post content to ${languageName}.
 
 Rules:
 - Maintain all markdown formatting exactly
@@ -61,39 +69,48 @@ Rules:
 - Return valid JSON with these exact keys: title, excerpt, content, image_alt, meta_title, meta_description, og_title, og_description
 - If a field is null in the input, set it to null in the output
 - Do NOT add commentary — return ONLY the JSON object`,
-      },
-      {
-        role: "user",
-        content: JSON.stringify({
-          title: source.title,
-          excerpt: source.excerpt,
-          content: source.content,
-          image_alt: source.image_alt,
-          meta_title: source.meta_title,
-          meta_description: source.meta_description,
-          og_title: source.og_title,
-          og_description: source.og_description,
-        }),
-      },
-    ],
-    temperature: 0.3,
-    response_format: { type: "json_object" },
-  });
+          },
+          {
+            role: "user",
+            content: JSON.stringify({
+              title: source.title,
+              excerpt: source.excerpt,
+              content: source.content,
+              image_alt: source.image_alt,
+              meta_title: source.meta_title,
+              meta_description: source.meta_description,
+              og_title: source.og_title,
+              og_description: source.og_description,
+            }),
+          },
+        ],
+        temperature: 0.3,
+        response_format: { type: "json_object" },
+      }, { timeout: 120_000 });
 
-  const raw = response.choices[0].message.content || "{}";
-  const parsed = JSON.parse(raw) as TranslationInput;
+      const raw = response.choices[0].message.content || "{}";
+      const parsed = JSON.parse(raw) as TranslationInput;
 
-  return {
-    title: parsed.title || source.title,
-    excerpt: parsed.excerpt || source.excerpt,
-    content: parsed.content || source.content,
-    image_alt: parsed.image_alt ?? source.image_alt,
-    meta_title: parsed.meta_title ?? source.meta_title,
-    meta_description: parsed.meta_description ?? source.meta_description,
-    og_title: parsed.og_title ?? source.og_title,
-    og_description: parsed.og_description ?? source.og_description,
-    tokensUsed: response.usage?.total_tokens || 0,
-  };
+      return {
+        title: parsed.title || source.title,
+        excerpt: parsed.excerpt || source.excerpt,
+        content: parsed.content || source.content,
+        image_alt: parsed.image_alt ?? source.image_alt,
+        meta_title: parsed.meta_title ?? source.meta_title,
+        meta_description: parsed.meta_description ?? source.meta_description,
+        og_title: parsed.og_title ?? source.og_title,
+        og_description: parsed.og_description ?? source.og_description,
+        tokensUsed: response.usage?.total_tokens || 0,
+      };
+    } catch (err) {
+      console.error(`[translate] ${languageName} attempt ${attempt}/${MAX_RETRIES}:`, err);
+      if (attempt === MAX_RETRIES) throw err;
+      // Exponential backoff: 2s, 4s
+      await sleep(2000 * attempt);
+    }
+  }
+
+  throw new Error(`Translation to ${languageName} failed after ${MAX_RETRIES} attempts`);
 }
 
 export function getLanguageName(locale: string): string {
