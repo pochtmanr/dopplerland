@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { createStaticClient } from "@/lib/supabase/server";
 
-const baseUrl = "https://dopplervpn.com";
+const baseUrl = "https://dopplervpn.org";
 
 interface SitemapPost {
   slug: string;

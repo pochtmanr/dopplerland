@@ -20,7 +20,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
-  const baseUrl = "https://dopplervpn.com";
+  const baseUrl = "https://dopplervpn.org";
 
   return {
     title: t("indexTitle"),

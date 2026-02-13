@@ -77,7 +77,7 @@ export async function generateMetadata({
   const description = t("description");
 
   const alternateLanguages = Object.fromEntries(
-    routing.locales.map((loc) => [loc, `https://dopplervpn.com/${loc}`])
+    routing.locales.map((loc) => [loc, `https://dopplervpn.org/${loc}`])
   );
 
   return {
@@ -98,7 +98,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://dopplervpn.com/${locale}`,
+      url: `https://dopplervpn.org/${locale}`,
       siteName: "Doppler VPN",
       locale: ogLocaleMap[locale] || "en_US",
       type: "website",
@@ -109,7 +109,7 @@ export async function generateMetadata({
       description,
     },
     alternates: {
-      canonical: `https://dopplervpn.com/${locale}`,
+      canonical: `https://dopplervpn.org/${locale}`,
       languages: alternateLanguages,
     },
     verification: {

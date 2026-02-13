@@ -58,7 +58,7 @@ interface PostMetadata {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const supabase = await createClient();
-  const baseUrl = "https://dopplervpn.com";
+  const baseUrl = "https://dopplervpn.org";
 
   const { data } = await supabase
     .from("blog_posts")

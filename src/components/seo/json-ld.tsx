@@ -7,8 +7,8 @@ export function OrganizationSchema({ locale }: OrganizationSchemaProps) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Doppler VPN",
-    url: `https://dopplervpn.com/${locale}`,
-    logo: "https://dopplervpn.com/logo.png",
+    url: `https://dopplervpn.org/${locale}`,
+    logo: "https://dopplervpn.org/logo.png",
     description:
       locale === "he"
         ? "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן."
@@ -149,12 +149,12 @@ export function WebsiteSchema({ locale }: WebsiteSchemaProps) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Doppler VPN",
-    url: `https://dopplervpn.com/${locale}`,
+    url: `https://dopplervpn.org/${locale}`,
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `https://dopplervpn.com/${locale}?q={search_term_string}`,
+        urlTemplate: `https://dopplervpn.org/${locale}?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
