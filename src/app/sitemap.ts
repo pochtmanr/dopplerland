@@ -24,35 +24,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = ["", "/privacy", "/terms", "/blog"];
 
   const staticEntries = routing.locales.flatMap((locale) =>
-    staticPages.map((page) => {
-      // Default locale (en) should be at root, others use locale prefix
-      const localePath = locale === routing.defaultLocale ? "" : `/${locale}`;
-      return {
-        url: `${baseUrl}${localePath}${page}`,
-        lastModified: new Date(),
-        changeFrequency:
-          page === ""
-            ? ("weekly" as const)
-            : page === "/blog"
-              ? ("daily" as const)
-              : ("monthly" as const),
-        priority: page === "" ? 1 : page === "/blog" ? 0.9 : 0.5,
-      };
-    })
+    staticPages.map((page) => ({
+      url: `${baseUrl}/${locale}${page}`,
+      lastModified: new Date(),
+      changeFrequency:
+        page === ""
+          ? ("weekly" as const)
+          : page === "/blog"
+            ? ("daily" as const)
+            : ("monthly" as const),
+      priority: page === "" ? 1 : page === "/blog" ? 0.9 : 0.5,
+    }))
   );
 
   // Blog post pages
   const blogEntries = (posts || []).flatMap((post) =>
-    routing.locales.map((locale) => {
-      // Default locale (en) should be at root, others use locale prefix
-      const localePath = locale === routing.defaultLocale ? "" : `/${locale}`;
-      return {
-        url: `${baseUrl}${localePath}/blog/${post.slug}`,
-        lastModified: new Date(post.updated_at),
-        changeFrequency: "weekly" as const,
-        priority: 0.8,
-      };
-    })
+    routing.locales.map((locale) => ({
+      url: `${baseUrl}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(post.updated_at),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }))
   );
 
   return [...staticEntries, ...blogEntries];
