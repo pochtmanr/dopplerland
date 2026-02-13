@@ -57,7 +57,7 @@ export function PostForm({
     slug: initialData?.slug || "",
     author_name: initialData?.author_name || "Doppler Team",
     status: initialData?.status || "draft",
-    published_at: initialData?.published_at?.slice(0, 16) || "",
+    published_at: initialData?.published_at?.slice(0, 16) || new Date().toISOString().slice(0, 16),
     image_url: initialData?.image_url || "",
     title: initialData?.title || "",
     excerpt: initialData?.excerpt || "",
