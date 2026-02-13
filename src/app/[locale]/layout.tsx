@@ -10,6 +10,7 @@ import {
   WebsiteSchema,
   SoftwareApplicationSchema,
 } from "@/components/seo/json-ld";
+import { Analytics } from "@vercel/analytics/react";
 import "@/app/globals.css";
 
 // Instrument Serif - for hero headline only
@@ -146,6 +147,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
