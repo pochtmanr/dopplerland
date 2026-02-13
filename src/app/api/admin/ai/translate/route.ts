@@ -59,21 +59,21 @@ export async function POST(request: Request) {
   try {
     const result = await translateContent(enTranslation, locale);
 
-    // Upsert the translation
+    // Upsert the translation (truncate SEO fields to fit DB constraints)
     const { error: upsertError } = await db
       .from("blog_post_translations")
       .upsert(
         {
           post_id,
           locale,
-          title: result.title,
+          title: result.title?.slice(0, 255),
           excerpt: result.excerpt,
           content: result.content,
           image_alt: result.image_alt,
-          meta_title: result.meta_title,
-          meta_description: result.meta_description,
-          og_title: result.og_title,
-          og_description: result.og_description,
+          meta_title: result.meta_title?.slice(0, 70) || null,
+          meta_description: result.meta_description?.slice(0, 160) || null,
+          og_title: result.og_title?.slice(0, 70) || null,
+          og_description: result.og_description?.slice(0, 200) || null,
         },
         { onConflict: "post_id,locale" }
       );
