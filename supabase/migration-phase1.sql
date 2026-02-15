@@ -66,97 +66,83 @@ CREATE TABLE IF NOT EXISTS translation_jobs (
 CREATE INDEX IF NOT EXISTS idx_translation_jobs_post ON translation_jobs(post_id);
 
 -- =====================================================
--- 5. RLS FOR ADMINS TABLE
+-- 5. SECURITY DEFINER FUNCTIONS FOR ADMIN CHECKS
+--    (Avoids infinite RLS recursion on admins table)
+-- =====================================================
+CREATE OR REPLACE FUNCTION is_admin()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM admins WHERE user_id = auth.uid()
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER STABLE;
+
+CREATE OR REPLACE FUNCTION is_super_admin()
+RETURNS BOOLEAN AS $$
+BEGIN
+  RETURN EXISTS (
+    SELECT 1 FROM admins WHERE user_id = auth.uid() AND role = 'admin'
+  );
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER STABLE;
+
+-- =====================================================
+-- 6. RLS FOR ADMINS TABLE
 -- =====================================================
 ALTER TABLE admins ENABLE ROW LEVEL SECURITY;
 
 -- Admins can read the admin list
 DROP POLICY IF EXISTS "Admins can read admin list" ON admins;
 CREATE POLICY "Admins can read admin list" ON admins
-  FOR SELECT USING (
-    EXISTS (
-      SELECT 1 FROM admins a WHERE a.user_id = auth.uid()
-    )
-  );
+  FOR SELECT USING (is_admin());
 
 -- Only role='admin' can manage other admins
 DROP POLICY IF EXISTS "Super admins can manage admins" ON admins;
 CREATE POLICY "Super admins can manage admins" ON admins
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins a WHERE a.user_id = auth.uid() AND a.role = 'admin'
-    )
-  );
+  FOR ALL USING (is_super_admin());
 
 -- =====================================================
--- 6. ADMIN WRITE POLICIES ON EXISTING TABLES
+-- 7. ADMIN WRITE POLICIES ON EXISTING TABLES
 --    (Public read policies already exist from schema.sql)
 -- =====================================================
 
 -- blog_posts: admins can insert, update, delete
 DROP POLICY IF EXISTS "Admins can manage posts" ON blog_posts;
 CREATE POLICY "Admins can manage posts" ON blog_posts
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- blog_post_translations: admins can manage
 DROP POLICY IF EXISTS "Admins can manage translations" ON blog_post_translations;
 CREATE POLICY "Admins can manage translations" ON blog_post_translations
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- blog_tags: admins can manage
 DROP POLICY IF EXISTS "Admins can manage tags" ON blog_tags;
 CREATE POLICY "Admins can manage tags" ON blog_tags
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- blog_tag_translations: admins can manage
 DROP POLICY IF EXISTS "Admins can manage tag translations" ON blog_tag_translations;
 CREATE POLICY "Admins can manage tag translations" ON blog_tag_translations
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- blog_post_tags: admins can manage
 DROP POLICY IF EXISTS "Admins can manage post tags" ON blog_post_tags;
 CREATE POLICY "Admins can manage post tags" ON blog_post_tags
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- blog_internal_links: admins can manage
 DROP POLICY IF EXISTS "Admins can manage internal links" ON blog_internal_links;
 CREATE POLICY "Admins can manage internal links" ON blog_internal_links
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- translation_jobs: admins can manage
 ALTER TABLE translation_jobs ENABLE ROW LEVEL SECURITY;
 
 DROP POLICY IF EXISTS "Admins can manage translation jobs" ON translation_jobs;
 CREATE POLICY "Admins can manage translation jobs" ON translation_jobs
-  FOR ALL USING (
-    EXISTS (
-      SELECT 1 FROM admins WHERE admins.user_id = auth.uid()
-    )
-  );
+  FOR ALL USING (is_admin());
 
 -- =====================================================
 -- 7. IMPORTANT: After first Google login, run this to

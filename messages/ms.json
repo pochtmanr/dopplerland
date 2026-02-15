@@ -24,7 +24,8 @@
       "noLogs": "Tiada Log",
       "unlimited": "Lebar Jalur Tanpa Had",
       "wireguard": "Penyulitan WireGuard"
-    }
+    },
+    "openTelegram": "Bot Telegram"
   },
   "features": {
     "title": "Direka untuk Privasi Sepenuhnya",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Saya melanggan tetapi ciri tidak berfungsi",
-        "answer": "Buka aplikasi, pergi ke Profil > Langganan dan ketik Pulihkan Pembelian. Ini akan menyegerakkan langganan anda dengan pelayan kami. Jika masalah berterusan, hubungi pasukan sokongan kami di support@simnetiq.store."
+        "answer": "Buka aplikasi, pergi ke Profil > Langganan dan ketik Pulihkan Pembelian. Ini akan menyegerakkan langganan anda dengan pelayan kami. Jika masalah berterusan, hubungi pasukan sokongan kami di support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Bagaimana cara meminta bayaran balik?",
@@ -189,7 +190,9 @@
     "legal": "Undang-undang",
     "privacy": "Dasar Privasi",
     "terms": "Terma Perkhidmatan",
-    "copyright": "Doppler VPN. Hak cipta terpelihara."
+    "copyright": "Doppler VPN. Hak cipta terpelihara.",
+    "supportTitle": "Sokongan",
+    "telegramSupport": "Sokongan Telegram"
   },
   "privacy": {
     "title": "Dasar Privasi",

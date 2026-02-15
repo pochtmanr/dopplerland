@@ -24,7 +24,8 @@
       "noLogs": "ללא יומנים",
       "unlimited": "רוחב פס ללא הגבלה",
       "wireguard": "הצפנת WireGuard"
-    }
+    },
+    "openTelegram": "בוט טלגרם"
   },
   "features": {
     "title": "תוכנן לפרטיות מלאה",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "נרשמתי למנוי אבל התכונות לא עובדות",
-        "answer": "פתח את האפליקציה, עבור לפרופיל > מנוי ולחץ על שחזור רכישות. זה יסנכרן מחדש את המנוי שלך עם השרתים שלנו. אם הבעיה נמשכת, צור קשר עם צוות התמיכה שלנו בכתובת support@simnetiq.store."
+        "answer": "פתח את האפליקציה, עבור לפרופיל > מנוי ולחץ על שחזור רכישות. זה יסנכרן מחדש את המנוי שלך עם השרתים שלנו. אם הבעיה נמשכת, צור קשר עם צוות התמיכה שלנו בכתובת support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "איך אני מבקש החזר כספי?",
@@ -189,7 +190,9 @@
     "legal": "משפטי",
     "privacy": "מדיניות פרטיות",
     "terms": "תנאי שימוש",
-    "copyright": "Doppler VPN. כל הזכויות שמורות."
+    "copyright": "Doppler VPN. כל הזכויות שמורות.",
+    "supportTitle": "תמיכה",
+    "telegramSupport": "תמיכה בטלגרם"
   },
   "privacy": {
     "title": "מדיניות פרטיות",

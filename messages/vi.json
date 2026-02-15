@@ -24,7 +24,8 @@
       "noLogs": "Không Nhật Ký",
       "unlimited": "Băng Thông Không Giới Hạn",
       "wireguard": "Mã Hóa WireGuard"
-    }
+    },
+    "openTelegram": "Bot Telegram"
   },
   "features": {
     "title": "Thiết Kế Cho Quyền Riêng Tư Toàn Diện",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Tôi đã đăng ký nhưng tính năng không hoạt động",
-        "answer": "Mở ứng dụng, vào Hồ sơ > Đăng ký và nhấn Khôi phục mua hàng. Điều này sẽ đồng bộ đăng ký với máy chủ của chúng tôi. Nếu vấn đề vẫn tiếp tục, liên hệ đội hỗ trợ tại support@simnetiq.store."
+        "answer": "Mở ứng dụng, vào Hồ sơ > Đăng ký và nhấn Khôi phục mua hàng. Điều này sẽ đồng bộ đăng ký với máy chủ của chúng tôi. Nếu vấn đề vẫn tiếp tục, liên hệ đội hỗ trợ tại support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Làm thế nào để yêu cầu hoàn tiền?",
@@ -189,7 +190,9 @@
     "legal": "Pháp lý",
     "privacy": "Chính Sách Bảo Mật",
     "terms": "Điều Khoản Dịch Vụ",
-    "copyright": "Doppler VPN. Bảo lưu mọi quyền."
+    "copyright": "Doppler VPN. Bảo lưu mọi quyền.",
+    "supportTitle": "Hỗ trợ",
+    "telegramSupport": "Hỗ trợ Telegram"
   },
   "privacy": {
     "title": "Chính Sách Bảo Mật",

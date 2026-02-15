@@ -24,7 +24,8 @@
       "noLogs": "Walang Logs",
       "unlimited": "Walang Limitasyong Bandwidth",
       "wireguard": "WireGuard Encryption"
-    }
+    },
+    "openTelegram": "Telegram Bot"
   },
   "features": {
     "title": "Dinisenyo para sa Kumpletong Privacy",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Nag-subscribe ako pero hindi gumagana ang features",
-        "answer": "Buksan ang app, pumunta sa Profile > Subscription at i-tap ang Restore Purchases. I-re-sync nito ang iyong subscription sa aming servers. Kung magpapatuloy ang isyu, kontakin ang aming support team sa support@simnetiq.store."
+        "answer": "Buksan ang app, pumunta sa Profile > Subscription at i-tap ang Restore Purchases. I-re-sync nito ang iyong subscription sa aming servers. Kung magpapatuloy ang isyu, kontakin ang aming support team sa support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Paano mag-request ng refund?",
@@ -189,7 +190,9 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "Doppler VPN. All rights reserved."
+    "copyright": "Doppler VPN. All rights reserved.",
+    "supportTitle": "Suporta",
+    "telegramSupport": "Suporta sa Telegram"
   },
   "privacy": {
     "title": "Privacy Policy",

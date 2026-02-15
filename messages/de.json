@@ -24,7 +24,8 @@
       "noLogs": "Keine Protokolle",
       "unlimited": "Unbegrenzte Bandbreite",
       "wireguard": "WireGuard-Verschlüsselung"
-    }
+    },
+    "openTelegram": "Telegram Bot"
   },
   "features": {
     "title": "Entwickelt für vollständige Privatsphäre",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Ich habe abonniert, aber meine Funktionen funktionieren nicht",
-        "answer": "Öffne die App, gehe zu Profil > Abonnement und tippe auf Käufe wiederherstellen. Dies synchronisiert dein Abonnement erneut mit unseren Servern. Wenn das Problem weiterhin besteht, kontaktiere unser Support-Team unter support@simnetiq.store."
+        "answer": "Öffne die App, gehe zu Profil > Abonnement und tippe auf Käufe wiederherstellen. Dies synchronisiert dein Abonnement erneut mit unseren Servern. Wenn das Problem weiterhin besteht, kontaktiere unser Support-Team unter support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Wie beantrage ich eine Rückerstattung?",
@@ -189,7 +190,9 @@
     "legal": "Rechtliches",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
-    "copyright": "Doppler VPN. Alle Rechte vorbehalten."
+    "copyright": "Doppler VPN. Alle Rechte vorbehalten.",
+    "supportTitle": "Support",
+    "telegramSupport": "Telegram Support"
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",

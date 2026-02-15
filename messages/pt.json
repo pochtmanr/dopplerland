@@ -24,7 +24,8 @@
       "noLogs": "Sem registros",
       "unlimited": "Largura de banda ilimitada",
       "wireguard": "Criptografia WireGuard"
-    }
+    },
+    "openTelegram": "Bot Telegram"
   },
   "features": {
     "title": "Projetado para privacidade total",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Assinei mas meus recursos não estão funcionando",
-        "answer": "Abra o app, vá para Perfil > Assinatura e toque em Restaurar compras. Isso irá ressincronizar sua assinatura com nossos servidores. Se o problema persistir, entre em contato com nossa equipe de suporte em support@simnetiq.store."
+        "answer": "Abra o app, vá para Perfil > Assinatura e toque em Restaurar compras. Isso irá ressincronizar sua assinatura com nossos servidores. Se o problema persistir, entre em contato com nossa equipe de suporte em support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Como solicito um reembolso?",
@@ -189,7 +190,9 @@
     "legal": "Legal",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
-    "copyright": "Doppler VPN. Todos os direitos reservados."
+    "copyright": "Doppler VPN. Todos os direitos reservados.",
+    "supportTitle": "Suporte",
+    "telegramSupport": "Suporte no Telegram"
   },
   "privacy": {
     "title": "Política de Privacidade",

@@ -24,7 +24,8 @@
       "noLogs": "Hakuna Kumbukumbu",
       "unlimited": "Bandwidth Bila Kikomo",
       "wireguard": "Usimbaji wa WireGuard"
-    }
+    },
+    "openTelegram": "Bot ya Telegram"
   },
   "features": {
     "title": "Imeundwa kwa Faragha Kamili",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Nimesajili lakini vipengele havifanyi kazi",
-        "answer": "Fungua programu, nenda kwa Profaili > Usajili na uguse Rejesha Ununuzi. Hii itasawazisha usajili wako na seva zetu. Ikiwa tatizo linaendelea, wasiliana na timu yetu ya msaada kwa support@simnetiq.store."
+        "answer": "Fungua programu, nenda kwa Profaili > Usajili na uguse Rejesha Ununuzi. Hii itasawazisha usajili wako na seva zetu. Ikiwa tatizo linaendelea, wasiliana na timu yetu ya msaada kwa support@simnetiq.store or contact @DopplerSupportBot on Telegram."
       },
       "refund": {
         "question": "Ninaiombaje kurudishiwa pesa?",
@@ -189,7 +190,9 @@
     "legal": "Kisheria",
     "privacy": "Sera ya Faragha",
     "terms": "Masharti ya Huduma",
-    "copyright": "Doppler VPN. Haki zote zimehifadhiwa."
+    "copyright": "Doppler VPN. Haki zote zimehifadhiwa.",
+    "supportTitle": "Msaada",
+    "telegramSupport": "Msaada wa Telegram"
   },
   "privacy": {
     "title": "Sera ya Faragha",

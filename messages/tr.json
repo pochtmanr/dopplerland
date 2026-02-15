@@ -24,7 +24,8 @@
       "noLogs": "Kayıt Tutulmaz",
       "unlimited": "Sınırsız Bant Genişliği",
       "wireguard": "WireGuard Şifreleme"
-    }
+    },
+    "openTelegram": "Telegram Bot"
   },
   "features": {
     "title": "Tam Gizlilik İçin Tasarlandı",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "Abone oldum ama özellikler çalışmıyor",
-        "answer": "Uygulamayı açın, Profil > Abonelik'e gidin ve Satın Alımları Geri Yükle'ye dokunun. Bu, aboneliğinizi sunucularımızla yeniden senkronize eder. Sorun devam ederse, destek ekibimizle support@simnetiq.store adresinden iletişime geçin."
+        "answer": "Uygulamayı açın, Profil > Abonelik'e gidin ve Satın Alımları Geri Yükle'ye dokunun. Bu, aboneliğinizi sunucularımızla yeniden senkronize eder. Sorun devam ederse, destek ekibimizle support@simnetiq.store or contact @DopplerSupportBot on Telegram adresinden iletişime geçin."
       },
       "refund": {
         "question": "Para iadesi nasıl talep ederim?",
@@ -189,7 +190,9 @@
     "legal": "Yasal",
     "privacy": "Gizlilik Politikası",
     "terms": "Hizmet Koşulları",
-    "copyright": "Doppler VPN. Tüm hakları saklıdır."
+    "copyright": "Doppler VPN. Tüm hakları saklıdır.",
+    "supportTitle": "Destek",
+    "telegramSupport": "Telegram Destek"
   },
   "privacy": {
     "title": "Gizlilik Politikası",

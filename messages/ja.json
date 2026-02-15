@@ -24,7 +24,8 @@
       "noLogs": "ログなし",
       "unlimited": "無制限帯域幅",
       "wireguard": "WireGuard暗号化"
-    }
+    },
+    "openTelegram": "Telegramボット"
   },
   "features": {
     "title": "完全なプライバシーのために設計",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "購読したのに機能が動作しません",
-        "answer": "アプリを開き、プロフィール > サブスクリプションに移動して「購入を復元」をタップしてください。これにより、サブスクリプションがサーバーと再同期されます。問題が解決しない場合は、support@simnetiq.storeのサポートチームにお問い合わせください。"
+        "answer": "アプリを開き、プロフィール > サブスクリプションに移動して「購入を復元」をタップしてください。これにより、サブスクリプションがサーバーと再同期されます。問題が解決しない場合は、support@simnetiq.store or contact @DopplerSupportBot on Telegramのサポートチームにお問い合わせください。"
       },
       "refund": {
         "question": "返金をリクエストするには？",
@@ -189,7 +190,9 @@
     "legal": "法的情報",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "copyright": "Doppler VPN. All rights reserved."
+    "copyright": "Doppler VPN. All rights reserved.",
+    "supportTitle": "サポート",
+    "telegramSupport": "Telegramサポート"
   },
   "privacy": {
     "title": "プライバシーポリシー",

@@ -24,7 +24,8 @@
       "noLogs": "零日志",
       "unlimited": "无限带宽",
       "wireguard": "WireGuard加密"
-    }
+    },
+    "openTelegram": "Telegram 机器人"
   },
   "features": {
     "title": "为完全隐私而设计",
@@ -152,7 +153,7 @@
       },
       "restore": {
         "question": "我已订阅但功能不起作用",
-        "answer": "打开应用，进入个人资料 > 订阅，点击恢复购买。这将重新同步您的订阅与我们的服务器。如果问题仍然存在，请联系我们的支持团队：support@simnetiq.store。"
+        "answer": "打开应用，进入个人资料 > 订阅，点击恢复购买。这将重新同步您的订阅与我们的服务器。如果问题仍然存在，请联系我们的支持团队：support@simnetiq.store or contact @DopplerSupportBot on Telegram。"
       },
       "refund": {
         "question": "如何申请退款？",
@@ -189,7 +190,9 @@
     "legal": "法律信息",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "copyright": "Doppler VPN。保留所有权利。"
+    "copyright": "Doppler VPN。保留所有权利。",
+    "supportTitle": "支持",
+    "telegramSupport": "Telegram 支持"
   },
   "privacy": {
     "title": "隐私政策",
