@@ -144,7 +144,7 @@ PersistentKeepalive = 25`;
     const { error: insertErr } = await supabase
       .from('vpn_user_configs')
       .insert({
-        accountCode,
+        account_id: accountCode,
         server_id,
         device_id: device_id || null,
         public_key: peer.public_key,
