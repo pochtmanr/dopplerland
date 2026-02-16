@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface PromoRedemption {
   id: string;
@@ -282,9 +282,8 @@ export default function PromoCodesPage() {
               const status = getStatus(promo);
               const isExpanded = expandedId === promo.id;
               return (
-                <>
+                <React.Fragment key={promo.id}>
                   <tr
-                    key={promo.id}
                     className="border-b border-white/5 text-text-primary cursor-pointer hover:bg-white/[0.02]"
                     onClick={() => setExpandedId(isExpanded ? null : promo.id)}
                   >
@@ -346,7 +345,7 @@ export default function PromoCodesPage() {
                       </td>
                     </tr>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
             {codes.length === 0 && (
