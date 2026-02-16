@@ -54,7 +54,7 @@ export async function translateContent(
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
       const response = await openai.chat.completions.create({
-        model: "gpt-4o-mini",
+        model: "gpt-5-mini",
         messages: [
           {
             role: "system",
@@ -84,7 +84,6 @@ Rules:
             }),
           },
         ],
-        temperature: 0.3,
         response_format: { type: "json_object" },
       }, { timeout: 120_000 });
 

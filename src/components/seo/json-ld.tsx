@@ -8,7 +8,8 @@ export function OrganizationSchema({ locale }: OrganizationSchemaProps) {
     "@type": "Organization",
     name: "Doppler VPN",
     url: `https://dopplervpn.org/${locale}`,
-    logo: "https://dopplervpn.org/logo.png",
+    logo: "https://dopplervpn.org/images/iosdopplerlogo.png",
+    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
     description:
       locale === "he"
         ? "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן."
@@ -33,6 +34,7 @@ export function ProductSchema({ locale }: ProductSchemaProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: "Doppler VPN",
+    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
     description:
       locale === "he"
         ? "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן. ללא יומנים."
@@ -80,6 +82,7 @@ export function SoftwareApplicationSchema({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Doppler VPN",
+    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
     applicationCategory: "SecurityApplication",
     operatingSystem: "iOS, macOS, Android",
     description:

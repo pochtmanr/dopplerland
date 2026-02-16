@@ -7,7 +7,7 @@ export async function rewriteContent(text: string): Promise<{
   const openai = getOpenAI();
 
   const response = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-5-mini",
     messages: [
       {
         role: "system",
@@ -27,7 +27,6 @@ Your job:
         content: text,
       },
     ],
-    temperature: 0.3,
   });
 
   return {

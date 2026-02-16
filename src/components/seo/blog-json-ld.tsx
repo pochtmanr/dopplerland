@@ -26,7 +26,7 @@ export function BlogPostJsonLd({
     "@type": "Article",
     headline: title,
     description,
-    image: imageUrl || undefined,
+    image: imageUrl || `${baseUrl}/images/iosdopplerlogo.png`,
     datePublished: publishedAt || undefined,
     dateModified: updatedAt,
     author: {

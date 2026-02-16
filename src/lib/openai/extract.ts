@@ -42,7 +42,7 @@ export async function extractFromUrl(url: string): Promise<{
   const openai = getOpenAI();
 
   const response = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-5-mini",
     messages: [
       {
         role: "system",
@@ -71,7 +71,6 @@ Return valid JSON with keys: title, excerpt, content, meta_title, meta_descripti
         content: `Source URL: ${url}\n\nExtracted text:\n${textContent}`,
       },
     ],
-    temperature: 0.7,
     response_format: { type: "json_object" },
   });
 
