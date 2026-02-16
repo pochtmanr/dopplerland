@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Bagikan artikel",
+    "copyLink": "Salin tautan"
   },
   "guide": {
     "title": "Panduan Pengaturan",
@@ -393,5 +395,10 @@
       "miniApp": "Mini App Langganan",
       "miniAppDesc": "Berlangganan dan kelola paket Anda melalui Mini App Telegram kami dengan pembayaran aman melalui Stripe."
     }
+  },
+  "cookie": {
+    "message": "Kami menggunakan cookie untuk meningkatkan pengalaman Anda. Dengan terus menggunakan situs ini, Anda menyetujui penggunaan cookie.",
+    "accept": "Terima",
+    "decline": "Tolak"
   }
 }

@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Ibahagi ang artikulo",
+    "copyLink": "Kopyahin ang link"
   },
   "guide": {
     "title": "Gabay sa Pag-setup",
@@ -393,5 +395,10 @@
     "backToGuides": "Lahat ng Gabay",
     "nextStep": "Susunod",
     "prevStep": "Nakaraan"
+  },
+  "cookie": {
+    "message": "Gumagamit kami ng cookies para mapabuti ang iyong karanasan. Sa patuloy na paggamit ng site na ito, sumasang-ayon ka sa paggamit ng cookies.",
+    "accept": "Tanggapin",
+    "decline": "Tanggihan"
   }
 }

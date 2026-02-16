@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Shiriki makala",
+    "copyLink": "Nakili kiungo"
   },
   "guide": {
     "title": "Mwongozo wa Usanidi",
@@ -393,5 +395,10 @@
     "backToGuides": "Miongozo Yote",
     "nextStep": "Ifuatayo",
     "prevStep": "Iliyopita"
+  },
+  "cookie": {
+    "message": "Tunatumia vidakuzi kuboresha uzoefu wako. Kwa kuendelea kutumia tovuti hii, unakubali matumizi ya vidakuzi.",
+    "accept": "Kubali",
+    "decline": "Kataa"
   }
 }

@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Chia sẻ bài viết",
+    "copyLink": "Sao chép liên kết"
   },
   "guide": {
     "title": "Hướng dẫn cài đặt",
@@ -393,5 +395,10 @@
     "backToGuides": "Tất cả hướng dẫn",
     "nextStep": "Tiếp theo",
     "prevStep": "Trước"
+  },
+  "cookie": {
+    "message": "Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. Tiếp tục sử dụng trang web này đồng nghĩa với việc bạn đồng ý sử dụng cookie.",
+    "accept": "Chấp nhận",
+    "decline": "Từ chối"
   }
 }

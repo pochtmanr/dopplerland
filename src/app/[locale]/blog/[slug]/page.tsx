@@ -13,6 +13,7 @@ import {
   BlogRelatedPosts,
   BlogCta,
 } from "@/components/blog";
+import { ShareButtons } from "@/components/blog/share-buttons";
 import { BlogPostJsonLd } from "@/components/seo/blog-json-ld";
 import type { Metadata } from "next";
 
@@ -373,6 +374,13 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
               </div>
             )}
+
+            {/* Share Buttons */}
+            <ShareButtons
+              url={`https://dopplervpn.org/${locale}/blog/${post.slug}`}
+              title={post.title}
+              imageUrl={post.imageUrl}
+            />
 
             {/* Related Posts */}
             <BlogRelatedPosts

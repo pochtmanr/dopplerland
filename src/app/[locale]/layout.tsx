@@ -11,6 +11,7 @@ import {
   SoftwareApplicationSchema,
 } from "@/components/seo/json-ld";
 import { Analytics } from "@vercel/analytics/react";
+import { CookieConsent } from "@/components/cookie-consent";
 import "@/app/globals.css";
 
 // Instrument Serif - for hero headline only
@@ -146,6 +147,7 @@ export default async function LocaleLayout({
       <body className="min-h-screen bg-bg-primary text-text-primary font-body antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieConsent />
         </NextIntlClientProvider>
         <Analytics />
       </body>

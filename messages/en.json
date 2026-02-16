@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Share this article",
+    "copyLink": "Copy link"
   },
   "guide": {
     "title": "Setup Guide",
@@ -393,5 +395,10 @@
     "backToGuides": "All Guides",
     "nextStep": "Next",
     "prevStep": "Previous"
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

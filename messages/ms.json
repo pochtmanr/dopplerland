@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Kongsi artikel",
+    "copyLink": "Salin pautan"
   },
   "guide": {
     "title": "Panduan Persediaan",
@@ -393,5 +395,10 @@
       "miniApp": "Mini App Langganan",
       "miniAppDesc": "Langgan dan urus pelan anda melalui Mini App Telegram kami dengan pembayaran selamat melalui Stripe."
     }
+  },
+  "cookie": {
+    "message": "Kami menggunakan kuki untuk meningkatkan pengalaman anda. Dengan terus menggunakan laman ini, anda bersetuju dengan penggunaan kuki.",
+    "accept": "Terima",
+    "decline": "Tolak"
   }
 }

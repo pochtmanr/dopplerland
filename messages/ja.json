@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "記事をシェア",
+    "copyLink": "リンクをコピー"
   },
   "guide": {
     "title": "セットアップガイド",
@@ -393,5 +395,10 @@
       "miniApp": "サブスクリプション ミニアプリ",
       "miniAppDesc": "Telegram ミニアプリから安全な Stripe 決済でサブスクリプションの登録・管理ができます。"
     }
+  },
+  "cookie": {
+    "message": "当サイトではCookieを使用してユーザー体験を向上させています。サイトの利用を続けることで、Cookieの使用に同意したことになります。",
+    "accept": "同意する",
+    "decline": "拒否する"
   }
 }

@@ -304,7 +304,9 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
-    }
+    },
+    "share": "Compartir artículo",
+    "copyLink": "Copiar enlace"
   },
   "guide": {
     "title": "Guía de configuración",
@@ -393,5 +395,10 @@
       "miniApp": "Mini App de suscripción",
       "miniAppDesc": "Suscríbete y gestiona tu plan a través de nuestra Mini App de Telegram con pagos seguros de Stripe."
     }
+  },
+  "cookie": {
+    "message": "Usamos cookies para mejorar tu experiencia. Al continuar usando este sitio, aceptas el uso de cookies.",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   }
 }
