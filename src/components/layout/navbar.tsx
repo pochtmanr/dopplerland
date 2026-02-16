@@ -8,9 +8,9 @@ export async function Navbar() {
   const t = await getTranslations("nav");
 
   const navItems = [
-    { href: "#features", label: t("features") },
-    { href: "#pricing", label: t("pricing") },
-    { href: "#faq", label: t("faq") },
+    { href: "/#features", label: t("features") },
+    { href: "/#pricing", label: t("pricing") },
+    { href: "/#faq", label: t("faq") },
     { href: "/blog", label: t("blog"), isPage: true },
     { href: "/guide", label: t("guide"), isPage: true },
   ];
@@ -35,36 +35,26 @@ export async function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          {navItems.map((item) =>
-            item.isPage ? (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
-              >
-                {item.label}
-              </a>
-            )
-          )}
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-text-muted hover:text-text-primary transition-colors text-sm font-medium py-2"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         {/* Right Side - Language Switcher & CTA */}
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
-          <a
-            href="#pricing"
+          <Link
+            href="/#pricing"
             className="inline-flex items-center px-4 py-2 rounded-full bg-accent-gold text-bg-primary font-medium text-sm hover:bg-accent-gold/90 transition-colors"
           >
             {t("download")}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}

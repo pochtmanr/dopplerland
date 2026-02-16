@@ -10,9 +10,9 @@ export function MobileNav() {
   const t = useTranslations("nav");
 
   const navItems = [
-    { href: "#features", label: t("features") },
-    { href: "#pricing", label: t("pricing") },
-    { href: "#faq", label: t("faq") },
+    { href: "/#features", label: t("features") },
+    { href: "/#pricing", label: t("pricing") },
+    { href: "/#faq", label: t("faq") },
     { href: "/blog", label: t("blog"), isPage: true },
     { href: "/guide", label: t("guide"), isPage: true },
   ];
@@ -79,7 +79,7 @@ export function MobileNav() {
               <LanguageSwitcher />
             </div>
             <Link
-              href="#pricing"
+              href="/#pricing"
               onClick={() => setIsOpen(false)}
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-accent-gold text-bg-primary font-medium hover:bg-accent-gold/90 transition-colors"
             >
