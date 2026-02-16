@@ -19,21 +19,27 @@ export async function POST(req: NextRequest) {
     const supabase = getSupabase();
 
     // 1. Verify account exists and get subscription tier
+    // Support both UUID (id) and code (account_id like VPN-XXXX-XXXX-XXXX)
+    const isCode = account_id.startsWith('VPN-') || account_id.includes('-');
+    const lookupField = isCode ? 'account_id' : 'id';
     const { data: account, error: accErr } = await supabase
       .from('accounts')
-      .select('id, subscription_tier, max_devices')
-      .eq('id', account_id)
+      .select('id, account_id, subscription_tier, max_devices')
+      .eq(lookupField, account_id)
       .single();
 
     if (accErr || !account) {
       return NextResponse.json({ error: 'Account not found' }, { status: 404 });
     }
 
+    // Use the account_id (code) for vpn_user_configs since that's what the app stores
+    const accountCode = account.account_id;
+
     // 2. Check for existing active config for this account + server
     const { data: existing } = await supabase
       .from('vpn_user_configs')
       .select('*')
-      .eq('account_id', account_id)
+      .eq('account_id', accountCode)
       .eq('server_id', server_id)
       .eq('is_active', true)
       .order('created_at', { ascending: false })
@@ -63,7 +69,7 @@ export async function POST(req: NextRequest) {
     const { count } = await supabase
       .from('vpn_user_configs')
       .select('*', { count: 'exact', head: true })
-      .eq('account_id', account_id)
+      .eq('account_id', accountCode)
       .eq('is_active', true);
 
     if ((count ?? 0) >= (account.max_devices || 10)) {
@@ -138,7 +144,7 @@ PersistentKeepalive = 25`;
     const { error: insertErr } = await supabase
       .from('vpn_user_configs')
       .insert({
-        account_id,
+        accountCode,
         server_id,
         device_id: device_id || null,
         public_key: peer.public_key,
