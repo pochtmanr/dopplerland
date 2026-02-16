@@ -18,6 +18,29 @@ export function generateStaticParams() {
   );
 }
 
+const DOWNLOAD_LINKS: Record<Device, { label: string; url: string; label2?: string; url2?: string }> = {
+  android: {
+    label: "step1PlayStore",
+    url: "https://play.google.com/store/apps/details?id=com.v2ray.ang",
+    label2: "step1GitHub",
+    url2: "https://github.com/2dust/v2rayNG/releases",
+  },
+  ios: {
+    label: "step1AppStore",
+    url: "https://apps.apple.com/app/streisand/id6450534064",
+  },
+  windows: {
+    label: "step1Download",
+    url: "https://github.com/2dust/v2rayN/releases",
+  },
+  mac: {
+    label: "step1Download",
+    url: "https://github.com/tzmax/V2RayXS/releases",
+    label2: "step1AppStore",
+    url2: "https://apps.apple.com/app/streisand/id6450534064",
+  },
+};
+
 const deviceNav: { id: Device; icon: string }[] = [
   { id: "android", icon: "🤖" },
   { id: "ios", icon: "🍎" },
@@ -97,28 +120,49 @@ export default async function DeviceGuidePage({ params }: PageProps) {
 
               {/* Steps */}
               <div className="space-y-8 mb-16">
-                {steps.map((step) => (
-                  <div
-                    key={step.num}
-                    className="relative flex gap-6 rounded-2xl border border-white/10 bg-bg-secondary/50 p-6 sm:p-8"
-                  >
-                    <div className="shrink-0 w-10 h-10 rounded-full bg-accent-teal/20 text-accent-teal font-bold flex items-center justify-center text-lg">
-                      {step.num}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h2 className="text-xl font-semibold text-text-primary mb-2">
-                        {step.title}
-                      </h2>
-                      <p className="text-text-muted leading-relaxed">
-                        {step.desc}
-                      </p>
-                      {/* Screenshot placeholder */}
-                      <div className="mt-4 rounded-xl bg-white/5 border border-white/10 h-48 flex items-center justify-center text-text-muted text-sm">
-                        📸 Screenshot: {step.title} — {d}
+                {steps.map((step) => {
+                  const links = step.num === 1 ? DOWNLOAD_LINKS[d] : null;
+                  return (
+                    <div
+                      key={step.num}
+                      className="relative flex gap-6 rounded-2xl border border-white/10 bg-bg-secondary/50 p-6 sm:p-8"
+                    >
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-accent-teal/20 text-accent-teal font-bold flex items-center justify-center text-lg">
+                        {step.num}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h2 className="text-xl font-semibold text-text-primary mb-2">
+                          {step.title}
+                        </h2>
+                        <p className="text-text-muted leading-relaxed">
+                          {step.desc}
+                        </p>
+                        {links && (
+                          <div className="mt-4 flex flex-wrap gap-3">
+                            <a
+                              href={links.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-teal text-bg-primary font-semibold rounded-xl hover:bg-accent-teal/90 transition-colors text-sm"
+                            >
+                              ↓ {t(`${d}.${links.label}`)}
+                            </a>
+                            {links.url2 && links.label2 && (
+                              <a
+                                href={links.url2}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-text-primary font-semibold rounded-xl hover:bg-white/5 transition-colors text-sm"
+                              >
+                                ↓ {t(`${d}.${links.label2}`)}
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               {/* Troubleshooting */}
