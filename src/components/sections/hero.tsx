@@ -1,11 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { fadeUpVariants, staggerContainerVariants } from "@/lib/animations";
+
+// Locales where decorative Latin-only fonts break (no Cyrillic/CJK/Arabic glyphs)
+const FALLBACK_FONT_LOCALES = new Set(["ru", "uk", "zh", "ja", "ko", "ar", "fa", "he", "hi", "ur", "th"]);
 
 type Platform = "ios" | "android" | "desktop";
 
@@ -20,6 +23,8 @@ function detectPlatform(): Platform {
 
 export function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
+  const useFallbackFont = FALLBACK_FONT_LOCALES.has(locale);
   const [platform, setPlatform] = useState<Platform>("desktop");
 
   useEffect(() => {
@@ -58,14 +63,17 @@ export function Hero() {
             >
               <span
                 className="block"
-                style={{ fontFamily: "var(--font-serif)" }}
+                style={useFallbackFont ? { fontFamily: "var(--font-body)", fontWeight: 700 } : { fontFamily: "var(--font-serif)" }}
               >
-                <span className="italic">{t("headlinePart1a")}</span>{" "}
-                <span>{t("headlinePart1b")}</span>
+                {useFallbackFont ? (
+                  <>{t("headlinePart1a")} {t("headlinePart1b")}</>
+                ) : (
+                  <><span className="italic">{t("headlinePart1a")}</span>{" "}<span>{t("headlinePart1b")}</span></>
+                )}
               </span>
               <span
                 className="block mt-0 bg-gradient-to-t from-text-muted to-white bg-clip-text text-transparent"
-                style={{ fontFamily: "var(--font-raster)" }}
+                style={useFallbackFont ? { fontFamily: "var(--font-body)", fontWeight: 700 } : { fontFamily: "var(--font-raster)" }}
               >
                 {t("headlinePart2")}
               </span>
