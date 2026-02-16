@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
+function getSupabase() { return createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+); }
 
 export async function POST(req: NextRequest) {
   const { code, account_id, plan } = await req.json();
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Find active code
-  const { data: promo, error } = await supabase
+  const { data: promo, error } = await getSupabase()
     .from("promo_codes")
     .select("*")
     .eq("code", code.toUpperCase().trim())
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Check if already redeemed by this account
-  const { data: existing } = await supabase
+  const { data: existing } = await getSupabase()
     .from("promo_redemptions")
     .select("id")
     .eq("promo_code_id", promo.id)
