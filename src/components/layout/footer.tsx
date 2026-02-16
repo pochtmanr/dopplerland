@@ -9,7 +9,7 @@ export async function Footer() {
   return (
     <footer className="bg-bg-secondary/50 border-t border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -87,6 +87,47 @@ export async function Footer() {
                 >
                   {t("download")}
                 </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Guides */}
+          <div>
+            <h3 className="font-semibold text-text-primary mb-4">
+              {t("guides")}
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/guide/android"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm"
+                >
+                  {t("guideAndroid")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide/ios"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm"
+                >
+                  {t("guideIOS")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide/windows"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm"
+                >
+                  {t("guideWindows")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide/mac"
+                  className="text-text-muted hover:text-text-primary transition-colors text-sm"
+                >
+                  {t("guideMac")}
+                </Link>
               </li>
             </ul>
           </div>

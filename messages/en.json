@@ -8,7 +8,8 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "blog": "Blog",
-    "download": "Download"
+    "download": "Download",
+    "guide": "Guide"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Free Forever.",
@@ -192,7 +193,12 @@
     "terms": "Terms of Service",
     "copyright": "Doppler VPN. All rights reserved.",
     "supportTitle": "Support",
-    "telegramSupport": "Telegram Support"
+    "telegramSupport": "Telegram Support",
+    "guides": "Setup Guides",
+    "guideAndroid": "Android Guide",
+    "guideIOS": "iOS Guide",
+    "guideWindows": "Windows Guide",
+    "guideMac": "macOS Guide"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -299,5 +305,93 @@
         "playStore": "Google Play"
       }
     }
+  },
+  "guide": {
+    "title": "Setup Guide",
+    "subtitle": "Get connected in minutes. Choose your device to begin.",
+    "chooseDevice": "Choose your device",
+    "android": {
+      "title": "Android Setup",
+      "subtitle": "Set up Doppler VPN on your Android device",
+      "step1Title": "Download V2RayNG",
+      "step1Desc": "Install V2RayNG from Google Play Store or download the APK from GitHub.",
+      "step1PlayStore": "Google Play Store",
+      "step1GitHub": "GitHub APK",
+      "step2Title": "Get Your VPN Config",
+      "step2Desc": "Open our Telegram bot @dopplercreatebot, tap \"Connect VPN\", choose a server, and you'll receive a VLESS config link.",
+      "step3Title": "Import Config",
+      "step3Desc": "Long-press the VLESS link to copy it. Open V2RayNG → tap the + button → select \"Import config from clipboard\".",
+      "step4Title": "Connect",
+      "step4Desc": "Tap the play button to connect. Allow VPN permission when prompted. You're now protected!",
+      "troubleshootTitle": "Troubleshooting",
+      "troubleshoot1": "If connection fails, try a different server location in the bot.",
+      "troubleshoot2": "Make sure V2RayNG has battery optimization disabled.",
+      "troubleshoot3": "For help, message @DopplerSupportBot on Telegram — our AI support is available 24/7."
+    },
+    "ios": {
+      "title": "iOS Setup",
+      "subtitle": "Set up Doppler VPN on your iPhone or iPad",
+      "step1Title": "Download Streisand",
+      "step1Desc": "Install Streisand from the App Store. It's free and supports VLESS protocol.",
+      "step1AppStore": "App Store",
+      "step2Title": "Get Your VPN Config",
+      "step2Desc": "Open our Telegram bot @dopplercreatebot, tap \"Connect VPN\", choose a server, and you'll receive a VLESS config link.",
+      "step3Title": "Import Config",
+      "step3Desc": "Long-press the VLESS link to copy it. Open Streisand → tap + → \"Import from clipboard\". Allow the VPN configuration when prompted.",
+      "step4Title": "Connect",
+      "step4Desc": "Tap the toggle to connect. Your traffic is now encrypted and protected!",
+      "troubleshootTitle": "Troubleshooting",
+      "troubleshoot1": "If the VPN won't connect, try removing and re-importing the config.",
+      "troubleshoot2": "Ensure Streisand has permission to add VPN configurations in Settings > General > VPN.",
+      "troubleshoot3": "For help, message @DopplerSupportBot on Telegram — our AI support is available 24/7."
+    },
+    "windows": {
+      "title": "Windows Setup",
+      "subtitle": "Set up Doppler VPN on your Windows PC",
+      "step1Title": "Download v2rayN",
+      "step1Desc": "Download v2rayN from GitHub. Extract the ZIP file and run v2rayN.exe.",
+      "step1Download": "Download v2rayN",
+      "step2Title": "Get Your VPN Config",
+      "step2Desc": "Open our Telegram bot @dopplercreatebot, tap \"Connect VPN\", choose a server, and you'll receive a VLESS config link.",
+      "step3Title": "Import Config",
+      "step3Desc": "Copy the VLESS link. In v2rayN, click \"Server\" → \"Import from clipboard\" or press Ctrl+V.",
+      "step4Title": "Connect",
+      "step4Desc": "Right-click the v2rayN tray icon and select \"System proxy\" → \"Set as system proxy\". You're connected!",
+      "troubleshootTitle": "Troubleshooting",
+      "troubleshoot1": "Make sure Windows Defender or your antivirus isn't blocking v2rayN.",
+      "troubleshoot2": "Try running v2rayN as Administrator.",
+      "troubleshoot3": "For help, message @DopplerSupportBot on Telegram — our AI support is available 24/7."
+    },
+    "mac": {
+      "title": "macOS Setup",
+      "subtitle": "Set up Doppler VPN on your Mac",
+      "step1Title": "Download V2RayXS",
+      "step1Desc": "Download V2RayXS from GitHub or install Streisand from the Mac App Store.",
+      "step1Download": "Download V2RayXS",
+      "step1AppStore": "Mac App Store",
+      "step2Title": "Get Your VPN Config",
+      "step2Desc": "Open our Telegram bot @dopplercreatebot, tap \"Connect VPN\", choose a server, and you'll receive a VLESS config link.",
+      "step3Title": "Import Config",
+      "step3Desc": "Copy the VLESS link. Open V2RayXS → \"Import\" → \"From clipboard\". Or in Streisand, tap + → \"Import from clipboard\".",
+      "step4Title": "Connect",
+      "step4Desc": "Click the connect button. Allow the VPN configuration when macOS prompts you. Done!",
+      "troubleshootTitle": "Troubleshooting",
+      "troubleshoot1": "If macOS blocks the app, go to System Preferences > Privacy & Security and allow it.",
+      "troubleshoot2": "Try restarting the app if the connection drops.",
+      "troubleshoot3": "For help, message @DopplerSupportBot on Telegram — our AI support is available 24/7."
+    },
+    "telegramSection": {
+      "title": "Telegram Integration",
+      "subtitle": "Get your VPN config and manage your subscription directly in Telegram.",
+      "vpnBot": "VPN Bot",
+      "vpnBotDesc": "Get your VPN configuration, connect to servers, and manage your account.",
+      "supportBot": "Support Bot",
+      "supportBotDesc": "24/7 AI-powered support in 23 languages. Get instant help with any issue.",
+      "miniApp": "Subscription Mini App",
+      "miniAppDesc": "Subscribe and manage your plan through our Telegram Mini App with secure Stripe payments."
+    },
+    "backToGuides": "All Guides",
+    "nextStep": "Next",
+    "prevStep": "Previous"
   }
 }

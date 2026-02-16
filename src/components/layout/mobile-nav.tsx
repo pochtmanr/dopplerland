@@ -14,6 +14,7 @@ export function MobileNav() {
     { href: "#pricing", label: t("pricing") },
     { href: "#faq", label: t("faq") },
     { href: "/blog", label: t("blog"), isPage: true },
+    { href: "/guide", label: t("guide"), isPage: true },
   ];
 
   return (

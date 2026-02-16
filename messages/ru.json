@@ -8,7 +8,8 @@
     "pricing": "Цены",
     "faq": "Вопросы",
     "blog": "Блог",
-    "download": "Скачать"
+    "download": "Скачать",
+    "guide": "Руководство"
   },
   "hero": {
     "tagline": "VPN с приоритетом конфиденциальности. Бесплатно навсегда.",
@@ -192,7 +193,12 @@
     "terms": "Условия использования",
     "copyright": "Doppler VPN. Все права защищены.",
     "supportTitle": "Поддержка",
-    "telegramSupport": "Поддержка в Telegram"
+    "telegramSupport": "Поддержка в Telegram",
+    "guides": "Руководства",
+    "guideAndroid": "Android",
+    "guideIOS": "iOS",
+    "guideWindows": "Windows",
+    "guideMac": "macOS"
   },
   "privacy": {
     "title": "Политика конфиденциальности",
@@ -298,6 +304,94 @@
         "appStore": "App Store",
         "playStore": "Google Play"
       }
+    }
+  },
+  "guide": {
+    "title": "Руководство по настройке",
+    "subtitle": "Подключитесь за несколько минут. Выберите ваше устройство.",
+    "chooseDevice": "Выбрать устройство",
+    "backToGuides": "Все руководства",
+    "nextStep": "Далее",
+    "prevStep": "Назад",
+    "android": {
+      "title": "Настройка Android",
+      "subtitle": "Настройте Doppler VPN на вашем Android-устройстве",
+      "step1Title": "Скачайте V2RayNG",
+      "step1Desc": "Установите V2RayNG из Google Play Store или скачайте APK с GitHub.",
+      "step1PlayStore": "Google Play Store",
+      "step1GitHub": "GitHub APK",
+      "step2Title": "Получите конфигурацию VPN",
+      "step2Desc": "Откройте нашего Telegram-бота @dopplercreatebot, нажмите «Подключить VPN», выберите сервер, и вы получите ссылку VLESS.",
+      "step3Title": "Импорт конфигурации",
+      "step3Desc": "Долгим нажатием скопируйте ссылку VLESS. Откройте V2RayNG → нажмите + → выберите «Импорт из буфера обмена».",
+      "step4Title": "Подключение",
+      "step4Desc": "Нажмите кнопку воспроизведения для подключения. Разрешите VPN при запросе. Вы защищены!",
+      "troubleshootTitle": "Устранение неполадок",
+      "troubleshoot1": "Если подключение не удается, попробуйте другой сервер в боте.",
+      "troubleshoot2": "Убедитесь, что для V2RayNG отключена оптимизация батареи.",
+      "troubleshoot3": "Для помощи напишите @DopplerSupportBot в Telegram — наша AI-поддержка доступна 24/7."
+    },
+    "ios": {
+      "title": "Настройка iOS",
+      "subtitle": "Настройте Doppler VPN на вашем iPhone или iPad",
+      "step1Title": "Скачайте Streisand",
+      "step1Desc": "Установите Streisand из App Store. Приложение бесплатное и поддерживает протокол VLESS.",
+      "step1AppStore": "App Store",
+      "step2Title": "Получите конфигурацию VPN",
+      "step2Desc": "Откройте нашего Telegram-бота @dopplercreatebot, нажмите «Подключить VPN», выберите сервер, и вы получите ссылку VLESS.",
+      "step3Title": "Импорт конфигурации",
+      "step3Desc": "Долгим нажатием скопируйте ссылку VLESS. Откройте Streisand → нажмите + → «Импорт из буфера обмена». Разрешите конфигурацию VPN.",
+      "step4Title": "Подключение",
+      "step4Desc": "Нажмите переключатель для подключения. Ваш трафик теперь зашифрован и защищён!",
+      "troubleshootTitle": "Устранение неполадок",
+      "troubleshoot1": "Если VPN не подключается, попробуйте удалить и заново импортировать конфигурацию.",
+      "troubleshoot2": "Убедитесь, что Streisand имеет разрешение на добавление VPN-конфигураций в Настройки > Основные > VPN.",
+      "troubleshoot3": "Для помощи напишите @DopplerSupportBot в Telegram — наша AI-поддержка доступна 24/7."
+    },
+    "windows": {
+      "title": "Настройка Windows",
+      "subtitle": "Настройте Doppler VPN на вашем ПК с Windows",
+      "step1Title": "Скачайте v2rayN",
+      "step1Desc": "Скачайте v2rayN с GitHub. Распакуйте ZIP-архив и запустите v2rayN.exe.",
+      "step1Download": "Скачать v2rayN",
+      "step2Title": "Получите конфигурацию VPN",
+      "step2Desc": "Откройте нашего Telegram-бота @dopplercreatebot, нажмите «Подключить VPN», выберите сервер, и вы получите ссылку VLESS.",
+      "step3Title": "Импорт конфигурации",
+      "step3Desc": "Скопируйте ссылку VLESS. В v2rayN нажмите «Сервер» → «Импорт из буфера обмена» или Ctrl+V.",
+      "step4Title": "Подключение",
+      "step4Desc": "Щёлкните правой кнопкой по значку v2rayN в трее и выберите «Системный прокси» → «Установить как системный прокси». Готово!",
+      "troubleshootTitle": "Устранение неполадок",
+      "troubleshoot1": "Убедитесь, что Защитник Windows или антивирус не блокирует v2rayN.",
+      "troubleshoot2": "Попробуйте запустить v2rayN от имени администратора.",
+      "troubleshoot3": "Для помощи напишите @DopplerSupportBot в Telegram — наша AI-поддержка доступна 24/7."
+    },
+    "mac": {
+      "title": "Настройка macOS",
+      "subtitle": "Настройте Doppler VPN на вашем Mac",
+      "step1Title": "Скачайте V2RayXS",
+      "step1Desc": "Скачайте V2RayXS с GitHub или установите Streisand из Mac App Store.",
+      "step1Download": "Скачать V2RayXS",
+      "step1AppStore": "Mac App Store",
+      "step2Title": "Получите конфигурацию VPN",
+      "step2Desc": "Откройте нашего Telegram-бота @dopplercreatebot, нажмите «Подключить VPN», выберите сервер, и вы получите ссылку VLESS.",
+      "step3Title": "Импорт конфигурации",
+      "step3Desc": "Скопируйте ссылку VLESS. Откройте V2RayXS → «Импорт» → «Из буфера обмена». Или в Streisand нажмите + → «Импорт из буфера обмена».",
+      "step4Title": "Подключение",
+      "step4Desc": "Нажмите кнопку подключения. Разрешите конфигурацию VPN, когда macOS запросит. Готово!",
+      "troubleshootTitle": "Устранение неполадок",
+      "troubleshoot1": "Если macOS блокирует приложение, перейдите в Системные настройки > Конфиденциальность и безопасность.",
+      "troubleshoot2": "Попробуйте перезапустить приложение, если соединение прерывается.",
+      "troubleshoot3": "Для помощи напишите @DopplerSupportBot в Telegram — наша AI-поддержка доступна 24/7."
+    },
+    "telegramSection": {
+      "title": "Интеграция с Telegram",
+      "subtitle": "Получите конфигурацию VPN и управляйте подпиской прямо в Telegram.",
+      "vpnBot": "VPN Бот",
+      "vpnBotDesc": "Получите конфигурацию VPN, подключитесь к серверам и управляйте аккаунтом.",
+      "supportBot": "Бот поддержки",
+      "supportBotDesc": "AI-поддержка 24/7 на 23 языках. Мгновенная помощь по любому вопросу.",
+      "miniApp": "Мини-приложение подписки",
+      "miniAppDesc": "Оформляйте и управляйте подпиской через наше мини-приложение Telegram с безопасной оплатой Stripe."
     }
   }
 }
