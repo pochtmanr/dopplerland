@@ -48,8 +48,13 @@ export async function POST(req: NextRequest) {
       serverConfig = {};
     }
 
-    const wgApiUrl = serverConfig.wg_api_url || `http://${server.ip_address}:9090/wg-api`;
-    const wgApiKey = serverConfig.wg_api_key || 'dpvpn-wg-2026-secret';
+    const wgApiUrl = serverConfig.wg_api_url;
+    const wgApiKey = serverConfig.wg_api_key;
+
+    if (!wgApiUrl || !wgApiKey) {
+      console.error('Server missing wg_api_url or wg_api_key in config_data:', server.id);
+      return NextResponse.json({ error: 'Server not properly configured' }, { status: 500 });
+    }
 
     // Call WG API to delete peer
     try {
