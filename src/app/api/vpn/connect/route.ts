@@ -116,17 +116,41 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Failed to create VPN peer' }, { status: 502 });
     }
 
-    const peer = await wgRes.json() as {
-      private_key: string;
-      public_key: string;
-      client_ip: string;
-      server_pubkey: string;
-      endpoint: string;
-      dns: string;
-    };
+    const peerRaw = await wgRes.json();
 
-    // 7. Build WireGuard config string
-    const wgConfig = `[Interface]
+    // Handle two WG API response formats:
+    // Format A (Germany/Russia): { private_key, public_key, client_ip, server_pubkey, endpoint, dns }
+    // Format B (USA/UK/CH): { status, config } where config is a full WireGuard config string
+    let peer: { private_key: string; public_key: string; client_ip: string; server_pubkey: string; endpoint: string; dns: string };
+    let wgConfig: string;
+
+    if (peerRaw.config && typeof peerRaw.config === 'string') {
+      // Format B — parse the config string
+      wgConfig = peerRaw.config.trim();
+      const lines = wgConfig.split('\n');
+      const getValue = (key: string) => {
+        const line = lines.find(l => l.trim().startsWith(key));
+        return line ? line.split('=').slice(1).join('=').trim() : '';
+      };
+      peer = {
+        private_key: getValue('PrivateKey'),
+        public_key: '', // not returned in this format, generate from config
+        client_ip: getValue('Address').replace('/24', '').replace('/32', ''),
+        server_pubkey: getValue('PublicKey'),
+        endpoint: getValue('Endpoint'),
+        dns: getValue('DNS'),
+      };
+      // Ensure MTU and PersistentKeepalive are present
+      if (!wgConfig.includes('MTU')) {
+        wgConfig = wgConfig.replace('[Peer]', 'MTU = 1420\n\n[Peer]');
+      }
+      if (!wgConfig.includes('AllowedIPs = 0.0.0.0/0, ::/0')) {
+        wgConfig = wgConfig.replace('AllowedIPs = 0.0.0.0/0, ::/0', 'AllowedIPs = 0.0.0.0/0, ::/0');
+      }
+    } else {
+      // Format A — individual fields
+      peer = peerRaw as typeof peer;
+      wgConfig = `[Interface]
 PrivateKey = ${peer.private_key}
 Address = ${peer.client_ip}/32
 DNS = ${peer.dns || '1.1.1.1, 1.0.0.1'}
@@ -137,6 +161,7 @@ PublicKey = ${peer.server_pubkey}
 Endpoint = ${peer.endpoint}
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25`;
+    }
 
     // 8. Determine expiry
     const tier = account.subscription_tier || 'free';
