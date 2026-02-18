@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
         hostname: "fzlrhmjdjjzcgstaeblu.supabase.co",
         pathname: "/storage/v1/object/public/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.pexels.com",
+      },
     ],
   },
 };
