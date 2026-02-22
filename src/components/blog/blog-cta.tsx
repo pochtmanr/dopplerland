@@ -10,6 +10,8 @@ import { fadeUpVariants, staggerContainerVariants } from "@/lib/animations";
 // Types
 // ─────────────────────────────────────────────────────────────────────────────
 
+type Platform = "ios" | "android" | "desktop";
+
 interface AppInfo {
   icon: string;
   name: string;
@@ -19,6 +21,7 @@ interface AppInfo {
   appStoreHref: string;
   playStoreHref: string;
   accentColor: "teal" | "gold";
+  promo?: { code: string; discount: string };
 }
 
 interface BlogCtaProps {
@@ -39,7 +42,19 @@ interface BlogCtaProps {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Store Button Component — hero-style pill buttons
+// Platform detection
+// ─────────────────────────────────────────────────────────────────────────────
+
+function detectPlatform(): Platform {
+  if (typeof window === "undefined") return "desktop";
+  const ua = navigator.userAgent.toLowerCase();
+  if (/iphone|ipad|ipod/.test(ua)) return "ios";
+  if (/android/.test(ua)) return "android";
+  return "desktop";
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Store Button Component
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface StoreButtonProps {
@@ -77,26 +92,76 @@ function StoreButton({ store, label, href, accent }: StoreButtonProps) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Promo Row with copy button
+// ─────────────────────────────────────────────────────────────────────────────
+
+function PromoRow({ code, discount, accent }: { code: string; discount: string; accent: "teal" | "gold" }) {
+  const [copied, setCopied] = useState(false);
+
+  const colors = accent === "teal"
+    ? { bg: "bg-accent-teal/10", border: "border-accent-teal/20", text: "text-accent-teal" }
+    : { bg: "bg-accent-gold/10", border: "border-accent-gold/20", text: "text-accent-gold" };
+
+  const copyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  };
+
+  return (
+    <div className={`mb-4 flex items-center justify-between gap-2 px-3 py-2 rounded-lg ${colors.bg} border ${colors.border}`}>
+      <div className="flex items-center gap-2 min-w-0">
+        <svg className={`w-4 h-4 ${colors.text} flex-shrink-0`} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6Z" />
+        </svg>
+        <span className={`text-sm ${colors.text}`}>
+          <span className="font-semibold">{code}</span>
+          {" "}&mdash; {discount}
+        </span>
+      </div>
+      <button
+        onClick={copyCode}
+        className={`flex-shrink-0 p-1.5 rounded-md transition-all duration-200 cursor-pointer ${
+          copied
+            ? `${colors.bg} ${colors.text}`
+            : `hover:${colors.bg} ${colors.text} opacity-60 hover:opacity-100`
+        }`}
+        title={copied ? "Copied!" : "Copy code"}
+      >
+        {copied ? (
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+        ) : (
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H8.25m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m6 10.375a2.625 2.625 0 0 1-2.625-2.625" />
+          </svg>
+        )}
+      </button>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // App Promotion Card Component
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface AppCardProps {
   app: AppInfo;
+  platform: Platform;
 }
 
-function AppCard({ app }: AppCardProps) {
-  const borderColor = app.accentColor === "teal"
-    ? "border-s-accent-teal"
-    : "border-s-accent-gold";
+function AppCard({ app, platform }: AppCardProps) {
+  const showApple = platform === "ios" || platform === "desktop";
+  const showGoogle = platform === "android" || platform === "desktop";
 
   return (
     <Card
       hover
-      className={`
-        min-w-[280px] flex-shrink-0 snap-center
-        border-s-2 ${borderColor}
-        md:min-w-0 md:flex-shrink
-      `}
+      className="min-w-[280px] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink"
     >
       {/* Header: Icon + Name */}
       <div className="flex items-start gap-3 mb-4">
@@ -105,13 +170,10 @@ function AppCard({ app }: AppCardProps) {
           alt={app.name}
           width={56}
           height={56}
-          className="w-14 h-14 rounded-xl shadow-md"
+          className="w-14 h-14 rounded-[12px] shadow-md"
         />
         <div className="flex-1 min-w-0">
-          <h3
-            className="text-lg font-semibold text-text-primary"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
+          <h3 className="text-lg font-semibold text-text-primary">
             {app.name}
           </h3>
           <p className="text-sm text-text-muted leading-relaxed line-clamp-2">
@@ -120,20 +182,29 @@ function AppCard({ app }: AppCardProps) {
         </div>
       </div>
 
-      {/* Store Buttons — hero-style */}
+      {/* Promo badge with copy */}
+      {app.promo && (
+        <PromoRow code={app.promo.code} discount={app.promo.discount} accent={app.accentColor} />
+      )}
+
+      {/* Store Buttons — platform-aware */}
       <div className="flex flex-wrap gap-2">
-        <StoreButton
-          store="apple"
-          label={app.appStoreLabel}
-          href={app.appStoreHref}
-          accent={app.accentColor}
-        />
-        <StoreButton
-          store="google"
-          label={app.playStoreLabel}
-          href={app.playStoreHref}
-          accent={app.accentColor}
-        />
+        {showApple && (
+          <StoreButton
+            store="apple"
+            label={app.appStoreLabel}
+            href={app.appStoreHref}
+            accent={app.accentColor}
+          />
+        )}
+        {showGoogle && (
+          <StoreButton
+            store="google"
+            label={app.playStoreLabel}
+            href={app.playStoreHref}
+            accent={app.accentColor}
+          />
+        )}
       </div>
     </Card>
   );
@@ -179,8 +250,12 @@ function CarouselDots({ count, activeIndex, onDotClick }: CarouselDotsProps) {
 export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [platform, setPlatform] = useState<Platform>("desktop");
 
-  // App data with store links
+  useEffect(() => {
+    setPlatform(detectPlatform());
+  }, []);
+
   const apps: AppInfo[] = [
     {
       icon: "/images/iosdopplerlogo.png",
@@ -191,6 +266,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       appStoreHref: "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773",
       playStoreHref: "https://play.google.com/store/apps/details?id=com.dopplervpn.android",
       accentColor: "teal",
+      promo: { code: "FEBRUARY26", discount: "26% off" },
     },
     {
       icon: "/images/iossimnetiqlogo.png",
@@ -201,10 +277,10 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       appStoreHref: "https://apps.apple.com/gb/app/simnetiq-travel-esim-data/id6755963262",
       playStoreHref: "https://play.google.com/store/apps/details?id=com.simnetiq.storeAndroid&hl=en",
       accentColor: "gold",
+      promo: { code: "FEBRUARY26", discount: "26% off" },
     },
   ];
 
-  // Handle scroll events to update active dot
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -220,7 +296,6 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
     return () => container.removeEventListener("scroll", handleScroll);
   }, [apps.length]);
 
-  // Scroll to specific card
   const scrollToCard = (index: number) => {
     const container = scrollRef.current;
     if (!container) return;
@@ -243,12 +318,8 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       variants={staggerContainerVariants}
       className="mt-16"
     >
-      {/* Section Header */}
       <motion.div variants={fadeUpVariants} className="text-center mb-8">
-        <h2
-          className="text-2xl sm:text-3xl font-semibold text-text-primary mb-2"
-          style={{ fontFamily: "var(--font-serif)" }}
-        >
+        <h2 className="text-2xl sm:text-3xl font-semibold text-text-primary mb-2">
           {title}
         </h2>
         <p className="text-text-muted max-w-md mx-auto">
@@ -262,7 +333,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
         className="hidden md:grid md:grid-cols-2 gap-6"
       >
         {apps.map((app) => (
-          <AppCard key={app.name} app={app} />
+          <AppCard key={app.name} app={app} platform={platform} />
         ))}
       </motion.div>
 
@@ -279,12 +350,11 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
         >
           {apps.map((app) => (
             <div key={app.name} data-app-card className="w-[85%] flex-shrink-0">
-              <AppCard app={app} />
+              <AppCard app={app} platform={platform} />
             </div>
           ))}
         </div>
 
-        {/* Pagination dots */}
         <CarouselDots
           count={apps.length}
           activeIndex={activeIndex}
