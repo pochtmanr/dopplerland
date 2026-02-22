@@ -53,7 +53,7 @@ export function MobileNav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full start-0 end-0 bg-bg-secondary/95 backdrop-blur-lg border-t border-overlay/5 p-4">
+        <div className="fixed inset-x-0 top-[calc(theme(spacing.4)+3rem)] sm:top-[calc(theme(spacing.4)+3.5rem)] mx-4 sm:mx-6 lg:mx-8 bg-bg-secondary/95 backdrop-blur-lg border border-overlay/10 rounded-2xl shadow-lg p-4">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) =>
               item.isPage ? (

@@ -18,7 +18,7 @@ export async function Navbar() {
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
-      <nav className="mx-auto max-w-7xl flex items-center justify-between h-12 sm:h-14 bg-bg-primary/70 backdrop-blur-xl border border-overlay/10 rounded-full shadow-lg shadow-overlay/5 px-4 sm:px-2">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between h-12 sm:h-14 bg-bg-primary/70 backdrop-blur-xl border border-overlay/10 rounded-full shadow-lg shadow-overlay/5 px-2 sm:px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <Image

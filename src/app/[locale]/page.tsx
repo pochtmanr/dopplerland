@@ -104,7 +104,7 @@ export default async function HomePage({ params }: PageProps) {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <Features />
         <HowItWorks />
