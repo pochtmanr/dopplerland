@@ -15,34 +15,31 @@ interface TokenCache {
 
 const tokenCache = new Map<string, TokenCache>();
 
+// Each entry: [id, envPrefix, defaultServerId, label]
+const MARZBAN_INSTANCES: [string, string, string, string][] = [
+  ["de", "MARZBAN_DE", "e462c96b-af8b-4f09-b989-3ad9aec63413", "Germany"],
+  ["ru", "MARZBAN_RU", "078dadc9-871a-4d56-aa7a-f6ec6296bd59", "Russia"],
+  ["ch", "MARZBAN_CH", "", "Switzerland"],
+  ["gb", "MARZBAN_GB", "", "UK"],
+  ["us", "MARZBAN_US", "", "USA"],
+];
+
 function loadServerConfigs(): MarzbanServerConfig[] {
   const servers: MarzbanServerConfig[] = [];
 
-  // Germany Marzban
-  const deUrl = process.env.MARZBAN_DE_API_URL || process.env.MARZBAN_API_URL;
-  if (deUrl) {
-    servers.push({
-      id: "de",
-      apiUrl: deUrl,
-      apiKey: process.env.MARZBAN_DE_API_KEY || process.env.MARZBAN_API_KEY || "",
-      adminUser: process.env.MARZBAN_DE_ADMIN_USER || process.env.MARZBAN_ADMIN_USER || "",
-      adminPass: process.env.MARZBAN_DE_ADMIN_PASS || process.env.MARZBAN_ADMIN_PASS || "",
-      serverId: process.env.MARZBAN_DE_SERVER_ID || "e462c96b-af8b-4f09-b989-3ad9aec63413",
-      label: "Germany",
-    });
-  }
+  for (const [id, prefix, defaultServerId, label] of MARZBAN_INSTANCES) {
+    // Support legacy env var names for DE
+    const apiUrl = process.env[`${prefix}_API_URL`] || (id === "de" ? process.env.MARZBAN_API_URL : "");
+    if (!apiUrl) continue;
 
-  // Russia Marzban
-  const ruUrl = process.env.MARZBAN_RU_API_URL;
-  if (ruUrl) {
     servers.push({
-      id: "ru",
-      apiUrl: ruUrl,
-      apiKey: process.env.MARZBAN_RU_API_KEY || "",
-      adminUser: process.env.MARZBAN_RU_ADMIN_USER || "",
-      adminPass: process.env.MARZBAN_RU_ADMIN_PASS || "",
-      serverId: process.env.MARZBAN_RU_SERVER_ID || "078dadc9-871a-4d56-aa7a-f6ec6296bd59",
-      label: "Russia",
+      id,
+      apiUrl,
+      apiKey: process.env[`${prefix}_API_KEY`] || (id === "de" ? process.env.MARZBAN_API_KEY || "" : ""),
+      adminUser: process.env[`${prefix}_ADMIN_USER`] || (id === "de" ? process.env.MARZBAN_ADMIN_USER || "" : ""),
+      adminPass: process.env[`${prefix}_ADMIN_PASS`] || (id === "de" ? process.env.MARZBAN_ADMIN_PASS || "" : ""),
+      serverId: process.env[`${prefix}_SERVER_ID`] || defaultServerId,
+      label,
     });
   }
 

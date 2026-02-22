@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { ServerCard } from "@/components/admin/server-card";
+import { HealthMonitor } from "@/components/admin/health-monitor";
 
 interface ServerOverview {
   id: string;
@@ -134,6 +135,9 @@ export default function VpnOverviewPage() {
           {syncResult}
         </div>
       )}
+
+      {/* Health Monitor */}
+      <HealthMonitor />
 
       {/* Global totals */}
       {data && (
