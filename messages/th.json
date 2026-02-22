@@ -56,7 +56,8 @@
         "title": "ฟรีทั้งหมด",
         "description": "เซิร์ฟเวอร์ทั้งหมดฟรีพร้อมฟังก์ชันเต็มรูปแบบ การเข้ารหัสเต็มรูปแบบ ความเร็วสูง แบนด์วิดท์ไม่จำกัด ไม่มีการจำกัดความเร็วหรือข้อมูล"
       }
-    }
+    },
+    "getApp": "ดาวน์โหลด Doppler VPN →"
   },
   "howItWorks": {
     "title": "เริ่มต้นในไม่กี่วินาที",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "ดาวน์โหลด",
-        "description": "ดาวน์โหลด Doppler VPN จากแอปสโตร์ของอุปกรณ์คุณ"
+        "description": "ดาวน์โหลด Doppler VPN จากแอปสโตร์ของอุปกรณ์คุณ",
+        "link": "รับ Doppler"
       },
       "connect": {
         "title": "เชื่อมต่อ",
-        "description": "เปิดแอปแล้วแตะเชื่อมต่อ — ไม่ต้องมีบัญชี"
+        "description": "เปิดแอปแล้วแตะเชื่อมต่อ — ไม่ต้องมีบัญชี",
+        "link": "คู่มือการตั้งค่า"
       },
       "browse": {
         "title": "ท่องเว็บ",
-        "description": "เพลิดเพลินกับการท่องเว็บส่วนตัวไม่มีโฆษณาทันที"
+        "description": "เพลิดเพลินกับการท่องเว็บส่วนตัวไม่มีโฆษณาทันที",
+        "link": "เรียนรู้เพิ่มเติม"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ การใช้เว็บไซต์นี้ต่อไปแสดงว่าคุณยอมรับการใช้คุกกี้",
     "accept": "ยอมรับ",
     "decline": "ปฏิเสธ"
+  },
+  "apps": {
+    "title": "ดาวน์โหลด Doppler VPN",
+    "subtitle": "พร้อมใช้งานบนทุกแพลตฟอร์ม",
+    "mobileApps": "แอปมือถือ",
+    "desktopApps": "แอปเดสก์ท็อป",
+    "telegramWeb": "Telegram และเว็บ",
+    "available": "พร้อมใช้งาน",
+    "comingSoon": "เร็ว ๆ นี้",
+    "ios": {
+      "title": "iOS",
+      "description": "ฟรีบน App Store",
+      "action": "ดาวน์โหลด"
+    },
+    "android": {
+      "title": "Android",
+      "description": "ฟรีบน Google Play",
+      "action": "ดาวน์โหลด"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "แอปเดสก์ท็อปเร็ว ๆ นี้",
+      "action": "ดูคู่มือ"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "แอปเดสก์ท็อปเร็ว ๆ นี้",
+      "action": "ดูคู่มือ"
+    },
+    "telegram": {
+      "title": "บอท Telegram",
+      "description": "จัดการ VPN ผ่าน Telegram",
+      "action": "เปิดบอท"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App เร็ว ๆ นี้",
+      "action": ""
+    },
+    "extension": {
+      "title": "ส่วนขยายเบราว์เซอร์",
+      "description": "Chrome และ Firefox เร็ว ๆ นี้",
+      "action": ""
+    },
+    "needHelp": "ต้องการความช่วยเหลือในการตั้งค่า?",
+    "viewGuides": "คู่มือการตั้งค่า"
   }
 }

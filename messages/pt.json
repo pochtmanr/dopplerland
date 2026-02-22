@@ -56,7 +56,8 @@
         "title": "Completamente grátis",
         "description": "Todos os servidores são gratuitos com funcionalidade completa. Criptografia completa, velocidades rápidas, largura de banda ilimitada. Sem limitação de velocidade ou limites de dados."
       }
-    }
+    },
+    "getApp": "Baixar Doppler VPN →"
   },
   "howItWorks": {
     "title": "Comece em segundos",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Baixe",
-        "description": "Obtenha o Doppler VPN na loja de aplicativos do seu dispositivo"
+        "description": "Obtenha o Doppler VPN na loja de aplicativos do seu dispositivo",
+        "link": "Obter Doppler"
       },
       "connect": {
         "title": "Conecte",
-        "description": "Abra o app e toque em conectar — sem necessidade de conta"
+        "description": "Abra o app e toque em conectar — sem necessidade de conta",
+        "link": "Guia de configuração"
       },
       "browse": {
         "title": "Navegue",
-        "description": "Aproveite a navegação privada e sem anúncios instantaneamente"
+        "description": "Aproveite a navegação privada e sem anúncios instantaneamente",
+        "link": "Saiba mais"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Usamos cookies para melhorar sua experiência. Ao continuar usando este site, você concorda com o uso de cookies.",
     "accept": "Aceitar",
     "decline": "Recusar"
+  },
+  "apps": {
+    "title": "Baixar Doppler VPN",
+    "subtitle": "Disponível em todas as plataformas",
+    "mobileApps": "Apps Móveis",
+    "desktopApps": "Apps Desktop",
+    "telegramWeb": "Telegram e Web",
+    "available": "Disponível",
+    "comingSoon": "Em breve",
+    "ios": {
+      "title": "iOS",
+      "description": "Grátis na App Store",
+      "action": "Baixar"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Grátis no Google Play",
+      "action": "Baixar"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Cliente desktop em breve",
+      "action": "Ver guia"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Cliente desktop em breve",
+      "action": "Ver guia"
+    },
+    "telegram": {
+      "title": "Bot do Telegram",
+      "description": "Gerencie VPN pelo Telegram",
+      "action": "Abrir bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Mini App do Telegram em breve",
+      "action": ""
+    },
+    "extension": {
+      "title": "Extensão do navegador",
+      "description": "Chrome e Firefox em breve",
+      "action": ""
+    },
+    "needHelp": "Precisa de ajuda para configurar?",
+    "viewGuides": "Guias de configuração"
   }
 }

@@ -7,7 +7,7 @@ export async function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-bg-secondary/50 border-t border-white/5">
+    <footer className="bg-bg-secondary/50 border-t border-overlay/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
           {/* Brand */}
@@ -30,8 +30,10 @@ export async function Footer() {
             {/* App Store Badges */}
             <div className="flex flex-wrap gap-3">
               <a
-                href="#"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                href="https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-overlay/5 rounded-lg hover:bg-overlay/10 transition-colors"
               >
                 <svg
                   className="w-5 h-5 text-text-primary"
@@ -43,8 +45,10 @@ export async function Footer() {
                 <span className="text-sm text-text-primary">App Store</span>
               </a>
               <a
-                href="#"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                href="https://play.google.com/store/apps/details?id=com.dopplervpn.android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-overlay/5 rounded-lg hover:bg-overlay/10 transition-colors"
               >
                 <svg
                   className="w-5 h-5 text-text-primary"
@@ -81,12 +85,12 @@ export async function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/apps"
                   className="text-text-muted hover:text-text-primary transition-colors text-sm"
                 >
                   {t("download")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -172,7 +176,7 @@ export async function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/5">
+        <div className="mt-12 pt-8 border-t border-overlay/5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-text-muted text-sm">
               &copy; {currentYear} {t("copyright")}

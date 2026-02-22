@@ -56,7 +56,8 @@
         "title": "مجاني بالكامل",
         "description": "جميع السيرفرات مجانية بوظائف كاملة. تشفير كامل، سرعات عالية، عرض نطاق غير محدود. بدون تقييد سرعة أو حدود بيانات."
       }
-    }
+    },
+    "getApp": "تحميل Doppler VPN →"
   },
   "howItWorks": {
     "title": "ابدأ في ثوانٍ",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "حمّل",
-        "description": "احصل على Doppler VPN من متجر تطبيقات جهازك"
+        "description": "احصل على Doppler VPN من متجر تطبيقات جهازك",
+        "link": "احصل على Doppler"
       },
       "connect": {
         "title": "اتصل",
-        "description": "افتح التطبيق واضغط على اتصل — لا حاجة لحساب"
+        "description": "افتح التطبيق واضغط على اتصل — لا حاجة لحساب",
+        "link": "دليل الإعداد"
       },
       "browse": {
         "title": "تصفح",
-        "description": "استمتع بتصفح خاص وخالٍ من الإعلانات فوراً"
+        "description": "استمتع بتصفح خاص وخالٍ من الإعلانات فوراً",
+        "link": "اعرف المزيد"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "نستخدم ملفات تعريف الارتباط لتحسين تجربتك. بمتابعة استخدام هذا الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط.",
     "accept": "قبول",
     "decline": "رفض"
+  },
+  "apps": {
+    "title": "تحميل Doppler VPN",
+    "subtitle": "متوفر على جميع المنصات",
+    "mobileApps": "تطبيقات الهاتف",
+    "desktopApps": "تطبيقات سطح المكتب",
+    "telegramWeb": "تيليجرام والويب",
+    "available": "متوفر",
+    "comingSoon": "قريبًا",
+    "ios": {
+      "title": "iOS",
+      "description": "مجاني على App Store",
+      "action": "تحميل"
+    },
+    "android": {
+      "title": "Android",
+      "description": "مجاني على Google Play",
+      "action": "تحميل"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "عميل سطح المكتب قريبًا",
+      "action": "عرض الدليل"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "عميل سطح المكتب قريبًا",
+      "action": "عرض الدليل"
+    },
+    "telegram": {
+      "title": "بوت تيليجرام",
+      "description": "إدارة VPN عبر تيليجرام",
+      "action": "فتح البوت"
+    },
+    "miniApp": {
+      "title": "تطبيق مصغر",
+      "description": "تطبيق تيليجرام المصغر قريبًا",
+      "action": ""
+    },
+    "extension": {
+      "title": "إضافة المتصفح",
+      "description": "Chrome و Firefox قريبًا",
+      "action": ""
+    },
+    "needHelp": "تحتاج مساعدة في الإعداد؟",
+    "viewGuides": "عرض أدلة الإعداد"
   }
 }

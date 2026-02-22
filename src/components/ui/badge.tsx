@@ -9,10 +9,10 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  default: "bg-white/10 text-text-primary",
-  gold: "bg-accent-gold/20 text-accent-gold",
-  teal: "bg-accent-teal/20 text-accent-teal-light",
-  outline: "border border-accent-gold/50 text-accent-gold bg-transparent",
+  default: "bg-bg-primary border border-overlay/20 text-text-primary",
+  gold: "bg-bg-primary border border-accent-gold text-accent-gold",
+  teal: "bg-bg-primary border border-accent-teal text-accent-teal",
+  outline: "bg-bg-primary border border-accent-gold text-accent-gold",
 };
 
 export function Badge({

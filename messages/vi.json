@@ -56,7 +56,8 @@
         "title": "Hoàn Toàn Miễn Phí",
         "description": "Tất cả máy chủ miễn phí với đầy đủ tính năng. Mã hóa đầy đủ, tốc độ cao, băng thông không giới hạn. Không giảm tốc hoặc giới hạn dữ liệu."
       }
-    }
+    },
+    "getApp": "Tải Doppler VPN →"
   },
   "howItWorks": {
     "title": "Bắt đầu trong vài giây",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Tải xuống",
-        "description": "Tải Doppler VPN từ cửa hàng ứng dụng của thiết bị"
+        "description": "Tải Doppler VPN từ cửa hàng ứng dụng của thiết bị",
+        "link": "Tải Doppler"
       },
       "connect": {
         "title": "Kết nối",
-        "description": "Mở ứng dụng và nhấn kết nối — không cần tài khoản"
+        "description": "Mở ứng dụng và nhấn kết nối — không cần tài khoản",
+        "link": "Hướng dẫn cài đặt"
       },
       "browse": {
         "title": "Duyệt web",
-        "description": "Tận hưởng duyệt web riêng tư, không quảng cáo ngay lập tức"
+        "description": "Tận hưởng duyệt web riêng tư, không quảng cáo ngay lập tức",
+        "link": "Tìm hiểu thêm"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. Tiếp tục sử dụng trang web này đồng nghĩa với việc bạn đồng ý sử dụng cookie.",
     "accept": "Chấp nhận",
     "decline": "Từ chối"
+  },
+  "apps": {
+    "title": "Tải Doppler VPN",
+    "subtitle": "Có sẵn trên mọi nền tảng",
+    "mobileApps": "Ứng dụng Di động",
+    "desktopApps": "Ứng dụng Máy tính",
+    "telegramWeb": "Telegram & Web",
+    "available": "Có sẵn",
+    "comingSoon": "Sắp ra mắt",
+    "ios": {
+      "title": "iOS",
+      "description": "Miễn phí trên App Store",
+      "action": "Tải xuống"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Miễn phí trên Google Play",
+      "action": "Tải xuống"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Ứng dụng desktop sắp ra mắt",
+      "action": "Xem hướng dẫn"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Ứng dụng desktop sắp ra mắt",
+      "action": "Xem hướng dẫn"
+    },
+    "telegram": {
+      "title": "Bot Telegram",
+      "description": "Quản lý VPN qua Telegram",
+      "action": "Mở bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App sắp ra mắt",
+      "action": ""
+    },
+    "extension": {
+      "title": "Tiện ích trình duyệt",
+      "description": "Chrome & Firefox sắp ra mắt",
+      "action": ""
+    },
+    "needHelp": "Cần trợ giúp cài đặt?",
+    "viewGuides": "Hướng dẫn cài đặt"
   }
 }

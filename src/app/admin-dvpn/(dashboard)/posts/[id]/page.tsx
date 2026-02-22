@@ -135,7 +135,7 @@ export default async function EditPostPage({
         </div>
         <Link
           href={`/admin-dvpn/posts/${id}/translations`}
-          className="inline-flex items-center gap-2 bg-bg-secondary border border-white/10 px-4 py-2.5 rounded-lg text-sm text-text-muted hover:text-text-primary hover:border-white/20 transition-colors"
+          className="inline-flex items-center gap-2 bg-bg-secondary border border-overlay/10 px-4 py-2.5 rounded-lg text-sm text-text-muted hover:text-text-primary hover:border-overlay/20 transition-colors"
         >
           <svg
             className="w-4 h-4"

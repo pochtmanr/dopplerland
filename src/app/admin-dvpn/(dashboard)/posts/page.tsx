@@ -105,10 +105,10 @@ export default async function AdminPostsPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-bg-secondary border border-white/10 rounded-xl overflow-hidden">
+      <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-white/10">
+            <tr className="border-b border-overlay/10">
               <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
                 Title
               </th>
@@ -129,7 +129,7 @@ export default async function AdminPostsPage() {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/5">
+          <tbody className="divide-y divide-overlay/5">
             {posts.map((post) => {
               const enTitle =
                 post.blog_post_translations.find((t) => t.locale === "en")
@@ -141,7 +141,7 @@ export default async function AdminPostsPage() {
               return (
                 <tr
                   key={post.id}
-                  className="hover:bg-white/[0.02] transition-colors"
+                  className="hover:bg-overlay/[0.02] transition-colors"
                 >
                   <td className="px-6 py-4">
                     <div>

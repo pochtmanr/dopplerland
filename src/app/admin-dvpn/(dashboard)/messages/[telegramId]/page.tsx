@@ -72,7 +72,7 @@ export default function ConversationPage() {
 
       {/* User info header */}
       {user && (
-        <div className="border border-white/10 rounded-lg p-4 mb-6">
+        <div className="border border-overlay/10 rounded-lg p-4 mb-6">
           <div className="flex items-center gap-4 flex-wrap">
             <h2 className="text-lg font-semibold text-text-primary">
               {user.username ? `@${user.username}` : user.first_name || String(user.telegram_id)}
@@ -87,7 +87,7 @@ export default function ConversationPage() {
               </span>
             )}
             {user.bot_state && (
-              <span className="px-2 py-0.5 rounded text-xs bg-white/10 text-text-muted">
+              <span className="px-2 py-0.5 rounded text-xs bg-overlay/10 text-text-muted">
                 {user.bot_state}
               </span>
             )}
@@ -103,7 +103,7 @@ export default function ConversationPage() {
       )}
 
       {/* Chat messages */}
-      <div className="border border-white/10 rounded-lg p-4 space-y-3 max-h-[600px] overflow-y-auto">
+      <div className="border border-overlay/10 rounded-lg p-4 space-y-3 max-h-[600px] overflow-y-auto">
         {messages.length === 0 ? (
           <p className="text-text-muted text-center py-8">No messages</p>
         ) : (
@@ -113,7 +113,7 @@ export default function ConversationPage() {
               <div key={m.id} className={`flex ${isUser ? "justify-start" : "justify-end"}`}>
                 <div className={`max-w-[75%] rounded-lg px-3 py-2 ${
                   isUser
-                    ? "bg-white/10 text-text-primary"
+                    ? "bg-overlay/10 text-text-primary"
                     : "bg-accent-teal/20 text-text-primary"
                 }`}>
                   <p className="text-sm whitespace-pre-wrap break-words">{m.content || "—"}</p>

@@ -122,7 +122,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
     <div
       role="tablist"
       aria-label={t("durationSelector")}
-      className="relative flex bg-white/5 rounded-full p-1"
+      className="relative flex bg-overlay/5 rounded-full p-1"
     >
       {durations.map((duration, index) => {
         const isSelected = selected === duration;

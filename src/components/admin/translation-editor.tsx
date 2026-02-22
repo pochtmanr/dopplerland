@@ -117,7 +117,7 @@ export function TranslationEditor({
           type="text"
           value={form.title}
           onChange={(e) => updateField("title", e.target.value)}
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
         />
       </div>
 
@@ -130,7 +130,7 @@ export function TranslationEditor({
           value={form.excerpt}
           onChange={(e) => updateField("excerpt", e.target.value)}
           rows={3}
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors resize-y"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors resize-y"
         />
       </div>
 
@@ -143,7 +143,7 @@ export function TranslationEditor({
           value={form.content}
           onChange={(e) => updateField("content", e.target.value)}
           rows={16}
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors resize-y font-mono text-sm"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors resize-y font-mono text-sm"
         />
       </div>
 
@@ -156,7 +156,7 @@ export function TranslationEditor({
           type="text"
           value={form.image_alt}
           onChange={(e) => updateField("image_alt", e.target.value)}
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
         />
       </div>
 
@@ -169,7 +169,7 @@ export function TranslationEditor({
             value={form.meta_title}
             onChange={(e) => updateField("meta_title", e.target.value)}
             maxLength={70}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal"
           />
         </div>
         <div className="space-y-2">
@@ -179,7 +179,7 @@ export function TranslationEditor({
             value={form.og_title}
             onChange={(e) => updateField("og_title", e.target.value)}
             maxLength={70}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal"
           />
         </div>
         <div className="space-y-2">
@@ -191,7 +191,7 @@ export function TranslationEditor({
             onChange={(e) => updateField("meta_description", e.target.value)}
             maxLength={160}
             rows={2}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal resize-none"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal resize-none"
           />
         </div>
         <div className="space-y-2">
@@ -203,13 +203,13 @@ export function TranslationEditor({
             onChange={(e) => updateField("og_description", e.target.value)}
             maxLength={200}
             rows={2}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal resize-none"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-accent-teal resize-none"
           />
         </div>
       </div>
 
       {/* Actions */}
-      <div className="flex items-center justify-end gap-3 pt-4 border-t border-white/10">
+      <div className="flex items-center justify-end gap-3 pt-4 border-t border-overlay/10">
         <button
           onClick={onClose}
           className="px-4 py-2.5 text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"

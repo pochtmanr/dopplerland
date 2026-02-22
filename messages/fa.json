@@ -56,7 +56,8 @@
         "title": "کاملاً رایگان",
         "description": "تمام سرورها رایگان هستند با عملکرد کامل. رمزنگاری کامل، سرعت بالا، پهنای باند نامحدود. بدون محدودیت سرعت یا سقف داده."
       }
-    }
+    },
+    "getApp": "دانلود Doppler VPN →"
   },
   "howItWorks": {
     "title": "در چند ثانیه شروع کنید",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "دانلود",
-        "description": "Doppler VPN را از فروشگاه اپلیکیشن دستگاه خود دریافت کنید"
+        "description": "Doppler VPN را از فروشگاه اپلیکیشن دستگاه خود دریافت کنید",
+        "link": "دریافت Doppler"
       },
       "connect": {
         "title": "اتصال",
-        "description": "اپلیکیشن را باز کنید و روی اتصال بزنید — بدون نیاز به حساب"
+        "description": "اپلیکیشن را باز کنید و روی اتصال بزنید — بدون نیاز به حساب",
+        "link": "راهنمای راه‌اندازی"
       },
       "browse": {
         "title": "مرور",
-        "description": "فوراً از مرور خصوصی و بدون تبلیغات لذت ببرید"
+        "description": "فوراً از مرور خصوصی و بدون تبلیغات لذت ببرید",
+        "link": "بیشتر بدانید"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "ما از کوکی‌ها برای بهبود تجربه شما استفاده می‌کنیم. با ادامه استفاده از این سایت، با استفاده از کوکی‌ها موافقت می‌کنید.",
     "accept": "قبول",
     "decline": "رد"
+  },
+  "apps": {
+    "title": "دانلود Doppler VPN",
+    "subtitle": "در تمام پلتفرم‌ها موجود است",
+    "mobileApps": "اپلیکیشن‌های موبایل",
+    "desktopApps": "اپلیکیشن‌های دسکتاپ",
+    "telegramWeb": "تلگرام و وب",
+    "available": "موجود",
+    "comingSoon": "به زودی",
+    "ios": {
+      "title": "iOS",
+      "description": "رایگان در App Store",
+      "action": "دانلود"
+    },
+    "android": {
+      "title": "Android",
+      "description": "رایگان در Google Play",
+      "action": "دانلود"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "کلاینت دسکتاپ به زودی",
+      "action": "مشاهده راهنما"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "کلاینت دسکتاپ به زودی",
+      "action": "مشاهده راهنما"
+    },
+    "telegram": {
+      "title": "ربات تلگرام",
+      "description": "مدیریت VPN از طریق تلگرام",
+      "action": "باز کردن ربات"
+    },
+    "miniApp": {
+      "title": "مینی اپ",
+      "description": "مینی اپ تلگرام به زودی",
+      "action": ""
+    },
+    "extension": {
+      "title": "افزونه مرورگر",
+      "description": "Chrome و Firefox به زودی",
+      "action": ""
+    },
+    "needHelp": "به کمک برای راه‌اندازی نیاز دارید؟",
+    "viewGuides": "راهنماهای راه‌اندازی"
   }
 }

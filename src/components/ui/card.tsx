@@ -23,7 +23,7 @@ export function Card({
   return (
     <div
       className={`
-        rounded-2xl bg-bg-secondary/50 backdrop-blur-sm border border-white/5
+        rounded-2xl bg-bg-secondary/50 backdrop-blur-sm border border-overlay/5
         ${paddingStyles[padding]}
         ${hover ? "transition-all duration-300 hover:bg-bg-secondary/70 hover:border-accent-teal/20 hover:shadow-lg hover:shadow-accent-teal/5" : ""}
         ${className}

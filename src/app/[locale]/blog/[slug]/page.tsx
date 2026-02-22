@@ -364,7 +364,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Tags at bottom */}
             {post.tags.length > 0 && (
-              <div className="mt-10 pt-6 border-t border-white/10">
+              <div className="mt-10 pt-6 border-t border-overlay/10">
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
                     <Badge key={tag.slug} variant="default">

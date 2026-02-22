@@ -56,7 +56,8 @@
         "title": "Ganap na Libre",
         "description": "Lahat ng server ay libre na may buong functionality. Kumpletong encryption, mabilis na bilis, walang limitasyong bandwidth. Walang throttling o data caps."
       }
-    }
+    },
+    "getApp": "Kunin ang Doppler VPN →"
   },
   "howItWorks": {
     "title": "Magsimula sa ilang segundo",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "I-download",
-        "description": "Kunin ang Doppler VPN mula sa app store ng iyong device"
+        "description": "Kunin ang Doppler VPN mula sa app store ng iyong device",
+        "link": "Kunin ang Doppler"
       },
       "connect": {
         "title": "Kumonekta",
-        "description": "Buksan ang app at i-tap ang connect — hindi kailangan ng account"
+        "description": "Buksan ang app at i-tap ang connect — hindi kailangan ng account",
+        "link": "Gabay sa pag-setup"
       },
       "browse": {
         "title": "Mag-browse",
-        "description": "Mag-enjoy ng pribado at walang ad na browsing agad"
+        "description": "Mag-enjoy ng pribado at walang ad na browsing agad",
+        "link": "Matuto pa"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Gumagamit kami ng cookies para mapabuti ang iyong karanasan. Sa patuloy na paggamit ng site na ito, sumasang-ayon ka sa paggamit ng cookies.",
     "accept": "Tanggapin",
     "decline": "Tanggihan"
+  },
+  "apps": {
+    "title": "I-download ang Doppler VPN",
+    "subtitle": "Available sa lahat ng platform",
+    "mobileApps": "Mobile Apps",
+    "desktopApps": "Desktop Apps",
+    "telegramWeb": "Telegram at Web",
+    "available": "Available",
+    "comingSoon": "Malapit Na",
+    "ios": {
+      "title": "iOS",
+      "description": "Libre sa App Store",
+      "action": "I-download"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Libre sa Google Play",
+      "action": "I-download"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Desktop client malapit na",
+      "action": "Tingnan ang gabay"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Desktop client malapit na",
+      "action": "Tingnan ang gabay"
+    },
+    "telegram": {
+      "title": "Telegram Bot",
+      "description": "Pamahalaan ang VPN sa Telegram",
+      "action": "Buksan ang bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App malapit na",
+      "action": ""
+    },
+    "extension": {
+      "title": "Browser Extension",
+      "description": "Chrome at Firefox malapit na",
+      "action": ""
+    },
+    "needHelp": "Kailangan ng tulong sa setup?",
+    "viewGuides": "Mga Setup Guide"
   }
 }

@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const dynamic = "force-dynamic";
 
@@ -13,9 +14,9 @@ export default function AdminRootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-bg-primary text-text-primary font-body antialiased">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

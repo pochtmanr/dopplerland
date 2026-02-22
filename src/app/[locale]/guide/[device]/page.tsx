@@ -96,7 +96,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                     className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
                       item.id === d
                         ? "bg-accent-teal/10 text-accent-teal border border-accent-teal/30"
-                        : "text-text-muted hover:text-text-primary hover:bg-white/5 border border-transparent"
+                        : "text-text-muted hover:text-text-primary hover:bg-overlay/5 border border-transparent"
                     }`}
                   >
                     <span>{item.icon}</span>
@@ -125,7 +125,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                   return (
                     <div
                       key={step.num}
-                      className="relative flex gap-6 rounded-2xl border border-white/10 bg-bg-secondary/50 p-6 sm:p-8"
+                      className="relative flex gap-6 rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8"
                     >
                       <div className="shrink-0 w-10 h-10 rounded-full bg-accent-teal/20 text-accent-teal font-bold flex items-center justify-center text-lg">
                         {step.num}
@@ -152,7 +152,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                                 href={links.url2}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-white/20 text-text-primary font-semibold rounded-xl hover:bg-white/5 transition-colors text-sm"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-overlay/20 text-text-primary font-semibold rounded-xl hover:bg-overlay/5 transition-colors text-sm"
                               >
                                 ↓ {t(`${d}.${links.label2}`)}
                               </a>
@@ -166,7 +166,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
               </div>
 
               {/* Troubleshooting */}
-              <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-6 sm:p-8 mb-12">
+              <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8 mb-12">
                 <h2 className="text-2xl font-semibold text-text-primary mb-6">
                   {t(`${d}.troubleshootTitle`)}
                 </h2>
@@ -184,7 +184,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
               </div>
 
               {/* Telegram Section */}
-              <div className="rounded-2xl border border-white/10 bg-bg-secondary/50 p-6 sm:p-8">
+              <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8">
                 <h2 className="text-2xl font-semibold text-text-primary mb-3">
                   {t("telegramSection.title")}
                 </h2>
@@ -196,7 +196,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                     href="https://t.me/dopplercreatebot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl border border-white/10 p-5 hover:border-accent-teal/50 transition-colors"
+                    className="rounded-xl border border-overlay/10 p-5 hover:border-accent-teal/50 transition-colors"
                   >
                     <h3 className="font-semibold text-text-primary mb-1">
                       🤖 {t("telegramSection.vpnBot")}
@@ -209,7 +209,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                     href="https://t.me/DopplerSupportBot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl border border-white/10 p-5 hover:border-accent-teal/50 transition-colors"
+                    className="rounded-xl border border-overlay/10 p-5 hover:border-accent-teal/50 transition-colors"
                   >
                     <h3 className="font-semibold text-text-primary mb-1">
                       💬 {t("telegramSection.supportBot")}
@@ -218,7 +218,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                       {t("telegramSection.supportBotDesc")}
                     </p>
                   </a>
-                  <div className="rounded-xl border border-white/10 p-5">
+                  <div className="rounded-xl border border-overlay/10 p-5">
                     <h3 className="font-semibold text-text-primary mb-1">
                       📱 {t("telegramSection.miniApp")}
                     </h3>

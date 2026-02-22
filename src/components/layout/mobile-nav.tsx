@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
+import { ThemeToggle } from "./theme-toggle";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ export function MobileNav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full start-0 end-0 bg-bg-secondary/95 backdrop-blur-lg border-t border-white/5 p-4">
+        <div className="absolute top-full start-0 end-0 bg-bg-secondary/95 backdrop-blur-lg border-t border-overlay/5 p-4">
           <nav className="flex flex-col gap-4">
             {navItems.map((item) =>
               item.isPage ? (
@@ -75,11 +76,12 @@ export function MobileNav() {
                 </a>
               )
             )}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-overlay/10 flex items-center gap-3">
               <LanguageSwitcher />
+              <ThemeToggle />
             </div>
             <Link
-              href="/#pricing"
+              href="/apps"
               onClick={() => setIsOpen(false)}
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-accent-gold text-bg-primary font-medium hover:bg-accent-gold/90 transition-colors"
             >

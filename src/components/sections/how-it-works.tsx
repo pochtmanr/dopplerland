@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/navigation";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { staggerContainerVariants, fadeUpVariants } from "@/lib/animations";
 
@@ -55,6 +56,12 @@ const stepIcons = {
 
 const stepKeys = ["download", "connect", "browse"] as const;
 
+const stepLinks: Record<(typeof stepKeys)[number], { href: string; isPage?: boolean }> = {
+  download: { href: "/apps", isPage: true },
+  connect: { href: "/guide", isPage: true },
+  browse: { href: "/#faq" },
+};
+
 export function HowItWorks() {
   const t = useTranslations("howItWorks");
 
@@ -82,9 +89,9 @@ export function HowItWorks() {
 
             {/* Step Number */}
             <div className="relative inline-flex items-center justify-center mb-6">
-              {/* Shadow glow - centered behind the icon */}
-              <div className="absolute w-28 h-28 rounded-full bg-accent-teal/20 blur-sm" />
-              <div className="relative w-20 h-20 rounded-full bg-bg-secondary border border-accent-teal/50 flex items-center justify-center">
+              {/* Shadow glow - halved opacity in light mode */}
+              <div className="absolute w-28 h-28 rounded-full bg-accent-teal/20 [.light_&]:bg-accent-teal/10 blur-sm" />
+              <div className="relative w-20 h-20 rounded-full bg-bg-secondary border border-accent-teal/50 [.light_&]:border-accent-teal/30 flex items-center justify-center">
                 <span className="absolute -top-2 -end-2 w-8 h-8 rounded-full bg-accent-gold text-bg-primary font-bold text-sm flex items-center justify-center">
                   {index + 1}
                 </span>
@@ -92,10 +99,28 @@ export function HowItWorks() {
               </div>
             </div>
 
-            {/* Content */}
-            <h3 className="font-display text-xl md:text-2xl font-semibold text-text-primary mb-2">
-              {t(`steps.${key}.title`)}
-            </h3>
+            {/* Title as Link */}
+            {stepLinks[key].isPage ? (
+              <Link
+                href={stepLinks[key].href}
+                className="inline-flex items-center gap-2 font-display text-xl md:text-2xl font-semibold text-text-primary hover:text-accent-teal transition-colors mb-2"
+              >
+                {t(`steps.${key}.title`)}
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ) : (
+              <a
+                href={stepLinks[key].href}
+                className="inline-flex items-center gap-2 font-display text-xl md:text-2xl font-semibold text-text-primary hover:text-accent-teal transition-colors mb-2"
+              >
+                {t(`steps.${key}.title`)}
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            )}
             <p className="text-text-muted text-base">
               {t(`steps.${key}.description`)}
             </p>

@@ -56,7 +56,8 @@
         "title": "Bure Kabisa",
         "description": "Seva zote ni bure na utendakazi kamili. Usimbaji kamili, kasi ya juu, bandwidth bila kikomo. Hakuna kupunguza kasi au vikomo vya data."
       }
-    }
+    },
+    "getApp": "Pakua Doppler VPN →"
   },
   "howItWorks": {
     "title": "Anza kwa sekunde chache",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Pakua",
-        "description": "Pata Doppler VPN kutoka duka la programu la kifaa chako"
+        "description": "Pata Doppler VPN kutoka duka la programu la kifaa chako",
+        "link": "Pata Doppler"
       },
       "connect": {
         "title": "Unganisha",
-        "description": "Fungua programu na uguse unganisha — hakuna akaunti inayohitajika"
+        "description": "Fungua programu na uguse unganisha — hakuna akaunti inayohitajika",
+        "link": "Mwongozo wa usanidi"
       },
       "browse": {
         "title": "Vinjari",
-        "description": "Furahia kuvinjari kwa faragha, bila matangazo mara moja"
+        "description": "Furahia kuvinjari kwa faragha, bila matangazo mara moja",
+        "link": "Jifunze zaidi"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Tunatumia vidakuzi kuboresha uzoefu wako. Kwa kuendelea kutumia tovuti hii, unakubali matumizi ya vidakuzi.",
     "accept": "Kubali",
     "decline": "Kataa"
+  },
+  "apps": {
+    "title": "Pakua Doppler VPN",
+    "subtitle": "Inapatikana kwenye majukwaa yote",
+    "mobileApps": "Programu za Simu",
+    "desktopApps": "Programu za Desktop",
+    "telegramWeb": "Telegram na Wavuti",
+    "available": "Inapatikana",
+    "comingSoon": "Inakuja Hivi Karibuni",
+    "ios": {
+      "title": "iOS",
+      "description": "Bure kwenye App Store",
+      "action": "Pakua"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Bure kwenye Google Play",
+      "action": "Pakua"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Programu ya desktop inakuja",
+      "action": "Tazama mwongozo"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Programu ya desktop inakuja",
+      "action": "Tazama mwongozo"
+    },
+    "telegram": {
+      "title": "Bot ya Telegram",
+      "description": "Simamia VPN kupitia Telegram",
+      "action": "Fungua bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App inakuja",
+      "action": ""
+    },
+    "extension": {
+      "title": "Kiendelezi cha Kivinjari",
+      "description": "Chrome na Firefox inakuja",
+      "action": ""
+    },
+    "needHelp": "Unahitaji msaada wa kuanzisha?",
+    "viewGuides": "Miongozo ya Kuanzisha"
   }
 }

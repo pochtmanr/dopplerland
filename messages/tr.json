@@ -56,7 +56,8 @@
         "title": "Tamamen Ücretsiz",
         "description": "Tüm sunucular tam işlevsellik ile ücretsizdir. Tam şifreleme, hızlı bağlantılar, sınırsız bant genişliği. Hız kısıtlama veya veri sınırı yok."
       }
-    }
+    },
+    "getApp": "Doppler VPN İndir →"
   },
   "howItWorks": {
     "title": "Saniyeler içinde başlayın",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "İndirin",
-        "description": "Doppler VPN'i cihazınızın uygulama mağazasından edinin"
+        "description": "Doppler VPN'i cihazınızın uygulama mağazasından edinin",
+        "link": "Doppler'ı edinin"
       },
       "connect": {
         "title": "Bağlanın",
-        "description": "Uygulamayı açın ve bağlan'a dokunun — hesap gerekmez"
+        "description": "Uygulamayı açın ve bağlan'a dokunun — hesap gerekmez",
+        "link": "Kurulum rehberi"
       },
       "browse": {
         "title": "Gezinin",
-        "description": "Anında gizli, reklamsız gezinmenin keyfini çıkarın"
+        "description": "Anında gizli, reklamsız gezinmenin keyfini çıkarın",
+        "link": "Daha fazla bilgi"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Deneyiminizi geliştirmek için çerezler kullanıyoruz. Bu siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz.",
     "accept": "Kabul Et",
     "decline": "Reddet"
+  },
+  "apps": {
+    "title": "Doppler VPN İndir",
+    "subtitle": "Tüm platformlarda mevcut",
+    "mobileApps": "Mobil Uygulamalar",
+    "desktopApps": "Masaüstü Uygulamalar",
+    "telegramWeb": "Telegram ve Web",
+    "available": "Mevcut",
+    "comingSoon": "Yakında",
+    "ios": {
+      "title": "iOS",
+      "description": "App Store'da ücretsiz",
+      "action": "İndir"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Google Play'de ücretsiz",
+      "action": "İndir"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Masaüstü istemci yakında",
+      "action": "Kılavuzu gör"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Masaüstü istemci yakında",
+      "action": "Kılavuzu gör"
+    },
+    "telegram": {
+      "title": "Telegram Bot",
+      "description": "Telegram ile VPN yönetin",
+      "action": "Botu aç"
+    },
+    "miniApp": {
+      "title": "Mini Uygulama",
+      "description": "Telegram Mini Uygulama yakında",
+      "action": ""
+    },
+    "extension": {
+      "title": "Tarayıcı Eklentisi",
+      "description": "Chrome ve Firefox yakında",
+      "action": ""
+    },
+    "needHelp": "Kurulumda yardım mı lazım?",
+    "viewGuides": "Kurulum Kılavuzları"
   }
 }

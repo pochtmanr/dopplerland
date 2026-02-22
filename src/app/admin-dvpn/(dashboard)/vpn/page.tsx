@@ -2,235 +2,179 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import { ServerCard } from "@/components/admin/server-card";
 
-interface SystemStats {
-  version: string;
-  mem_total: number;
-  mem_used: number;
-  cpu_cores: number;
-  cpu_usage: number;
-  total_user: number;
-  online_users: number;
-  users_active: number;
-  incoming_bandwidth: number;
-  outgoing_bandwidth: number;
+interface ServerOverview {
+  id: string;
+  name: string;
+  country: string;
+  country_code: string;
+  ip_address: string;
+  protocols: string[];
+  is_active: boolean;
+  live: {
+    cpu_usage: number | null;
+    mem_used: number | null;
+    mem_total: number | null;
+    online_users: number;
+    bandwidth_in: number;
+    bandwidth_out: number;
+  } | null;
+  user_counts: {
+    total: number;
+    active: number;
+    by_platform: Record<string, number>;
+    by_protocol: Record<string, number>;
+  };
 }
 
-interface VpnUser {
-  username: string;
-  status: string;
-  used_traffic: number;
-  data_limit: number | null;
-  expire: number | null;
-  online_at: string | null;
-  created_at: string;
+interface OverviewData {
+  servers: ServerOverview[];
+  totals: {
+    total_users: number;
+    online_users: number;
+    by_platform: Record<string, number>;
+    by_protocol: Record<string, number>;
+  };
 }
 
-function formatBytes(bytes: number): string {
-  if (!bytes) return "0 B";
-  const units = ["B", "KB", "MB", "GB", "TB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(1024));
-  return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${units[i]}`;
-}
-
-function formatDate(ts: number | string | null): string {
-  if (!ts) return "Never";
-  const d = typeof ts === "number" ? new Date(ts * 1000) : new Date(ts);
-  return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-}
-
-const statusColors: Record<string, string> = {
-  active: "bg-green-500/20 text-green-400",
-  disabled: "bg-red-500/20 text-red-400",
-  expired: "bg-yellow-500/20 text-yellow-400",
-  limited: "bg-orange-500/20 text-orange-400",
-  on_hold: "bg-gray-500/20 text-gray-400",
+const platformColors: Record<string, string> = {
+  ios: "text-blue-400",
+  android: "text-green-400",
+  telegram: "text-sky-400",
+  desktop: "text-purple-400",
+  unknown: "text-text-muted",
 };
 
-export default function VpnPage() {
-  const [system, setSystem] = useState<SystemStats | null>(null);
-  const [users, setUsers] = useState<VpnUser[]>([]);
-  const [total, setTotal] = useState(0);
+const platformLabels: Record<string, string> = {
+  ios: "iOS",
+  android: "Android",
+  telegram: "Telegram",
+  desktop: "Desktop",
+  unknown: "Other",
+};
+
+export default function VpnOverviewPage() {
+  const [data, setData] = useState<OverviewData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [showCreate, setShowCreate] = useState(false);
-  const [creating, setCreating] = useState(false);
-  const [newUser, setNewUser] = useState({ username: "", dataLimitGB: "", expiryDate: "" });
-  const [protocols, setProtocols] = useState({ vless: true, shadowsocks: true, trojan: true });
   const [error, setError] = useState("");
+  const [syncing, setSyncing] = useState(false);
+  const [syncResult, setSyncResult] = useState("");
 
   const fetchData = useCallback(async () => {
     try {
-      const res = await fetch("/api/admin/vpn");
-      if (!res.ok) throw new Error("Failed to fetch");
-      const data = await res.json();
-      setSystem(data.system);
-      setUsers(data.users || []);
-      setTotal(data.total || 0);
+      setLoading(true);
+      const res = await fetch("/api/admin/vpn/overview");
+      if (!res.ok) throw new Error("Failed to fetch overview");
+      const json = await res.json();
+      setData(json);
+      setError("");
     } catch {
-      setError("Failed to load VPN data");
+      setError("Failed to load VPN overview");
     } finally {
       setLoading(false);
     }
   }, []);
 
-  useEffect(() => { fetchData(); }, [fetchData]);
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
-  async function handleCreate(e: React.FormEvent) {
-    e.preventDefault();
-    setCreating(true);
-    setError("");
+  async function handleSync() {
+    setSyncing(true);
+    setSyncResult("");
     try {
-      const proxies: Record<string, object> = {};
-      const inbounds: Record<string, string[]> = {};
-      if (protocols.vless) { proxies.vless = {}; inbounds.vless = ["VLESS-Reality", "VLESS-WebSocket", "VLESS-gRPC"]; }
-      if (protocols.shadowsocks) { proxies.shadowsocks = {}; inbounds.shadowsocks = ["Shadowsocks-2022"]; }
-      if (protocols.trojan) { proxies.trojan = {}; inbounds.trojan = ["Trojan-WS"]; }
-
-      const body: Record<string, unknown> = {
-        username: newUser.username,
-        proxies,
-        inbounds,
-        data_limit: newUser.dataLimitGB ? parseFloat(newUser.dataLimitGB) * 1024 * 1024 * 1024 : 0,
-        expire: newUser.expiryDate ? Math.floor(new Date(newUser.expiryDate).getTime() / 1000) : null,
-        status: "active",
-      };
-
-      const res = await fetch("/api/admin/vpn", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-      if (!res.ok) { const d = await res.json(); throw new Error(d.error || "Failed"); }
-      setShowCreate(false);
-      setNewUser({ username: "", dataLimitGB: "", expiryDate: "" });
-      fetchData();
-    } catch (e: unknown) {
-      setError((e as Error).message);
+      const res = await fetch("/api/admin/vpn/sync", { method: "POST" });
+      if (!res.ok) throw new Error("Sync failed");
+      const json = await res.json();
+      const summary = json.results
+        .map((r: { server: string; synced: number; errors: number }) => `${r.server}: ${r.synced} synced, ${r.errors} errors`)
+        .join(" | ");
+      setSyncResult(summary);
+      fetchData(); // refresh after sync
+    } catch {
+      setSyncResult("Sync failed");
     } finally {
-      setCreating(false);
+      setSyncing(false);
     }
-  }
-
-  async function toggleUser(username: string, currentStatus: string) {
-    const newStatus = currentStatus === "active" ? "disabled" : "active";
-    await fetch(`/api/admin/vpn/${encodeURIComponent(username)}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ status: newStatus }) });
-    fetchData();
-  }
-
-  async function handleDelete(username: string) {
-    if (!confirm(`Delete user "${username}"?`)) return;
-    await fetch(`/api/admin/vpn/${encodeURIComponent(username)}`, { method: "DELETE" });
-    fetchData();
   }
 
   if (loading) return <div className="p-8 text-text-muted">Loading...</div>;
 
   return (
     <div className="p-8 max-w-7xl mx-auto">
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-semibold text-text-primary">VPN Users</h1>
-        <button onClick={() => setShowCreate(true)} className="px-4 py-2 bg-accent-teal text-black rounded-lg text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer">
-          Create User
-        </button>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold text-text-primary">VPN Servers</h1>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={handleSync}
+            disabled={syncing}
+            className="px-3 py-2 text-xs border border-overlay/10 rounded-lg text-text-muted hover:text-text-primary hover:bg-overlay/5 disabled:opacity-50 cursor-pointer transition-colors"
+          >
+            {syncing ? "Syncing..." : "Sync Marzban"}
+          </button>
+          <button
+            onClick={fetchData}
+            className="px-3 py-2 text-xs border border-overlay/10 rounded-lg text-text-muted hover:text-text-primary hover:bg-overlay/5 cursor-pointer transition-colors"
+          >
+            Refresh
+          </button>
+        </div>
       </div>
 
-      {error && <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">{error}</div>}
+      {error && (
+        <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+          {error}
+        </div>
+      )}
 
-      {/* Stats */}
-      {system && (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-          {[
-            { label: "CPU Usage", value: `${system.cpu_usage.toFixed(1)}%` },
-            { label: "RAM", value: `${formatBytes(system.mem_used)} / ${formatBytes(system.mem_total)}` },
-            { label: "Online", value: system.online_users },
-            { label: "Total Users", value: system.total_user },
-            { label: "Bandwidth In", value: formatBytes(system.incoming_bandwidth) },
-            { label: "Bandwidth Out", value: formatBytes(system.outgoing_bandwidth) },
-          ].map((s) => (
-            <div key={s.label} className="bg-bg-secondary border border-white/10 rounded-lg p-4">
-              <p className="text-xs text-text-muted mb-1">{s.label}</p>
-              <p className="text-lg font-semibold text-text-primary">{s.value}</p>
-            </div>
+      {syncResult && (
+        <div className="mb-4 p-3 bg-accent-teal/10 border border-accent-teal/20 rounded-lg text-accent-teal text-sm">
+          {syncResult}
+        </div>
+      )}
+
+      {/* Global totals */}
+      {data && (
+        <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div className="px-3 py-1.5 bg-bg-secondary border border-overlay/10 rounded-lg text-sm">
+            <span className="text-text-muted">Total: </span>
+            <span className="text-text-primary font-semibold">{data.totals.total_users}</span>
+          </div>
+          <div className="px-3 py-1.5 bg-bg-secondary border border-overlay/10 rounded-lg text-sm">
+            <span className="text-text-muted">Online: </span>
+            <span className="text-green-400 font-semibold">{data.totals.online_users}</span>
+          </div>
+          {Object.entries(data.totals.by_platform).map(([platform, count]) => (
+            <span
+              key={platform}
+              className={`text-sm ${platformColors[platform] || platformColors.unknown}`}
+            >
+              {platformLabels[platform] || platform}: <span className="font-semibold">{count}</span>
+            </span>
           ))}
         </div>
       )}
 
-      {/* Users table */}
-      <div className="bg-bg-secondary border border-white/10 rounded-lg overflow-hidden">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-white/10 text-text-muted text-left">
-              <th className="px-4 py-3 font-medium">Username</th>
-              <th className="px-4 py-3 font-medium">Status</th>
-              <th className="px-4 py-3 font-medium">Traffic</th>
-              <th className="px-4 py-3 font-medium">Expires</th>
-              <th className="px-4 py-3 font-medium">Online At</th>
-              <th className="px-4 py-3 font-medium text-right">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((u) => (
-              <tr key={u.username} className="border-b border-white/5 hover:bg-white/[0.02]">
-                <td className="px-4 py-3">
-                  <Link href={`/admin-dvpn/vpn/${encodeURIComponent(u.username)}`} className="text-accent-teal hover:underline">{u.username}</Link>
-                </td>
-                <td className="px-4 py-3">
-                  <span className={`px-2 py-0.5 rounded text-xs font-medium ${statusColors[u.status] || "bg-gray-500/20 text-gray-400"}`}>{u.status}</span>
-                </td>
-                <td className="px-4 py-3 text-text-muted">
-                  {formatBytes(u.used_traffic)}{u.data_limit ? ` / ${formatBytes(u.data_limit)}` : " / Unlimited"}
-                </td>
-                <td className="px-4 py-3 text-text-muted">{u.expire ? formatDate(u.expire) : "Never"}</td>
-                <td className="px-4 py-3 text-text-muted">{u.online_at ? formatDate(u.online_at) : "Never"}</td>
-                <td className="px-4 py-3 text-right space-x-2">
-                  <button onClick={() => toggleUser(u.username, u.status)} className="px-2 py-1 text-xs rounded border border-white/10 text-text-muted hover:text-text-primary hover:bg-white/5 cursor-pointer">
-                    {u.status === "active" ? "Disable" : "Enable"}
-                  </button>
-                  <button onClick={() => handleDelete(u.username)} className="px-2 py-1 text-xs rounded border border-red-500/20 text-red-400 hover:bg-red-500/10 cursor-pointer">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-            {users.length === 0 && (
-              <tr><td colSpan={6} className="px-4 py-8 text-center text-text-muted">No users found</td></tr>
-            )}
-          </tbody>
-        </table>
-        {total > 50 && <div className="px-4 py-3 text-xs text-text-muted border-t border-white/10">Showing {users.length} of {total} users</div>}
-      </div>
-
-      {/* Create Modal */}
-      {showCreate && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={() => setShowCreate(false)}>
-          <form onClick={(e) => e.stopPropagation()} onSubmit={handleCreate} className="bg-bg-secondary border border-white/10 rounded-xl p-6 w-full max-w-md space-y-4">
-            <h2 className="text-lg font-semibold text-text-primary">Create VPN User</h2>
-            <div>
-              <label className="block text-sm text-text-muted mb-1">Username</label>
-              <input required value={newUser.username} onChange={(e) => setNewUser({ ...newUser, username: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
-            </div>
-            <div>
-              <label className="block text-sm text-text-muted mb-1">Data Limit (GB, empty = unlimited)</label>
-              <input type="number" step="0.1" value={newUser.dataLimitGB} onChange={(e) => setNewUser({ ...newUser, dataLimitGB: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
-            </div>
-            <div>
-              <label className="block text-sm text-text-muted mb-1">Expiry Date (empty = never)</label>
-              <input type="date" value={newUser.expiryDate} onChange={(e) => setNewUser({ ...newUser, expiryDate: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
-            </div>
-            <div>
-              <label className="block text-sm text-text-muted mb-2">Protocols</label>
-              <div className="flex gap-4">
-                {(["vless", "shadowsocks", "trojan"] as const).map((p) => (
-                  <label key={p} className="flex items-center gap-2 text-sm text-text-muted cursor-pointer">
-                    <input type="checkbox" checked={protocols[p]} onChange={(e) => setProtocols({ ...protocols, [p]: e.target.checked })} className="accent-accent-teal" />
-                    {p.charAt(0).toUpperCase() + p.slice(1)}
-                  </label>
-                ))}
-              </div>
-            </div>
-            <div className="flex gap-3 pt-2">
-              <button type="button" onClick={() => setShowCreate(false)} className="flex-1 px-4 py-2 border border-white/10 rounded-lg text-sm text-text-muted hover:bg-white/5 cursor-pointer">Cancel</button>
-              <button type="submit" disabled={creating} className="flex-1 px-4 py-2 bg-accent-teal text-black rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 cursor-pointer">{creating ? "Creating..." : "Create"}</button>
-            </div>
-          </form>
+      {/* Server grid */}
+      {data && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {data.servers.map((server) => (
+            <ServerCard key={server.id} server={server} />
+          ))}
         </div>
       )}
+
+      {/* View all link */}
+      <div className="flex justify-center">
+        <Link
+          href="/admin-dvpn/vpn/users"
+          className="px-4 py-2 bg-accent-teal/20 text-accent-teal rounded-lg text-sm hover:bg-accent-teal/30 transition-colors"
+        >
+          View All Users
+        </Link>
+      </div>
     </div>
   );
 }

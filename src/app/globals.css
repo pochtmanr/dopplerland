@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors from PRD */
+  /* Colors — dark mode defaults */
   --color-bg-primary: #0a0a0a;
   --color-bg-secondary: #141414;
   --color-bg-card: oklch(0.1 0 0 / 0.8);
@@ -10,6 +10,7 @@
   --color-accent-gold: #E1DECF;
   --color-accent-teal: #5390A8;
   --color-accent-teal-light: #73B0C8;
+  --color-overlay: #ffffff;
 
   /* Typography - Font variables are set by next/font in layout.tsx */
   /* Space Grotesk - main site font */
@@ -30,6 +31,19 @@
   --radius-full: 9999px;
 }
 
+/* Light mode overrides */
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f2f2f2;
+  --color-bg-card: oklch(0.97 0 0 / 0.8);
+  --color-text-primary: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-accent-gold: #7A6B42;
+  --color-accent-teal: #2E6E85;
+  --color-accent-teal-light: #3D7A92;
+  --color-overlay: #000000;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
@@ -48,7 +62,7 @@ body {
   text-align: right;
 }
 
-/* Custom scrollbar for dark theme */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

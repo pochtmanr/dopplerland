@@ -56,7 +56,8 @@
         "title": "Completely Free",
         "description": "All servers are free with full functionality. Full encryption, fast speeds, unlimited bandwidth. No throttling or data caps."
       }
-    }
+    },
+    "getApp": "Get Doppler VPN →"
   },
   "howItWorks": {
     "title": "Get started in seconds",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Download",
-        "description": "Get Doppler VPN from your device's app store"
+        "description": "Get Doppler VPN from your device's app store",
+        "link": "Get Doppler"
       },
       "connect": {
         "title": "Connect",
-        "description": "Open the app and tap connect - no account needed"
+        "description": "Open the app and tap connect - no account needed",
+        "link": "Setup guide"
       },
       "browse": {
         "title": "Browse",
-        "description": "Enjoy private, ad-free browsing instantly"
+        "description": "Enjoy private, ad-free browsing instantly",
+        "link": "Learn more"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "apps": {
+    "title": "Get Doppler VPN",
+    "subtitle": "Available on every platform you use",
+    "mobileApps": "Mobile Apps",
+    "desktopApps": "Desktop Apps",
+    "telegramWeb": "Telegram & Web",
+    "available": "Available",
+    "comingSoon": "Coming Soon",
+    "ios": {
+      "title": "iOS",
+      "description": "Free on the App Store",
+      "action": "Download"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Free on Google Play",
+      "action": "Download"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Desktop client coming soon",
+      "action": "View Guide"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Desktop client coming soon",
+      "action": "View Guide"
+    },
+    "telegram": {
+      "title": "Telegram Bot",
+      "description": "Manage VPN via Telegram",
+      "action": "Open Bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App coming soon",
+      "action": ""
+    },
+    "extension": {
+      "title": "Browser Extension",
+      "description": "Chrome & Firefox coming soon",
+      "action": ""
+    },
+    "needHelp": "Need help setting up?",
+    "viewGuides": "View Setup Guides"
   }
 }

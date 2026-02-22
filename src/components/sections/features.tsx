@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { staggerContainerVariants, cardVariants } from "@/lib/animations";
@@ -98,7 +99,7 @@ function VisualFeatureCard({
       {/* Text Content Overlay */}
       <div className="absolute inset-0 flex flex-col justify-end p-6">
         {/* Feature Headline with 3-style Typography Treatment */}
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl text-text-primary mb-3 leading-tight">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-3 leading-tight">
           {/* Instrument Serif Italic */}
           <span
             className="italic"
@@ -112,7 +113,7 @@ function VisualFeatureCard({
           </span>{" "}
           {/* FK Raster (playful) with gradient */}
           <span
-            className="bg-gradient-to-t from-text-muted to-white bg-clip-text text-transparent"
+            className="bg-gradient-to-t from-white/50 to-white bg-clip-text text-transparent"
             style={{ fontFamily: "var(--font-raster)" }}
           >
             {headline.playful}
@@ -120,12 +121,12 @@ function VisualFeatureCard({
         </h3>
 
         {/* Original Feature Title */}
-        <h4 className="text-sm font-medium text-accent-gold uppercase tracking-wider mb-2">
+        <h4 className="text-sm font-medium text-amber-300 uppercase tracking-wider mb-2">
           {title}
         </h4>
 
         {/* Feature Description */}
-        <p className="text-text-muted text-sm leading-relaxed line-clamp-3">
+        <p className="text-white/70 text-[10px] sm:text-xs leading-relaxed line-clamp-3">
           {description}
         </p>
       </div>
@@ -137,8 +138,20 @@ export function Features() {
   const t = useTranslations("features");
 
   return (
-    <Section id="features" className="bg-bg-secondary/30">
+    <Section id="features">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="flex justify-center mb-8">
+        <Link
+          href="/apps"
+          className="inline-flex items-center gap-2 text-accent-teal hover:text-accent-teal-light font-medium transition-colors"
+        >
+          {t("getApp")}
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
 
       {/* Visual Feature Cards (Features 1, 2, 3, 5) */}
       <motion.div

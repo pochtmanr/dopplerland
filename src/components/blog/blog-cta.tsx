@@ -64,7 +64,7 @@ function StoreButton({ store, label, href, variant = "primary" }: StoreButtonPro
         ${
           isPrimary
             ? "bg-accent-teal hover:bg-accent-teal-light text-bg-white"
-            : "bg-white/10 hover:bg-white/15 border border-white/20 text-text-primary"
+            : "bg-overlay/10 hover:bg-overlay/15 border border-overlay/20 text-text-primary"
         }
       `}
     >
@@ -168,7 +168,7 @@ function CarouselDots({ count, activeIndex, onDotClick }: CarouselDotsProps) {
             ${
               index === activeIndex
                 ? "bg-accent-teal w-6"
-                : "bg-white/30 hover:bg-white/50"
+                : "bg-overlay/30 hover:bg-overlay/50"
             }
           `}
           aria-label={`Go to slide ${index + 1}`}
@@ -194,7 +194,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       tagline: doppler.tagline,
       appStoreLabel: doppler.appStore,
       playStoreLabel: doppler.playStore,
-      appStoreHref: "https://apps.apple.com/app/doppler-vpn/id6740261606",
+      appStoreHref: "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773",
       playStoreHref: "https://play.google.com/store/apps/details?id=com.dopplervpn.android",
       accentColor: "teal",
     },

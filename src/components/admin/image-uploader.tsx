@@ -59,7 +59,7 @@ export function ImageUploader({ currentUrl, onUpload }: ImageUploaderProps) {
       </label>
 
       {preview ? (
-        <div className="relative aspect-[21/9] rounded-lg overflow-hidden border border-white/10">
+        <div className="relative aspect-[21/9] rounded-lg overflow-hidden border border-overlay/10">
           <Image
             src={preview}
             alt="Preview"
@@ -71,7 +71,7 @@ export function ImageUploader({ currentUrl, onUpload }: ImageUploaderProps) {
             <button
               type="button"
               onClick={() => inputRef.current?.click()}
-              className="px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-lg text-sm text-white hover:bg-white/30 transition-colors"
+              className="px-3 py-1.5 bg-overlay/20 backdrop-blur-sm rounded-lg text-sm text-white hover:bg-overlay/30 transition-colors"
             >
               Replace
             </button>
@@ -92,7 +92,7 @@ export function ImageUploader({ currentUrl, onUpload }: ImageUploaderProps) {
           type="button"
           onClick={() => inputRef.current?.click()}
           disabled={uploading}
-          className="w-full aspect-[21/9] rounded-lg border-2 border-dashed border-white/20 hover:border-white/40 transition-colors flex flex-col items-center justify-center gap-2 text-text-muted cursor-pointer"
+          className="w-full aspect-[21/9] rounded-lg border-2 border-dashed border-overlay/20 hover:border-overlay/40 transition-colors flex flex-col items-center justify-center gap-2 text-text-muted cursor-pointer"
         >
           <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />

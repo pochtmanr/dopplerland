@@ -56,7 +56,8 @@
         "title": "Sepenuhnya Gratis",
         "description": "Semua server gratis dengan fungsionalitas penuh. Enkripsi penuh, kecepatan tinggi, bandwidth tak terbatas. Tanpa throttling atau batas data."
       }
-    }
+    },
+    "getApp": "Unduh Doppler VPN →"
   },
   "howItWorks": {
     "title": "Mulai dalam hitungan detik",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Unduh",
-        "description": "Dapatkan Doppler VPN dari toko aplikasi perangkat Anda"
+        "description": "Dapatkan Doppler VPN dari toko aplikasi perangkat Anda",
+        "link": "Dapatkan Doppler"
       },
       "connect": {
         "title": "Hubungkan",
-        "description": "Buka aplikasi dan ketuk hubungkan — tidak perlu akun"
+        "description": "Buka aplikasi dan ketuk hubungkan — tidak perlu akun",
+        "link": "Panduan pengaturan"
       },
       "browse": {
         "title": "Jelajahi",
-        "description": "Nikmati penjelajahan privat tanpa iklan secara instan"
+        "description": "Nikmati penjelajahan privat tanpa iklan secara instan",
+        "link": "Pelajari lebih lanjut"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Kami menggunakan cookie untuk meningkatkan pengalaman Anda. Dengan terus menggunakan situs ini, Anda menyetujui penggunaan cookie.",
     "accept": "Terima",
     "decline": "Tolak"
+  },
+  "apps": {
+    "title": "Unduh Doppler VPN",
+    "subtitle": "Tersedia di semua platform",
+    "mobileApps": "Aplikasi Seluler",
+    "desktopApps": "Aplikasi Desktop",
+    "telegramWeb": "Telegram & Web",
+    "available": "Tersedia",
+    "comingSoon": "Segera Hadir",
+    "ios": {
+      "title": "iOS",
+      "description": "Gratis di App Store",
+      "action": "Unduh"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Gratis di Google Play",
+      "action": "Unduh"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Klien desktop segera hadir",
+      "action": "Lihat panduan"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Klien desktop segera hadir",
+      "action": "Lihat panduan"
+    },
+    "telegram": {
+      "title": "Bot Telegram",
+      "description": "Kelola VPN via Telegram",
+      "action": "Buka bot"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App segera hadir",
+      "action": ""
+    },
+    "extension": {
+      "title": "Ekstensi Browser",
+      "description": "Chrome & Firefox segera hadir",
+      "action": ""
+    },
+    "needHelp": "Butuh bantuan pengaturan?",
+    "viewGuides": "Panduan Pengaturan"
   }
 }

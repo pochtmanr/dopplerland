@@ -33,7 +33,7 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
       ),
-      color: "hover:bg-white/10 hover:text-white",
+      color: "hover:bg-overlay/10 hover:text-text-primary",
     },
     {
       name: "WhatsApp",
@@ -84,7 +84,7 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
   };
 
   return (
-    <div className="mt-8 pt-6 border-t border-white/10">
+    <div className="mt-8 pt-6 border-t border-overlay/10">
       <p className="text-sm font-medium text-text-muted mb-3">{t("share")}</p>
       <div className="flex flex-wrap gap-2">
         {shareLinks.map((link) => (
@@ -93,7 +93,7 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 text-text-muted text-sm transition-colors ${link.color}`}
+            className={`inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-overlay/10 text-text-muted text-sm transition-colors ${link.color}`}
             title={`${t("share")} ${link.name}`}
           >
             {link.icon}
@@ -102,7 +102,7 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
         ))}
         <button
           onClick={copyLink}
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 text-text-muted text-sm transition-colors hover:bg-white/10 hover:text-text-primary cursor-pointer"
+          className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-overlay/10 text-text-muted text-sm transition-colors hover:bg-overlay/10 hover:text-text-primary cursor-pointer"
           title={t("copyLink")}
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

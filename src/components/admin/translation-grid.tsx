@@ -193,7 +193,7 @@ export function TranslationGrid({
       {/* Batch progress bar */}
       {batchTranslating && batchProgress.total > 0 && (
         <div className="space-y-2">
-          <div className="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-overlay/5 rounded-full h-2 overflow-hidden">
             <div
               className="h-full bg-accent-teal rounded-full transition-all duration-300"
               style={{ width: `${(batchProgress.done / batchProgress.total) * 100}%` }}
@@ -206,10 +206,10 @@ export function TranslationGrid({
         </div>
       )}
 
-      <div className="bg-bg-secondary border border-white/10 rounded-xl overflow-hidden">
+      <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-white/10">
+            <tr className="border-b border-overlay/10">
               <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
                 Language
               </th>
@@ -227,7 +227,7 @@ export function TranslationGrid({
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/5">
+          <tbody className="divide-y divide-overlay/5">
             {ALL_LOCALES.map((loc) => {
               const trans = translationMap.get(loc.code);
               const isSource = loc.code === "en";
@@ -238,7 +238,7 @@ export function TranslationGrid({
               return (
                 <tr
                   key={loc.code}
-                  className="hover:bg-white/[0.02] transition-colors"
+                  className="hover:bg-overlay/[0.02] transition-colors"
                 >
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-2">

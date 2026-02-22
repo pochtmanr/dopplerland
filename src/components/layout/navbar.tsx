@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
+import { ThemeToggle } from "./theme-toggle";
 
 export async function Navbar() {
   const t = await getTranslations("nav");
@@ -17,7 +18,7 @@ export async function Navbar() {
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
-      <nav className="mx-auto max-w-7xl flex items-center justify-between h-12 sm:h-14 bg-bg-primary/70 backdrop-blur-xl border border-white/10 rounded-full shadow-lg shadow-black/5 px-4 sm:px-2">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between h-12 sm:h-14 bg-bg-primary/70 backdrop-blur-xl border border-overlay/10 rounded-full shadow-lg shadow-overlay/5 px-4 sm:px-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <Image
@@ -46,11 +47,12 @@ export async function Navbar() {
           ))}
         </div>
 
-        {/* Right Side - Language Switcher & CTA */}
+        {/* Right Side - Theme Toggle, Language Switcher & CTA */}
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Link
-            href="/#pricing"
+            href="/apps"
             className="inline-flex items-center px-4 py-2 rounded-full bg-accent-gold text-bg-primary font-medium text-sm hover:bg-accent-gold/90 transition-colors"
           >
             {t("download")}

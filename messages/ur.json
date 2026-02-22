@@ -56,7 +56,8 @@
         "title": "مکمل طور پر مفت",
         "description": "تمام سرورز مکمل فعالیت کے ساتھ مفت ہیں۔ مکمل انکرپشن، تیز رفتار، لامحدود بینڈوڈتھ۔ کوئی تھروٹلنگ یا ڈیٹا کیپ نہیں۔"
       }
-    }
+    },
+    "getApp": "Doppler VPN حاصل کریں →"
   },
   "howItWorks": {
     "title": "سیکنڈوں میں شروع کریں",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "ڈاؤن لوڈ",
-        "description": "اپنے ڈیوائس کے ایپ سٹور سے Doppler VPN حاصل کریں"
+        "description": "اپنے ڈیوائس کے ایپ سٹور سے Doppler VPN حاصل کریں",
+        "link": "Doppler حاصل کریں"
       },
       "connect": {
         "title": "جڑیں",
-        "description": "ایپ کھولیں اور کنکٹ پر ٹیپ کریں — کسی اکاؤنٹ کی ضرورت نہیں"
+        "description": "ایپ کھولیں اور کنکٹ پر ٹیپ کریں — کسی اکاؤنٹ کی ضرورت نہیں",
+        "link": "سیٹ اپ گائیڈ"
       },
       "browse": {
         "title": "براؤز کریں",
-        "description": "فوری طور پر نجی، اشتہار سے پاک براؤزنگ سے لطف اٹھائیں"
+        "description": "فوری طور پر نجی، اشتہار سے پاک براؤزنگ سے لطف اٹھائیں",
+        "link": "مزید جانیں"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "ہم آپ کے تجربے کو بہتر بنانے کے لیے کوکیز استعمال کرتے ہیں۔ اس سائٹ کا استعمال جاری رکھ کر، آپ کوکیز کے استعمال سے اتفاق کرتے ہیں۔",
     "accept": "قبول کریں",
     "decline": "مسترد کریں"
+  },
+  "apps": {
+    "title": "Doppler VPN ڈاؤن لوڈ کریں",
+    "subtitle": "تمام پلیٹ فارمز پر دستیاب",
+    "mobileApps": "موبائل ایپس",
+    "desktopApps": "ڈیسک ٹاپ ایپس",
+    "telegramWeb": "ٹیلیگرام اور ویب",
+    "available": "دستیاب",
+    "comingSoon": "جلد آ رہا ہے",
+    "ios": {
+      "title": "iOS",
+      "description": "App Store پر مفت",
+      "action": "ڈاؤن لوڈ"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Google Play پر مفت",
+      "action": "ڈاؤن لوڈ"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "ڈیسک ٹاپ کلائنٹ جلد آ رہا ہے",
+      "action": "گائیڈ دیکھیں"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "ڈیسک ٹاپ کلائنٹ جلد آ رہا ہے",
+      "action": "گائیڈ دیکھیں"
+    },
+    "telegram": {
+      "title": "ٹیلیگرام بوٹ",
+      "description": "ٹیلیگرام سے VPN منظم کریں",
+      "action": "بوٹ کھولیں"
+    },
+    "miniApp": {
+      "title": "منی ایپ",
+      "description": "ٹیلیگرام منی ایپ جلد",
+      "action": ""
+    },
+    "extension": {
+      "title": "براؤزر ایکسٹینشن",
+      "description": "Chrome اور Firefox جلد",
+      "action": ""
+    },
+    "needHelp": "سیٹ اپ میں مدد چاہیے؟",
+    "viewGuides": "سیٹ اپ گائیڈز"
   }
 }

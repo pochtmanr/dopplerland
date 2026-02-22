@@ -76,7 +76,7 @@ export default function MessagesPage() {
           placeholder="Search by username or content..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-teal/50"
+          className="w-full max-w-md px-3 py-2 text-sm bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-teal/50"
         />
       </div>
 
@@ -95,7 +95,7 @@ export default function MessagesPage() {
             <div
               key={e.id}
               onClick={() => router.push(`/admin-dvpn/messages/${e.telegram_user_id}`)}
-              className="border border-white/10 rounded-lg p-4 hover:bg-white/5 cursor-pointer transition-colors"
+              className="border border-overlay/10 rounded-lg p-4 hover:bg-overlay/5 cursor-pointer transition-colors"
             >
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
@@ -144,14 +144,14 @@ export default function MessagesPage() {
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="px-3 py-1.5 text-sm border border-white/10 rounded-lg text-text-muted hover:text-text-primary disabled:opacity-30 cursor-pointer disabled:cursor-default"
+              className="px-3 py-1.5 text-sm border border-overlay/10 rounded-lg text-text-muted hover:text-text-primary disabled:opacity-30 cursor-pointer disabled:cursor-default"
             >
               Previous
             </button>
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={page === totalPages}
-              className="px-3 py-1.5 text-sm border border-white/10 rounded-lg text-text-muted hover:text-text-primary disabled:opacity-30 cursor-pointer disabled:cursor-default"
+              className="px-3 py-1.5 text-sm border border-overlay/10 rounded-lg text-text-muted hover:text-text-primary disabled:opacity-30 cursor-pointer disabled:cursor-default"
             >
               Next
             </button>

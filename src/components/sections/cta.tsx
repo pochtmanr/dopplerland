@@ -10,12 +10,9 @@ interface StoreButtonProps {
   store: "apple" | "google";
   label: string;
   href: string;
-  variant?: "primary" | "secondary";
 }
 
-function StoreButton({ store, label, href, variant = "primary" }: StoreButtonProps) {
-  const isPrimary = variant === "primary";
-
+function StoreButton({ store, label, href }: StoreButtonProps) {
   return (
     <a
       href={href}
@@ -26,9 +23,9 @@ function StoreButton({ store, label, href, variant = "primary" }: StoreButtonPro
         transition-colors focus-visible:outline-none focus-visible:ring-2
         focus-visible:ring-accent-teal focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary
         ${
-          isPrimary
-            ? "bg-accent-teal hover:bg-accent-teal-light text-bg-white"
-            : "bg-white/10 hover:bg-white/15 border border-white/20 text-text-primary"
+          store === "apple"
+            ? "bg-accent-teal/20 text-accent-teal hover:bg-accent-teal/30"
+            : "bg-accent-gold/20 text-accent-gold hover:bg-accent-gold/30"
         }
       `}
     >
@@ -88,14 +85,14 @@ function ProductSection({
         className={`space-y-6 text-center lg:text-start ${reverse ? "lg:order-2" : ""}`}
       >
         {/* App Icon + Headline */}
-        <motion.div variants={fadeUpVariants} className="flex flex-col items-center lg:items-start gap-4">
+        <motion.div variants={fadeUpVariants} className="flex flex-row items-center justify-center lg:justify-start gap-4">
           {/* iOS-style App Icon */}
           <Image
             src={appIcon}
             alt={titlePlayful}
             width={80}
             height={80}
-            className="w-20 h-20 rounded-[18px] shadow-lg"
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-[18px] shadow-lg shrink-0"
           />
 
           {/* Headline with 3-style typography */}
@@ -113,7 +110,7 @@ function ProductSection({
             </span>{" "}
             {/* FK Raster (playful) */}
             <span
-              className="bg-gradient-to-t from-text-muted to-white bg-clip-text text-transparent"
+              className="bg-gradient-to-t from-text-muted to-text-primary bg-clip-text text-transparent"
               style={{ fontFamily: "var(--font-raster)" }}
             >
               {titlePlayful}
@@ -138,13 +135,11 @@ function ProductSection({
             store="apple"
             label={appStoreLabel}
             href={appStoreHref}
-            variant="primary"
           />
           <StoreButton
             store="google"
             label={playStoreLabel}
             href={playStoreHref}
-            variant="secondary"
           />
         </motion.div>
       </motion.div>
@@ -200,8 +195,8 @@ export function CTA() {
           subtitle={t("doppler.subtitle")}
           appStoreLabel={t("doppler.appStore")}
           playStoreLabel={t("doppler.playStore")}
-          appStoreHref="https://apps.apple.com/gb/app/simnetiq-travel-esim-data/id6755963262"
-          playStoreHref="https://play.google.com/store/apps/details?id=com.simnetiq.storeAndroid&hl=en"
+          appStoreHref="https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773"
+          playStoreHref="https://play.google.com/store/apps/details?id=com.dopplervpn.android"
           imageSrc="/images/dopplerdownload.avif"
           imageAlt="Doppler VPN app interface"
           accentColor="teal"

@@ -87,7 +87,7 @@ export function BlogCard({
               {excerpt}
             </p>
 
-            <div className="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
+            <div className="flex items-center justify-between mt-auto pt-3 border-t border-overlay/5">
               <time
                 dateTime={publishedAt || undefined}
                 className="text-xs text-text-muted"

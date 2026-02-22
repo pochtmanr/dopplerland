@@ -123,7 +123,7 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
           { label: "Expires", value: user.expire ? formatDate(user.expire) : "Never" },
           { label: "Last Online", value: user.online_at ? formatDate(user.online_at) : "Never" },
         ].map((c) => (
-          <div key={c.label} className="bg-bg-secondary border border-white/10 rounded-lg p-4">
+          <div key={c.label} className="bg-bg-secondary border border-overlay/10 rounded-lg p-4">
             <p className="text-xs text-text-muted mb-1">{c.label}</p>
             <p className="text-sm font-medium text-text-primary">{c.value}</p>
           </div>
@@ -132,11 +132,11 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
 
       {/* Subscription URL */}
       {user.subscription_url && (
-        <div className="bg-bg-secondary border border-white/10 rounded-lg p-4 mb-6">
+        <div className="bg-bg-secondary border border-overlay/10 rounded-lg p-4 mb-6">
           <p className="text-xs text-text-muted mb-2">Subscription URL</p>
           <div className="flex items-center gap-2">
-            <code className="flex-1 text-xs text-text-primary bg-white/5 px-3 py-2 rounded overflow-x-auto">{user.subscription_url}</code>
-            <button onClick={copySubscription} className="px-3 py-2 text-xs border border-white/10 rounded text-text-muted hover:text-text-primary hover:bg-white/5 cursor-pointer whitespace-nowrap">
+            <code className="flex-1 text-xs text-text-primary bg-overlay/5 px-3 py-2 rounded overflow-x-auto">{user.subscription_url}</code>
+            <button onClick={copySubscription} className="px-3 py-2 text-xs border border-overlay/10 rounded text-text-muted hover:text-text-primary hover:bg-overlay/5 cursor-pointer whitespace-nowrap">
               {copied ? "Copied" : "Copy"}
             </button>
           </div>
@@ -145,11 +145,11 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
 
       {/* Links */}
       {user.links && user.links.length > 0 && (
-        <div className="bg-bg-secondary border border-white/10 rounded-lg p-4 mb-6">
+        <div className="bg-bg-secondary border border-overlay/10 rounded-lg p-4 mb-6">
           <p className="text-xs text-text-muted mb-2">Connection Links</p>
           <div className="space-y-1">
             {user.links.map((link, i) => (
-              <code key={i} className="block text-xs text-text-muted bg-white/5 px-3 py-1.5 rounded break-all">{link}</code>
+              <code key={i} className="block text-xs text-text-muted bg-overlay/5 px-3 py-1.5 rounded break-all">{link}</code>
             ))}
           </div>
         </div>
@@ -157,11 +157,11 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
 
       {/* Edit form */}
       {editMode ? (
-        <div className="bg-bg-secondary border border-white/10 rounded-lg p-4 mb-6 space-y-4">
+        <div className="bg-bg-secondary border border-overlay/10 rounded-lg p-4 mb-6 space-y-4">
           <h2 className="text-sm font-medium text-text-primary">Edit User</h2>
           <div>
             <label className="block text-xs text-text-muted mb-1">Status</label>
-            <select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal">
+            <select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })} className="w-full px-3 py-2 bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal">
               <option value="active">Active</option>
               <option value="disabled">Disabled</option>
               <option value="on_hold">On Hold</option>
@@ -169,20 +169,20 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
           </div>
           <div>
             <label className="block text-xs text-text-muted mb-1">Data Limit (GB, empty = unlimited)</label>
-            <input type="number" step="0.1" value={form.dataLimitGB} onChange={(e) => setForm({ ...form, dataLimitGB: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
+            <input type="number" step="0.1" value={form.dataLimitGB} onChange={(e) => setForm({ ...form, dataLimitGB: e.target.value })} className="w-full px-3 py-2 bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
           </div>
           <div>
             <label className="block text-xs text-text-muted mb-1">Expiry Date</label>
-            <input type="date" value={form.expiryDate} onChange={(e) => setForm({ ...form, expiryDate: e.target.value })} className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
+            <input type="date" value={form.expiryDate} onChange={(e) => setForm({ ...form, expiryDate: e.target.value })} className="w-full px-3 py-2 bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary text-sm focus:outline-none focus:border-accent-teal" />
           </div>
           <div className="flex gap-3">
-            <button onClick={() => setEditMode(false)} className="px-4 py-2 border border-white/10 rounded-lg text-sm text-text-muted hover:bg-white/5 cursor-pointer">Cancel</button>
+            <button onClick={() => setEditMode(false)} className="px-4 py-2 border border-overlay/10 rounded-lg text-sm text-text-muted hover:bg-overlay/5 cursor-pointer">Cancel</button>
             <button onClick={handleSave} disabled={saving} className="px-4 py-2 bg-accent-teal text-black rounded-lg text-sm font-medium hover:opacity-90 disabled:opacity-50 cursor-pointer">{saving ? "Saving..." : "Save"}</button>
           </div>
         </div>
       ) : (
         <div className="flex gap-3">
-          <button onClick={() => setEditMode(true)} className="px-4 py-2 border border-white/10 rounded-lg text-sm text-text-muted hover:text-text-primary hover:bg-white/5 cursor-pointer">Edit User</button>
+          <button onClick={() => setEditMode(true)} className="px-4 py-2 border border-overlay/10 rounded-lg text-sm text-text-muted hover:text-text-primary hover:bg-overlay/5 cursor-pointer">Edit User</button>
           <button onClick={handleDelete} className="px-4 py-2 border border-red-500/20 rounded-lg text-sm text-red-400 hover:bg-red-500/10 cursor-pointer">Delete User</button>
         </div>
       )}

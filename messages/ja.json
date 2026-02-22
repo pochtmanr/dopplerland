@@ -56,7 +56,8 @@
         "title": "完全無料",
         "description": "すべてのサーバーがフル機能で無料。完全な暗号化、高速、無制限帯域幅。速度制限やデータ制限なし。"
       }
-    }
+    },
+    "getApp": "Doppler VPN を入手 →"
   },
   "howItWorks": {
     "title": "数秒で始められます",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "ダウンロード",
-        "description": "デバイスのアプリストアからDoppler VPNを入手"
+        "description": "デバイスのアプリストアからDoppler VPNを入手",
+        "link": "Dopplerを入手"
       },
       "connect": {
         "title": "接続",
-        "description": "アプリを開いて接続をタップ — アカウント不要"
+        "description": "アプリを開いて接続をタップ — アカウント不要",
+        "link": "セットアップガイド"
       },
       "browse": {
         "title": "ブラウジング",
-        "description": "プライベートで広告のないブラウジングを即座にお楽しみください"
+        "description": "プライベートで広告のないブラウジングを即座にお楽しみください",
+        "link": "詳細を見る"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "当サイトではCookieを使用してユーザー体験を向上させています。サイトの利用を続けることで、Cookieの使用に同意したことになります。",
     "accept": "同意する",
     "decline": "拒否する"
+  },
+  "apps": {
+    "title": "Doppler VPN をダウンロード",
+    "subtitle": "すべてのプラットフォームで利用可能",
+    "mobileApps": "モバイルアプリ",
+    "desktopApps": "デスクトップアプリ",
+    "telegramWeb": "Telegram & Web",
+    "available": "利用可能",
+    "comingSoon": "近日公開",
+    "ios": {
+      "title": "iOS",
+      "description": "App Store で無料",
+      "action": "ダウンロード"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Google Play で無料",
+      "action": "ダウンロード"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "デスクトップ版近日公開",
+      "action": "ガイドを見る"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "デスクトップ版近日公開",
+      "action": "ガイドを見る"
+    },
+    "telegram": {
+      "title": "Telegram Bot",
+      "description": "Telegram で VPN を管理",
+      "action": "Bot を開く"
+    },
+    "miniApp": {
+      "title": "ミニアプリ",
+      "description": "Telegram ミニアプリ近日公開",
+      "action": ""
+    },
+    "extension": {
+      "title": "ブラウザ拡張機能",
+      "description": "Chrome & Firefox 近日公開",
+      "action": ""
+    },
+    "needHelp": "設定にお困りですか？",
+    "viewGuides": "セットアップガイド"
   }
 }

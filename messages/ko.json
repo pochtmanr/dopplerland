@@ -56,7 +56,8 @@
         "title": "완전 무료",
         "description": "모든 서버가 전체 기능과 함께 무료입니다. 완전한 암호화, 빠른 속도, 무제한 대역폭. 속도 제한이나 데이터 제한 없음."
       }
-    }
+    },
+    "getApp": "Doppler VPN 받기 →"
   },
   "howItWorks": {
     "title": "몇 초 만에 시작하세요",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "다운로드",
-        "description": "기기의 앱 스토어에서 Doppler VPN을 받으세요"
+        "description": "기기의 앱 스토어에서 Doppler VPN을 받으세요",
+        "link": "Doppler 받기"
       },
       "connect": {
         "title": "연결",
-        "description": "앱을 열고 연결을 누르세요 — 계정 불필요"
+        "description": "앱을 열고 연결을 누르세요 — 계정 불필요",
+        "link": "설정 가이드"
       },
       "browse": {
         "title": "브라우징",
-        "description": "즉시 프라이빗하고 광고 없는 브라우징을 즐기세요"
+        "description": "즉시 프라이빗하고 광고 없는 브라우징을 즐기세요",
+        "link": "자세히 보기"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "더 나은 경험을 위해 쿠키를 사용합니다. 이 사이트를 계속 사용하면 쿠키 사용에 동의하는 것입니다.",
     "accept": "수락",
     "decline": "거부"
+  },
+  "apps": {
+    "title": "Doppler VPN 다운로드",
+    "subtitle": "모든 플랫폼에서 사용 가능",
+    "mobileApps": "모바일 앱",
+    "desktopApps": "데스크톱 앱",
+    "telegramWeb": "텔레그램 & 웹",
+    "available": "사용 가능",
+    "comingSoon": "곧 출시",
+    "ios": {
+      "title": "iOS",
+      "description": "App Store에서 무료",
+      "action": "다운로드"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Google Play에서 무료",
+      "action": "다운로드"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "데스크톱 클라이언트 곧 출시",
+      "action": "가이드 보기"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "데스크톱 클라이언트 곧 출시",
+      "action": "가이드 보기"
+    },
+    "telegram": {
+      "title": "텔레그램 봇",
+      "description": "텔레그램으로 VPN 관리",
+      "action": "봇 열기"
+    },
+    "miniApp": {
+      "title": "미니 앱",
+      "description": "텔레그램 미니 앱 곧 출시",
+      "action": ""
+    },
+    "extension": {
+      "title": "브라우저 확장",
+      "description": "Chrome & Firefox 곧 출시",
+      "action": ""
+    },
+    "needHelp": "설정에 도움이 필요하신가요?",
+    "viewGuides": "설정 가이드 보기"
   }
 }

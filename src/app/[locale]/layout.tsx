@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Instrument_Serif, Space_Grotesk } from "next/font/google";
+import { Instrument_Serif, Space_Grotesk, Inter, Jost } from "next/font/google";
 import localFont from "next/font/local";
 import { routing, isRtlLocale } from "@/i18n/routing";
 import {
@@ -12,6 +12,7 @@ import {
 } from "@/components/seo/json-ld";
 import { Analytics } from "@vercel/analytics/react";
 import { CookieConsent } from "@/components/cookie-consent";
+import { ThemeProvider } from "@/components/theme-provider";
 import "@/app/globals.css";
 
 // Instrument Serif - for hero headline only
@@ -27,6 +28,22 @@ const instrumentSerif = Instrument_Serif({
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+// Inter - body font for Russian locale (Cyrillic-capable Google Sans alternative)
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-body",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+// Jost - heading font for Russian locale (Cyrillic-capable)
+const jost = Jost({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-serif",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
@@ -136,7 +153,11 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${instrumentSerif.variable} ${spaceGrotesk.variable} ${fkRaster.variable}`}
+      suppressHydrationWarning
+      className={locale === "ru"
+        ? `${jost.variable} ${inter.variable} ${fkRaster.variable}`
+        : `${instrumentSerif.variable} ${spaceGrotesk.variable} ${fkRaster.variable}`
+      }
     >
       <head>
         <OrganizationSchema locale={locale} />
@@ -145,10 +166,12 @@ export default async function LocaleLayout({
         <SoftwareApplicationSchema locale={locale} />
       </head>
       <body className="min-h-screen bg-bg-primary text-text-primary font-body antialiased">
-        <NextIntlClientProvider messages={messages}>
-          {children}
-          <CookieConsent />
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+            <CookieConsent />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

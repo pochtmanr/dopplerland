@@ -29,7 +29,7 @@ export function BlogRelatedPosts({
   if (posts.length === 0) return null;
 
   return (
-    <section className="mt-16 pt-12 border-t border-white/10">
+    <section className="mt-16 pt-12 border-t border-overlay/10">
       <h2 className="text-2xl font-semibold text-text-primary mb-8">{title}</h2>
 
       <motion.div

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 
 const navItems = [
   {
@@ -70,9 +71,9 @@ export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
   }
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-white/10 flex flex-col">
+    <aside className="fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-overlay/10 flex flex-col">
       {/* Logo */}
-      <div className="p-6 border-b border-white/10">
+      <div className="p-6 border-b border-overlay/10">
         <Link href="/admin-dvpn/posts" className="text-lg font-semibold">
           Doppler Admin
         </Link>
@@ -91,7 +92,7 @@ export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
                 isActive
                   ? "bg-accent-teal/10 text-accent-teal"
-                  : "text-text-muted hover:text-text-primary hover:bg-white/5"
+                  : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
               }`}
             >
               {item.icon}
@@ -102,10 +103,13 @@ export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
       </nav>
 
       {/* User section */}
-      <div className="p-4 border-t border-white/10">
-        <div className="mb-3">
-          <p className="text-sm text-text-primary truncate">{adminEmail}</p>
-          <p className="text-xs text-text-muted capitalize">{adminRole}</p>
+      <div className="p-4 border-t border-overlay/10">
+        <div className="mb-3 flex items-center justify-between">
+          <div className="min-w-0">
+            <p className="text-sm text-text-primary truncate">{adminEmail}</p>
+            <p className="text-xs text-text-muted capitalize">{adminRole}</p>
+          </div>
+          <ThemeToggle />
         </div>
         <button
           onClick={handleSignOut}

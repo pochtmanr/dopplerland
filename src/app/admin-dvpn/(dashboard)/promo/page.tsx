@@ -27,7 +27,7 @@ interface PromoCode {
 
 function StatCard({ label, value, sub }: { label: string; value: string | number; sub?: string }) {
   return (
-    <div className="bg-bg-secondary border border-white/10 rounded-xl p-5">
+    <div className="bg-bg-secondary border border-overlay/10 rounded-xl p-5">
       <p className="text-text-muted text-sm mb-1">{label}</p>
       <p className="text-2xl font-semibold text-text-primary">{value}</p>
       {sub && <p className="text-text-muted text-xs mt-1">{sub}</p>}
@@ -175,7 +175,7 @@ export default function PromoCodesPage() {
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <form
             onSubmit={handleCreate}
-            className="bg-bg-secondary border border-white/10 rounded-xl p-6 w-full max-w-md space-y-4"
+            className="bg-bg-secondary border border-overlay/10 rounded-xl p-6 w-full max-w-md space-y-4"
           >
             <h2 className="text-lg font-semibold text-text-primary">Create Promo Code</h2>
 
@@ -185,7 +185,7 @@ export default function PromoCodesPage() {
                 type="text"
                 value={formCode}
                 onChange={(e) => setFormCode(e.target.value.toUpperCase())}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
                 placeholder="LAUNCH20"
                 required
               />
@@ -199,7 +199,7 @@ export default function PromoCodesPage() {
                 max={100}
                 value={formDiscount}
                 onChange={(e) => setFormDiscount(parseInt(e.target.value))}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
                 required
               />
             </div>
@@ -228,7 +228,7 @@ export default function PromoCodesPage() {
                 min={1}
                 value={formMaxRedemptions}
                 onChange={(e) => setFormMaxRedemptions(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
                 placeholder="Unlimited"
               />
             </div>
@@ -239,7 +239,7 @@ export default function PromoCodesPage() {
                 type="datetime-local"
                 value={formExpiry}
                 onChange={(e) => setFormExpiry(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
               />
             </div>
 
@@ -254,7 +254,7 @@ export default function PromoCodesPage() {
               <button
                 type="button"
                 onClick={() => setShowCreate(false)}
-                className="flex-1 px-4 py-2 bg-white/5 text-text-muted rounded-lg text-sm hover:bg-white/10 transition-colors cursor-pointer"
+                className="flex-1 px-4 py-2 bg-overlay/5 text-text-muted rounded-lg text-sm hover:bg-overlay/10 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
@@ -264,10 +264,10 @@ export default function PromoCodesPage() {
       )}
 
       {/* Table */}
-      <div className="bg-bg-secondary border border-white/10 rounded-xl overflow-hidden">
+      <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-text-muted text-left">
+            <tr className="border-b border-overlay/10 text-text-muted text-left">
               <th className="px-4 py-3 font-medium">Code</th>
               <th className="px-4 py-3 font-medium">Discount</th>
               <th className="px-4 py-3 font-medium">Plans</th>
@@ -284,7 +284,7 @@ export default function PromoCodesPage() {
               return (
                 <React.Fragment key={promo.id}>
                   <tr
-                    className="border-b border-white/5 text-text-primary cursor-pointer hover:bg-white/[0.02]"
+                    className="border-b border-overlay/5 text-text-primary cursor-pointer hover:bg-overlay/[0.02]"
                     onClick={() => setExpandedId(isExpanded ? null : promo.id)}
                   >
                     <td className="px-4 py-3 font-mono font-semibold">{promo.code}</td>
@@ -310,8 +310,8 @@ export default function PromoCodesPage() {
                     </td>
                   </tr>
                   {isExpanded && promo.promo_redemptions.length > 0 && (
-                    <tr key={`${promo.id}-detail`} className="border-b border-white/5">
-                      <td colSpan={7} className="px-4 py-3 bg-white/[0.02]">
+                    <tr key={`${promo.id}-detail`} className="border-b border-overlay/5">
+                      <td colSpan={7} className="px-4 py-3 bg-overlay/[0.02]">
                         <p className="text-xs text-text-muted mb-2 font-medium">Redemption History</p>
                         <table className="w-full text-xs">
                           <thead>
@@ -339,8 +339,8 @@ export default function PromoCodesPage() {
                     </tr>
                   )}
                   {isExpanded && promo.promo_redemptions.length === 0 && (
-                    <tr key={`${promo.id}-empty`} className="border-b border-white/5">
-                      <td colSpan={7} className="px-4 py-3 bg-white/[0.02] text-text-muted text-xs">
+                    <tr key={`${promo.id}-empty`} className="border-b border-overlay/5">
+                      <td colSpan={7} className="px-4 py-3 bg-overlay/[0.02] text-text-muted text-xs">
                         No redemptions yet
                       </td>
                     </tr>

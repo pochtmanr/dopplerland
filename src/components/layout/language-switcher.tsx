@@ -75,7 +75,7 @@ export function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 end-0 min-w-[180px] bg-bg-secondary/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50">
+        <div className="absolute top-full mt-2 end-0 min-w-[180px] bg-bg-secondary/95 backdrop-blur-xl border border-overlay/10 rounded-xl shadow-2xl overflow-hidden z-50">
           <div className="py-1 max-h-[320px] overflow-y-auto">
             {routing.locales.map((loc) => {
               const config = localeConfig[loc] || { label: loc, flag: "", name: loc };
@@ -88,7 +88,7 @@ export function LanguageSwitcher() {
                     w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150
                     ${isActive
                       ? "bg-accent-teal/20 text-accent-teal"
-                      : "text-text-muted hover:text-text-primary hover:bg-white/5"
+                      : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
                     }
                   `}
                   aria-label={`Switch to ${config.name}`}

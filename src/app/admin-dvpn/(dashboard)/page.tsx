@@ -46,7 +46,7 @@ interface DashboardData {
 
 function StatCard({ label, value, sub }: { label: string; value: string | number; sub?: string }) {
   return (
-    <div className="bg-bg-secondary border border-white/10 rounded-xl p-5">
+    <div className="bg-bg-secondary border border-overlay/10 rounded-xl p-5">
       <p className="text-text-muted text-sm mb-1">{label}</p>
       <p className="text-2xl font-semibold text-text-primary">{value}</p>
       {sub && <p className="text-text-muted text-xs mt-1">{sub}</p>}
@@ -131,7 +131,7 @@ export default function DashboardPage() {
 
       {/* Device stats */}
       {data.devices.total > 0 && (
-        <div className="bg-bg-secondary border border-white/10 rounded-xl p-5">
+        <div className="bg-bg-secondary border border-overlay/10 rounded-xl p-5">
           <h2 className="text-sm font-medium text-text-muted mb-2">Device Sessions ({data.devices.total})</h2>
           <div className="flex gap-4 text-sm text-text-primary">
             {Object.entries(data.devices.byType).map(([type, count]) => (
@@ -144,10 +144,10 @@ export default function DashboardPage() {
       {/* Recent Users */}
       <div>
         <h2 className="text-lg font-medium text-text-primary mb-3">Recent Users</h2>
-        <div className="bg-bg-secondary border border-white/10 rounded-xl overflow-hidden">
+        <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-text-muted text-left">
+              <tr className="border-b border-overlay/10 text-text-muted text-left">
                 <th className="px-4 py-3 font-medium">Account Code</th>
                 <th className="px-4 py-3 font-medium">Tier</th>
                 <th className="px-4 py-3 font-medium">Created</th>
@@ -161,7 +161,7 @@ export default function DashboardPage() {
               {data.recentSignups.map((u) => {
                 const tg = u.telegram_links?.[0];
                 return (
-                  <tr key={u.id} className="border-b border-white/5 text-text-primary">
+                  <tr key={u.id} className="border-b border-overlay/5 text-text-primary">
                     <td className="px-4 py-3 font-mono text-xs">{u.account_code}</td>
                     <td className="px-4 py-3">
                       <span className={u.subscription_tier === "free" ? "text-text-muted" : "text-accent-teal"}>
@@ -185,10 +185,10 @@ export default function DashboardPage() {
       {data.escalations.length > 0 && (
         <div>
           <h2 className="text-lg font-medium text-text-primary mb-3">Support Escalations</h2>
-          <div className="bg-bg-secondary border border-white/10 rounded-xl overflow-hidden">
+          <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-text-muted text-left">
+                <tr className="border-b border-overlay/10 text-text-muted text-left">
                   <th className="px-4 py-3 font-medium">User ID</th>
                   <th className="px-4 py-3 font-medium">Content</th>
                   <th className="px-4 py-3 font-medium">Type</th>
@@ -197,7 +197,7 @@ export default function DashboardPage() {
               </thead>
               <tbody>
                 {data.escalations.map((e) => (
-                  <tr key={e.id} className="border-b border-white/5 text-text-primary">
+                  <tr key={e.id} className="border-b border-overlay/5 text-text-primary">
                     <td className="px-4 py-3 font-mono text-xs">{e.telegram_user_id}</td>
                     <td className="px-4 py-3 max-w-xs truncate">{e.content}</td>
                     <td className="px-4 py-3 text-text-muted">{e.template_key || "message"}</td>

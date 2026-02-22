@@ -56,7 +56,8 @@
         "title": "Komplett kostenlos",
         "description": "Alle Server sind kostenlos mit vollem Funktionsumfang. Vollständige Verschlüsselung, hohe Geschwindigkeiten, unbegrenzte Bandbreite. Keine Drosselung oder Datenlimits."
       }
-    }
+    },
+    "getApp": "Doppler VPN herunterladen →"
   },
   "howItWorks": {
     "title": "In Sekunden starten",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Herunterladen",
-        "description": "Hole dir Doppler VPN aus dem App Store deines Geräts"
+        "description": "Hole dir Doppler VPN aus dem App Store deines Geräts",
+        "link": "Doppler holen"
       },
       "connect": {
         "title": "Verbinden",
-        "description": "Öffne die App und tippe auf Verbinden — kein Konto nötig"
+        "description": "Öffne die App und tippe auf Verbinden — kein Konto nötig",
+        "link": "Einrichtungsanleitung"
       },
       "browse": {
         "title": "Surfen",
-        "description": "Genieße sofort privates, werbefreies Surfen"
+        "description": "Genieße sofort privates, werbefreies Surfen",
+        "link": "Mehr erfahren"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die weitere Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu.",
     "accept": "Akzeptieren",
     "decline": "Ablehnen"
+  },
+  "apps": {
+    "title": "Doppler VPN herunterladen",
+    "subtitle": "Verfügbar auf allen Plattformen",
+    "mobileApps": "Mobile Apps",
+    "desktopApps": "Desktop-Apps",
+    "telegramWeb": "Telegram & Web",
+    "available": "Verfügbar",
+    "comingSoon": "Demnächst",
+    "ios": {
+      "title": "iOS",
+      "description": "Kostenlos im App Store",
+      "action": "Herunterladen"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Kostenlos bei Google Play",
+      "action": "Herunterladen"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Desktop-Client kommt bald",
+      "action": "Anleitung"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Desktop-Client kommt bald",
+      "action": "Anleitung"
+    },
+    "telegram": {
+      "title": "Telegram Bot",
+      "description": "VPN über Telegram verwalten",
+      "action": "Bot öffnen"
+    },
+    "miniApp": {
+      "title": "Mini App",
+      "description": "Telegram Mini App kommt bald",
+      "action": ""
+    },
+    "extension": {
+      "title": "Browser-Erweiterung",
+      "description": "Chrome & Firefox kommt bald",
+      "action": ""
+    },
+    "needHelp": "Hilfe bei der Einrichtung?",
+    "viewGuides": "Einrichtungsanleitungen"
   }
 }

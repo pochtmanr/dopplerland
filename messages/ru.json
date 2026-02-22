@@ -14,8 +14,8 @@
   "hero": {
     "tagline": "VPN с приоритетом конфиденциальности. Бесплатно навсегда.",
     "headlinePart1a": "Посещайте любые сайты",
-    "headlinePart1b": "в интернете",
-    "headlinePart2": "Не оставляя следов.",
+    "headlinePart1b": "",
+    "headlinePart2": "не оставляя следов.",
     "subheadline": "Мгновенное подключение с шифрованием WireGuard. Ваше устройство — это ваш аккаунт.",
     "downloadIos": "App Store",
     "downloadAndroid": "Google Play",
@@ -56,7 +56,8 @@
         "title": "Полностью бесплатно",
         "description": "Все серверы бесплатны с полным функционалом. Полное шифрование, высокая скорость, безлимитный трафик. Без ограничений скорости или объёма данных."
       }
-    }
+    },
+    "getApp": "Скачать Doppler VPN →"
   },
   "howItWorks": {
     "title": "Начните за секунды",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "Скачайте",
-        "description": "Загрузите Doppler VPN из магазина приложений вашего устройства"
+        "description": "Загрузите Doppler VPN из магазина приложений вашего устройства",
+        "link": "Скачать Doppler"
       },
       "connect": {
         "title": "Подключитесь",
-        "description": "Откройте приложение и нажмите «Подключить» — аккаунт не нужен"
+        "description": "Откройте приложение и нажмите «Подключить» — аккаунт не нужен",
+        "link": "Руководство"
       },
       "browse": {
         "title": "Просматривайте",
-        "description": "Наслаждайтесь приватным просмотром без рекламы мгновенно"
+        "description": "Наслаждайтесь приватным просмотром без рекламы мгновенно",
+        "link": "Подробнее"
       }
     }
   },
@@ -166,16 +170,16 @@
     "byLabel": "от",
     "simnetiqName": "Simnetiq",
     "doppler": {
-      "titleItalic": "Начните",
-      "titleMiddle": "с",
-      "titlePlayful": "Doppler VPN",
+      "titleItalic": "Подключайтесь к",
+      "titleMiddle": "",
+      "titlePlayful": "Doppler",
       "subtitle": "VPN с приоритетом конфиденциальности без регистрации. Мгновенное подключение с шифрованием WireGuard.",
       "appStore": "App Store",
       "playStore": "Google Play"
     },
     "simnetiq": {
-      "titleItalic": "Путешествуйте",
-      "titleMiddle": "с",
+      "titleItalic": "Путешествуйте с",
+      "titleMiddle": "",
       "titlePlayful": "Simnetiq",
       "subtitle": "Глобальные eSIM тарифы для путешественников. Оставайтесь на связи в любой точке мира.",
       "appStore": "App Store",
@@ -400,5 +404,51 @@
     "message": "Мы используем файлы cookie для улучшения вашего опыта. Продолжая использовать сайт, вы соглашаетесь с использованием cookie.",
     "accept": "Принять",
     "decline": "Отклонить"
+  },
+  "apps": {
+    "title": "Скачать Doppler VPN",
+    "subtitle": "Доступен на всех ваших платформах",
+    "mobileApps": "Мобильные приложения",
+    "desktopApps": "Десктопные приложения",
+    "telegramWeb": "Telegram и Web",
+    "available": "Доступно",
+    "comingSoon": "Скоро",
+    "ios": {
+      "title": "iOS",
+      "description": "Бесплатно в App Store",
+      "action": "Скачать"
+    },
+    "android": {
+      "title": "Android",
+      "description": "Бесплатно в Google Play",
+      "action": "Скачать"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "Десктоп-клиент скоро",
+      "action": "Руководство"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "Десктоп-клиент скоро",
+      "action": "Руководство"
+    },
+    "telegram": {
+      "title": "Telegram Бот",
+      "description": "Управляйте VPN через Telegram",
+      "action": "Открыть бота"
+    },
+    "miniApp": {
+      "title": "Мини-приложение",
+      "description": "Telegram мини-приложение скоро",
+      "action": ""
+    },
+    "extension": {
+      "title": "Расширение браузера",
+      "description": "Chrome и Firefox скоро",
+      "action": ""
+    },
+    "needHelp": "Нужна помощь с настройкой?",
+    "viewGuides": "Руководства по настройке"
   }
 }

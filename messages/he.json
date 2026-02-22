@@ -56,7 +56,8 @@
         "title": "חינמי לחלוטין",
         "description": "כל השרתים חינמיים עם פונקציונליות מלאה. הצפנה מלאה, מהירויות גבוהות, רוחב פס ללא הגבלה. ללא חנק מהירות או מגבלות נתונים."
       }
-    }
+    },
+    "getApp": "הורד את Doppler VPN →"
   },
   "howItWorks": {
     "title": "התחל בשניות",
@@ -64,15 +65,18 @@
     "steps": {
       "download": {
         "title": "הורדה",
-        "description": "הורד את Doppler VPN מחנות האפליקציות של המכשיר שלך"
+        "description": "הורד את Doppler VPN מחנות האפליקציות של המכשיר שלך",
+        "link": "הורד את Doppler"
       },
       "connect": {
         "title": "התחברות",
-        "description": "פתח את האפליקציה ולחץ על התחבר - ללא צורך בחשבון"
+        "description": "פתח את האפליקציה ולחץ על התחבר - ללא צורך בחשבון",
+        "link": "מדריך התקנה"
       },
       "browse": {
         "title": "גלישה",
-        "description": "תהנה מגלישה פרטית וללא פרסומות מיידית"
+        "description": "תהנה מגלישה פרטית וללא פרסומות מיידית",
+        "link": "למידע נוסף"
       }
     }
   },
@@ -400,5 +404,51 @@
     "message": "אנו משתמשים בעוגיות כדי לשפר את חוויית השימוש שלך. המשך השימוש באתר מהווה הסכמה לשימוש בעוגיות.",
     "accept": "אישור",
     "decline": "דחייה"
+  },
+  "apps": {
+    "title": "הורד את Doppler VPN",
+    "subtitle": "זמין בכל הפלטפורמות",
+    "mobileApps": "אפליקציות מובייל",
+    "desktopApps": "אפליקציות שולחניות",
+    "telegramWeb": "טלגרם ואינטרנט",
+    "available": "זמין",
+    "comingSoon": "בקרוב",
+    "ios": {
+      "title": "iOS",
+      "description": "חינם ב-App Store",
+      "action": "הורדה"
+    },
+    "android": {
+      "title": "Android",
+      "description": "חינם ב-Google Play",
+      "action": "הורדה"
+    },
+    "windows": {
+      "title": "Windows",
+      "description": "לקוח שולחני בקרוב",
+      "action": "צפה במדריך"
+    },
+    "mac": {
+      "title": "macOS",
+      "description": "לקוח שולחני בקרוב",
+      "action": "צפה במדריך"
+    },
+    "telegram": {
+      "title": "בוט טלגרם",
+      "description": "נהל VPN דרך טלגרם",
+      "action": "פתח בוט"
+    },
+    "miniApp": {
+      "title": "מיני אפליקציה",
+      "description": "מיני אפליקציית טלגרם בקרוב",
+      "action": ""
+    },
+    "extension": {
+      "title": "הרחבת דפדפן",
+      "description": "Chrome ו-Firefox בקרוב",
+      "action": ""
+    },
+    "needHelp": "צריך עזרה בהגדרה?",
+    "viewGuides": "מדריכי הגדרה"
   }
 }

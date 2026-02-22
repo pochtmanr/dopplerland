@@ -50,7 +50,7 @@ export function BlogTagFilter({
           ${
             activeTagSlug === null
               ? "bg-accent-teal text-white"
-              : "bg-white/5 text-text-muted hover:bg-white/10 hover:text-text-primary"
+              : "bg-overlay/5 text-text-muted hover:bg-overlay/10 hover:text-text-primary"
           }
         `}
       >
@@ -66,7 +66,7 @@ export function BlogTagFilter({
             ${
               activeTagSlug === tag.slug
                 ? "bg-accent-teal text-white"
-                : "bg-white/5 text-text-muted hover:bg-white/10 hover:text-text-primary"
+                : "bg-overlay/5 text-text-muted hover:bg-overlay/10 hover:text-text-primary"
             }
           `}
         >

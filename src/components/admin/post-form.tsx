@@ -216,7 +216,7 @@ export function PostForm({
       )}
 
       {/* URL Extract */}
-      <div className="bg-bg-secondary border border-white/10 rounded-lg p-4 space-y-3">
+      <div className="bg-bg-secondary border border-overlay/10 rounded-lg p-4 space-y-3">
         <label className="block text-sm font-medium text-text-muted">
           Generate from URL (Perplexity, news article, etc.)
         </label>
@@ -226,7 +226,7 @@ export function PostForm({
             value={extractUrl}
             onChange={(e) => setExtractUrl(e.target.value)}
             placeholder="https://www.perplexity.ai/page/..."
-            className="flex-1 bg-bg-primary border border-white/10 rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
+            className="flex-1 bg-bg-primary border border-overlay/10 rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
           />
           <button
             type="button"
@@ -256,7 +256,7 @@ export function PostForm({
           onChange={(e) => updateField("title", e.target.value)}
           required
           placeholder="How to Protect Your Privacy Online"
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
         />
       </div>
 
@@ -276,7 +276,7 @@ export function PostForm({
             }}
             required
             placeholder="how-to-protect-your-privacy"
-            className="flex-1 bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
+            className="flex-1 bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
           />
         </div>
       </div>
@@ -292,7 +292,7 @@ export function PostForm({
           required
           rows={3}
           placeholder="A brief summary of the article..."
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors resize-y"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors resize-y"
         />
       </div>
 
@@ -317,7 +317,7 @@ export function PostForm({
           required
           rows={20}
           placeholder="Write your article content in Markdown..."
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors resize-y font-mono text-sm"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors resize-y font-mono text-sm"
         />
       </div>
 
@@ -331,7 +331,7 @@ export function PostForm({
           value={form.image_alt}
           onChange={(e) => updateField("image_alt", e.target.value)}
           placeholder="Descriptive alt text for the featured image"
-          className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
+          className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal transition-colors"
         />
       </div>
 
@@ -345,7 +345,7 @@ export function PostForm({
           <select
             value={form.status}
             onChange={(e) => updateField("status", e.target.value)}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -362,7 +362,7 @@ export function PostForm({
             type="text"
             value={form.author_name}
             onChange={(e) => updateField("author_name", e.target.value)}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
           />
         </div>
 
@@ -375,7 +375,7 @@ export function PostForm({
             type="datetime-local"
             value={form.published_at}
             onChange={(e) => updateField("published_at", e.target.value)}
-            className="w-full bg-bg-secondary border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
+            className="w-full bg-bg-secondary border border-overlay/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent-teal transition-colors"
           />
         </div>
       </div>
@@ -397,7 +397,7 @@ export function PostForm({
                   className={`px-3 py-1.5 rounded-full text-sm border transition-colors cursor-pointer ${
                     selected
                       ? "bg-accent-teal/20 border-accent-teal/40 text-accent-teal"
-                      : "bg-bg-secondary border-white/10 text-text-muted hover:border-white/20"
+                      : "bg-bg-secondary border-overlay/10 text-text-muted hover:border-overlay/20"
                   }`}
                 >
                   {tag.name}
@@ -409,7 +409,7 @@ export function PostForm({
       )}
 
       {/* SEO Section (collapsible) */}
-      <div className="border border-white/10 rounded-lg overflow-hidden">
+      <div className="border border-overlay/10 rounded-lg overflow-hidden">
         <button
           type="button"
           onClick={() => setShowSeo(!showSeo)}
@@ -428,7 +428,7 @@ export function PostForm({
         </button>
 
         {showSeo && (
-          <div className="p-4 border-t border-white/10 space-y-4">
+          <div className="p-4 border-t border-overlay/10 space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="block text-xs text-text-muted">Meta Title</label>
@@ -438,7 +438,7 @@ export function PostForm({
                   onChange={(e) => updateField("meta_title", e.target.value)}
                   maxLength={70}
                   placeholder="SEO title (max 70 chars)"
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal"
+                  className="w-full bg-bg-primary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal"
                 />
               </div>
               <div className="space-y-2">
@@ -449,7 +449,7 @@ export function PostForm({
                   onChange={(e) => updateField("og_title", e.target.value)}
                   maxLength={70}
                   placeholder="Open Graph title"
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal"
+                  className="w-full bg-bg-primary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal"
                 />
               </div>
             </div>
@@ -462,7 +462,7 @@ export function PostForm({
                   maxLength={160}
                   rows={2}
                   placeholder="SEO description (max 160 chars)"
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal resize-none"
+                  className="w-full bg-bg-primary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal resize-none"
                 />
               </div>
               <div className="space-y-2">
@@ -473,7 +473,7 @@ export function PostForm({
                   maxLength={200}
                   rows={2}
                   placeholder="Open Graph description"
-                  className="w-full bg-bg-primary border border-white/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal resize-none"
+                  className="w-full bg-bg-primary border border-overlay/10 rounded-lg px-3 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-teal resize-none"
                 />
               </div>
             </div>
@@ -482,7 +482,7 @@ export function PostForm({
       </div>
 
       {/* Actions */}
-      <div className="flex items-center justify-between pt-4 border-t border-white/10">
+      <div className="flex items-center justify-between pt-4 border-t border-overlay/10">
         <div>
           {mode === "edit" && (
             <button
