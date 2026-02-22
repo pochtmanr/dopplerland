@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 interface ShareButtonsProps {
@@ -8,8 +9,9 @@ interface ShareButtonsProps {
   imageUrl?: string | null;
 }
 
-export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
+export function ShareButtons({ url, title }: ShareButtonsProps) {
   const t = useTranslations("blog");
+  const [copied, setCopied] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
@@ -80,6 +82,8 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
   const copyLink = async () => {
     try {
       await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     } catch {}
   };
 
@@ -102,13 +106,25 @@ export function ShareButtons({ url, title, imageUrl }: ShareButtonsProps) {
         ))}
         <button
           onClick={copyLink}
-          className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-overlay/10 text-text-muted text-sm transition-colors hover:bg-overlay/10 hover:text-text-primary cursor-pointer"
+          className={`inline-flex items-center gap-2 px-3 py-2 rounded-xl border text-sm transition-all duration-200 cursor-pointer ${
+            copied
+              ? "border-accent-teal/30 bg-accent-teal/10 text-accent-teal"
+              : "border-overlay/10 text-text-muted hover:bg-overlay/10 hover:text-text-primary"
+          }`}
           title={t("copyLink")}
         >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-4.06a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.343 8.07" />
-          </svg>
-          <span className="hidden sm:inline">{t("copyLink")}</span>
+          {copied ? (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H8.25m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m6 10.375a2.625 2.625 0 0 1-2.625-2.625" />
+            </svg>
+          )}
+          <span className="hidden sm:inline">
+            {copied ? t("copied") : t("copyLink")}
+          </span>
         </button>
       </div>
     </div>

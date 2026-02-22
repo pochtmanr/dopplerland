@@ -310,7 +310,8 @@
       }
     },
     "share": "Share this article",
-    "copyLink": "Copy link"
+    "copyLink": "Copy link",
+    "copied": "Copied!"
   },
   "guide": {
     "title": "Setup Guide",

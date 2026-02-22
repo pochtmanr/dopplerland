@@ -158,7 +158,14 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
             <span className="relative z-10 flex items-center justify-center gap-1.5">
               {t(`durations.${duration}`)}
               {isAnnual && (
-                <span className="hidden sm:inline text-[10px] uppercase tracking-wider font-bold opacity-80">
+                <span className={`
+                  hidden sm:inline text-[10px] uppercase tracking-wider font-bold
+                  px-1.5 py-0.5 rounded-full
+                  ${isSelected
+                    ? "bg-bg-primary/20 text-bg-primary"
+                    : "bg-accent-gold/15 text-accent-gold"
+                  }
+                `}>
                   {t("bestValue")}
                 </span>
               )}
@@ -312,7 +319,7 @@ export function Pricing() {
           </div>
 
           {/* CTA Button */}
-          <Button variant="primary" className="w-full" size="lg">
+          <Button variant="primary" className="w-full" size="lg" href="https://t.me/dopplercreatebot" external>
             {t("cta")}
           </Button>
 
