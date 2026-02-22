@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin-auth";
-import { getMarzbanServers, createMarzbanClient } from "@/lib/marzban";
+import { loadMarzbanServers, createMarzbanClient } from "@/lib/marzban";
 
 export async function POST() {
   const { admin, supabase, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
-    const marzbanServers = getMarzbanServers();
+    const marzbanServers = await loadMarzbanServers(supabase);
     const results: Array<{ server: string; synced: number; errors: number }> = [];
 
     for (const ms of marzbanServers) {
@@ -41,7 +41,6 @@ export async function POST() {
 
         // Upsert each user into vpn_users
         for (const user of allUsers) {
-          // Determine protocol from proxies
           const proxies = user.proxies ? Object.keys(user.proxies) : [];
           const protocol = proxies.includes("vless")
             ? "vless"
@@ -49,7 +48,7 @@ export async function POST() {
               ? "shadowsocks"
               : proxies.includes("trojan")
                 ? "trojan"
-                : "vless"; // default
+                : "vless";
 
           const row = {
             server_id: ms.serverId,

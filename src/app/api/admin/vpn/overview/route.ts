@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin-auth";
-import { getMarzbanServers, createMarzbanClient } from "@/lib/marzban";
+import { loadMarzbanServers, createMarzbanClient } from "@/lib/marzban";
 
 interface ServerOverview {
   id: string;
@@ -69,11 +69,11 @@ export async function GET() {
       entry.by_protocol[row.protocol] = (entry.by_protocol[row.protocol] || 0) + 1;
     }
 
-    // 4. Fetch live stats from Marzban instances in parallel
-    const marzbanServers = getMarzbanServers();
+    // 4. Load Marzban configs from Supabase and fetch live stats
+    const marzbanConfigs = await loadMarzbanServers(supabase);
     const liveStats = new Map<string, ServerOverview["live"]>();
 
-    const marzbanPromises = marzbanServers.map(async (ms) => {
+    const marzbanPromises = marzbanConfigs.map(async (ms) => {
       try {
         const client = createMarzbanClient(ms);
         const system = await client.getSystem();
@@ -86,7 +86,6 @@ export async function GET() {
           bandwidth_out: system.outgoing_bandwidth ?? 0,
         });
       } catch {
-        // Server unreachable — live stats will be null
         liveStats.set(ms.serverId, null);
       }
     });
@@ -94,7 +93,7 @@ export async function GET() {
     await Promise.allSettled(marzbanPromises);
 
     // 5. Build response
-    const marzbanServerIds = new Set(marzbanServers.map((ms) => ms.serverId));
+    const marzbanServerIds = new Set(marzbanConfigs.map((ms) => ms.serverId));
 
     const serverOverviews: ServerOverview[] = (servers || []).map((srv) => {
       const hasMarzban = marzbanServerIds.has(srv.id);

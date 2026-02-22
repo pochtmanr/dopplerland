@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin-auth";
-import { getMarzbanServers, createMarzbanClient, type MarzbanServerConfig } from "@/lib/marzban";
+import { loadMarzbanServers, createMarzbanClient, type MarzbanServerConfig } from "@/lib/marzban";
 
 interface HealthResult {
   server_id: string;
@@ -30,25 +30,12 @@ interface VpnServer {
   is_active: boolean;
 }
 
-function findMarzbanConfig(
-  srv: VpnServer,
-  byServerId: Map<string, MarzbanServerConfig>,
-  byId: Map<string, MarzbanServerConfig>,
-): MarzbanServerConfig | undefined {
-  // Try matching by serverId (vpn_servers.id = marzban config serverId)
-  const byServerIdMatch = byServerId.get(srv.id);
-  if (byServerIdMatch) return byServerIdMatch;
-  // Fallback: match by country code (de, ru, ch, gb, us)
-  return byId.get(srv.country_code.toLowerCase());
-}
-
 async function checkServer(
   srv: VpnServer,
   marzbanConfig: MarzbanServerConfig | undefined,
 ): Promise<HealthResult> {
   const base = { server_id: srv.id, name: srv.name, country_code: srv.country_code, ip_address: srv.ip_address };
 
-  // Server has Marzban fully configured via env vars
   if (marzbanConfig) {
     const start = Date.now();
     try {
@@ -80,28 +67,7 @@ async function checkServer(
     }
   }
 
-  // Server has marzban_api_url in DB but not in env vars yet — basic probe
-  if (srv.marzban_api_url) {
-    const start = Date.now();
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 10000);
-    try {
-      const res = await fetch(`${srv.marzban_api_url}/system`, { signal: controller.signal });
-      clearTimeout(timer);
-      return {
-        ...base,
-        status: res.ok ? "degraded" : "down",
-        latency_ms: Date.now() - start,
-        marzban: null,
-        error: res.ok ? "Marzban reachable but no auth configured" : `HTTP ${res.status}`,
-      };
-    } catch {
-      clearTimeout(timer);
-      return { ...base, status: "down", latency_ms: Date.now() - start, marzban: null, error: "Marzban unreachable" };
-    }
-  }
-
-  // No Marzban — report as no_agent (Vercel cannot reliably probe raw IP:port)
+  // No Marzban configured for this server
   return { ...base, status: "no_agent", latency_ms: null, marzban: null, error: null };
 }
 
@@ -119,13 +85,13 @@ export async function GET() {
 
     if (srvErr) throw new Error(srvErr.message);
 
-    const marzbanServers = getMarzbanServers();
-    const byServerId = new Map(marzbanServers.filter((ms) => ms.serverId).map((ms) => [ms.serverId, ms]));
-    const byId = new Map(marzbanServers.map((ms) => [ms.id, ms]));
+    // Load Marzban configs from Supabase (credentials included)
+    const marzbanConfigs = await loadMarzbanServers(supabase);
+    const byServerId = new Map(marzbanConfigs.map((mc) => [mc.serverId, mc]));
 
     const settled = await Promise.allSettled(
       (servers || []).map((srv) => {
-        const config = findMarzbanConfig(srv, byServerId, byId);
+        const config = byServerId.get(srv.id);
         return checkServer(srv, config);
       }),
     );

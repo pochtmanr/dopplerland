@@ -1,3 +1,6 @@
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { createAdminClient } from "@/lib/supabase/admin";
+
 export interface MarzbanServerConfig {
   id: string;
   apiUrl: string;
@@ -15,54 +18,48 @@ interface TokenCache {
 
 const tokenCache = new Map<string, TokenCache>();
 
-// Each entry: [id, envPrefix, defaultServerId, label]
-const MARZBAN_INSTANCES: [string, string, string, string][] = [
-  ["de", "MARZBAN_DE", "e462c96b-af8b-4f09-b989-3ad9aec63413", "Germany"],
-  ["ru", "MARZBAN_RU", "078dadc9-871a-4d56-aa7a-f6ec6296bd59", "Russia"],
-  ["ch", "MARZBAN_CH", "", "Switzerland"],
-  ["gb", "MARZBAN_GB", "", "UK"],
-  ["us", "MARZBAN_US", "", "USA"],
-];
-
-function loadServerConfigs(): MarzbanServerConfig[] {
-  const servers: MarzbanServerConfig[] = [];
-
-  for (const [id, prefix, defaultServerId, label] of MARZBAN_INSTANCES) {
-    // Support legacy env var names for DE
-    const apiUrl = process.env[`${prefix}_API_URL`] || (id === "de" ? process.env.MARZBAN_API_URL : "");
-    if (!apiUrl) continue;
-
-    servers.push({
-      id,
-      apiUrl,
-      apiKey: process.env[`${prefix}_API_KEY`] || (id === "de" ? process.env.MARZBAN_API_KEY || "" : ""),
-      adminUser: process.env[`${prefix}_ADMIN_USER`] || (id === "de" ? process.env.MARZBAN_ADMIN_USER || "" : ""),
-      adminPass: process.env[`${prefix}_ADMIN_PASS`] || (id === "de" ? process.env.MARZBAN_ADMIN_PASS || "" : ""),
-      serverId: process.env[`${prefix}_SERVER_ID`] || defaultServerId,
-      label,
-    });
-  }
-
-  return servers;
+interface VpnServerRow {
+  id: string;
+  name: string;
+  country_code: string;
+  marzban_api_url: string | null;
+  marzban_admin_user: string | null;
+  marzban_admin_pass: string | null;
+  marzban_api_key: string | null;
 }
 
-let _configs: MarzbanServerConfig[] | null = null;
+/**
+ * Load all Marzban-enabled servers from Supabase.
+ * Pass an existing supabase client if you have one (from requireAdmin),
+ * otherwise a service-role admin client is created automatically.
+ */
+export async function loadMarzbanServers(
+  supabase?: SupabaseClient,
+): Promise<MarzbanServerConfig[]> {
+  const client = supabase ?? createAdminClient();
 
-export function getMarzbanServers(): MarzbanServerConfig[] {
-  if (!_configs) _configs = loadServerConfigs();
-  return _configs;
-}
+  const { data, error } = await client
+    .from("vpn_servers")
+    .select("id, name, country_code, marzban_api_url, marzban_admin_user, marzban_admin_pass, marzban_api_key")
+    .not("marzban_api_url", "is", null)
+    .eq("is_active", true)
+    .returns<VpnServerRow[]>();
 
-export function getMarzbanServer(id: string): MarzbanServerConfig | undefined {
-  return getMarzbanServers().find((s) => s.id === id);
-}
+  if (error) throw new Error(`Failed to load Marzban servers: ${error.message}`);
 
-export function getMarzbanServerByServerId(serverId: string): MarzbanServerConfig | undefined {
-  return getMarzbanServers().find((s) => s.serverId === serverId);
+  return (data || []).map((row) => ({
+    id: row.country_code.toLowerCase(),
+    apiUrl: row.marzban_api_url!,
+    apiKey: row.marzban_api_key || "",
+    adminUser: row.marzban_admin_user || "",
+    adminPass: row.marzban_admin_pass || "",
+    serverId: row.id,
+    label: row.name,
+  }));
 }
 
 async function getToken(server: MarzbanServerConfig): Promise<string> {
-  const cached = tokenCache.get(server.id);
+  const cached = tokenCache.get(server.serverId);
   if (cached && Date.now() < cached.expiry) return cached.token;
 
   const res = await fetch(`${server.apiUrl}/admin/token`, {
@@ -76,7 +73,7 @@ async function getToken(server: MarzbanServerConfig): Promise<string> {
 
   if (!res.ok) throw new Error(`Marzban ${server.label} auth failed: ${res.status}`);
   const data = await res.json();
-  tokenCache.set(server.id, { token: data.access_token, expiry: Date.now() + 55 * 60 * 1000 });
+  tokenCache.set(server.serverId, { token: data.access_token, expiry: Date.now() + 55 * 60 * 1000 });
   return data.access_token;
 }
 
@@ -112,19 +109,3 @@ export function createMarzbanClient(server: MarzbanServerConfig) {
     deleteUser: (username: string) => fetchFn(`/user/${encodeURIComponent(username)}`, { method: "DELETE" }),
   };
 }
-
-// Backward-compatible exports (use DE server by default)
-function getDefaultServer(): MarzbanServerConfig {
-  const servers = getMarzbanServers();
-  if (servers.length === 0) throw new Error("No Marzban servers configured");
-  return servers[0];
-}
-
-export const getMarzbanToken = () => getToken(getDefaultServer());
-export const marzbanFetch = (path: string, options?: RequestInit) => marzbanFetchForServer(getDefaultServer(), path, options);
-export const getSystem = () => marzbanFetch("/system");
-export const getUsers = (offset = 0, limit = 50) => marzbanFetch(`/users?offset=${offset}&limit=${limit}`);
-export const getUser = (username: string) => marzbanFetch(`/user/${encodeURIComponent(username)}`);
-export const createUser = (data: Record<string, unknown>) => marzbanFetch("/user", { method: "POST", body: JSON.stringify(data) });
-export const updateUser = (username: string, data: Record<string, unknown>) => marzbanFetch(`/user/${encodeURIComponent(username)}`, { method: "PUT", body: JSON.stringify(data) });
-export const deleteUser = (username: string) => marzbanFetch(`/user/${encodeURIComponent(username)}`, { method: "DELETE" });
