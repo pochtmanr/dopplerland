@@ -13,7 +13,7 @@ async function getAdmin() {
   const { data: admin } = await supabase
     .from("admins")
     .select("id, email, role")
-    .eq("email", user.email!)
+    .eq("user_id", user.id)
     .single<{ id: string; email: string; role: string }>();
 
   return admin;

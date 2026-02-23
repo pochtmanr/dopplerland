@@ -7,9 +7,9 @@ export function OrganizationSchema({ locale }: OrganizationSchemaProps) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Doppler VPN",
-    url: `https://dopplervpn.org/${locale}`,
-    logo: "https://dopplervpn.org/images/iosdopplerlogo.png",
-    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
+    url: `https://www.dopplervpn.org/${locale}`,
+    logo: "https://www.dopplervpn.org/images/iosdopplerlogo.png",
+    image: "https://www.dopplervpn.org/images/iosdopplerlogo.png",
     description:
       locale === "he"
         ? "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן."
@@ -34,7 +34,7 @@ export function ProductSchema({ locale }: ProductSchemaProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: "Doppler VPN",
-    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
+    image: "https://www.dopplervpn.org/images/iosdopplerlogo.png",
     description:
       locale === "he"
         ? "VPN חינמי ללא צורך באימייל או הרשמה. התחבר מיידית עם הצפנת WireGuard, חוסם פרסומות מובנה וסינון תוכן. ללא יומנים."
@@ -152,7 +152,7 @@ export function SoftwareApplicationSchema({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Doppler VPN",
-    image: "https://dopplervpn.org/images/iosdopplerlogo.png",
+    image: "https://www.dopplervpn.org/images/iosdopplerlogo.png",
     applicationCategory: "SecurityApplication",
     operatingSystem: "iOS, macOS, Android",
     description:
@@ -222,12 +222,12 @@ export function WebsiteSchema({ locale }: WebsiteSchemaProps) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Doppler VPN",
-    url: `https://dopplervpn.org/${locale}`,
+    url: `https://www.dopplervpn.org/${locale}`,
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `https://dopplervpn.org/${locale}?q={search_term_string}`,
+        urlTemplate: `https://www.dopplervpn.org/${locale}?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },

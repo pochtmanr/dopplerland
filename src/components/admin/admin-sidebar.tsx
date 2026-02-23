@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
+import { useState } from "react";
 
 const navItems = [
   {
@@ -63,6 +64,12 @@ interface AdminSidebarProps {
 export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const [showInvite, setShowInvite] = useState(false);
+  const [inviteEmail, setInviteEmail] = useState("");
+  const [invitePassword, setInvitePassword] = useState("");
+  const [inviteRole, setInviteRole] = useState<"admin" | "editor">("editor");
+  const [inviteLoading, setInviteLoading] = useState(false);
+  const [inviteResult, setInviteResult] = useState<{ ok: boolean; message: string } | null>(null);
 
   async function handleSignOut() {
     const supabase = createClient();
@@ -70,57 +77,178 @@ export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
     router.push("/admin-dvpn/login");
   }
 
+  async function handleInvite(e: React.FormEvent) {
+    e.preventDefault();
+    setInviteLoading(true);
+    setInviteResult(null);
+
+    const res = await fetch("/api/admin/admins", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: inviteEmail.trim(),
+        password: invitePassword,
+        role: inviteRole,
+      }),
+    });
+
+    const data = await res.json();
+    setInviteLoading(false);
+
+    if (!res.ok) {
+      setInviteResult({ ok: false, message: data.error || "Failed to create admin" });
+      return;
+    }
+
+    setInviteResult({ ok: true, message: `Admin ${data.email} created as ${data.role}` });
+    setInviteEmail("");
+    setInvitePassword("");
+    setInviteRole("editor");
+  }
+
+  function closeInviteModal() {
+    setShowInvite(false);
+    setInviteResult(null);
+    setInviteEmail("");
+    setInvitePassword("");
+    setInviteRole("editor");
+  }
+
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-overlay/10 flex flex-col">
-      {/* Logo */}
-      <div className="p-6 border-b border-overlay/10">
-        <Link href="/admin-dvpn/posts" className="text-lg font-semibold">
-          Doppler Admin
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="flex-1 p-4 space-y-1">
-        {navItems.map((item) => {
-          const isActive = item.href === "/admin-dvpn"
-            ? pathname === "/admin-dvpn" || pathname === "/admin-dvpn/"
-            : pathname.startsWith(item.href);
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
-                isActive
-                  ? "bg-accent-teal/10 text-accent-teal"
-                  : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
-              }`}
-            >
-              {item.icon}
-              {item.label}
-            </Link>
-          );
-        })}
-      </nav>
-
-      {/* User section */}
-      <div className="p-4 border-t border-overlay/10">
-        <div className="mb-3 flex items-center justify-between">
-          <div className="min-w-0">
-            <p className="text-sm text-text-primary truncate">{adminEmail}</p>
-            <p className="text-xs text-text-muted capitalize">{adminRole}</p>
-          </div>
-          <ThemeToggle />
+    <>
+      <aside className="fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-overlay/10 flex flex-col">
+        {/* Logo */}
+        <div className="p-6 border-b border-overlay/10">
+          <Link href="/admin-dvpn/posts" className="text-lg font-semibold">
+            Doppler VPN Admin
+          </Link>
         </div>
-        <button
-          onClick={handleSignOut}
-          className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
-          </svg>
-          Sign out
-        </button>
-      </div>
-    </aside>
+
+        {/* Navigation */}
+        <nav className="flex-1 p-4 space-y-1">
+          {navItems.map((item) => {
+            const isActive = item.href === "/admin-dvpn"
+              ? pathname === "/admin-dvpn" || pathname === "/admin-dvpn/"
+              : pathname.startsWith(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
+                  isActive
+                    ? "bg-accent-teal/10 text-accent-teal"
+                    : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
+                }`}
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* User section */}
+        <div className="p-4 border-t border-overlay/10 space-y-1">
+          <div className="mb-3 flex items-center justify-between">
+            <div className="min-w-0">
+              <p className="text-sm text-text-primary truncate">{adminEmail}</p>
+              <p className="text-xs text-text-muted capitalize">{adminRole}</p>
+            </div>
+            <ThemeToggle />
+          </div>
+
+          {adminRole === "admin" && (
+            <button
+              onClick={() => setShowInvite(true)}
+              className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-accent-teal hover:bg-accent-teal/10 rounded-lg transition-colors cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+              </svg>
+              Invite Admin
+            </button>
+          )}
+
+          <button
+            onClick={handleSignOut}
+            className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+            Sign out
+          </button>
+        </div>
+      </aside>
+
+      {/* Invite Admin Modal */}
+      {showInvite && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+          <form
+            onSubmit={handleInvite}
+            className="bg-bg-secondary border border-overlay/10 rounded-xl p-6 w-full max-w-md space-y-4"
+          >
+            <h2 className="text-lg font-semibold">Invite Admin</h2>
+
+            {inviteResult && (
+              <div
+                className={`rounded-lg p-3 text-sm text-center ${
+                  inviteResult.ok
+                    ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                    : "bg-red-500/10 border border-red-500/20 text-red-400"
+                }`}
+              >
+                {inviteResult.message}
+              </div>
+            )}
+
+            <div className="space-y-3">
+              <input
+                type="email"
+                placeholder="Email"
+                value={inviteEmail}
+                onChange={(e) => setInviteEmail(e.target.value)}
+                required
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+              />
+              <input
+                type="text"
+                placeholder="Password (min 12 characters)"
+                value={invitePassword}
+                onChange={(e) => setInvitePassword(e.target.value)}
+                required
+                minLength={12}
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+              />
+              <select
+                value={inviteRole}
+                onChange={(e) => setInviteRole(e.target.value as "admin" | "editor")}
+                className="w-full bg-overlay/5 border border-overlay/10 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-accent-teal"
+              >
+                <option value="editor">Editor</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                type="submit"
+                disabled={inviteLoading}
+                className="flex-1 px-4 py-2 bg-accent-teal/20 text-accent-teal rounded-lg text-sm hover:bg-accent-teal/30 transition-colors cursor-pointer disabled:opacity-50"
+              >
+                {inviteLoading ? "Creating..." : "Create Admin"}
+              </button>
+              <button
+                type="button"
+                onClick={closeInviteModal}
+                className="flex-1 px-4 py-2 bg-overlay/5 text-text-muted rounded-lg text-sm hover:bg-overlay/10 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+    </>
   );
 }

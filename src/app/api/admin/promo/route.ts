@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-
-function getSupabase() { return createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-); }
+import { requireAdmin } from "@/lib/admin-auth";
+import { createUntypedAdminClient } from "@/lib/supabase/admin";
 
 export async function GET() {
-  const { data, error } = await getSupabase()
+  const { admin, error } = await requireAdmin();
+  if (!admin) return NextResponse.json({ error }, { status: 401 });
+
+  const supabase = createUntypedAdminClient();
+  const { data, error: dbError } = await supabase
     .from("promo_codes")
     .select(`
       *,
@@ -22,11 +22,14 @@ export async function GET() {
     `)
     .order("created_at", { ascending: false });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (dbError) return NextResponse.json({ error: dbError.message }, { status: 500 });
   return NextResponse.json(data);
 }
 
 export async function POST(req: NextRequest) {
+  const { admin, error } = await requireAdmin();
+  if (!admin) return NextResponse.json({ error }, { status: 401 });
+
   const body = await req.json();
   const { code, discount_percent, applicable_plans, max_redemptions, expires_at } = body;
 
@@ -34,7 +37,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "code and discount_percent required" }, { status: 400 });
   }
 
-  const { data, error } = await getSupabase()
+  const supabase = createUntypedAdminClient();
+  const { data, error: dbError } = await supabase
     .from("promo_codes")
     .insert({
       code: code.toUpperCase().trim(),
@@ -46,11 +50,11 @@ export async function POST(req: NextRequest) {
     .select()
     .single();
 
-  if (error) {
-    if (error.code === "23505") {
+  if (dbError) {
+    if (dbError.code === "23505") {
       return NextResponse.json({ error: "Code already exists" }, { status: 409 });
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: dbError.message }, { status: 500 });
   }
 
   return NextResponse.json(data, { status: 201 });

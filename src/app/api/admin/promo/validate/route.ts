@@ -1,47 +1,43 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
-
-function getSupabase() { return createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-); }
+import { requireAdmin } from "@/lib/admin-auth";
+import { createUntypedAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(req: NextRequest) {
+  const { admin, error } = await requireAdmin();
+  if (!admin) return NextResponse.json({ error }, { status: 401 });
+
   const { code, account_id, plan } = await req.json();
 
   if (!code || !account_id || !plan) {
     return NextResponse.json({ error: "code, account_id, plan required" }, { status: 400 });
   }
 
-  // Find active code
-  const { data: promo, error } = await getSupabase()
+  const supabase = createUntypedAdminClient();
+
+  const { data: promo, error: promoError } = await supabase
     .from("promo_codes")
     .select("*")
     .eq("code", code.toUpperCase().trim())
     .eq("is_active", true)
     .single();
 
-  if (error || !promo) {
+  if (promoError || !promo) {
     return NextResponse.json({ error: "Invalid promo code" }, { status: 404 });
   }
 
-  // Check expiry
   if (promo.expires_at && new Date(promo.expires_at) < new Date()) {
     return NextResponse.json({ error: "Promo code expired" }, { status: 410 });
   }
 
-  // Check max redemptions
   if (promo.max_redemptions && promo.current_redemptions >= promo.max_redemptions) {
     return NextResponse.json({ error: "Promo code fully redeemed" }, { status: 410 });
   }
 
-  // Check plan applicability
   if (!promo.applicable_plans.includes(plan)) {
     return NextResponse.json({ error: "Code not valid for this plan" }, { status: 400 });
   }
 
-  // Check if already redeemed by this account
-  const { data: existing } = await getSupabase()
+  const { data: existing } = await supabase
     .from("promo_redemptions")
     .select("id")
     .eq("promo_code_id", promo.id)

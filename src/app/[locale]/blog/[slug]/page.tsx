@@ -59,7 +59,7 @@ interface PostMetadata {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const supabase = await createClient();
-  const baseUrl = "https://dopplervpn.org";
+  const baseUrl = "https://www.dopplervpn.org";
 
   const { data } = await supabase
     .from("blog_posts")
@@ -377,7 +377,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Share Buttons */}
             <ShareButtons
-              url={`https://dopplervpn.org/${locale}/blog/${post.slug}`}
+              url={`https://www.dopplervpn.org/${locale}/blog/${post.slug}`}
               title={post.title}
               imageUrl={post.imageUrl}
             />

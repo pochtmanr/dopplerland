@@ -21,13 +21,14 @@ interface HealthResult {
   error: string | null;
 }
 
-const flagEmoji: Record<string, string> = {
-  DE: "\u{1F1E9}\u{1F1EA}",
-  RU: "\u{1F1F7}\u{1F1FA}",
-  CH: "\u{1F1E8}\u{1F1ED}",
-  GB: "\u{1F1EC}\u{1F1E7}",
-  US: "\u{1F1FA}\u{1F1F8}",
-};
+/** Convert country code (e.g. "US", "US2", "DE2") to flag emoji using first 2 chars */
+function countryFlag(code: string): string {
+  const base = code.slice(0, 2).toUpperCase();
+  if (base.length < 2 || !/^[A-Z]{2}$/.test(base)) return code;
+  return String.fromCodePoint(
+    ...Array.from(base).map((c) => c.codePointAt(0)! - 0x41 + 0x1f1e6),
+  );
+}
 
 const statusColors: Record<string, { dot: string; text: string }> = {
   healthy: { dot: "bg-green-500", text: "text-green-400" },
@@ -117,7 +118,7 @@ export function HealthMonitor() {
       <div className="flex flex-wrap gap-3">
         {servers.map((s) => {
           const colors = statusColors[s.status] || statusColors.down;
-          const flag = flagEmoji[s.country_code] || s.country_code;
+          const flag = countryFlag(s.country_code);
           const isHovered = hoveredId === s.server_id;
 
           return (

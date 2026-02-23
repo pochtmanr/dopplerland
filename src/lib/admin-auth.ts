@@ -1,24 +1,59 @@
 import { createClient } from "@/lib/supabase/server";
 
-export async function requireAdmin() {
+export type AdminRole = "admin" | "editor";
+
+interface AdminRecord {
+  id: string;
+  user_id: string;
+  email: string;
+  role: AdminRole;
+}
+
+type RequireAdminResult =
+  | {
+      admin: AdminRecord;
+      supabase: Awaited<ReturnType<typeof createClient>>;
+      error: null;
+    }
+  | {
+      admin: null;
+      supabase: Awaited<ReturnType<typeof createClient>>;
+      error: string;
+    };
+
+/**
+ * Server-side admin gate. Validates:
+ * 1. Valid Supabase session (JWT verified server-side via getUser())
+ * 2. Corresponding row in admins table matched by user_id (NOT email)
+ * 3. Optionally checks minimum required role
+ */
+export async function requireAdmin(
+  minimumRole?: AdminRole
+): Promise<RequireAdminResult> {
   const supabase = await createClient();
+
   const {
     data: { user },
+    error: authError,
   } = await supabase.auth.getUser();
 
-  if (!user?.email) {
-    return { admin: null, supabase, error: "Not authenticated" } as const;
+  if (authError || !user) {
+    return { admin: null, supabase, error: "Not authenticated" };
   }
 
   const { data: admin } = await supabase
     .from("admins")
-    .select("id, email, role")
-    .eq("email", user.email)
-    .single<{ id: string; email: string; role: string }>();
+    .select("id, user_id, email, role")
+    .eq("user_id", user.id)
+    .single<AdminRecord>();
 
   if (!admin) {
-    return { admin: null, supabase, error: "Not authorized" } as const;
+    return { admin: null, supabase, error: "Not authorized" };
   }
 
-  return { admin, supabase, error: null } as const;
+  if (minimumRole === "admin" && admin.role !== "admin") {
+    return { admin: null, supabase, error: "Insufficient permissions" };
+  }
+
+  return { admin, supabase, error: null };
 }

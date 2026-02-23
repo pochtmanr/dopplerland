@@ -19,7 +19,7 @@ export function BlogPostJsonLd({
   slug,
   locale,
 }: BlogPostJsonLdProps) {
-  const baseUrl = "https://dopplervpn.org";
+  const baseUrl = "https://www.dopplervpn.org";
 
   const articleSchema = {
     "@context": "https://schema.org",
