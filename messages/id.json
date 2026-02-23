@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — VPN Gratis Tanpa Registrasi | Privat & Aman",
-    "description": "VPN gratis tanpa email atau pendaftaran. Terhubung langsung dengan enkripsi WireGuard, pemblokir iklan bawaan & filter konten. Tanpa log. Tanpa batas data."
+    "description": "VPN gratis tanpa email atau pendaftaran. Terhubung langsung dengan enkripsi WireGuard, pemblokir iklan bawaan & filter konten. Tanpa log. Tanpa batas data. Tersedia di iOS, Android & Telegram."
   },
   "nav": {
     "features": "Fitur",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "Unduh",
-    "guide": "Panduan"
+    "guide": "Panduan",
+    "apps": "Aplikasi"
   },
   "hero": {
     "tagline": "VPN Mengutamakan Privasi. Gratis Selamanya.",

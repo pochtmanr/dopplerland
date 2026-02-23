@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — 가입 불필요 무료 VPN | 개인정보 보호 & 보안",
-    "description": "이메일이나 가입 없이 무료 VPN. WireGuard 암호화, 내장 광고 차단기 & 콘텐츠 필터로 즉시 연결. 로그 없음. 데이터 제한 없음."
+    "description": "이메일이나 가입 없이 무료 VPN. WireGuard 암호화, 내장 광고 차단기 & 콘텐츠 필터로 즉시 연결. 로그 없음. 데이터 제한 없음. iOS, Android, Telegram에서 사용 가능."
   },
   "nav": {
     "features": "기능",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "블로그",
     "download": "다운로드",
-    "guide": "가이드"
+    "guide": "가이드",
+    "apps": "앱"
   },
   "hero": {
     "tagline": "프라이버시 우선 VPN. 영원히 무료.",

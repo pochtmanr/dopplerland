@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — Kostenloses VPN Ohne Registrierung | Privat & Sicher",
-    "description": "Kostenloses VPN ohne E-Mail oder Anmeldung. Sofort verbinden mit WireGuard-Verschlüsselung, integriertem Werbeblocker und Inhaltsfilter. Keine Protokolle. Keine Limits."
+    "description": "Kostenloses VPN ohne E-Mail oder Anmeldung. Sofort verbinden mit WireGuard-Verschlüsselung, integriertem Werbeblocker und Inhaltsfilter. Keine Protokolle. Keine Limits. Verfügbar für iOS, Android und Telegram."
   },
   "nav": {
     "features": "Funktionen",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "Herunterladen",
-    "guide": "Anleitung"
+    "guide": "Anleitung",
+    "apps": "Apps"
   },
   "hero": {
     "tagline": "Datenschutz-zuerst VPN. Für immer kostenlos.",

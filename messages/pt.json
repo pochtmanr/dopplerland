@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — VPN Grátis Sem Registro | Privado e Seguro",
-    "description": "VPN grátis sem e-mail ou cadastro. Conecte-se instantaneamente com criptografia WireGuard, bloqueador de anúncios integrado e filtro de conteúdo. Sem logs. Sem limites."
+    "description": "VPN grátis sem e-mail ou cadastro. Conecte-se instantaneamente com criptografia WireGuard, bloqueador de anúncios integrado e filtro de conteúdo. Sem logs. Sem limites. Disponível para iOS, Android e Telegram."
   },
   "nav": {
     "features": "Recursos",
@@ -9,7 +9,8 @@
     "faq": "Perguntas",
     "blog": "Blog",
     "download": "Baixar",
-    "guide": "Guia"
+    "guide": "Guia",
+    "apps": "Apps"
   },
   "hero": {
     "tagline": "VPN com privacidade em primeiro lugar. Grátis para sempre.",

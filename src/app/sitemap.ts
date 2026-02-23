@@ -29,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = postsRaw as SitemapPost[] | null;
 
   // Static pages — one entry per page with hreflang alternates
-  const staticPages = ["", "/privacy", "/terms", "/blog"];
+  const staticPages = ["", "/apps", "/guide", "/privacy", "/terms", "/blog"];
 
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: `${baseUrl}/en${page}`,
@@ -39,8 +39,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         ? ("weekly" as const)
         : page === "/blog"
           ? ("daily" as const)
-          : ("monthly" as const),
-    priority: page === "" ? 1 : page === "/blog" ? 0.9 : 0.5,
+          : page === "/apps" || page === "/guide"
+            ? ("monthly" as const)
+            : ("monthly" as const),
+    priority:
+      page === "" ? 1 : page === "/blog" ? 0.9 : page === "/apps" ? 0.8 : page === "/guide" ? 0.7 : 0.5,
     alternates: buildAlternates(page),
   }));
 

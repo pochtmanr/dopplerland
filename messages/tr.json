@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — Kayıt Gerektirmeyen Ücretsiz VPN | Gizli & Güvenli",
-    "description": "E-posta veya kayıt gerektirmeyen ücretsiz VPN. WireGuard şifreleme, yerleşik reklam engelleyici ve içerik filtresi ile anında bağlanın. Kayıt yok. Veri sınırı yok."
+    "description": "E-posta veya kayıt gerektirmeyen ücretsiz VPN. WireGuard şifreleme, yerleşik reklam engelleyici ve içerik filtresi ile anında bağlanın. Kayıt yok. Veri sınırı yok. iOS, Android ve Telegram'da mevcut."
   },
   "nav": {
     "features": "Özellikler",
@@ -9,7 +9,8 @@
     "faq": "SSS",
     "blog": "Blog",
     "download": "İndir",
-    "guide": "Rehber"
+    "guide": "Rehber",
+    "apps": "Uygulamalar"
   },
   "hero": {
     "tagline": "Gizlilik Öncelikli VPN. Sonsuza Kadar Ücretsiz.",

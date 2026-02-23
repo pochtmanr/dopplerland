@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — 免费VPN无需注册 | 私密且安全",
-    "description": "免费VPN，无需邮箱或注册。通过WireGuard加密即时连接，内置广告拦截器和内容过滤。无日志。无限制。"
+    "description": "免费VPN，无需邮箱或注册。通过WireGuard加密即时连接，内置广告拦截器和内容过滤。无日志。无限制。 支持iOS、Android和Telegram。"
   },
   "nav": {
     "features": "功能",
@@ -9,7 +9,8 @@
     "faq": "常见问题",
     "blog": "博客",
     "download": "下载",
-    "guide": "指南"
+    "guide": "指南",
+    "apps": "应用"
   },
   "hero": {
     "tagline": "隐私至上的VPN。永久免费。",

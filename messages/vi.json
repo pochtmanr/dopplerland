@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — VPN Miễn Phí Không Cần Đăng Ký | Riêng Tư & An Toàn",
-    "description": "VPN miễn phí không cần email hoặc đăng ký. Kết nối ngay với mã hóa WireGuard, trình chặn quảng cáo tích hợp & bộ lọc nội dung. Không nhật ký. Không giới hạn dữ liệu."
+    "description": "VPN miễn phí không cần email hoặc đăng ký. Kết nối ngay với mã hóa WireGuard, trình chặn quảng cáo tích hợp & bộ lọc nội dung. Không nhật ký. Không giới hạn dữ liệu. Có sẵn trên iOS, Android và Telegram."
   },
   "nav": {
     "features": "Tính năng",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "Tải xuống",
-    "guide": "Hướng dẫn"
+    "guide": "Hướng dẫn",
+    "apps": "Ứng dụng"
   },
   "hero": {
     "tagline": "VPN Ưu Tiên Quyền Riêng Tư. Miễn Phí Mãi Mãi.",

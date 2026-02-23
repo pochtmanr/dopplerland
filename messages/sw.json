@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — VPN Bure Bila Usajili | Faragha na Usalama",
-    "description": "VPN bure bila barua pepe au usajili. Unganisha mara moja na usimbaji wa WireGuard, kizuia matangazo kilichojengwa ndani na kichujio cha maudhui. Hakuna kumbukumbu. Hakuna kikomo cha data."
+    "description": "VPN bure bila barua pepe au usajili. Unganisha mara moja na usimbaji wa WireGuard, kizuia matangazo kilichojengwa ndani na kichujio cha maudhui. Hakuna kumbukumbu. Hakuna kikomo cha data. Inapatikana kwenye iOS, Android na Telegram."
   },
   "nav": {
     "features": "Vipengele",
@@ -9,7 +9,8 @@
     "faq": "Maswali",
     "blog": "Blogu",
     "download": "Pakua",
-    "guide": "Mwongozo"
+    "guide": "Mwongozo",
+    "apps": "Programu"
   },
   "hero": {
     "tagline": "VPN ya Faragha Kwanza. Bure Milele.",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — Libreng VPN Walang Pagpaparehistro | Pribado at Secure",
-    "description": "Libreng VPN na walang email o pag-sign up. Kumonekta agad sa WireGuard encryption, built-in ad blocker at content filter. Walang logs. Walang data caps."
+    "description": "Libreng VPN na walang email o pag-sign up. Kumonekta agad sa WireGuard encryption, built-in ad blocker at content filter. Walang logs. Walang data caps. Available sa iOS, Android at Telegram."
   },
   "nav": {
     "features": "Mga Tampok",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "I-download",
-    "guide": "Gabay"
+    "guide": "Gabay",
+    "apps": "Apps"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Libre Magpakailanman.",

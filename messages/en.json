@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — Free VPN No Registration | Private & Secure",
-    "description": "Free VPN with no email or sign up required. Connect instantly with WireGuard encryption, built-in ad blocker & content filter. No logs. No data caps."
+    "description": "Free VPN with no email or sign up required. Connect instantly with WireGuard encryption, built-in ad blocker & content filter. No logs. No data caps. Available on iOS, Android & Telegram."
   },
   "nav": {
     "features": "Features",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "Download",
-    "guide": "Guide"
+    "guide": "Guide",
+    "apps": "Apps"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Free Forever.",

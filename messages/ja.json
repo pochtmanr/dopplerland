@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Doppler VPN — 登録不要の無料VPN | プライベート＆安全",
-    "description": "メールや登録不要の無料VPN。WireGuard暗号化、内蔵広告ブロッカー＆コンテンツフィルターで即座に接続。ログなし。データ制限なし。"
+    "description": "メールや登録不要の無料VPN。WireGuard暗号化、内蔵広告ブロッカー＆コンテンツフィルターで即座に接続。ログなし。データ制限なし。 iOS、Android、Telegramで利用可能。"
   },
   "nav": {
     "features": "機能",
@@ -9,7 +9,8 @@
     "faq": "FAQ",
     "blog": "ブログ",
     "download": "ダウンロード",
-    "guide": "ガイド"
+    "guide": "ガイド",
+    "apps": "アプリ"
   },
   "hero": {
     "tagline": "プライバシー最優先VPN。永久無料。",
