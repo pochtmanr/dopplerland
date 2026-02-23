@@ -92,7 +92,8 @@ export function AppsDropdown() {
 
       {/* Full-width panel — positioned relative to <nav> */}
       <div
-        className={`absolute inset-x-0 top-full mt-1.5 bg-bg-primary/70 backdrop-blur-xl border border-overlay/[0.08] rounded-2xl shadow-lg shadow-overlay/5 p-2.5 transition-all duration-[180ms] ease-out ${
+        data-dropdown-open={isOpen || undefined}
+        className={`absolute inset-x-0 top-full bg-bg-primary/90 backdrop-blur-xl  rounded-t-none rounded-b-2xl shadow-lg shadow-overlay/5 p-2.5 transition-all duration-[180ms] ease-out ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-1 pointer-events-none"
@@ -108,9 +109,9 @@ export function AppsDropdown() {
               role="menuitem"
               tabIndex={isOpen ? 0 : -1}
               onClick={close}
-              className="flex items-center gap-3 px-3.5 py-3 rounded-xl bg-overlay/[0.03] hover:bg-accent-teal/15 transition-colors group"
+              className="flex items-center gap-3 px-3.5 py-3 rounded-xl bg-bg-secondary hover:bg-accent-teal/15 transition-colors group"
             >
-              <span className="w-9 h-9 rounded-[10px] bg-overlay/[0.05] group-hover:bg-accent-teal/20 flex items-center justify-center text-text-muted group-hover:text-accent-teal shrink-0 transition-colors">
+              <span className="w-9 h-9 rounded-[10px] bg-bg-primary group-hover:bg-accent-teal/20 flex items-center justify-center text-text-muted group-hover:text-accent-teal shrink-0 transition-colors">
                 {item.icon}
               </span>
               <div className="min-w-0">

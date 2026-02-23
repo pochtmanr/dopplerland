@@ -151,7 +151,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
             {isSelected && (
               <motion.span
                 layoutId="duration-selector-bg"
-                className="absolute inset-0 bg-accent-gold rounded-full"
+                className="absolute inset-0 bg-accent-teal rounded-full"
                 transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
               />
             )}
@@ -163,7 +163,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
                   px-1.5 py-0.5 rounded-full
                   ${isSelected
                     ? "bg-bg-primary/20 text-bg-primary"
-                    : "bg-accent-gold/15 text-accent-gold"
+                    : "bg-accent-teal/15 text-accent-teal"
                   }
                 `}>
                   {t("bestValue")}
@@ -226,7 +226,7 @@ function PriceDisplay({ duration, region, t }: PriceDisplayProps) {
 
         {/* Savings badge */}
         {priceData.savings && (
-          <Badge variant="gold" className="mt-1">
+          <Badge variant="teal" className="mt-1">
             {t("save")} {priceData.savings}%
           </Badge>
         )}
@@ -256,12 +256,12 @@ export function Pricing() {
         className="max-w-lg mx-auto"
       >
         <Card
-          className="relative border-accent-gold/30 bg-gradient-to-b from-accent-gold/5 to-transparent"
+          className="relative border-accent-teal/30 bg-gradient-to-b from-accent-teal/5 to-transparent"
           padding="lg"
         >
           {/* Header */}
           <div className="text-center mb-6">
-            <Badge variant="gold" className="mb-4">
+            <Badge variant="teal" className="mb-4">
               {t("plusBadge")}
             </Badge>
             <h3 className="font-display text-2xl font-semibold text-text-primary mb-2">
@@ -290,7 +290,7 @@ export function Pricing() {
 
           {/* Feature assurance */}
           <div className="space-y-3 mb-8">
-            <p className="text-accent-gold text-sm font-medium text-center mb-4">
+            <p className="text-accent-teal text-sm font-medium text-center mb-4">
               {t("allFeaturesIncluded")}
             </p>
             <ul className="grid grid-cols-2 gap-2">
@@ -339,7 +339,7 @@ export function Pricing() {
         className="text-center text-text-muted text-sm mt-8"
       >
         <svg
-          className="inline-block w-5 h-5 me-2 text-accent-gold"
+          className="inline-block w-5 h-5 me-2 text-accent-teal"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
