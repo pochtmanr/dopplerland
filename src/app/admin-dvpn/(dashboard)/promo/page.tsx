@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { AdminLoader } from "@/components/admin/admin-loader";
 
 interface PromoRedemption {
   id: string;
@@ -139,7 +140,7 @@ export default function PromoCodesPage() {
   }
 
   if (error) return <p className="text-red-400">{error}</p>;
-  if (loading) return <p className="text-text-muted">Loading promo codes...</p>;
+  if (loading) return <AdminLoader />;
 
   const totalCodes = codes.length;
   const activeCodes = codes.filter((c) => c.is_active).length;

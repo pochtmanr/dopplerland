@@ -226,9 +226,9 @@ export function Hero() {
 
           {/* Right Column - Card with iPhone (hidden on mobile) */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
             className="hidden lg:flex justify-end"
           >
             <Card

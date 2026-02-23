@@ -3,7 +3,7 @@ import { requireAdmin } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 interface MsgRow { id: number; telegram_user_id: number; direction: string; message_type: string; content: string; template_key: string | null; created_at: string; conversation_id: number | null; metadata: Record<string, unknown> | null; }
-interface UserRow { telegram_id: number; username: string | null; first_name: string | null; bot_source: string | null; }
+interface UserRow { telegram_id: number; username: string | null; first_name: string | null; bot_source: string | null; support_status: string | null; }
 
 export async function GET(request: NextRequest) {
   const { admin, error } = await requireAdmin();
@@ -50,18 +50,19 @@ export async function GET(request: NextRequest) {
     const uniqueIds = [...new Set(messages.map((m) => m.telegram_user_id))];
     const userMap: Record<string, UserRow> = {};
 
-    const { data: users } = await supabase.from("telegram_links").select("telegram_id, username, first_name, bot_source").in("telegram_id", uniqueIds);
+    const { data: users } = await supabase.from("telegram_links").select("telegram_id, username, first_name, bot_source, support_status").in("telegram_id", uniqueIds);
     for (const u of (users || []) as unknown as UserRow[]) userMap[String(u.telegram_id)] = u;
 
     // Also extract escalation metadata (device, issue, account_code) from the log entry
     const enriched = messages.map((m) => {
-      const u = userMap[String(m.telegram_user_id)] || { telegram_id: 0, username: null, first_name: null, bot_source: null };
+      const u = userMap[String(m.telegram_user_id)] || { telegram_id: 0, username: null, first_name: null, bot_source: null, support_status: null };
       const meta = m.metadata as Record<string, string> | null;
       return {
         ...m,
         username: u.username,
         first_name: u.first_name,
         bot_source: "support",
+        support_status: u.support_status || "new",
         device: meta?.device || null,
         issue: meta?.issue || null,
         account_code: meta?.account_code || null,

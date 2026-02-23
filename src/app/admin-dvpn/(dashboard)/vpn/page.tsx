@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ServerCard } from "@/components/admin/server-card";
 import { HealthMonitor } from "@/components/admin/health-monitor";
+import { AdminLoader } from "@/components/admin/admin-loader";
 
 // ─── Types ───────────────────────────────────────────────────────────
 
@@ -282,7 +283,7 @@ export default function VpnOverviewPage() {
   const hasUserFilters = serverId || platform || protocol || status || search;
 
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold text-text-primary">
@@ -345,9 +346,7 @@ export default function VpnOverviewPage() {
           <HealthMonitor />
 
           {serversLoading ? (
-            <div className="py-12 text-center text-text-muted">
-              Loading servers...
-            </div>
+            <AdminLoader />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {servers.map((srv) => (
@@ -452,9 +451,7 @@ export default function VpnOverviewPage() {
           {/* Users table */}
           <div className="bg-bg-secondary border border-overlay/10 rounded-lg overflow-hidden">
             {usersLoading ? (
-              <div className="px-4 py-8 text-center text-text-muted">
-                Loading users...
-              </div>
+              <AdminLoader />
             ) : (
               <table className="w-full text-sm">
                 <thead>

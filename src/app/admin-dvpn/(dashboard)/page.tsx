@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AdminLoader } from "@/components/admin/admin-loader";
 
 interface DashboardData {
   accounts: {
@@ -91,7 +92,7 @@ export default function DashboardPage() {
   }
 
   if (!data) {
-    return <p className="text-text-muted">Loading dashboard...</p>;
+    return <AdminLoader />;
   }
 
   const paidCount = Object.entries(data.accounts.tierBreakdown)

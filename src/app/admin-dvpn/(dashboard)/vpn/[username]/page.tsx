@@ -3,6 +3,7 @@
 import { useEffect, useState, use } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { AdminLoader } from "@/components/admin/admin-loader";
 
 function formatBytes(bytes: number): string {
   if (!bytes) return "0 B";
@@ -98,11 +99,11 @@ export default function VpnUserDetailPage({ params }: { params: Promise<{ userna
     }
   }
 
-  if (loading) return <div className="p-8 text-text-muted">Loading...</div>;
-  if (!user) return <div className="p-8 text-red-400">{error || "User not found"}</div>;
+  if (loading) return <AdminLoader />;
+  if (!user) return <div className="text-red-400">{error || "User not found"}</div>;
 
   return (
-    <div className="p-8 max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto space-y-6">
       <Link href="/admin-dvpn/vpn" className="inline-flex items-center gap-1 text-sm text-text-muted hover:text-text-primary mb-6">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
         Back to Users

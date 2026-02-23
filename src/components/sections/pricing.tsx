@@ -152,7 +152,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
               <motion.span
                 layoutId="duration-selector-bg"
                 className="absolute inset-0 bg-accent-gold rounded-full"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
               />
             )}
             <span className="relative z-10 flex items-center justify-center gap-1.5">
