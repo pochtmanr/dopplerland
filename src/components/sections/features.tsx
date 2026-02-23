@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { staggerContainerVariants, cardVariants } from "@/lib/animations";
@@ -140,18 +139,6 @@ export function Features() {
   return (
     <Section id="features">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
-
-      <div className="flex justify-center mb-8">
-        <Link
-          href="/apps"
-          className="inline-flex items-center gap-2 text-accent-teal hover:text-accent-teal-light font-medium transition-colors"
-        >
-          {t("getApp")}
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-      </div>
 
       {/* Visual Feature Cards (Features 1, 2, 3, 5) */}
       <motion.div

@@ -36,10 +36,11 @@ export const scaleOnHoverVariants: Variants = {
 };
 
 export const cardVariants: Variants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.2, ease: "easeOut" },
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
   },
 };
 
