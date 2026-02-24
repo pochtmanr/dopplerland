@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { isRtlLocale } from "@/i18n/routing";
-import { cardVariants } from "@/lib/animations";
 
 interface BlogTag {
   slug: string;
@@ -49,7 +47,7 @@ export function BlogCard({
   const isRtl = isRtlLocale(locale);
 
   return (
-    <motion.article variants={cardVariants}>
+    <article>
       <Link href={`/blog/${slug}`} className="group block h-full">
         <Card
           padding="none"
@@ -115,6 +113,6 @@ export function BlogCard({
           </div>
         </Card>
       </Link>
-    </motion.article>
+    </article>
   );
 }

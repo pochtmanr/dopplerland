@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
 import { Section, SectionHeader } from "@/components/ui/section";
 
 const faqKeys = [
@@ -41,10 +40,9 @@ function FaqItem({
         <span className="font-display text-lg md:text-xl font-medium text-text-primary group-hover:text-accent-gold transition-colors">
           {t(`items.${faqKey}.question`)}
         </span>
-        <motion.span
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-text-muted group-hover:text-accent-gold transition-colors"
+        <span
+          className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-text-muted group-hover:text-accent-gold transition-all duration-200"
+          style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
         >
           <svg
             className="w-5 h-5"
@@ -59,24 +57,20 @@ function FaqItem({
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>
-        </motion.span>
+        </span>
       </button>
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="pb-6 text-text-muted leading-relaxed">
-              {t(`items.${faqKey}.answer`)}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`grid transition-[grid-template-rows] duration-200 ease-out ${
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="pb-6 text-text-muted leading-relaxed">
+            {t(`items.${faqKey}.answer`)}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,9 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -311,34 +310,25 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
   };
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={staggerContainerVariants}
-      className="mt-16"
-    >
-      <motion.div variants={fadeUpVariants} className="text-center mb-8">
+    <Reveal className="mt-16">
+      <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl font-semibold text-text-primary mb-2">
           {title}
         </h2>
         <p className="text-text-muted max-w-md mx-auto">
           {subtitle}
         </p>
-      </motion.div>
+      </div>
 
       {/* Desktop: Side-by-side grid */}
-      <motion.div
-        variants={fadeUpVariants}
-        className="hidden md:grid md:grid-cols-2 gap-6"
-      >
+      <div className="hidden md:grid md:grid-cols-2 gap-6">
         {apps.map((app) => (
           <AppCard key={app.name} app={app} platform={platform} />
         ))}
-      </motion.div>
+      </div>
 
       {/* Mobile: Horizontal scroll carousel */}
-      <motion.div variants={fadeUpVariants} className="md:hidden">
+      <div className="md:hidden">
         <div
           ref={scrollRef}
           className="
@@ -360,7 +350,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
           activeIndex={activeIndex}
           onDotClick={scrollToCard}
         />
-      </motion.div>
-    </motion.section>
+      </div>
+    </Reveal>
   );
 }

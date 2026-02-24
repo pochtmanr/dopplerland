@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { BlogCard, BlogTagFilter } from "@/components/blog";
-import { staggerContainerVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 interface BlogPost {
   slug: string;
@@ -51,27 +50,23 @@ export function BlogIndexContent({
       )}
 
       {posts.length > 0 ? (
-        <motion.div
-          variants={staggerContainerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {posts.map((post) => (
-            <BlogCard
-              key={post.slug}
-              slug={post.slug}
-              title={post.title}
-              excerpt={post.excerpt}
-              imageUrl={post.imageUrl}
-              imageAlt={post.imageAlt}
-              publishedAt={post.publishedAt}
-              tags={post.tags}
-              locale={locale}
-              readMoreText={translations.readMore}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post, i) => (
+            <Reveal key={post.slug} delay={i * 30}>
+              <BlogCard
+                slug={post.slug}
+                title={post.title}
+                excerpt={post.excerpt}
+                imageUrl={post.imageUrl}
+                imageAlt={post.imageAlt}
+                publishedAt={post.publishedAt}
+                tags={post.tags}
+                locale={locale}
+                readMoreText={translations.readMore}
+              />
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
       ) : (
         <div className="text-center py-16">
           <p className="text-xl text-text-primary mb-2">{translations.noPosts}</p>

@@ -1,11 +1,9 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/animations";
 
 // Locales where decorative Latin-only fonts break (no Cyrillic/CJK/Arabic glyphs)
 const FALLBACK_FONT_LOCALES = new Set(["ru", "uk", "zh", "ja", "ko", "ar", "fa", "he", "hi", "ur", "th"]);
@@ -33,10 +31,7 @@ function PromoBanner() {
   };
 
   return (
-    <motion.div
-      variants={fadeUpVariants}
-      className="flex items-center justify-center lg:justify-start"
-    >
+    <div className="hero-animate hero-animate-delay-4 flex items-center justify-center lg:justify-start">
       <button
         onClick={copyCode}
         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm cursor-pointer transition-all duration-200 ${
@@ -60,7 +55,7 @@ function PromoBanner() {
           </svg>
         )}
       </button>
-    </motion.div>
+    </div>
   );
 }
 
@@ -86,23 +81,17 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
-          <motion.div
-            variants={staggerContainerVariants}
-            initial="hidden"
-            animate="visible"
-            className="space-y-6 text-center lg:text-start"
-          >
+          <div className="space-y-6 text-center lg:text-start">
             {/* Tagline */}
-            <motion.div variants={fadeUpVariants}>
+            <div className="hero-animate">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-accent-teal/30 text-text-primary text-sm font-medium border border-accent-teal/40">
                 {t("tagline")}
               </span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
-            <motion.h1
-              variants={fadeUpVariants}
-              className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl text-text-primary leading-tight"
+            <h1
+              className="hero-animate hero-animate-delay-1 text-5xl sm:text-6xl md:text-6xl lg:text-7xl text-text-primary leading-tight"
             >
               <span
                 className="block"
@@ -120,20 +109,18 @@ export function Hero() {
               >
                 {t("headlinePart2")}
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Subheadline */}
-            <motion.p
-              variants={fadeUpVariants}
-              className="text-text-muted text-md sm:text-xl md:text-2xl max-w-md sm:max-w-xl mx-auto lg:mx-0"
+            <p
+              className="hero-animate hero-animate-delay-2 text-text-muted text-md sm:text-xl md:text-2xl max-w-md sm:max-w-xl mx-auto lg:mx-0"
             >
               {t("subheadline")}
-            </motion.p>
+            </p>
 
             {/* CTA Buttons */}
-            <motion.div
-              variants={fadeUpVariants}
-              className="flex flex-row items-center justify-center lg:justify-start gap-3 pt-4"
+            <div
+              className="hero-animate hero-animate-delay-3 flex flex-row items-center justify-center lg:justify-start gap-3 pt-4"
             >
               {/* iOS Button - Show on iOS or Desktop */}
               {(platform === "ios" || platform === "desktop") && (
@@ -187,15 +174,14 @@ export function Hero() {
                 </svg>
                 <span className="text-sm font-medium">{t("openTelegram")}</span>
               </a>
-            </motion.div>
+            </div>
 
             {/* Promo Banner */}
             <PromoBanner />
 
             {/* Trust Badges */}
-            <motion.div
-              variants={fadeUpVariants}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-4 text-xs text-text-muted"
+            <div
+              className="hero-animate hero-animate-delay-5 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-4 text-xs text-text-muted"
             >
               <span className="flex items-center gap-1.5">
                 <svg className="w-4 h-4 text-accent-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -221,19 +207,14 @@ export function Hero() {
                 </svg>
                 {t("trustBadges.wireguard")}
               </span>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Column - Card with iPhone (hidden on mobile) */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-            className="hidden lg:flex justify-end"
-          >
+          <div className="hero-animate hero-animate-delay-3 hidden lg:flex justify-end">
             <Card
               padding="lg"
-              className="relative w-full max-w-xl lg:max-w-2xl aspect-[3/4] overflow-hidden"
+              className="relative w-full max-w-xl lg:max-w-2xl aspect-[5/6] overflow-hidden"
             >
               {/* Decorative gradient background */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent-teal/10 via-transparent to-accent-gold/5" />
@@ -249,7 +230,7 @@ export function Hero() {
                 />
               </div>
             </Card>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

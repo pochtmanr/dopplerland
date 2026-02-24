@@ -1,10 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 interface StoreButtonProps {
   store: "apple" | "google";
@@ -77,15 +76,9 @@ function ProductSection({
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       {/* Content Column */}
-      <motion.div
-        variants={staggerContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className={`space-y-6 text-center lg:text-start ${reverse ? "lg:order-2" : ""}`}
-      >
+      <Reveal className={`space-y-6 text-center lg:text-start ${reverse ? "lg:order-2" : ""}`}>
         {/* App Icon + Headline */}
-        <motion.div variants={fadeUpVariants} className="flex flex-row items-center justify-center lg:justify-start gap-4">
+        <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
           {/* iOS-style App Icon */}
           <Image
             src={appIcon}
@@ -116,21 +109,15 @@ function ProductSection({
               {titlePlayful}
             </span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* Subheadline */}
-        <motion.p
-          variants={fadeUpVariants}
-          className="text-text-muted text-lg max-w-md mx-auto lg:mx-0"
-        >
+        <p className="text-text-muted text-lg max-w-md mx-auto lg:mx-0">
           {subtitle}
-        </motion.p>
+        </p>
 
         {/* Store Buttons */}
-        <motion.div
-          variants={fadeUpVariants}
-          className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-3 pt-2"
-        >
+        <div className="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
           <StoreButton
             store="apple"
             label={appStoreLabel}
@@ -141,17 +128,11 @@ function ProductSection({
             label={playStoreLabel}
             href={playStoreHref}
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </Reveal>
 
       {/* Image Column - 4:3 aspect ratio card */}
-      <motion.div
-        initial={{ opacity: 0, x: reverse ? -30 : 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-        className={`w-full ${reverse ? "lg:order-1" : ""}`}
-      >
+      <Reveal delay={100} className={`w-full ${reverse ? "lg:order-1" : ""}`}>
         <Card
           padding="none"
           className={`relative w-full aspect-[4/3] overflow-hidden ${
@@ -169,7 +150,7 @@ function ProductSection({
             />
           </div>
         </Card>
-      </motion.div>
+      </Reveal>
     </div>
   );
 }
@@ -220,13 +201,7 @@ export function CTA() {
         />
 
         {/* Footer Attribution with external link arrow */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="text-center"
-        >
+        <Reveal className="text-center" delay={100}>
           <p className="text-text-muted text-sm">
             {t("byLabel")}{" "}
             <a
@@ -251,7 +226,7 @@ export function CTA() {
               </svg>
             </a>
           </p>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

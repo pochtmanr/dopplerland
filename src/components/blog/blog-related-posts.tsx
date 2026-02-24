@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { BlogCard } from "./blog-card";
-import { staggerContainerVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 interface RelatedPost {
   slug: string;
@@ -32,28 +31,23 @@ export function BlogRelatedPosts({
     <section className="mt-16 pt-12 border-t border-overlay/10">
       <h2 className="text-2xl font-semibold text-text-primary mb-8">{title}</h2>
 
-      <motion.div
-        variants={staggerContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
-        {posts.map((post) => (
-          <BlogCard
-            key={post.slug}
-            slug={post.slug}
-            title={post.title}
-            excerpt={post.excerpt}
-            imageUrl={post.imageUrl}
-            imageAlt={post.imageAlt}
-            publishedAt={post.publishedAt}
-            tags={[]}
-            locale={locale}
-            readMoreText={readMoreText}
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post, i) => (
+          <Reveal key={post.slug} delay={i * 50}>
+            <BlogCard
+              slug={post.slug}
+              title={post.title}
+              excerpt={post.excerpt}
+              imageUrl={post.imageUrl}
+              imageAlt={post.imageAlt}
+              publishedAt={post.publishedAt}
+              tags={[]}
+              locale={locale}
+              readMoreText={readMoreText}
+            />
+          </Reveal>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -90,6 +90,31 @@ body {
   display: none;
 }
 
+/* --- Minimal animation system --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero mount animation (plays once on load) */
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero-animate {
+  animation: hero-fade-in 200ms ease-out both;
+}
+.hero-animate-delay-1 { animation-delay: 50ms; }
+.hero-animate-delay-2 { animation-delay: 100ms; }
+.hero-animate-delay-3 { animation-delay: 150ms; }
+.hero-animate-delay-4 { animation-delay: 200ms; }
+.hero-animate-delay-5 { animation-delay: 250ms; }
+
 /* Reduced motion — accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,

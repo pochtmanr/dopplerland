@@ -1,11 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { staggerContainerVariants, cardVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 // Visual feature cards with images (Features 1, 2, 3, 5)
 const visualFeatureKeys = [
@@ -141,34 +140,22 @@ export function Features() {
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
       {/* Visual Feature Cards (Features 1, 2, 3, 5) */}
-      <motion.div
-        variants={staggerContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
-      >
-        {visualFeatureKeys.map((key) => (
-          <motion.div key={key} variants={cardVariants}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {visualFeatureKeys.map((key, i) => (
+          <Reveal key={key} delay={i * 50}>
             <VisualFeatureCard
               featureKey={key}
               title={t(`items.${key}.title`)}
               description={t(`items.${key}.description`)}
             />
-          </motion.div>
+          </Reveal>
         ))}
-      </motion.div>
+      </div>
 
       {/* Text-Only Feature Cards (Features 4, 6) */}
-      <motion.div
-        variants={staggerContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        {textFeatureKeys.map((key) => (
-          <motion.div key={key} variants={cardVariants}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {textFeatureKeys.map((key, i) => (
+          <Reveal key={key} delay={i * 50}>
             <Card hover className="h-full">
               <div className="text-accent-teal mb-4">{featureIcons[key]}</div>
               <CardTitle className="mb-2">{t(`items.${key}.title`)}</CardTitle>
@@ -176,9 +163,9 @@ export function Features() {
                 {t(`items.${key}.description`)}
               </CardDescription>
             </Card>
-          </motion.div>
+          </Reveal>
         ))}
-      </motion.div>
+      </div>
     </Section>
   );
 }

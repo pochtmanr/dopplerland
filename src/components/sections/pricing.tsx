@@ -2,12 +2,11 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cardVariants } from "@/lib/animations";
+import { Reveal } from "@/components/ui/reveal";
 
 type Duration = "monthly" | "sixMonth" | "annual";
 type Region = "US" | "EU";
@@ -92,6 +91,7 @@ interface DurationSelectorProps {
 
 function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
   const durations: Duration[] = ["monthly", "sixMonth", "annual"];
+  const selectedIndex = durations.indexOf(selected);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent, currentIndex: number) => {
@@ -124,6 +124,14 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
       aria-label={t("durationSelector")}
       className="relative flex bg-overlay/5 rounded-full p-1"
     >
+      {/* Sliding pill background */}
+      <span
+        className="absolute top-1 bottom-1 bg-accent-teal rounded-full transition-all duration-200 ease-out"
+        style={{
+          left: `calc(${selectedIndex * (100 / 3)}% + 4px)`,
+          width: `calc(${100 / 3}% - 8px)`,
+        }}
+      />
       {durations.map((duration, index) => {
         const isSelected = selected === duration;
         const isAnnual = duration === "annual";
@@ -137,7 +145,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
             onClick={() => onSelect(duration)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             className={`
-              relative flex-1 px-4 py-3 text-sm font-medium rounded-full
+              relative flex-1 px-4 py-3 text-sm font-medium rounded-full z-10
               transition-colors duration-200 focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-accent-teal focus-visible:ring-offset-2
               focus-visible:ring-offset-bg-primary
@@ -148,13 +156,6 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
               }
             `}
           >
-            {isSelected && (
-              <motion.span
-                layoutId="duration-selector-bg"
-                className="absolute inset-0 bg-accent-teal rounded-full"
-                transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
-              />
-            )}
             <span className="relative z-10 flex items-center justify-center gap-1.5">
               {t(`durations.${duration}`)}
               {isAnnual && (
@@ -188,50 +189,41 @@ function PriceDisplay({ duration, region, t }: PriceDisplayProps) {
   const monthlyBase = PRICES[region].monthly.monthly;
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={`${duration}-${region}`}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.15 }}
-        className="flex flex-col items-center gap-2"
-      >
-        {/* Strikethrough original price (for multi-month plans) */}
-        {priceData.savings && (
-          <span className="text-lg text-text-muted line-through">
-            {formatPrice(monthlyBase, region)}/mo
-          </span>
+    <div className="flex flex-col items-center gap-2 transition-opacity duration-150">
+      {/* Strikethrough original price (for multi-month plans) */}
+      {priceData.savings && (
+        <span className="text-lg text-text-muted line-through">
+          {formatPrice(monthlyBase, region)}/mo
+        </span>
+      )}
+
+      {/* Main price */}
+      <div className="flex items-baseline gap-1">
+        <span className="font-display text-5xl md:text-6xl font-bold text-text-primary">
+          {formatPrice(priceData.monthly, region)}
+        </span>
+        <span className="text-xl text-text-muted">/mo</span>
+      </div>
+
+      {/* Total billing info */}
+      <p className="text-text-muted text-sm">
+        {duration === "monthly" ? (
+          t("billedMonthly")
+        ) : (
+          <>
+            {t("billed")} {formatPrice(priceData.total, region)}{" "}
+            {duration === "sixMonth" ? t("every6Months") : t("perYear")}
+          </>
         )}
+      </p>
 
-        {/* Main price */}
-        <div className="flex items-baseline gap-1">
-          <span className="font-display text-5xl md:text-6xl font-bold text-text-primary">
-            {formatPrice(priceData.monthly, region)}
-          </span>
-          <span className="text-xl text-text-muted">/mo</span>
-        </div>
-
-        {/* Total billing info */}
-        <p className="text-text-muted text-sm">
-          {duration === "monthly" ? (
-            t("billedMonthly")
-          ) : (
-            <>
-              {t("billed")} {formatPrice(priceData.total, region)}{" "}
-              {duration === "sixMonth" ? t("every6Months") : t("perYear")}
-            </>
-          )}
-        </p>
-
-        {/* Savings badge */}
-        {priceData.savings && (
-          <Badge variant="teal" className="mt-1">
-            {t("save")} {priceData.savings}%
-          </Badge>
-        )}
-      </motion.div>
-    </AnimatePresence>
+      {/* Savings badge */}
+      {priceData.savings && (
+        <Badge variant="teal" className="mt-1">
+          {t("save")} {priceData.savings}%
+        </Badge>
+      )}
+    </div>
   );
 }
 
@@ -248,13 +240,7 @@ export function Pricing() {
     <Section id="pricing" className="bg-bg-secondary/30">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <motion.div
-        variants={cardVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="max-w-lg mx-auto"
-      >
+      <Reveal className="max-w-lg mx-auto">
         <Card
           className="relative border-accent-teal/30 bg-gradient-to-b from-accent-teal/5 to-transparent"
           padding="lg"
@@ -328,31 +314,27 @@ export function Pricing() {
             {t("cancelAnytime")}
           </p>
         </Card>
-      </motion.div>
+      </Reveal>
 
       {/* Money-back guarantee */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3 }}
-        className="text-center text-text-muted text-sm mt-8"
-      >
-        <svg
-          className="inline-block w-5 h-5 me-2 text-accent-teal"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
-          />
-        </svg>
-        {t("guarantee")}
-      </motion.p>
+      <Reveal className="text-center mt-8" delay={100}>
+        <p className="text-text-muted text-sm">
+          <svg
+            className="inline-block w-5 h-5 me-2 text-accent-teal"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+            />
+          </svg>
+          {t("guarantee")}
+        </p>
+      </Reveal>
 
       {/* Region indicator (optional, can be removed) */}
       <p className="text-center text-text-muted/50 text-xs mt-4">
