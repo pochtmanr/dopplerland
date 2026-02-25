@@ -90,7 +90,7 @@ export async function POST(request: Request) {
       batch.map(async (locale: string) => {
         const result = await translateContent(enTranslation, locale);
 
-        await db.from("blog_post_translations").upsert(
+        const { error: upsertError } = await db.from("blog_post_translations").upsert(
           {
             post_id: postId,
             locale,
@@ -105,6 +105,10 @@ export async function POST(request: Request) {
           },
           { onConflict: "post_id,locale" }
         );
+
+        if (upsertError) {
+          throw new Error(`DB upsert failed: ${upsertError.message}`);
+        }
 
         return locale;
       })

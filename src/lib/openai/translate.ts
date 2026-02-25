@@ -85,6 +85,7 @@ Rules:
           },
         ],
         response_format: { type: "json_object" },
+        max_completion_tokens: 16000,
       }, { timeout: 120_000 });
 
       const raw = response.choices[0].message.content || "{}";
