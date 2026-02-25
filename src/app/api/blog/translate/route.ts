@@ -13,6 +13,9 @@ function requireApiKey(request: Request) {
   return token === apiKey;
 }
 
+// Allow up to 5 minutes for translating all 20 languages
+export const maxDuration = 300;
+
 // POST /api/blog/translate — trigger translations for an existing post
 export async function POST(request: Request) {
   if (!requireApiKey(request)) {
@@ -79,30 +82,42 @@ export async function POST(request: Request) {
   const results: Record<string, string> = {};
   const errors: string[] = [];
 
-  for (const locale of targetLocales) {
-    try {
-      const result = await translateContent(enTranslation, locale);
+  // Process translations in parallel batches of 5 to avoid timeouts
+  const BATCH_SIZE = 5;
+  for (let i = 0; i < targetLocales.length; i += BATCH_SIZE) {
+    const batch = targetLocales.slice(i, i + BATCH_SIZE);
+    const batchResults = await Promise.allSettled(
+      batch.map(async (locale: string) => {
+        const result = await translateContent(enTranslation, locale);
 
-      await db.from("blog_post_translations").upsert(
-        {
-          post_id: postId,
-          locale,
-          title: result.title?.slice(0, 255),
-          excerpt: result.excerpt,
-          content: result.content,
-          image_alt: result.image_alt,
-          meta_title: result.meta_title?.slice(0, 70) || null,
-          meta_description: result.meta_description?.slice(0, 160) || null,
-          og_title: result.og_title?.slice(0, 70) || null,
-          og_description: result.og_description?.slice(0, 200) || null,
-        },
-        { onConflict: "post_id,locale" }
-      );
+        await db.from("blog_post_translations").upsert(
+          {
+            post_id: postId,
+            locale,
+            title: result.title?.slice(0, 255),
+            excerpt: result.excerpt,
+            content: result.content,
+            image_alt: result.image_alt,
+            meta_title: result.meta_title?.slice(0, 70) || null,
+            meta_description: result.meta_description?.slice(0, 160) || null,
+            og_title: result.og_title?.slice(0, 70) || null,
+            og_description: result.og_description?.slice(0, 200) || null,
+          },
+          { onConflict: "post_id,locale" }
+        );
 
-      results[locale] = `${baseUrl}/${locale}/blog/${postSlug}`;
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : "Unknown error";
-      errors.push(`${locale}: ${msg}`);
+        return locale;
+      })
+    );
+
+    for (const r of batchResults) {
+      if (r.status === "fulfilled") {
+        results[r.value] = `${baseUrl}/${r.value}/blog/${postSlug}`;
+      } else {
+        const locale = batch[batchResults.indexOf(r)];
+        const msg = r.reason instanceof Error ? r.reason.message : "Unknown error";
+        errors.push(`${locale}: ${msg}`);
+      }
     }
   }
 
