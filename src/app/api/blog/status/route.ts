@@ -34,6 +34,23 @@ export async function GET(request: Request) {
     .from("blog_post_translations")
     .select("id", { count: "exact", head: true });
 
+  // Template type distribution (template_type column added in migration 002, not yet in generated types)
+  const { data: templateStats } = await db
+    .from("blog_posts")
+    .select("template_type" as string)
+    .eq("status", "published");
+
+  const templateDistribution = (
+    (templateStats as unknown as { template_type: string | null }[]) || []
+  ).reduce(
+    (acc: Record<string, number>, row) => {
+      const type = row.template_type || "quick-take";
+      acc[type] = (acc[type] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
+
   // Latest post
   const { data: latest } = await db
     .from("blog_posts")
@@ -53,6 +70,7 @@ export async function GET(request: Request) {
       total_posts: totalPosts || 0,
       published_posts: publishedPosts || 0,
       total_translations: totalTranslations || 0,
+      template_distribution: templateDistribution,
     },
     latest_post: latest
       ? {
