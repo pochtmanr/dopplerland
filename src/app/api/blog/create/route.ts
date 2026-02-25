@@ -44,14 +44,26 @@ export async function POST(request: Request) {
     category,
     tags,
     auto_translate = true,
-    author = "Flora Bot",
+    author = "Doppler Team",
     excerpt,
     webhook_url,
+    // Editorial strategy fields
+    template_type = "quick-take",
+    source_combo,
+    topic_category,
   } = body;
 
   if (!title || !content) {
     return NextResponse.json(
       { error: "title and content are required" },
+      { status: 400 }
+    );
+  }
+
+  const validTemplateTypes = ["quick-take", "analysis", "meme", "roundup"];
+  if (template_type && !validTemplateTypes.includes(template_type)) {
+    return NextResponse.json(
+      { error: `template_type must be one of: ${validTemplateTypes.join(", ")}` },
       { status: 400 }
     );
   }
@@ -82,6 +94,9 @@ export async function POST(request: Request) {
       status: "published",
       published_at: new Date().toISOString(),
       image_url: featured_image || null,
+      template_type,
+      source_combo: source_combo || null,
+      topic_category: topic_category || null,
     })
     .select("id")
     .single();
@@ -186,7 +201,7 @@ export async function POST(request: Request) {
 
   for (const locale of SUPPORTED_LOCALES) {
     try {
-      const result = await translateContent(enSource, locale);
+      const result = await translateContent(enSource, locale, template_type);
 
       await db.from("blog_post_translations").upsert(
         {
@@ -215,6 +230,7 @@ export async function POST(request: Request) {
   const response = {
     blog_id: post.id,
     slug,
+    template_type,
     english_url: englishUrl,
     russian_url: `${baseUrl}/ru/blog/${slug}`,
     all_urls: translationResults,
