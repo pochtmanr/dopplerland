@@ -2,15 +2,20 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { LanguageSwitcher } from "./language-switcher";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { localeConfig } from "@/lib/languages";
 import { ThemeToggle } from "./theme-toggle";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
 
@@ -18,8 +23,17 @@ export function MobileNav() {
 
   const close = useCallback(() => {
     setIsOpen(false);
+    setLangOpen(false);
     hamburgerRef.current?.focus();
   }, []);
+
+  const switchLocale = useCallback(
+    (newLocale: string) => {
+      router.replace(pathname, { locale: newLocale });
+      close();
+    },
+    [router, pathname, close]
+  );
 
   // Lock body scroll when open
   useEffect(() => {
@@ -47,8 +61,11 @@ export function MobileNav() {
   const navItems: { href: string; label: string; isPage?: boolean }[] = [
     { href: "/apps", label: t("apps"), isPage: true },
     { href: "/guide", label: t("guide"), isPage: true },
+    { href: "/blog", label: t("blog"), isPage: true },
     { href: "/#pricing", label: t("pricing") },
   ];
+
+  const currentLang = localeConfig[locale] || localeConfig.en;
 
   const overlay = (
     <div
@@ -112,9 +129,77 @@ export function MobileNav() {
           )}
         </nav>
 
-        {/* Controls */}
-        <div className="flex items-center gap-3 mt-10">
-          <LanguageSwitcher />
+        {/* Language accordion */}
+        <div className="w-full max-w-sm mt-10">
+          {/* Trigger */}
+          <button
+            onClick={() => setLangOpen((prev) => !prev)}
+            className="flex items-center justify-between w-full py-3 px-4 rounded-xl bg-bg-secondary/50 text-text-primary"
+            aria-expanded={langOpen}
+            aria-controls="mobile-language-list"
+          >
+            <span className="flex items-center gap-2 text-lg font-medium">
+              <span className="text-xl leading-none">{currentLang.flag}</span>
+              {currentLang.name}
+            </span>
+            <svg
+              className={`w-4 h-4 transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {/* Expandable language grid */}
+          <div
+            id="mobile-language-list"
+            className={`grid transition-[grid-template-rows] duration-[180ms] ease-out ${
+              langOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="relative mt-2">
+                <div className="grid grid-cols-2 gap-1.5 max-h-[60vh] overflow-y-auto px-1 pb-1">
+                  {routing.locales.map((loc) => {
+                    const config = localeConfig[loc] || { label: loc, flag: "", name: loc };
+                    const isActive = locale === loc;
+                    return (
+                      <button
+                        key={loc}
+                        onClick={() => switchLocale(loc)}
+                        className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-base transition-colors duration-150 min-w-0 ${
+                          isActive
+                            ? "bg-accent-teal/15 text-accent-teal ring-1 ring-accent-teal/20"
+                            : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
+                        }`}
+                        aria-current={isActive ? "true" : undefined}
+                        aria-label={`Switch to ${config.name}`}
+                      >
+                        <span className="text-base leading-none shrink-0">{config.flag}</span>
+                        <span className="font-medium truncate">{config.name}</span>
+                        {isActive && (
+                          <svg className="w-3.5 h-3.5 ms-auto shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Theme toggle */}
+        <div className="mt-6">
           <ThemeToggle />
         </div>
 

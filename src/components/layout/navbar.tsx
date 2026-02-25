@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { DopplerLogo } from "./doppler-logo";
 import { DesktopNav } from "./desktop-nav";
-import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -21,12 +20,7 @@ export async function Navbar() {
             </span>
           </Link>
         }
-        controls={
-          <div className="hidden md:flex items-center gap-1.5">
-            <ThemeToggle />
-            <LanguageSwitcher />
-          </div>
-        }
+        controls={<ThemeToggle />}
         mobile={<MobileNav />}
       />
     </header>
