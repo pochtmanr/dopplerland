@@ -56,6 +56,15 @@ export async function POST(request: Request) {
     postSlug = post?.slug || postId;
   }
 
+  // Fetch template_type for translation prompt selection
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: postData } = await (db as any)
+    .from("blog_posts")
+    .select("template_type")
+    .eq("id", postId)
+    .single();
+  const templateType: string = postData?.template_type || "quick-take";
+
   // Fetch EN source
   const { data: enTranslation } = await db
     .from("blog_post_translations")
@@ -88,7 +97,7 @@ export async function POST(request: Request) {
     const batch = targetLocales.slice(i, i + BATCH_SIZE);
     const batchResults = await Promise.allSettled(
       batch.map(async (locale: string) => {
-        const result = await translateContent(enTranslation, locale);
+        const result = await translateContent(enTranslation, locale, templateType);
 
         const { error: upsertError } = await db.from("blog_post_translations").upsert(
           {
