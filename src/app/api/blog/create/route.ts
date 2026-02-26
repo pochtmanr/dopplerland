@@ -116,12 +116,26 @@ export async function POST(request: Request) {
       .slice(0, 200)
       .trim() + "...";
 
-  // Embed source links at bottom of content if provided
+  // Embed source links at bottom of content if provided (and not already present)
   let fullContent = content;
-  if (source_links && source_links.length > 0) {
-    fullContent += "\n\n---\n\n**Sources:**\n";
-    for (const link of source_links) {
-      fullContent += `- [${link.text}](${link.url})\n`;
+  const alreadyHasSources = /\*\*Sources?:\*\*/i.test(content);
+  if (source_links && source_links.length > 0 && !alreadyHasSources) {
+    const validLinks = source_links
+      .map((link: string | { text?: string; url?: string }) => {
+        if (typeof link === "string") {
+          const domain = link.replace(/^https?:\/\/(?:www\.)?/, "").split("/")[0];
+          return { text: domain, url: link };
+        }
+        return link;
+      })
+      .filter((link: { text?: string; url?: string }) => link.url && link.url !== "undefined" && link.url.startsWith("http"))
+      .slice(0, 3);
+
+    if (validLinks.length > 0) {
+      fullContent += "\n\n---\n\n**Sources:**\n";
+      for (const link of validLinks) {
+        fullContent += `- [${link.text || "Source"}](${link.url})\n`;
+      }
     }
   }
 
