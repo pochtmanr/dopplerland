@@ -126,31 +126,21 @@ export default async function EditPostPage({
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8">
         <div>
-          <h1 className="text-2xl font-semibold">Edit Post</h1>
-          <p className="text-text-muted text-sm mt-1">
+          <h1 className="text-xl sm:text-2xl font-semibold">Edit Post</h1>
+          <p className="text-text-muted text-sm mt-1 truncate">
             /{post.slug} — {translationCount}/21 translations
           </p>
         </div>
         <Link
           href={`/admin-dvpn/posts/${id}/translations`}
-          className="inline-flex items-center gap-2 bg-bg-secondary border border-overlay/10 px-4 py-2.5 rounded-lg text-sm text-text-muted hover:text-text-primary hover:border-overlay/20 transition-colors"
+          className="inline-flex items-center gap-2 bg-bg-secondary border border-overlay/10 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-sm text-text-muted hover:text-text-primary hover:border-overlay/20 transition-colors self-start sm:self-auto"
         >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={1.5}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
-            />
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
           </svg>
-          Manage Translations
+          Translations
         </Link>
       </div>
       <PostForm

@@ -34,8 +34,8 @@ export default async function NewPostPage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold">New Post</h1>
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-xl sm:text-2xl font-semibold">New Post</h1>
         <p className="text-text-muted text-sm mt-1">
           Create a new blog post in English. You can add translations later.
         </p>

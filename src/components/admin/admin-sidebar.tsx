@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   {
@@ -27,11 +27,20 @@ const navItems = [
     ),
   },
   {
-    label: "VPN Users",
-    href: "/admin-dvpn/vpn",
+    label: "VPN Servers",
+    href: "/admin-dvpn/vpn-servers",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
+      </svg>
+    ),
+  },
+  {
+    label: "VPN Users",
+    href: "/admin-dvpn/vpn-users",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
       </svg>
     ),
   },
@@ -64,12 +73,30 @@ interface AdminSidebarProps {
 export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [showInvite, setShowInvite] = useState(false);
   const [inviteEmail, setInviteEmail] = useState("");
   const [invitePassword, setInvitePassword] = useState("");
   const [inviteRole, setInviteRole] = useState<"admin" | "editor">("editor");
   const [inviteLoading, setInviteLoading] = useState(false);
   const [inviteResult, setInviteResult] = useState<{ ok: boolean; message: string } | null>(null);
+
+  // Close mobile sidebar on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile sidebar is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   async function handleSignOut() {
     const supabase = createClient();
@@ -114,76 +141,117 @@ export function AdminSidebar({ adminEmail, adminRole }: AdminSidebarProps) {
     setInviteRole("editor");
   }
 
-  return (
+  const sidebarContent = (
     <>
-      <aside className="fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-overlay/10 flex flex-col">
-        {/* Logo */}
-        <div className="p-6 border-b border-overlay/10">
-          <Link href="/admin-dvpn/posts" className="text-lg font-semibold">
-            Doppler VPN Admin
-          </Link>
+      {/* Logo */}
+      <div className="p-6 border-b border-overlay/10 flex items-center justify-between">
+        <Link href="/admin-dvpn/posts" className="text-lg font-semibold">
+          Doppler VPN Admin
+        </Link>
+        {/* Close button - mobile only */}
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="lg:hidden p-1 text-text-muted hover:text-text-primary rounded-lg cursor-pointer"
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Navigation */}
+      <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
+        {navItems.map((item) => {
+          const isActive = item.href === "/admin-dvpn"
+            ? pathname === "/admin-dvpn" || pathname === "/admin-dvpn/"
+            : pathname.startsWith(item.href);
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
+                isActive
+                  ? "bg-accent-teal/10 text-accent-teal"
+                  : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
+              }`}
+            >
+              {item.icon}
+              {item.label}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* User section */}
+      <div className="p-4 border-t border-overlay/10 space-y-1">
+        <div className="mb-3 flex items-center justify-between">
+          <div className="min-w-0">
+            <p className="text-sm text-text-primary truncate">{adminEmail}</p>
+            <p className="text-xs text-text-muted capitalize">{adminRole}</p>
+          </div>
+          <ThemeToggle />
         </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-1">
-          {navItems.map((item) => {
-            const isActive = item.href === "/admin-dvpn"
-              ? pathname === "/admin-dvpn" || pathname === "/admin-dvpn/"
-              : pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
-                  isActive
-                    ? "bg-accent-teal/10 text-accent-teal"
-                    : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
-                }`}
-              >
-                {item.icon}
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* User section */}
-        <div className="p-4 border-t border-overlay/10 space-y-1">
-          <div className="mb-3 flex items-center justify-between">
-            <div className="min-w-0">
-              <p className="text-sm text-text-primary truncate">{adminEmail}</p>
-              <p className="text-xs text-text-muted capitalize">{adminRole}</p>
-            </div>
-            <ThemeToggle />
-          </div>
-
-          {adminRole === "admin" && (
-            <button
-              onClick={() => setShowInvite(true)}
-              className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-accent-teal hover:bg-accent-teal/10 rounded-lg transition-colors cursor-pointer"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-              </svg>
-              Invite Admin
-            </button>
-          )}
-
+        {adminRole === "admin" && (
           <button
-            onClick={handleSignOut}
-            className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+            onClick={() => setShowInvite(true)}
+            className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-accent-teal hover:bg-accent-teal/10 rounded-lg transition-colors cursor-pointer"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
             </svg>
-            Sign out
+            Invite Admin
           </button>
-        </div>
+        )}
+
+        <button
+          onClick={handleSignOut}
+          className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text-muted hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+          </svg>
+          Sign out
+        </button>
+      </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile top bar */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-bg-secondary border-b border-overlay/10 flex items-center px-4 z-40">
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="p-2 text-text-muted hover:text-text-primary rounded-lg cursor-pointer -ml-1"
+        >
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+        <span className="ml-3 text-sm font-semibold text-text-primary">Doppler Admin</span>
+      </div>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/60 z-40"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      {/* Sidebar - desktop: fixed left, mobile: slide-over */}
+      <aside
+        className={`fixed left-0 top-0 h-screen w-64 bg-bg-secondary border-r border-overlay/10 flex flex-col z-50 transition-transform duration-200 ${
+          mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        }`}
+      >
+        {sidebarContent}
       </aside>
 
       {/* Invite Admin Modal */}
       {showInvite && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <form
             onSubmit={handleInvite}
             className="bg-bg-secondary border border-overlay/10 rounded-xl p-6 w-full max-w-md space-y-4"

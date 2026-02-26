@@ -109,9 +109,9 @@ export default function MessagesPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
         <div>
-          <h1 className="text-2xl font-semibold">Support Escalations</h1>
+          <h1 className="text-xl sm:text-2xl font-semibold">Support Escalations</h1>
           <p className="text-sm text-text-muted mt-1">Users who requested human support</p>
         </div>
         <span className="text-sm text-text-muted">{total} escalation{total !== 1 ? "s" : ""}</span>
@@ -124,7 +124,7 @@ export default function MessagesPage() {
           placeholder="Search by username or content..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md px-3 py-2 text-sm bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-teal/50"
+          className="w-full sm:max-w-md px-3 py-2 text-sm bg-overlay/5 border border-overlay/10 rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-teal/50"
         />
       </div>
 
@@ -134,7 +134,7 @@ export default function MessagesPage() {
           <AdminLoader />
         ) : escalations.length === 0 ? (
           <div className="text-center py-12 text-text-muted">
-            <div className="text-4xl mb-2">✅</div>
+            <div className="text-4xl mb-2">&#x2705;</div>
             <p>No support escalations</p>
             <p className="text-xs mt-1">When users request human support, they&apos;ll appear here</p>
           </div>
@@ -146,14 +146,132 @@ export default function MessagesPage() {
                 key={e.id}
                 className="border border-overlay/10 rounded-lg p-4 hover:bg-overlay/5 transition-colors"
               >
-                <div className="flex items-start justify-between">
+                {/* Mobile layout: stacked */}
+                <div className="sm:hidden space-y-3">
+                  {/* Top: user info — clickable */}
+                  <div
+                    className="flex items-center gap-3 cursor-pointer"
+                    onClick={() => router.push(`/admin-dvpn/messages/${e.telegram_user_id}`)}
+                  >
+                    <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 text-lg shrink-0">
+                      &#x1F514;
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-medium text-text-primary truncate">
+                        {e.first_name || "Unknown"}{" "}
+                        {e.username && <span className="text-text-muted font-normal">@{e.username}</span>}
+                      </div>
+                      <div className="text-xs text-text-muted mt-0.5">
+                        {formatTime(e.created_at)} &middot; {timeAgo(e.created_at)}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {e.issue && (
+                      <span className="px-2 py-0.5 rounded-lg text-xs border border-red-500/40 text-red-400">
+                        &#x1F527; {e.issue}
+                      </span>
+                    )}
+                    {e.device && (
+                      <span className="px-2 py-0.5 rounded-lg text-xs border border-blue-500/40 text-blue-400">
+                        &#x1F4F1; {e.device}
+                      </span>
+                    )}
+                    {e.account_code && (
+                      <span className="px-2 py-0.5 rounded-lg text-xs border border-purple-500/40 text-purple-400 font-mono">
+                        &#x1F511; {e.account_code}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Bottom: status + delete */}
+                  <div className="flex items-center justify-between">
+                    <div className="relative">
+                      <button
+                        onClick={(ev) => {
+                          ev.stopPropagation();
+                          setOpenStatusMenu(openStatusMenu === e.telegram_user_id ? null : e.telegram_user_id);
+                          setConfirmDelete(null);
+                        }}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-medium border transition-colors cursor-pointer ${status.color}`}
+                      >
+                        {status.label}
+                      </button>
+
+                      {openStatusMenu === e.telegram_user_id && (
+                        <div className="absolute left-0 top-full mt-1 z-20 bg-bg-secondary border border-overlay/10 rounded-lg shadow-lg py-1 min-w-[130px]">
+                          {STATUSES.map((s) => (
+                            <button
+                              key={s.value}
+                              onClick={(ev) => {
+                                ev.stopPropagation();
+                                handleStatusChange(e.telegram_user_id, s.value);
+                              }}
+                              className={`w-full text-left px-3 py-1.5 text-xs transition-colors cursor-pointer ${
+                                s.value === e.support_status
+                                  ? "text-text-primary font-medium bg-overlay/10"
+                                  : "text-text-muted hover:text-text-primary hover:bg-overlay/5"
+                              }`}
+                            >
+                              {s.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      {confirmDelete === e.telegram_user_id ? (
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={(ev) => {
+                              ev.stopPropagation();
+                              handleDelete(e.telegram_user_id);
+                            }}
+                            className="px-2 py-1 text-xs bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30 transition-colors cursor-pointer"
+                          >
+                            Confirm
+                          </button>
+                          <button
+                            onClick={(ev) => {
+                              ev.stopPropagation();
+                              setConfirmDelete(null);
+                            }}
+                            className="px-2 py-1 text-xs bg-overlay/5 text-text-muted rounded-lg hover:bg-overlay/10 transition-colors cursor-pointer"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={(ev) => {
+                            ev.stopPropagation();
+                            setConfirmDelete(e.telegram_user_id);
+                            setOpenStatusMenu(null);
+                          }}
+                          title="Delete conversation"
+                          className="p-1.5 text-text-muted hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors cursor-pointer"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop layout: horizontal */}
+                <div className="hidden sm:flex items-start justify-between">
                   {/* Left: user info — clickable to open conversation */}
                   <div
                     className="flex items-center gap-3 flex-1 min-w-0 cursor-pointer"
                     onClick={() => router.push(`/admin-dvpn/messages/${e.telegram_user_id}`)}
                   >
                     <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 text-lg shrink-0">
-                      🔔
+                      &#x1F514;
                     </div>
                     <div className="min-w-0">
                       <div className="font-medium text-text-primary truncate">
@@ -163,17 +281,17 @@ export default function MessagesPage() {
                       <div className="flex flex-wrap gap-2 mt-1">
                         {e.issue && (
                           <span className="px-2 py-0.5 rounded-lg text-xs border border-red-500/40 text-red-400">
-                            🔧 {e.issue}
+                            &#x1F527; {e.issue}
                           </span>
                         )}
                         {e.device && (
                           <span className="px-2 py-0.5 rounded-lg text-xs border border-blue-500/40 text-blue-400">
-                            📱 {e.device}
+                            &#x1F4F1; {e.device}
                           </span>
                         )}
                         {e.account_code && (
                           <span className="px-2 py-0.5 rounded-lg text-xs border border-purple-500/40 text-purple-400 font-mono">
-                            🔑 {e.account_code}
+                            &#x1F511; {e.account_code}
                           </span>
                         )}
                       </div>

@@ -68,17 +68,17 @@ export default async function TranslationsPage({
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8">
         <div>
-          <h1 className="text-2xl font-semibold">Translations</h1>
-          <p className="text-text-muted text-sm mt-1">
+          <h1 className="text-xl sm:text-2xl font-semibold">Translations</h1>
+          <p className="text-text-muted text-sm mt-1 truncate">
             {enTranslation?.title || post.slug} —{" "}
             {post.blog_post_translations.length}/21 languages
           </p>
         </div>
         <Link
           href={`/admin-dvpn/posts/${id}`}
-          className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors self-start sm:self-auto"
         >
           <svg
             className="w-4 h-4"

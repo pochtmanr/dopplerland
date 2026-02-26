@@ -208,7 +208,7 @@ export function PostForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-4xl space-y-8">
+    <form onSubmit={handleSubmit} className="max-w-4xl space-y-6 sm:space-y-8">
       {error && (
         <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-sm text-red-400">
           {error}
@@ -220,7 +220,7 @@ export function PostForm({
         <label className="block text-sm font-medium text-text-muted">
           Generate from URL (Perplexity, news article, etc.)
         </label>
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="url"
             value={extractUrl}
@@ -482,7 +482,7 @@ export function PostForm({
       </div>
 
       {/* Actions */}
-      <div className="flex items-center justify-between pt-4 border-t border-overlay/10">
+      <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t border-overlay/10">
         <div>
           {mode === "edit" && (
             <button
@@ -498,14 +498,14 @@ export function PostForm({
           <button
             type="button"
             onClick={() => router.push("/admin-dvpn/posts")}
-            className="px-4 py-2.5 text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"
+            className="flex-1 sm:flex-none px-4 py-2.5 text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer text-center"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={saving}
-            className="px-6 py-2.5 bg-accent-teal text-white rounded-lg text-sm font-medium hover:bg-accent-teal-light transition-colors disabled:opacity-50 cursor-pointer"
+            className="flex-1 sm:flex-none px-6 py-2.5 bg-accent-teal text-white rounded-lg text-sm font-medium hover:bg-accent-teal-light transition-colors disabled:opacity-50 cursor-pointer text-center"
           >
             {saving
               ? "Saving..."

@@ -174,18 +174,18 @@ export function TranslationGrid({
 
       {/* Translate All button */}
       {missingCount > 0 && (
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <p className="text-sm text-text-muted">
             {missingCount} language{missingCount !== 1 ? "s" : ""} missing
           </p>
           <button
             onClick={handleTranslateAll}
             disabled={batchTranslating || translating !== null}
-            className="px-4 py-2 bg-accent-teal/20 text-accent-teal rounded-lg text-sm font-medium hover:bg-accent-teal/30 transition-colors disabled:opacity-50 cursor-pointer"
+            className="px-4 py-2 bg-accent-teal/20 text-accent-teal rounded-lg text-sm font-medium hover:bg-accent-teal/30 transition-colors disabled:opacity-50 cursor-pointer self-start sm:self-auto"
           >
             {batchTranslating
               ? `Translating ${batchProgress.done}/${batchProgress.total}...`
-              : `Translate All Missing (${missingCount})`}
+              : `Translate All (${missingCount})`}
           </button>
         </div>
       )}
@@ -206,114 +206,193 @@ export function TranslationGrid({
         </div>
       )}
 
-      <div className="bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-overlay/10">
-              <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
-                Language
-              </th>
-              <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
-                Status
-              </th>
-              <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
-                Title Preview
-              </th>
-              <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
-                Updated
-              </th>
-              <th className="text-right px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
-                Actions
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-overlay/5">
-            {ALL_LOCALES.map((loc) => {
-              const trans = translationMap.get(loc.code);
-              const isSource = loc.code === "en";
-              const hasTranslation = !!trans;
-              const isTranslating = translating === loc.code || (batchTranslating && !hasTranslation && loc.code !== "en");
-              const justCompleted = batchTranslating && completedLocales.has(loc.code);
+      {/* Desktop table */}
+      <div className="hidden sm:block bg-bg-secondary border border-overlay/10 rounded-xl overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-overlay/10">
+                <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                  Language
+                </th>
+                <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                  Status
+                </th>
+                <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                  Title Preview
+                </th>
+                <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                  Updated
+                </th>
+                <th className="text-right px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-overlay/5">
+              {ALL_LOCALES.map((loc) => {
+                const trans = translationMap.get(loc.code);
+                const isSource = loc.code === "en";
+                const hasTranslation = !!trans;
+                const isTranslating = translating === loc.code || (batchTranslating && !hasTranslation && loc.code !== "en");
+                const justCompleted = batchTranslating && completedLocales.has(loc.code);
 
-              return (
-                <tr
-                  key={loc.code}
-                  className="hover:bg-overlay/[0.02] transition-colors"
-                >
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">{loc.flag}</span>
-                      <div>
-                        <p className="text-sm font-medium text-text-primary">
-                          {loc.name}
-                        </p>
-                        <p className="text-xs text-text-muted">{loc.code}</p>
+                return (
+                  <tr
+                    key={loc.code}
+                    className="hover:bg-overlay/[0.02] transition-colors"
+                  >
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">{loc.flag}</span>
+                        <div>
+                          <p className="text-sm font-medium text-text-primary">
+                            {loc.name}
+                          </p>
+                          <p className="text-xs text-text-muted">{loc.code}</p>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    {isSource ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                        Source
-                      </span>
-                    ) : justCompleted ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
-                        Done
-                      </span>
-                    ) : isTranslating && !hasTranslation ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-teal/10 text-accent-teal border border-accent-teal/20 animate-pulse">
-                        Translating...
-                      </span>
-                    ) : hasTranslation ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
-                        Done
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
-                        Missing
-                      </span>
-                    )}
-                  </td>
-                  <td className="px-6 py-4 text-sm text-text-muted max-w-xs truncate">
-                    {trans?.title || "—"}
-                  </td>
-                  <td className="px-6 py-4 text-sm text-text-muted">
-                    {trans ? formatDate(trans.updated_at) : "—"}
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
+                    </td>
+                    <td className="px-6 py-4">
                       {isSource ? (
-                        <span className="text-xs text-text-muted">
-                          Edit in post
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                          Source
+                        </span>
+                      ) : justCompleted ? (
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
+                          Done
+                        </span>
+                      ) : isTranslating && !hasTranslation ? (
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-teal/10 text-accent-teal border border-accent-teal/20 animate-pulse">
+                          Translating...
+                        </span>
+                      ) : hasTranslation ? (
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
+                          Done
                         </span>
                       ) : (
-                        <>
-                          <button
-                            onClick={() => setEditing(loc.code)}
-                            className="text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"
-                          >
-                            {hasTranslation ? "Edit" : "Manual"}
-                          </button>
-                          <button
-                            onClick={() => handleTranslate(loc.code)}
-                            disabled={isTranslating || translating !== null || batchTranslating}
-                            className="text-sm text-accent-teal hover:text-accent-teal-light transition-colors disabled:opacity-50 cursor-pointer"
-                          >
-                            {isTranslating
-                              ? "Translating..."
-                              : hasTranslation
-                                ? "Re-translate"
-                                : "AI Translate"}
-                          </button>
-                        </>
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                          Missing
+                        </span>
                       )}
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-text-muted max-w-xs truncate">
+                      {trans?.title || "\u2014"}
+                    </td>
+                    <td className="px-6 py-4 text-sm text-text-muted">
+                      {trans ? formatDate(trans.updated_at) : "\u2014"}
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <div className="flex items-center justify-end gap-2">
+                        {isSource ? (
+                          <span className="text-xs text-text-muted">
+                            Edit in post
+                          </span>
+                        ) : (
+                          <>
+                            <button
+                              onClick={() => setEditing(loc.code)}
+                              className="text-sm text-text-muted hover:text-text-primary transition-colors cursor-pointer"
+                            >
+                              {hasTranslation ? "Edit" : "Manual"}
+                            </button>
+                            <button
+                              onClick={() => handleTranslate(loc.code)}
+                              disabled={isTranslating || translating !== null || batchTranslating}
+                              className="text-sm text-accent-teal hover:text-accent-teal-light transition-colors disabled:opacity-50 cursor-pointer"
+                            >
+                              {isTranslating
+                                ? "Translating..."
+                                : hasTranslation
+                                  ? "Re-translate"
+                                  : "AI Translate"}
+                            </button>
+                          </>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Mobile cards */}
+      <div className="sm:hidden space-y-2">
+        {ALL_LOCALES.map((loc) => {
+          const trans = translationMap.get(loc.code);
+          const isSource = loc.code === "en";
+          const hasTranslation = !!trans;
+          const isTranslating = translating === loc.code || (batchTranslating && !hasTranslation && loc.code !== "en");
+          const justCompleted = batchTranslating && completedLocales.has(loc.code);
+
+          const statusBadge = isSource ? (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-blue-500/10 text-blue-400">
+              Source
+            </span>
+          ) : justCompleted ? (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-green-500/10 text-green-400">
+              Done
+            </span>
+          ) : isTranslating && !hasTranslation ? (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-accent-teal/10 text-accent-teal animate-pulse">
+              Translating...
+            </span>
+          ) : hasTranslation ? (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-green-500/10 text-green-400">
+              Done
+            </span>
+          ) : (
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-yellow-500/10 text-yellow-400">
+              Missing
+            </span>
+          );
+
+          return (
+            <div
+              key={loc.code}
+              className="bg-bg-secondary border border-overlay/10 rounded-lg p-3 hover:bg-overlay/5 transition-colors"
+            >
+              {/* Row 1: flag + name + status */}
+              <div className="flex items-center gap-2.5">
+                <span className="text-base shrink-0">{loc.flag}</span>
+                <div className="min-w-0 flex-1">
+                  <span className="text-sm font-medium text-text-primary">{loc.name}</span>
+                  <span className="text-xs text-text-muted ml-1.5">{loc.code}</span>
+                </div>
+                {statusBadge}
+              </div>
+
+              {/* Row 2: title preview + actions */}
+              <div className="flex items-center justify-between mt-1.5 ml-[30px]">
+                <p className="text-xs text-text-muted truncate flex-1 mr-2">
+                  {trans?.title || "\u2014"}
+                </p>
+                {isSource ? (
+                  <span className="text-[11px] text-text-muted shrink-0">Edit in post</span>
+                ) : (
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => setEditing(loc.code)}
+                      className="px-2 py-0.5 text-xs text-text-muted hover:text-text-primary hover:bg-overlay/10 rounded-md transition-colors cursor-pointer"
+                    >
+                      {hasTranslation ? "Edit" : "Manual"}
+                    </button>
+                    <button
+                      onClick={() => handleTranslate(loc.code)}
+                      disabled={isTranslating || translating !== null || batchTranslating}
+                      className="px-2 py-0.5 text-xs text-accent-teal hover:bg-accent-teal/10 rounded-md transition-colors disabled:opacity-50 cursor-pointer"
+                    >
+                      {isTranslating ? "..." : hasTranslation ? "Redo" : "AI"}
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
