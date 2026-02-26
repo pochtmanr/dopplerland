@@ -5,6 +5,7 @@ interface PostRow {
   id: string;
   slug: string;
   status: string;
+  template_type: string | null;
   published_at: string | null;
   updated_at: string;
   author_name: string;
@@ -24,6 +25,7 @@ async function getPosts() {
       id,
       slug,
       status,
+      template_type,
       published_at,
       updated_at,
       author_name,
@@ -50,6 +52,27 @@ function formatDate(dateString: string | null): string {
     day: "numeric",
     year: "numeric",
   });
+}
+
+function TemplateBadge({ type }: { type: string | null }) {
+  if (!type) return <span className="text-xs text-text-muted">—</span>;
+
+  const styles: Record<string, string> = {
+    "quick-take": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+    analysis: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+    meme: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+    roundup: "bg-green-500/10 text-green-400 border-green-500/20",
+  };
+
+  return (
+    <span
+      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${
+        styles[type] || "bg-gray-500/10 text-gray-400 border-gray-500/20"
+      }`}
+    >
+      {type}
+    </span>
+  );
 }
 
 function StatusBadge({ status }: { status: string }) {
@@ -116,6 +139,9 @@ export default async function AdminPostsPage() {
                 Status
               </th>
               <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
+                Template
+              </th>
+              <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
                 Languages
               </th>
               <th className="text-left px-6 py-3 text-xs font-medium text-text-muted uppercase tracking-wider">
@@ -157,6 +183,9 @@ export default async function AdminPostsPage() {
                     <StatusBadge status={post.status} />
                   </td>
                   <td className="px-6 py-4">
+                    <TemplateBadge type={post.template_type} />
+                  </td>
+                  <td className="px-6 py-4">
                     <span className="text-sm text-text-muted">
                       {translationCount}/21
                     </span>
@@ -190,7 +219,7 @@ export default async function AdminPostsPage() {
             {posts.length === 0 && (
               <tr>
                 <td
-                  colSpan={6}
+                  colSpan={7}
                   className="px-6 py-12 text-center text-text-muted"
                 >
                   No posts yet.{" "}
