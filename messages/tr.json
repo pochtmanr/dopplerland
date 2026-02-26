@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Basit, şeffaf fiyatlandırma",
-    "subtitle": "7 günlük ücretsiz deneme ile başlayın. İstediğiniz zaman iptal edin.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Tüm Premium özellikler dahil",
-    "cardSubtitle": "Aynı güçlü özellikler, taahhüdünüzü seçin",
-    "durationSelector": "Abonelik süresini seçin",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Ay",
-      "sixMonth": "6 Ay",
-      "annual": "Yıllık"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "En İyi",
-    "billedMonthly": "Aylık faturalandırılır",
-    "billed": "Faturalandırılır",
-    "every6Months": "her 6 ayda bir",
-    "perYear": "yıllık",
-    "save": "Tasarruf",
-    "allFeaturesIncluded": "Tüm özellikler her plana dahil",
-    "features": {
-      "noLogs": "Kayıt tutmayan VPN",
-      "adBlocker": "Reklam engelleyici",
-      "categoryFilter": "Kategori filtresi",
-      "customBlocklist": "Engel listeleri",
-      "devices": "10 cihaz",
-      "support": "7/24 destek"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "Ücretsiz Denemeyi Başlat",
-    "cancelAnytime": "İstediğiniz zaman iptal edin. Soru sorulmaz.",
-    "guarantee": "30 gün para iade garantisi",
-    "pricesIn": "Fiyatlar şu birimde gösterilir"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Sıkça sorulan sorular",
@@ -401,6 +418,7 @@
       "miniAppDesc": "Telegram Mini App'imiz üzerinden güvenli Stripe ödemeleriyle abone olun ve planınızı yönetin."
     },
     "backToGuides": "Tüm Rehberler",
+    "seePricing": "See pricing plans",
     "nextStep": "İleri",
     "prevStep": "Geri",
     "downloadApps": "Uygulamayı indir",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Abonelik ve fiyatlandırma",
       "subtitle": "Planlar, promosyon kodları, Telegram bot indirimleri ve abonelik yönetimi."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "İndir",
     "viewSetupGuide": "Kurulum kılavuzunu gör",
     "vlessNote": "Kısıtlı bölgelerdeki Telegram bot kullanıcıları için"
+  },
+  "servers": {
+    "title": "Küresel Sunucu Ağı",
+    "subtitle": "Dünya genelinde birçok konumdan seçin. Tüm sunucular çift protokol mimarisini destekler.",
+    "servers": "sunucu",
+    "server": "sunucu",
+    "protocols": "Protokoller",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Almanya"
+      },
+      "moscow": {
+        "city": "Moskova",
+        "country": "Rusya"
+      },
+      "zurich": {
+        "city": "Zürih",
+        "country": "İsviçre"
+      },
+      "london": {
+        "city": "Londra",
+        "country": "Birleşik Krallık"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "Amerika Birleşik Devletleri"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Tüm Kılavuzlar",
+    "title": "VPN Protokolleri",
+    "subtitle": "Doppler, iki VPN protokolünü — WireGuard ve VLESS-Reality'yi destekler. Her biri farklı bir amaca hizmet eder. Durumunuza uygun olanı seçin.",
+    "bestFor": "En iyi",
+    "apps": "Desteklenen uygulamalar",
+    "comparison": "Yan yana karşılaştırma",
+    "tableFeature": "Özellik",
+    "whichToUse": "Hangisini kullanmalıyım?",
+    "getApps": "Uygulamaları indir",
+    "viewSubscription": "Abonelik ve fiyatlandırma",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Tavsiye edilen",
+      "description": "Güvenlik uzmanları tarafından güvenilen modern, hafif bir VPN protokolü. WireGuard, en hızlı bağlantıları, en iyi pil verimliliğini ve askeri düzeyde şifrelemeyi sunar. Doppler VPN uygulaması bunu yerel olarak kullanır.",
+      "speed": "Maksimum hız — OpenVPN ve IKEv2'yi geride bırakır",
+      "battery": "Mobil cihazlarda minimal pil tüketimi",
+      "streaming": "Akıcı yayın ve video görüşmeleri",
+      "everyday": "Günlük gizlilik ve reklam engelleme",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Sansür atlatma",
+      "description": "Derin paket incelemesini (DPI) ve ağ sansürünü aşmak için tasarlanmış gelişmiş bir proxy protokolü. VLESS-Reality, VPN trafiğini normal HTTPS olarak gizler, bu da neredeyse tespit edilemez hale getirir. Telegram botumuz aracılığıyla kullanılır.",
+      "censorship": "Hükümet internet sansürünü aşma",
+      "stealth": "Tespit edilemeyen trafik — normal HTTPS gibi görünür",
+      "deepPacket": "Derin paket incelemesini (DPI) aşma",
+      "restricted": "Rusya, Çin, İran ve diğer kısıtlı bölgelerde internete erişim",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Bağlantı hızı",
+        "wireguard": "Mükemmel — mevcut en hızlı",
+        "vless": "İyi — maskelemeden kaynaklanan hafif yük"
+      },
+      "battery": {
+        "label": "Pil etkisi",
+        "wireguard": "Minimal — çekirdek düzeyinde verimlilik",
+        "vless": "Orta — kullanıcı alanında çalışır"
+      },
+      "censorship": {
+        "label": "Sansür atlatma",
+        "wireguard": "Temel — DPI tarafından engellenebilir",
+        "vless": "Mükemmel — DPI tarafından tespit edilemez"
+      },
+      "setup": {
+        "label": "Kurulum zorluğu",
+        "wireguard": "Tek dokunuş — Doppler uygulamasına entegre",
+        "vless": "Manuel — Telegram botundan yapılandırma"
+      },
+      "platforms": {
+        "label": "Platformlar",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "WireGuard'ı kullanın eğer...",
+      "desc": "En basit deneyimi ve en iyi performansı istiyorsanız. Sadece Doppler VPN uygulamasını indirin ve bağlanmak için dokunun — yapılandırma gerekmez. Günlük tarama, yayın ve gizlilik için mükemmel."
+    },
+    "useVless": {
+      "title": "VLESS-Reality'yi kullanın eğer...",
+      "desc": "İnternet sansürünün olduğu bir ülkedesiniz (Rusya, Çin, İran vb.) veya internet servis sağlayıcınız VPN bağlantılarını engelliyor. Yapılandırmanızı Telegram botumuzdan @dopplercreatebot alın ve üçüncü taraf bir istemci uygulaması kullanın."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Tüm Kılavuzlar",
+    "title": "Abonelik ve Fiyatlandırma",
+    "subtitle": "Doppler VPN planları, platformlar arası fiyatlandırma, promosyon kodları ve aboneliğinizi nasıl yöneteceğiniz hakkında her şey.",
+    "promo": {
+      "title": "Başlangıç promosyonu — tüm planlarda %20 indirim",
+      "desc": "Herhangi bir abonelik planında %20 indirim almak için Telegram botunda ödeme sırasında LAUNCH20 kodunu kullanın. Tüm yeni ve mevcut kullanıcılar için geçerlidir."
+    },
+    "pricingSection": "Platforma göre fiyatlandırma",
+    "tableHeaders": {
+      "plan": "Plan",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram Bot"
+    },
+    "plans": {
+      "monthly": "1 Ay",
+      "sixMonth": "6 Ay",
+      "annual": "1 Yıl"
+    },
+    "pricingNote": "Telegram botu fiyatları daha düşüktür çünkü uygulama mağazası komisyonları yoktur. Tüm planlar aynı Premium özellikleri içerir.",
+    "howToSubscribe": "Nasıl abone olunur",
+    "appStoreMethod": {
+      "title": "App Store üzerinden (iOS)",
+      "step1": "iPhone veya iPad'inizde Doppler VPN uygulamasını açın",
+      "step2": "Profil sekmesine gidin ve \"Premium'a Yükselt\"e dokunun",
+      "step3": "Planınızı seçin ve Face ID veya Apple ID ile onaylayın"
+    },
+    "googlePlayMethod": {
+      "title": "Google Play üzerinden (Android)",
+      "step1": "Android cihazınızda Doppler VPN uygulamasını açın",
+      "step2": "Profil sekmesine gidin ve \"Premium'a Yükselt\"e dokunun",
+      "step3": "Planınızı seçin ve Google Play ödemesi ile onaylayın"
+    },
+    "telegramMethod": {
+      "title": "Telegram Botu üzerinden",
+      "savings": "Uygulama mağazalarına göre %35'e kadar tasarruf edin",
+      "step1": "Telegram'da @dopplercreatebot'u açın",
+      "step2": "\"Abone Ol\"a dokunun ve planınızı seçin",
+      "step3": "Stripe üzerinden güvenli bir şekilde ödeme yapın — %20 indirim için LAUNCH20 kodunu kullanın"
+    },
+    "manageSection": "Aboneliğinizi yönetme",
+    "manage": {
+      "restore": {
+        "title": "Satın alımları geri yükle",
+        "desc": "Eğer Premium özellikleriniz satın aldıktan sonra görünmüyorsa, uygulamayı açın → Profil → Abonelik → Satın alımları Geri Yükle. Bu, aboneliğinizi sunucularımızla yeniden senkronize eder."
+      },
+      "cancel": {
+        "title": "Aboneliği iptal et",
+        "desc": "App Store için: Ayarlar → Apple ID → Abonelikler → Doppler VPN → İptal et. Google Play için: Google Play → Hesap → Abonelikler → İptal et. Erişiminiz faturalama döneminin sonuna kadar devam eder."
+      },
+      "switch": {
+        "title": "Planları değiştir",
+        "desc": "Abone olduğunuz platform üzerinden istediğiniz zaman planınızı yükseltebilir veya düşürebilirsiniz. Değişiklik, bir sonraki faturalama döngüsünde geçerli olur."
+      },
+      "crossPlatform": {
+        "title": "Çapraz platform abonelikleri",
+        "desc": "App Store üzerinden satın alınan abonelikler yalnızca iOS'ta çalışır. Google Play abonelikleri yalnızca Android'de çalışır. Çapraz platform erişimi için Telegram botu üzerinden abone olun — her yerde çalışır."
+      }
+    },
+    "getApp": "Uygulamayı indir",
+    "openBot": "Telegram Botunu Aç",
+    "viewProtocols": "VPN Protokolleri kılavuzu"
   }
 }

@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "简单透明的定价",
-    "subtitle": "7天免费试用。随时取消。",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "包含所有高级功能",
-    "cardSubtitle": "相同的强大功能，选择您的订阅方案",
-    "durationSelector": "选择订阅时长",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1个月",
-      "sixMonth": "6个月",
-      "annual": "1年"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "最划算",
-    "billedMonthly": "按月计费",
-    "billed": "计费",
-    "every6Months": "每6个月",
-    "perYear": "每年",
-    "save": "节省",
-    "allFeaturesIncluded": "每个方案都包含所有功能",
-    "features": {
-      "noLogs": "零日志VPN",
-      "adBlocker": "广告拦截器",
-      "categoryFilter": "分类过滤",
-      "customBlocklist": "拦截列表",
-      "devices": "10台设备",
-      "support": "24/7支持"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "开始免费试用",
-    "cancelAnytime": "随时取消。无需理由。",
-    "guarantee": "30天退款保证",
-    "pricesIn": "价格显示为"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "常见问题",
@@ -321,6 +338,7 @@
     "subtitle": "几分钟即可连接。选择您的设备开始。",
     "chooseDevice": "选择您的设备",
     "backToGuides": "所有指南",
+    "seePricing": "See pricing plans",
     "nextStep": "下一步",
     "prevStep": "上一步",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "订阅与定价",
       "subtitle": "套餐、促销码、Telegram机器人折扣和订阅管理。"
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "下载",
     "viewSetupGuide": "查看设置指南",
     "vlessNote": "适用于受限地区的Telegram机器人用户"
+  },
+  "servers": {
+    "title": "全球服务器网络",
+    "subtitle": "从全球多个地点中选择。所有服务器均支持双协议架构。",
+    "servers": "台服务器",
+    "server": "台服务器",
+    "protocols": "协议",
+    "locations": {
+      "frankfurt": {
+        "city": "法兰克福",
+        "country": "德国"
+      },
+      "moscow": {
+        "city": "莫斯科",
+        "country": "俄罗斯"
+      },
+      "zurich": {
+        "city": "苏黎世",
+        "country": "瑞士"
+      },
+      "london": {
+        "city": "伦敦",
+        "country": "英国"
+      },
+      "newYork": {
+        "city": "纽约",
+        "country": "美国"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "所有指南",
+    "title": "VPN协议",
+    "subtitle": "Doppler支持两种VPN协议 — WireGuard和VLESS-Reality。每种协议有不同的用途。选择适合您情况的协议。",
+    "bestFor": "最佳适用",
+    "apps": "支持的应用",
+    "comparison": "并排比较",
+    "tableFeature": "特性",
+    "whichToUse": "我应该使用哪种？",
+    "getApps": "下载应用",
+    "viewSubscription": "订阅与定价",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "推荐",
+      "description": "一种现代、轻量级的VPN协议，受到安全专业人士的信任。WireGuard提供最快的连接、最佳的电池效率和军用级加密。这是Doppler VPN应用的原生使用协议。",
+      "speed": "最大速度 — 超越OpenVPN和IKEv2",
+      "battery": "对移动设备的电池影响最小",
+      "streaming": "流畅的流媒体和视频通话",
+      "everyday": "日常隐私和广告拦截",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "绕过审查",
+      "description": "一种先进的代理协议，旨在绕过深度包检测（DPI）和网络审查。VLESS-Reality将VPN流量伪装成普通的HTTPS，使其几乎无法被检测。通过我们的Telegram机器人使用。",
+      "censorship": "绕过政府互联网审查",
+      "stealth": "不可检测的流量 — 看起来像正常的HTTPS",
+      "deepPacket": "规避深度包检测（DPI）",
+      "restricted": "在俄罗斯、中国、伊朗及其他受限地区访问互联网",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "连接速度",
+        "wireguard": "优秀 — 可用的最快速度",
+        "vless": "良好 — 由于伪装略有开销"
+      },
+      "battery": {
+        "label": "电池影响",
+        "wireguard": "最小 — 内核级效率",
+        "vless": "适中 — 在用户空间运行"
+      },
+      "censorship": {
+        "label": "绕过审查",
+        "wireguard": "基本 — 可能被DPI阻止",
+        "vless": "优秀 — 不可被DPI检测"
+      },
+      "setup": {
+        "label": "设置难度",
+        "wireguard": "一键 — 内置于Doppler应用",
+        "vless": "手动 — 从Telegram机器人获取配置"
+      },
+      "platforms": {
+        "label": "平台",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "如果您想使用WireGuard...",
+      "desc": "您希望获得最简单的体验和最佳的性能。只需下载Doppler VPN应用并点击连接 — 无需配置。非常适合日常浏览、流媒体和隐私保护。"
+    },
+    "useVless": {
+      "title": "如果您想使用VLESS-Reality...",
+      "desc": "您身处一个有互联网审查的国家（如俄罗斯、中国、伊朗等）或您的ISP阻止VPN连接。通过我们的Telegram机器人@dopplercreatebot获取配置，并使用第三方客户端应用。"
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "所有指南",
+    "title": "订阅与定价",
+    "subtitle": "有关Doppler VPN计划、各平台定价、促销代码及如何管理您的订阅的所有信息。",
+    "promo": {
+      "title": "启动促销 — 所有计划享受20%折扣",
+      "desc": "在Telegram机器人结账时使用代码LAUNCH20，获得任何订阅计划的20%折扣。适用于所有新用户和现有用户。"
+    },
+    "pricingSection": "按平台定价",
+    "tableHeaders": {
+      "plan": "计划",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram机器人"
+    },
+    "plans": {
+      "monthly": "1个月",
+      "sixMonth": "6个月",
+      "annual": "1年"
+    },
+    "pricingNote": "Telegram机器人价格较低，因为没有应用商店佣金。所有计划均包含相同的Premium功能。",
+    "howToSubscribe": "如何订阅",
+    "appStoreMethod": {
+      "title": "通过App Store（iOS）",
+      "step1": "在您的iPhone或iPad上打开Doppler VPN应用",
+      "step2": "进入个人资料标签并点击“升级到Premium”",
+      "step3": "选择您的计划并通过Face ID或Apple ID确认"
+    },
+    "googlePlayMethod": {
+      "title": "通过Google Play（Android）",
+      "step1": "在您的Android设备上打开Doppler VPN应用",
+      "step2": "进入个人资料标签并点击“升级到Premium”",
+      "step3": "选择您的计划并通过Google Play支付确认"
+    },
+    "telegramMethod": {
+      "title": "通过Telegram机器人",
+      "savings": "与应用商店相比节省高达35%",
+      "step1": "在Telegram中打开@dopplercreatebot",
+      "step2": "点击“订阅”并选择您的计划",
+      "step3": "通过Stripe安全支付 — 使用代码LAUNCH20享受20%折扣"
+    },
+    "manageSection": "管理您的订阅",
+    "manage": {
+      "restore": {
+        "title": "恢复购买",
+        "desc": "如果您的Premium功能在购买后未显示，请打开应用 → 个人资料 → 订阅 → 恢复购买。这将重新同步您的订阅与我们的服务器。"
+      },
+      "cancel": {
+        "title": "取消订阅",
+        "desc": "对于App Store：设置 → Apple ID → 订阅 → Doppler VPN → 取消。对于Google Play：Google Play → 账户 → 订阅 → 取消。您的访问权限将持续到计费周期结束。"
+      },
+      "switch": {
+        "title": "切换计划",
+        "desc": "您可以随时通过您订阅的平台升级或降级您的计划。更改将在下一个计费周期生效。"
+      },
+      "crossPlatform": {
+        "title": "跨平台订阅",
+        "desc": "通过App Store购买的订阅仅适用于iOS。Google Play订阅仅适用于Android。要实现跨平台访问，请通过Telegram机器人订阅 — 它在任何地方都有效。"
+      }
+    },
+    "getApp": "下载应用",
+    "openBot": "打开Telegram机器人",
+    "viewProtocols": "VPN协议指南"
   }
 }

@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Preços simples e transparentes",
-    "subtitle": "Comece com um teste grátis de 7 dias. Cancele a qualquer momento.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Todos os recursos Premium incluídos",
-    "cardSubtitle": "Os mesmos recursos poderosos, escolha seu compromisso",
-    "durationSelector": "Escolha a duração da assinatura",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Mês",
-      "sixMonth": "6 Meses",
-      "annual": "Ano"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "Melhor",
-    "billedMonthly": "Cobrado mensalmente",
-    "billed": "Cobrado",
-    "every6Months": "a cada 6 meses",
-    "perYear": "por ano",
-    "save": "Economize",
-    "allFeaturesIncluded": "Todos os recursos incluídos em todos os planos",
-    "features": {
-      "noLogs": "VPN sem registros",
-      "adBlocker": "Bloqueador de anúncios",
-      "categoryFilter": "Filtro de categorias",
-      "customBlocklist": "Listas de bloqueio",
-      "devices": "10 dispositivos",
-      "support": "Suporte 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "Iniciar teste grátis",
-    "cancelAnytime": "Cancele a qualquer momento. Sem perguntas.",
-    "guarantee": "Garantia de reembolso de 30 dias",
-    "pricesIn": "Preços exibidos em"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Perguntas frequentes",
@@ -321,6 +338,7 @@
     "subtitle": "Conecte-se em minutos. Escolha seu dispositivo para começar.",
     "chooseDevice": "Escolha seu dispositivo",
     "backToGuides": "Todos os guias",
+    "seePricing": "See pricing plans",
     "nextStep": "Próximo",
     "prevStep": "Anterior",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Assinatura e preços",
       "subtitle": "Planos, códigos promocionais, descontos do bot Telegram e gerenciamento de assinatura."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "Baixar",
     "viewSetupGuide": "Ver guia de configuração",
     "vlessNote": "Para usuários do bot Telegram em regiões restritas"
+  },
+  "servers": {
+    "title": "Rede Global de Servidores",
+    "subtitle": "Escolha entre vários locais ao redor do mundo. Todos os servidores suportam arquitetura de protocolo duplo.",
+    "servers": "servidores",
+    "server": "servidor",
+    "protocols": "Protocolos",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Alemanha"
+      },
+      "moscow": {
+        "city": "Moscou",
+        "country": "Rússia"
+      },
+      "zurich": {
+        "city": "Zurique",
+        "country": "Suíça"
+      },
+      "london": {
+        "city": "Londres",
+        "country": "Reino Unido"
+      },
+      "newYork": {
+        "city": "Nova York",
+        "country": "Estados Unidos"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Todos os Guias",
+    "title": "Protocolos de VPN",
+    "subtitle": "Doppler suporta dois protocolos de VPN — WireGuard e VLESS-Reality. Cada um serve a um propósito diferente. Escolha o que se adapta à sua situação.",
+    "bestFor": "Melhor para",
+    "apps": "Aplicativos suportados",
+    "comparison": "Comparação lado a lado",
+    "tableFeature": "Recurso",
+    "whichToUse": "Qual devo usar?",
+    "getApps": "Baixar aplicativos",
+    "viewSubscription": "Assinatura e preços",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Recomendado",
+      "description": "Um protocolo de VPN moderno e leve, confiável por profissionais de segurança. WireGuard oferece as conexões mais rápidas, melhor eficiência de bateria e criptografia de nível militar. Este é o que o aplicativo Doppler VPN usa nativamente.",
+      "speed": "Velocidade máxima — supera OpenVPN e IKEv2",
+      "battery": "Consumo mínimo de bateria em dispositivos móveis",
+      "streaming": "Streaming suave e chamadas de vídeo",
+      "everyday": "Privacidade no dia a dia e bloqueio de anúncios",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Bypass de censura",
+      "description": "Um protocolo de proxy avançado projetado para contornar a inspeção profunda de pacotes (DPI) e a censura da rede. VLESS-Reality disfarça o tráfego de VPN como HTTPS normal, tornando-o quase indetectável. Usado através do nosso bot do Telegram.",
+      "censorship": "Contornando a censura governamental da internet",
+      "stealth": "Tráfego indetectável — parece normal HTTPS",
+      "deepPacket": "Evitando a inspeção profunda de pacotes (DPI)",
+      "restricted": "Acessando a internet na Rússia, China, Irã e outras regiões restritas",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Velocidade de conexão",
+        "wireguard": "Excelente — mais rápido disponível",
+        "vless": "Bom — leve sobrecarga devido ao mascaramento"
+      },
+      "battery": {
+        "label": "Impacto na bateria",
+        "wireguard": "Mínimo — eficiência em nível de kernel",
+        "vless": "Moderado — roda no espaço do usuário"
+      },
+      "censorship": {
+        "label": "Bypass de censura",
+        "wireguard": "Básico — pode ser bloqueado por DPI",
+        "vless": "Excelente — indetectável por DPI"
+      },
+      "setup": {
+        "label": "Dificuldade de configuração",
+        "wireguard": "Um toque — integrado ao aplicativo Doppler",
+        "vless": "Manual — configuração pelo bot do Telegram"
+      },
+      "platforms": {
+        "label": "Plataformas",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Use WireGuard se...",
+      "desc": "Você quer a experiência mais simples com o melhor desempenho. Basta baixar o aplicativo Doppler VPN e tocar em conectar — sem configuração necessária. Perfeito para navegação, streaming e privacidade no dia a dia."
+    },
+    "useVless": {
+      "title": "Use VLESS-Reality se...",
+      "desc": "Você está em um país com censura na internet (Rússia, China, Irã, etc.) ou seu ISP bloqueia conexões VPN. Obtenha sua configuração pelo nosso bot do Telegram @dopplercreatebot e use um aplicativo cliente de terceiros."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Todos os Guias",
+    "title": "Assinatura e Preços",
+    "subtitle": "Tudo sobre os planos do Doppler VPN, preços nas plataformas, códigos promocionais e como gerenciar sua assinatura.",
+    "promo": {
+      "title": "Promoção de lançamento — 20% de desconto em todos os planos",
+      "desc": "Use o código LAUNCH20 na finalização da compra no bot do Telegram para obter 20% de desconto em qualquer plano de assinatura. Disponível para todos os novos e atuais usuários."
+    },
+    "pricingSection": "Preços por plataforma",
+    "tableHeaders": {
+      "plan": "Plano",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Bot do Telegram"
+    },
+    "plans": {
+      "monthly": "1 Mês",
+      "sixMonth": "6 Meses",
+      "annual": "1 Ano"
+    },
+    "pricingNote": "Os preços do bot do Telegram são mais baixos porque não há comissões de loja de aplicativos. Todos os planos incluem os mesmos recursos Premium.",
+    "howToSubscribe": "Como assinar",
+    "appStoreMethod": {
+      "title": "Via App Store (iOS)",
+      "step1": "Abra o aplicativo Doppler VPN no seu iPhone ou iPad",
+      "step2": "Vá para a aba Perfil e toque em \"Atualizar para Premium\"",
+      "step3": "Escolha seu plano e confirme com Face ID ou Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Via Google Play (Android)",
+      "step1": "Abra o aplicativo Doppler VPN no seu dispositivo Android",
+      "step2": "Vá para a aba Perfil e toque em \"Atualizar para Premium\"",
+      "step3": "Escolha seu plano e confirme com o pagamento do Google Play"
+    },
+    "telegramMethod": {
+      "title": "Via Bot do Telegram",
+      "savings": "Economize até 35% em relação às lojas de aplicativos",
+      "step1": "Abra @dopplercreatebot no Telegram",
+      "step2": "Toque em \"Assinar\" e escolha seu plano",
+      "step3": "Pague com segurança via Stripe — use o código LAUNCH20 para 20% de desconto"
+    },
+    "manageSection": "Gerenciando sua assinatura",
+    "manage": {
+      "restore": {
+        "title": "Restaurar compras",
+        "desc": "Se seus recursos Premium não estiverem aparecendo após a compra, abra o aplicativo → Perfil → Assinatura → Restaurar Compras. Isso re-sincroniza sua assinatura com nossos servidores."
+      },
+      "cancel": {
+        "title": "Cancelar assinatura",
+        "desc": "Para App Store: Configurações → Apple ID → Assinaturas → Doppler VPN → Cancelar. Para Google Play: Google Play → Conta → Assinaturas → Cancelar. Seu acesso continua até o final do período de cobrança."
+      },
+      "switch": {
+        "title": "Trocar planos",
+        "desc": "Você pode atualizar ou rebaixar seu plano a qualquer momento através da mesma plataforma em que se inscreveu. A mudança entra em vigor no próximo ciclo de cobrança."
+      },
+      "crossPlatform": {
+        "title": "Assinaturas multiplataforma",
+        "desc": "Assinaturas adquiridas através da App Store funcionam apenas no iOS. Assinaturas do Google Play funcionam apenas no Android. Para acesso multiplataforma, assine via bot do Telegram — funciona em todos os lugares."
+      }
+    },
+    "getApp": "Baixar o aplicativo",
+    "openBot": "Abrir Bot do Telegram",
+    "viewProtocols": "Guia de Protocolos de VPN"
   }
 }

@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "سادہ، شفاف قیمتیں",
-    "subtitle": "7 دن کی مفت آزمائش سے شروع کریں۔ کسی بھی وقت منسوخ کریں۔",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "تمام پریمیم خصوصیات شامل",
-    "cardSubtitle": "ایک جیسی طاقتور خصوصیات، اپنا عزم منتخب کریں",
-    "durationSelector": "سبسکرپشن کی مدت منتخب کریں",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 ماہ",
-      "sixMonth": "6 ماہ",
-      "annual": "سال"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "بہترین",
-    "billedMonthly": "ماہانہ بل",
-    "billed": "بل",
-    "every6Months": "ہر 6 ماہ",
-    "perYear": "سالانہ",
-    "save": "بچت",
-    "allFeaturesIncluded": "ہر پلان میں تمام خصوصیات شامل",
-    "features": {
-      "noLogs": "صفر لاگ VPN",
-      "adBlocker": "ایڈ بلاکر",
-      "categoryFilter": "کیٹیگری فلٹر",
-      "customBlocklist": "بلاک لسٹس",
-      "devices": "10 ڈیوائسز",
-      "support": "24/7 سپورٹ"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "مفت آزمائش شروع کریں",
-    "cancelAnytime": "کسی بھی وقت منسوخ کریں۔ کوئی سوال نہیں۔",
-    "guarantee": "30 دن کی رقم واپسی کی ضمانت",
-    "pricesIn": "قیمتیں دکھائی گئی ہیں"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "اکثر پوچھے گئے سوالات",
@@ -401,6 +418,7 @@
       "miniAppDesc": "ہماری Telegram Mini App کے ذریعے محفوظ Stripe ادائیگیوں سے سبسکرائب کریں اور اپنا پلان منظم کریں۔"
     },
     "backToGuides": "تمام گائیڈز",
+    "seePricing": "See pricing plans",
     "nextStep": "اگلا",
     "prevStep": "پچھلا",
     "downloadApps": "ایپ ڈاؤنلوڈ کریں",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "سبسکرپشن اور قیمتیں",
       "subtitle": "پلانز، پرومو کوڈز، ٹیلیگرام بوٹ ڈسکاؤنٹس اور سبسکرپشن کا انتظام۔"
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "ڈاؤنلوڈ",
     "viewSetupGuide": "سیٹ اپ گائیڈ دیکھیں",
     "vlessNote": "محدود علاقوں میں ٹیلیگرام بوٹ صارفین کے لیے"
+  },
+  "servers": {
+    "title": "عالمی سرور نیٹ ورک",
+    "subtitle": "دنیا بھر کے متعدد مقامات میں سے انتخاب کریں۔ تمام سرورز ڈوئل پروٹوکول آرکیٹیکچر کو سپورٹ کرتے ہیں۔",
+    "servers": "سرورز",
+    "server": "سرور",
+    "protocols": "پروٹوکولز",
+    "locations": {
+      "frankfurt": {
+        "city": "فرینکفرٹ",
+        "country": "جرمنی"
+      },
+      "moscow": {
+        "city": "ماسکو",
+        "country": "روس"
+      },
+      "zurich": {
+        "city": "زیورخ",
+        "country": "سوئٹزرلینڈ"
+      },
+      "london": {
+        "city": "لندن",
+        "country": "برطانیہ"
+      },
+      "newYork": {
+        "city": "نیویارک",
+        "country": "امریکہ"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "تمام گائیڈز",
+    "title": "VPN پروٹوکول",
+    "subtitle": "Doppler دو VPN پروٹوکول کی حمایت کرتا ہے — WireGuard اور VLESS-Reality۔ ہر ایک کا ایک مختلف مقصد ہے۔ اس کا انتخاب کریں جو آپ کی صورتحال کے مطابق ہو۔",
+    "bestFor": "بہترین ہے",
+    "apps": "حمایت یافتہ ایپس",
+    "comparison": "طرف بہ طرف موازنہ",
+    "tableFeature": "خصوصیت",
+    "whichToUse": "مجھے کون سا استعمال کرنا چاہیے؟",
+    "getApps": "ایپس ڈاؤن لوڈ کریں",
+    "viewSubscription": "سبسکرپشن اور قیمتیں",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "تجویز کردہ",
+      "description": "ایک جدید، ہلکا پھلکا VPN پروٹوکول جس پر سیکیورٹی کے ماہرین اعتماد کرتے ہیں۔ WireGuard سب سے تیز کنکشن، بہترین بیٹری کی کارکردگی، اور فوجی درجے کی انکرپشن فراہم کرتا ہے۔ یہ وہی ہے جو Doppler VPN ایپ میں قدرتی طور پر استعمال ہوتا ہے۔",
+      "speed": "زیادہ سے زیادہ رفتار — OpenVPN اور IKEv2 سے بہتر",
+      "battery": "موبائل ڈیوائسز پر کم سے کم بیٹری کا خرچ",
+      "streaming": "ہموار اسٹریمنگ اور ویڈیو کالز",
+      "everyday": "روزمرہ کی رازداری اور اشتہارات کی بلاکنگ",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "سنسرشپ کی بائی پاس",
+      "description": "ایک جدید پراکسی پروٹوکول جو ڈیپ پیکٹ انسپیکشن (DPI) اور نیٹ ورک سنسرشپ کو بائی پاس کرنے کے لیے ڈیزائن کیا گیا ہے۔ VLESS-Reality VPN ٹریفک کو عام HTTPS کے طور پر چھپاتا ہے، جسے تقریباً غیر قابل شناخت بناتا ہے۔ ہمارے ٹیلیگرام بوٹ کے ذریعے استعمال ہوتا ہے۔",
+      "censorship": "حکومتی انٹرنیٹ سنسرشپ کو بائی پاس کرنا",
+      "stealth": "غیر قابل شناخت ٹریفک — عام HTTPS کی طرح نظر آتا ہے",
+      "deepPacket": "ڈیپ پیکٹ انسپیکشن (DPI) سے بچنا",
+      "restricted": "روس، چین، ایران، اور دیگر پابندی والے علاقوں میں انٹرنیٹ تک رسائی",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "کنکشن کی رفتار",
+        "wireguard": "بہترین — دستیاب سب سے تیز",
+        "vless": "اچھا — ماسکنگ سے معمولی اوور ہیڈ"
+      },
+      "battery": {
+        "label": "بیٹری کا اثر",
+        "wireguard": "کم سے کم — کرنل کی سطح کی کارکردگی",
+        "vless": "درمیانہ — صارف کی جگہ میں چلتا ہے"
+      },
+      "censorship": {
+        "label": "سنسرشپ کی بائی پاس",
+        "wireguard": "بنیادی — DPI کے ذریعے بلاک کیا جا سکتا ہے",
+        "vless": "بہترین — DPI کے ذریعے غیر قابل شناخت"
+      },
+      "setup": {
+        "label": "سیٹ اپ کی مشکل",
+        "wireguard": "ایک ٹیپ — Doppler ایپ میں شامل",
+        "vless": "دستی — ٹیلیگرام بوٹ سے کنفیگ"
+      },
+      "platforms": {
+        "label": "پلیٹ فارم",
+        "wireguard": "iOS، Android",
+        "vless": "iOS، Android، Windows، macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "اگر آپ WireGuard استعمال کریں تو...",
+      "desc": "آپ بہترین کارکردگی کے ساتھ سب سے آسان تجربہ چاہتے ہیں۔ بس Doppler VPN ایپ ڈاؤن لوڈ کریں اور کنیکٹ پر ٹیپ کریں — کوئی کنفیگریشن کی ضرورت نہیں۔ روزمرہ کی براؤزنگ، اسٹریمنگ، اور رازداری کے لیے بہترین۔"
+    },
+    "useVless": {
+      "title": "اگر آپ VLESS-Reality استعمال کریں تو...",
+      "desc": "آپ ایک ایسے ملک میں ہیں جہاں انٹرنیٹ سنسرشپ ہے (روس، چین، ایران، وغیرہ) یا آپ کا ISP VPN کنکشن کو بلاک کرتا ہے۔ ہمارے ٹیلیگرام بوٹ @dopplercreatebot سے اپنی کنفیگ حاصل کریں اور ایک تیسری پارٹی کے کلائنٹ ایپ کا استعمال کریں۔"
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "تمام گائیڈز",
+    "title": "سبسکرپشن اور قیمتیں",
+    "subtitle": "Doppler VPN منصوبوں، پلیٹ فارمز پر قیمتوں، پرومو کوڈز، اور اپنی سبسکرپشن کو منظم کرنے کے بارے میں سب کچھ۔",
+    "promo": {
+      "title": "لانچ پرومو — تمام منصوبوں پر 20% چھوٹ",
+      "desc": "ٹیلیگرام بوٹ میں چیک آؤٹ پر کوڈ LAUNCH20 استعمال کریں تاکہ کسی بھی سبسکرپشن پلان پر 20% چھوٹ حاصل کریں۔ یہ تمام نئے اور موجودہ صارفین کے لیے دستیاب ہے۔"
+    },
+    "pricingSection": "پلیٹ فارم کے لحاظ سے قیمتیں",
+    "tableHeaders": {
+      "plan": "منصوبہ",
+      "appStore": "ایپ اسٹور",
+      "googlePlay": "گوگل پلے",
+      "telegram": "ٹیلیگرام بوٹ"
+    },
+    "plans": {
+      "monthly": "1 مہینہ",
+      "sixMonth": "6 مہینے",
+      "annual": "1 سال"
+    },
+    "pricingNote": "ٹیلیگرام بوٹ کی قیمتیں کم ہیں کیونکہ ایپ اسٹور کی کمیشن نہیں ہیں۔ تمام منصوبوں میں ایک ہی Premium خصوصیات شامل ہیں۔",
+    "howToSubscribe": "سبسکرائب کرنے کا طریقہ",
+    "appStoreMethod": {
+      "title": "ایپ اسٹور کے ذریعے (iOS)",
+      "step1": "اپنے آئی فون یا آئی پیڈ پر Doppler VPN ایپ کھولیں",
+      "step2": "پروفائل ٹیب پر جائیں اور \"Premium میں اپ گریڈ کریں\" پر ٹیپ کریں",
+      "step3": "اپنا منصوبہ منتخب کریں اور Face ID یا Apple ID سے تصدیق کریں"
+    },
+    "googlePlayMethod": {
+      "title": "گوگل پلے کے ذریعے (Android)",
+      "step1": "اپنے Android ڈیوائس پر Doppler VPN ایپ کھولیں",
+      "step2": "پروفائل ٹیب پر جائیں اور \"Premium میں اپ گریڈ کریں\" پر ٹیپ کریں",
+      "step3": "اپنا منصوبہ منتخب کریں اور Google Play کی ادائیگی سے تصدیق کریں"
+    },
+    "telegramMethod": {
+      "title": "ٹیلیگرام بوٹ کے ذریعے",
+      "savings": "ایپ اسٹورز کے مقابلے میں 35% تک بچت کریں",
+      "step1": "ٹیلیگرام میں @dopplercreatebot کھولیں",
+      "step2": "\"سبسکرائب کریں\" پر ٹیپ کریں اور اپنا منصوبہ منتخب کریں",
+      "step3": "Stripe کے ذریعے محفوظ طریقے سے ادائیگی کریں — 20% چھوٹ کے لیے کوڈ LAUNCH20 استعمال کریں"
+    },
+    "manageSection": "اپنی سبسکرپشن کا انتظام",
+    "manage": {
+      "restore": {
+        "title": "خریداری کی بحالی",
+        "desc": "اگر آپ کی Premium خصوصیات خریداری کے بعد ظاہر نہیں ہو رہی ہیں، تو ایپ کھولیں → پروفائل → سبسکرپشن → خریداری کی بحالی۔ یہ آپ کی سبسکرپشن کو ہمارے سرورز کے ساتھ دوبارہ ہم آہنگ کرتا ہے۔"
+      },
+      "cancel": {
+        "title": "سبسکرپشن منسوخ کریں",
+        "desc": "ایپ اسٹور کے لیے: سیٹنگز → Apple ID → سبسکرپشنز → Doppler VPN → منسوخ کریں۔ گوگل پلے کے لیے: گوگل پلے → اکاؤنٹ → سبسکرپشنز → منسوخ کریں۔ آپ کی رسائی بلنگ کی مدت کے آخر تک جاری رہے گی۔"
+      },
+      "switch": {
+        "title": "منصوبے تبدیل کریں",
+        "desc": "آپ کسی بھی وقت اسی پلیٹ فارم کے ذریعے اپنے منصوبے کو اپ گریڈ یا ڈاؤن گریڈ کر سکتے ہیں جس پر آپ نے سبسکرائب کیا ہے۔ تبدیلی اگلی بلنگ سائیکل میں مؤثر ہوگی۔"
+      },
+      "crossPlatform": {
+        "title": "کراس پلیٹ فارم سبسکرپشنز",
+        "desc": "ایپ اسٹور کے ذریعے خریدی گئی سبسکرپشنز صرف iOS پر کام کرتی ہیں۔ گوگل پلے کی سبسکرپشنز صرف Android پر کام کرتی ہیں۔ کراس پلیٹ فارم رسائی کے لیے، ٹیلیگرام بوٹ کے ذریعے سبسکرائب کریں — یہ ہر جگہ کام کرتا ہے۔"
+      }
+    },
+    "getApp": "ایپ ڈاؤن لوڈ کریں",
+    "openBot": "ٹیلیگرام بوٹ کھولیں",
+    "viewProtocols": "VPN پروٹوکول گائیڈ"
   }
 }

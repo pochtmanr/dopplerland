@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Giá đơn giản, minh bạch",
-    "subtitle": "Bắt đầu với bản dùng thử miễn phí 7 ngày. Hủy bất cứ lúc nào.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Tất cả tính năng Premium đều bao gồm",
-    "cardSubtitle": "Cùng tính năng mạnh mẽ, chọn cam kết của bạn",
-    "durationSelector": "Chọn thời hạn đăng ký",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Tháng",
-      "sixMonth": "6 Tháng",
-      "annual": "Năm"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "Tốt nhất",
-    "billedMonthly": "Thanh toán hàng tháng",
-    "billed": "Thanh toán",
-    "every6Months": "mỗi 6 tháng",
-    "perYear": "mỗi năm",
-    "save": "Tiết kiệm",
-    "allFeaturesIncluded": "Tất cả tính năng bao gồm trong mọi gói",
-    "features": {
-      "noLogs": "VPN không nhật ký",
-      "adBlocker": "Chặn quảng cáo",
-      "categoryFilter": "Lọc danh mục",
-      "customBlocklist": "Danh sách chặn",
-      "devices": "10 thiết bị",
-      "support": "Hỗ trợ 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "Bắt Đầu Dùng Thử Miễn Phí",
-    "cancelAnytime": "Hủy bất cứ lúc nào. Không hỏi lý do.",
-    "guarantee": "Đảm bảo hoàn tiền 30 ngày",
-    "pricesIn": "Giá hiển thị bằng"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Câu hỏi thường gặp",
@@ -401,6 +418,7 @@
       "miniAppDesc": "Đăng ký và quản lý gói của bạn qua Mini App Telegram với thanh toán Stripe an toàn."
     },
     "backToGuides": "Tất cả hướng dẫn",
+    "seePricing": "See pricing plans",
     "nextStep": "Tiếp theo",
     "prevStep": "Trước",
     "downloadApps": "Tải ứng dụng",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Đăng ký và giá cả",
       "subtitle": "Gói cước, mã khuyến mãi, giảm giá bot Telegram và quản lý đăng ký."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "Tải xuống",
     "viewSetupGuide": "Xem hướng dẫn cài đặt",
     "vlessNote": "Dành cho người dùng bot Telegram ở vùng bị hạn chế"
+  },
+  "servers": {
+    "title": "Mạng Lưới Máy Chủ Toàn Cầu",
+    "subtitle": "Chọn từ nhiều vị trí trên toàn thế giới. Tất cả máy chủ hỗ trợ kiến trúc hai giao thức.",
+    "servers": "máy chủ",
+    "server": "máy chủ",
+    "protocols": "Giao thức",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Đức"
+      },
+      "moscow": {
+        "city": "Moscow",
+        "country": "Nga"
+      },
+      "zurich": {
+        "city": "Zurich",
+        "country": "Thụy Sĩ"
+      },
+      "london": {
+        "city": "London",
+        "country": "Vương quốc Anh"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "Hoa Kỳ"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Tất cả Hướng dẫn",
+    "title": "Giao thức VPN",
+    "subtitle": "Doppler hỗ trợ hai giao thức VPN — WireGuard và VLESS-Reality. Mỗi giao thức phục vụ một mục đích khác nhau. Chọn cái phù hợp với tình huống của bạn.",
+    "bestFor": "Tốt nhất cho",
+    "apps": "Các ứng dụng được hỗ trợ",
+    "comparison": "So sánh từng cái",
+    "tableFeature": "Tính năng",
+    "whichToUse": "Nên sử dụng cái nào?",
+    "getApps": "Tải xuống ứng dụng",
+    "viewSubscription": "Đăng ký & giá cả",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Được khuyên dùng",
+      "description": "Một giao thức VPN hiện đại, nhẹ, được các chuyên gia bảo mật tin tưởng. WireGuard cung cấp kết nối nhanh nhất, hiệu suất pin tốt nhất và mã hóa cấp quân đội. Đây là giao thức mà ứng dụng Doppler VPN sử dụng một cách tự nhiên.",
+      "speed": "Tốc độ tối đa — vượt trội hơn OpenVPN và IKEv2",
+      "battery": "Tiêu tốn pin tối thiểu trên thiết bị di động",
+      "streaming": "Phát trực tuyến và gọi video mượt mà",
+      "everyday": "Bảo mật hàng ngày và chặn quảng cáo",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Vượt qua kiểm duyệt",
+      "description": "Một giao thức proxy tiên tiến được thiết kế để vượt qua kiểm tra gói sâu (DPI) và kiểm duyệt mạng. VLESS-Reality ngụy trang lưu lượng VPN như HTTPS thông thường, khiến nó gần như không thể phát hiện. Sử dụng qua bot Telegram của chúng tôi.",
+      "censorship": "Vượt qua kiểm duyệt internet của chính phủ",
+      "stealth": "Lưu lượng không thể phát hiện — giống như HTTPS bình thường",
+      "deepPacket": "Tránh kiểm tra gói sâu (DPI)",
+      "restricted": "Truy cập internet ở Nga, Trung Quốc, Iran và các khu vực bị hạn chế khác",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Tốc độ kết nối",
+        "wireguard": "Xuất sắc — nhanh nhất có sẵn",
+        "vless": "Tốt — một chút overhead từ việc ngụy trang"
+      },
+      "battery": {
+        "label": "Tác động đến pin",
+        "wireguard": "Tối thiểu — hiệu quả ở mức kernel",
+        "vless": "Vừa phải — chạy trong không gian người dùng"
+      },
+      "censorship": {
+        "label": "Vượt qua kiểm duyệt",
+        "wireguard": "Cơ bản — có thể bị chặn bởi DPI",
+        "vless": "Xuất sắc — không thể phát hiện bởi DPI"
+      },
+      "setup": {
+        "label": "Độ khó thiết lập",
+        "wireguard": "Một chạm — tích hợp vào ứng dụng Doppler",
+        "vless": "Thủ công — cấu hình từ bot Telegram"
+      },
+      "platforms": {
+        "label": "Nền tảng",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Sử dụng WireGuard nếu...",
+      "desc": "Bạn muốn trải nghiệm đơn giản nhất với hiệu suất tốt nhất. Chỉ cần tải xuống ứng dụng Doppler VPN và nhấn kết nối — không cần cấu hình. Hoàn hảo cho việc duyệt web hàng ngày, phát trực tuyến và bảo mật."
+    },
+    "useVless": {
+      "title": "Sử dụng VLESS-Reality nếu...",
+      "desc": "Bạn đang ở một quốc gia có kiểm duyệt internet (Nga, Trung Quốc, Iran, v.v.) hoặc nhà cung cấp dịch vụ internet của bạn chặn kết nối VPN. Lấy cấu hình của bạn từ bot Telegram của chúng tôi @dopplercreatebot và sử dụng ứng dụng khách bên thứ ba."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Tất cả Hướng dẫn",
+    "title": "Đăng ký & Giá cả",
+    "subtitle": "Tất cả thông tin về các gói Doppler VPN, giá cả trên các nền tảng, mã khuyến mãi và cách quản lý đăng ký của bạn.",
+    "promo": {
+      "title": "Khuyến mãi ra mắt — giảm 20% cho tất cả các gói",
+      "desc": "Sử dụng mã LAUNCH20 khi thanh toán trong bot Telegram để nhận giảm 20% cho bất kỳ gói đăng ký nào. Có sẵn cho tất cả người dùng mới và hiện tại."
+    },
+    "pricingSection": "Giá cả theo nền tảng",
+    "tableHeaders": {
+      "plan": "Gói",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Bot Telegram"
+    },
+    "plans": {
+      "monthly": "1 Tháng",
+      "sixMonth": "6 Tháng",
+      "annual": "1 Năm"
+    },
+    "pricingNote": "Giá của bot Telegram thấp hơn vì không có hoa hồng từ cửa hàng ứng dụng. Tất cả các gói đều bao gồm các tính năng Premium giống nhau.",
+    "howToSubscribe": "Cách đăng ký",
+    "appStoreMethod": {
+      "title": "Qua App Store (iOS)",
+      "step1": "Mở ứng dụng Doppler VPN trên iPhone hoặc iPad của bạn",
+      "step2": "Đi đến tab Hồ sơ và nhấn \"Nâng cấp lên Premium\"",
+      "step3": "Chọn gói của bạn và xác nhận bằng Face ID hoặc Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Qua Google Play (Android)",
+      "step1": "Mở ứng dụng Doppler VPN trên thiết bị Android của bạn",
+      "step2": "Đi đến tab Hồ sơ và nhấn \"Nâng cấp lên Premium\"",
+      "step3": "Chọn gói của bạn và xác nhận bằng thanh toán Google Play"
+    },
+    "telegramMethod": {
+      "title": "Qua Bot Telegram",
+      "savings": "Tiết kiệm lên đến 35% so với cửa hàng ứng dụng",
+      "step1": "Mở @dopplercreatebot trong Telegram",
+      "step2": "Nhấn \"Đăng ký\" và chọn gói của bạn",
+      "step3": "Thanh toán an toàn qua Stripe — sử dụng mã LAUNCH20 để được giảm 20%"
+    },
+    "manageSection": "Quản lý đăng ký của bạn",
+    "manage": {
+      "restore": {
+        "title": "Khôi phục giao dịch mua",
+        "desc": "Nếu các tính năng Premium của bạn không hiển thị sau khi mua, hãy mở ứng dụng → Hồ sơ → Đăng ký → Khôi phục Giao dịch mua. Điều này sẽ đồng bộ lại đăng ký của bạn với máy chủ của chúng tôi."
+      },
+      "cancel": {
+        "title": "Hủy đăng ký",
+        "desc": "Đối với App Store: Cài đặt → Apple ID → Đăng ký → Doppler VPN → Hủy. Đối với Google Play: Google Play → Tài khoản → Đăng ký → Hủy. Quyền truy cập của bạn tiếp tục cho đến hết kỳ thanh toán."
+      },
+      "switch": {
+        "title": "Chuyển đổi gói",
+        "desc": "Bạn có thể nâng cấp hoặc hạ cấp gói của mình bất kỳ lúc nào thông qua cùng một nền tảng mà bạn đã đăng ký. Thay đổi sẽ có hiệu lực vào chu kỳ thanh toán tiếp theo."
+      },
+      "crossPlatform": {
+        "title": "Đăng ký đa nền tảng",
+        "desc": "Các đăng ký mua qua App Store chỉ hoạt động trên iOS. Các đăng ký Google Play chỉ hoạt động trên Android. Để truy cập đa nền tảng, hãy đăng ký qua bot Telegram — nó hoạt động ở mọi nơi."
+      }
+    },
+    "getApp": "Tải xuống ứng dụng",
+    "openBot": "Mở Bot Telegram",
+    "viewProtocols": "Hướng dẫn Giao thức VPN"
   }
 }

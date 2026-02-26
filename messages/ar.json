@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "أسعار بسيطة وشفافة",
-    "subtitle": "ابدأ بفترة تجريبية مجانية لمدة 7 أيام. ألغِ في أي وقت.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "جميع ميزات Premium مشمولة",
-    "cardSubtitle": "نفس الميزات القوية، اختر التزامك",
-    "durationSelector": "اختر مدة الاشتراك",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "شهر واحد",
-      "sixMonth": "6 أشهر",
-      "annual": "سنة"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "الأفضل",
-    "billedMonthly": "فوترة شهرية",
-    "billed": "فوترة",
-    "every6Months": "كل 6 أشهر",
-    "perYear": "في السنة",
-    "save": "وفّر",
-    "allFeaturesIncluded": "جميع الميزات مشمولة في كل خطة",
-    "features": {
-      "noLogs": "VPN بدون سجلات",
-      "adBlocker": "حاجب إعلانات",
-      "categoryFilter": "فلتر الفئات",
-      "customBlocklist": "قوائم الحظر",
-      "devices": "10 أجهزة",
-      "support": "دعم 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "ابدأ الفترة التجريبية المجانية",
-    "cancelAnytime": "ألغِ في أي وقت. بدون أسئلة.",
-    "guarantee": "ضمان استرداد الأموال لمدة 30 يوم",
-    "pricesIn": "الأسعار معروضة بـ"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "الأسئلة الشائعة",
@@ -321,6 +338,7 @@
     "subtitle": "اتصل في دقائق. اختر جهازك للبدء.",
     "chooseDevice": "اختر جهازك",
     "backToGuides": "جميع الأدلة",
+    "seePricing": "See pricing plans",
     "nextStep": "التالي",
     "prevStep": "السابق",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "الاشتراك والأسعار",
       "subtitle": "الخطط وأكواد الخصم وخصومات بوت تيليجرام وكيفية إدارة اشتراكك."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "تحميل",
     "viewSetupGuide": "عرض دليل الإعداد",
     "vlessNote": "لمستخدمي بوت تيليجرام في المناطق المحظورة"
+  },
+  "servers": {
+    "title": "شبكة خوادم عالمية",
+    "subtitle": "اختر من مواقع متعددة حول العالم. جميع الخوادم تدعم بنية البروتوكول المزدوج.",
+    "servers": "خوادم",
+    "server": "خادم",
+    "protocols": "البروتوكولات",
+    "locations": {
+      "frankfurt": {
+        "city": "فرانكفورت",
+        "country": "ألمانيا"
+      },
+      "moscow": {
+        "city": "موسكو",
+        "country": "روسيا"
+      },
+      "zurich": {
+        "city": "زيوريخ",
+        "country": "سويسرا"
+      },
+      "london": {
+        "city": "لندن",
+        "country": "المملكة المتحدة"
+      },
+      "newYork": {
+        "city": "نيويورك",
+        "country": "الولايات المتحدة"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "جميع الأدلة",
+    "title": "بروتوكولات VPN",
+    "subtitle": "يدعم Doppler بروتوكولين VPN — WireGuard و VLESS-Reality. كل منهما يخدم غرضًا مختلفًا. اختر الذي يناسب وضعك.",
+    "bestFor": "الأفضل لـ",
+    "apps": "التطبيقات المدعومة",
+    "comparison": "مقارنة جنبًا إلى جنب",
+    "tableFeature": "الميزة",
+    "whichToUse": "أي بروتوكول يجب أن أستخدم؟",
+    "getApps": "تحميل التطبيقات",
+    "viewSubscription": "الاشتراك والأسعار",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "موصى به",
+      "description": "بروتوكول VPN حديث وخفيف الوزن موثوق به من قبل محترفي الأمن. يوفر WireGuard أسرع الاتصالات، وأفضل كفاءة في البطارية، وتشفير من الدرجة العسكرية. هذا هو ما يستخدمه تطبيق Doppler VPN بشكل أصلي.",
+      "speed": "أقصى سرعة — يتفوق على OpenVPN و IKEv2",
+      "battery": "تأثير ضئيل على البطارية في الأجهزة المحمولة",
+      "streaming": "بث سلس ومكالمات فيديو",
+      "everyday": "خصوصية يومية وحظر الإعلانات",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "تجاوز الرقابة",
+      "description": "بروتوكول وكيل متقدم مصمم لتجاوز فحص الحزم العميق (DPI) ورقابة الشبكة. يخفي VLESS-Reality حركة مرور VPN كـ HTTPS عادي، مما يجعله شبه غير قابل للكشف. يستخدم عبر روبوت Telegram الخاص بنا.",
+      "censorship": "تجاوز رقابة الإنترنت الحكومية",
+      "stealth": "حركة مرور غير قابلة للكشف — تبدو كـ HTTPS عادي",
+      "deepPacket": "تجنب فحص الحزم العميق (DPI)",
+      "restricted": "الوصول إلى الإنترنت في روسيا والصين وإيران ومناطق مقيدة أخرى",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "سرعة الاتصال",
+        "wireguard": "ممتازة — الأسرع المتاحة",
+        "vless": "جيدة — بعض الزيادة الناتجة عن التمويه"
+      },
+      "battery": {
+        "label": "تأثير البطارية",
+        "wireguard": "ضئيل — كفاءة على مستوى النواة",
+        "vless": "متوسطة — تعمل في مساحة المستخدم"
+      },
+      "censorship": {
+        "label": "تجاوز الرقابة",
+        "wireguard": "أساسية — يمكن حظرها بواسطة DPI",
+        "vless": "ممتازة — غير قابلة للكشف بواسطة DPI"
+      },
+      "setup": {
+        "label": "صعوبة الإعداد",
+        "wireguard": "نقرة واحدة — مدمجة في تطبيق Doppler",
+        "vless": "يدوي — إعداد من روبوت Telegram"
+      },
+      "platforms": {
+        "label": "المنصات",
+        "wireguard": "iOS، Android",
+        "vless": "iOS، Android، Windows، macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "استخدم WireGuard إذا...",
+      "desc": "كنت ترغب في أبسط تجربة مع أفضل أداء. فقط قم بتحميل تطبيق Doppler VPN واضغط على الاتصال — لا حاجة للإعداد. مثالي للتصفح اليومي، والبث، والخصوصية."
+    },
+    "useVless": {
+      "title": "استخدم VLESS-Reality إذا...",
+      "desc": "كنت في بلد به رقابة على الإنترنت (روسيا، الصين، إيران، إلخ) أو مزود خدمة الإنترنت الخاص بك يحظر اتصالات VPN. احصل على إعدادك من روبوت Telegram الخاص بنا @dopplercreatebot واستخدم تطبيق عميل تابع لجهة خارجية."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "جميع الأدلة",
+    "title": "الاشتراك والأسعار",
+    "subtitle": "كل شيء عن خطط Doppler VPN، والأسعار عبر المنصات، وأكواد الترويج، وكيفية إدارة اشتراكك.",
+    "promo": {
+      "title": "عرض الإطلاق — خصم 20% على جميع الخطط",
+      "desc": "استخدم الرمز LAUNCH20 عند الدفع في روبوت Telegram للحصول على خصم 20% على أي خطة اشتراك. متاح لجميع المستخدمين الجدد والحاليين."
+    },
+    "pricingSection": "الأسعار حسب المنصة",
+    "tableHeaders": {
+      "plan": "الخطة",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "روبوت Telegram"
+    },
+    "plans": {
+      "monthly": "1 شهر",
+      "sixMonth": "6 أشهر",
+      "annual": "1 سنة"
+    },
+    "pricingNote": "أسعار روبوت Telegram أقل لأن هناك عمولات من متاجر التطبيقات. جميع الخطط تشمل نفس ميزات Premium.",
+    "howToSubscribe": "كيفية الاشتراك",
+    "appStoreMethod": {
+      "title": "عبر App Store (iOS)",
+      "step1": "افتح تطبيق Doppler VPN على جهاز iPhone أو iPad الخاص بك",
+      "step2": "اذهب إلى علامة التبويب الملف الشخصي واضغط على \"ترقية إلى Premium\"",
+      "step3": "اختر خطتك وأكد باستخدام Face ID أو Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "عبر Google Play (Android)",
+      "step1": "افتح تطبيق Doppler VPN على جهاز Android الخاص بك",
+      "step2": "اذهب إلى علامة التبويب الملف الشخصي واضغط على \"ترقية إلى Premium\"",
+      "step3": "اختر خطتك وأكد باستخدام دفع Google Play"
+    },
+    "telegramMethod": {
+      "title": "عبر روبوت Telegram",
+      "savings": "وفر حتى 35% مقارنة بمتاجر التطبيقات",
+      "step1": "افتح @dopplercreatebot في Telegram",
+      "step2": "اضغط على \"اشتراك\" واختر خطتك",
+      "step3": "ادفع بأمان عبر Stripe — استخدم الرمز LAUNCH20 للحصول على خصم 20%"
+    },
+    "manageSection": "إدارة اشتراكك",
+    "manage": {
+      "restore": {
+        "title": "استعادة المشتريات",
+        "desc": "إذا لم تظهر ميزات Premium بعد الشراء، افتح التطبيق → الملف الشخصي → الاشتراك → استعادة المشتريات. هذا يعيد مزامنة اشتراكك مع خوادمنا."
+      },
+      "cancel": {
+        "title": "إلغاء الاشتراك",
+        "desc": "لـ App Store: الإعدادات → Apple ID → الاشتراكات → Doppler VPN → إلغاء. لـ Google Play: Google Play → الحساب → الاشتراكات → إلغاء. يستمر وصولك حتى نهاية فترة الفوترة."
+      },
+      "switch": {
+        "title": "تغيير الخطط",
+        "desc": "يمكنك ترقية أو تخفيض خطتك في أي وقت من خلال نفس المنصة التي اشتركت عليها. يبدأ التغيير في الدورة الفوترة التالية."
+      },
+      "crossPlatform": {
+        "title": "الاشتراكات عبر المنصات",
+        "desc": "الاشتراكات المشتراة عبر App Store تعمل فقط على iOS. اشتراكات Google Play تعمل فقط على Android. للوصول عبر المنصات، اشترك عبر روبوت Telegram — فهو يعمل في كل مكان."
+      }
+    },
+    "getApp": "تحميل التطبيق",
+    "openBot": "فتح روبوت Telegram",
+    "viewProtocols": "دليل بروتوكولات VPN"
   }
 }

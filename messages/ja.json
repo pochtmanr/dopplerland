@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "シンプルで透明な料金設定",
-    "subtitle": "7日間の無料トライアルから始めましょう。いつでもキャンセル可能。",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "すべてのプレミアム機能を含む",
-    "cardSubtitle": "同じ強力な機能、期間をお選びください",
-    "durationSelector": "サブスクリプション期間を選択",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1ヶ月",
-      "sixMonth": "6ヶ月",
-      "annual": "年間"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "最高",
-    "billedMonthly": "月額請求",
-    "billed": "請求",
-    "every6Months": "6ヶ月ごと",
-    "perYear": "年間",
-    "save": "節約",
-    "allFeaturesIncluded": "すべてのプランにすべての機能を含む",
-    "features": {
-      "noLogs": "ノーログVPN",
-      "adBlocker": "広告ブロッカー",
-      "categoryFilter": "カテゴリフィルター",
-      "customBlocklist": "ブロックリスト",
-      "devices": "10台のデバイス",
-      "support": "24時間年中無休サポート"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "無料トライアルを開始",
-    "cancelAnytime": "いつでもキャンセル。質問なし。",
-    "guarantee": "30日間返金保証",
-    "pricesIn": "表示通貨"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "よくある質問",
@@ -321,6 +338,7 @@
     "subtitle": "数分で接続できます。お使いのデバイスを選んで始めましょう。",
     "chooseDevice": "デバイスを選択",
     "backToGuides": "すべてのガイド",
+    "seePricing": "See pricing plans",
     "nextStep": "次へ",
     "prevStep": "前へ",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "サブスクリプションと料金",
       "subtitle": "プラン、プロモコード、Telegramボット割引、サブスクリプション管理について。"
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "ダウンロード",
     "viewSetupGuide": "セットアップガイドを見る",
     "vlessNote": "制限地域のTelegramボットユーザー向け"
+  },
+  "servers": {
+    "title": "グローバルサーバーネットワーク",
+    "subtitle": "世界各地のサーバーから選択。すべてのサーバーがデュアルプロトコルに対応。",
+    "servers": "サーバー",
+    "server": "サーバー",
+    "protocols": "プロトコル",
+    "locations": {
+      "frankfurt": {
+        "city": "フランクフルト",
+        "country": "ドイツ"
+      },
+      "moscow": {
+        "city": "モスクワ",
+        "country": "ロシア"
+      },
+      "zurich": {
+        "city": "チューリッヒ",
+        "country": "スイス"
+      },
+      "london": {
+        "city": "ロンドン",
+        "country": "イギリス"
+      },
+      "newYork": {
+        "city": "ニューヨーク",
+        "country": "アメリカ"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "すべてのガイド",
+    "title": "VPNプロトコル",
+    "subtitle": "Dopplerは2つのVPNプロトコル — WireGuardとVLESS-Realityをサポートしています。それぞれ異なる目的に使用されます。あなたの状況に合ったものを選んでください。",
+    "bestFor": "最適な用途",
+    "apps": "サポートされているアプリ",
+    "comparison": "並列比較",
+    "tableFeature": "機能",
+    "whichToUse": "どちらを使うべきですか？",
+    "getApps": "アプリをダウンロード",
+    "viewSubscription": "サブスクリプションと価格",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "推奨",
+      "description": "セキュリティ専門家に信頼される現代的で軽量なVPNプロトコル。WireGuardは最速の接続、最高のバッテリー効率、軍用グレードの暗号化を提供します。これはDoppler VPNアプリがネイティブに使用しているものです。",
+      "speed": "最大速度 — OpenVPNおよびIKEv2を上回る",
+      "battery": "モバイルデバイスでのバッテリー消費が最小限",
+      "streaming": "スムーズなストリーミングとビデオ通話",
+      "everyday": "日常的なプライバシーと広告ブロック",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "検閲回避",
+      "description": "深層パケット検査（DPI）やネットワーク検閲を回避するために設計された高度なプロキシプロトコル。VLESS-RealityはVPNトラフィックを通常のHTTPSとして偽装し、ほぼ検出不可能にします。私たちのTelegramボットを介して使用します。",
+      "censorship": "政府のインターネット検閲を回避",
+      "stealth": "検出されないトラフィック — 通常のHTTPSのように見える",
+      "deepPacket": "深層パケット検査（DPI）を回避",
+      "restricted": "ロシア、中国、イランなどの制限地域でのインターネットアクセス",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "接続速度",
+        "wireguard": "優れた — 利用可能な最速",
+        "vless": "良好 — マスキングによるわずかなオーバーヘッド"
+      },
+      "battery": {
+        "label": "バッテリーへの影響",
+        "wireguard": "最小限 — カーネルレベルの効率",
+        "vless": "中程度 — ユーザースペースで実行"
+      },
+      "censorship": {
+        "label": "検閲回避",
+        "wireguard": "基本的 — DPIによってブロックされる可能性あり",
+        "vless": "優れた — DPIによって検出されない"
+      },
+      "setup": {
+        "label": "設定の難易度",
+        "wireguard": "ワンタップ — Dopplerアプリに組み込まれている",
+        "vless": "手動 — Telegramボットから設定"
+      },
+      "platforms": {
+        "label": "プラットフォーム",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "WireGuardを使用する場合...",
+      "desc": "最もシンプルな体験を望み、最高のパフォーマンスを求める場合。Doppler VPNアプリをダウンロードして接続をタップするだけで、設定は不要です。日常的なブラウジング、ストリーミング、プライバシーに最適です。"
+    },
+    "useVless": {
+      "title": "VLESS-Realityを使用する場合...",
+      "desc": "インターネット検閲のある国（ロシア、中国、イランなど）にいるか、ISPがVPN接続をブロックしている場合。私たちのTelegramボット @dopplercreatebot から設定を取得し、サードパーティのクライアントアプリを使用してください。"
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "すべてのガイド",
+    "title": "サブスクリプションと価格",
+    "subtitle": "Doppler VPNプラン、プラットフォームごとの価格、プロモコード、サブスクリプションの管理方法についてのすべて。",
+    "promo": {
+      "title": "ローンチプロモ — すべてのプラン20%オフ",
+      "desc": "Telegramボットでチェックアウト時にコードLAUNCH20を使用して、任意のサブスクリプションプランを20%オフで取得してください。新規および既存のユーザー全員が対象です。"
+    },
+    "pricingSection": "プラットフォーム別の価格",
+    "tableHeaders": {
+      "plan": "プラン",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegramボット"
+    },
+    "plans": {
+      "monthly": "1ヶ月",
+      "sixMonth": "6ヶ月",
+      "annual": "1年"
+    },
+    "pricingNote": "Telegramボットの価格はアプリストアの手数料がないため、低く設定されています。すべてのプランには同じPremium機能が含まれています。",
+    "howToSubscribe": "サブスクリプションの方法",
+    "appStoreMethod": {
+      "title": "App Store経由（iOS）",
+      "step1": "iPhoneまたはiPadでDoppler VPNアプリを開く",
+      "step2": "プロフィールタブに移動し、「Premiumにアップグレード」をタップ",
+      "step3": "プランを選択し、Face IDまたはApple IDで確認"
+    },
+    "googlePlayMethod": {
+      "title": "Google Play経由（Android）",
+      "step1": "AndroidデバイスでDoppler VPNアプリを開く",
+      "step2": "プロフィールタブに移動し、「Premiumにアップグレード」をタップ",
+      "step3": "プランを選択し、Google Playでの支払いを確認"
+    },
+    "telegramMethod": {
+      "title": "Telegramボット経由",
+      "savings": "アプリストアに対して最大35%の節約",
+      "step1": "Telegramで@dopplercreatebotを開く",
+      "step2": "「サブスクライブ」をタップし、プランを選択",
+      "step3": "Stripe経由で安全に支払い — 20%オフのためにコードLAUNCH20を使用"
+    },
+    "manageSection": "サブスクリプションの管理",
+    "manage": {
+      "restore": {
+        "title": "購入の復元",
+        "desc": "購入後にPremium機能が表示されない場合は、アプリを開いて → プロフィール → サブスクリプション → 購入を復元を選択してください。これにより、サブスクリプションがサーバーと再同期されます。"
+      },
+      "cancel": {
+        "title": "サブスクリプションのキャンセル",
+        "desc": "App Storeの場合: 設定 → Apple ID → サブスクリプション → Doppler VPN → キャンセル。Google Playの場合: Google Play → アカウント → サブスクリプション → キャンセル。請求期間の終了までアクセスは継続されます。"
+      },
+      "switch": {
+        "title": "プランの切り替え",
+        "desc": "サブスクリプションしたプラットフォームを通じて、いつでもプランをアップグレードまたはダウングレードできます。変更は次の請求サイクルで有効になります。"
+      },
+      "crossPlatform": {
+        "title": "クロスプラットフォームのサブスクリプション",
+        "desc": "App Storeを通じて購入したサブスクリプションはiOSでのみ機能します。Google PlayのサブスクリプションはAndroidでのみ機能します。クロスプラットフォームアクセスを希望する場合は、Telegramボットを通じてサブスクライブしてください — どこでも機能します。"
+      }
+    },
+    "getApp": "アプリをダウンロード",
+    "openBot": "Telegramボットを開く",
+    "viewProtocols": "VPNプロトコルガイド"
   }
 }

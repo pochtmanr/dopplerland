@@ -85,15 +85,20 @@
   },
   "pricing": {
     "title": "Simple, transparent pricing",
-    "subtitle": "Start with a 7-day free trial. Cancel anytime.",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "All Premium features included",
-    "cardSubtitle": "Same powerful features, choose your commitment",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
     "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Month",
-      "sixMonth": "6 Months",
-      "annual": "Year"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
     "bestValue": "Best",
     "billedMonthly": "Billed monthly",
@@ -101,16 +106,28 @@
     "every6Months": "every 6 months",
     "perYear": "per year",
     "save": "Save",
-    "allFeaturesIncluded": "All features included with every plan",
-    "features": {
-      "noLogs": "Zero-log VPN",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
+    },
+    "plusFeatures": {
+      "everything": "Everything in Free",
       "adBlocker": "Ad blocker",
       "categoryFilter": "Category filter",
-      "customBlocklist": "Blocklists",
+      "customBlocklist": "Custom blocklists",
       "devices": "10 devices",
-      "support": "24/7 support"
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
     },
-    "cta": "Start Free Trial",
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
     "cancelAnytime": "Cancel anytime. No questions asked.",
     "guarantee": "30-day money-back guarantee",
     "pricesIn": "Prices shown in"
@@ -401,6 +418,7 @@
       "miniAppDesc": "Subscribe and manage your plan through our Telegram Mini App with secure Stripe payments."
     },
     "backToGuides": "All Guides",
+    "seePricing": "See pricing plans",
     "downloadApps": "Download the app",
     "nextStep": "Next",
     "prevStep": "Previous",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Subscription & Pricing",
       "subtitle": "Plans, promo codes, Telegram bot discounts, and how to manage your subscription."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -605,5 +628,34 @@
     "getApp": "Download the app",
     "openBot": "Open Telegram Bot",
     "viewProtocols": "VPN Protocols guide"
+  },
+  "servers": {
+    "title": "Global Server Network",
+    "subtitle": "Choose from multiple locations worldwide. All servers support dual-protocol architecture.",
+    "servers": "servers",
+    "server": "server",
+    "protocols": "Protocols",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Germany"
+      },
+      "moscow": {
+        "city": "Moscow",
+        "country": "Russia"
+      },
+      "zurich": {
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      "london": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "United States"
+      }
+    }
   }
 }

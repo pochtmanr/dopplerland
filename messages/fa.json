@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "قیمت‌گذاری ساده و شفاف",
-    "subtitle": "با دوره آزمایشی رایگان ۷ روزه شروع کنید. هر زمان لغو کنید.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "تمام ویژگی‌های پریمیوم شامل می‌شود",
-    "cardSubtitle": "همان ویژگی‌های قدرتمند، تعهد خود را انتخاب کنید",
-    "durationSelector": "مدت اشتراک را انتخاب کنید",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "۱ ماه",
-      "sixMonth": "۶ ماه",
-      "annual": "سال"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "بهترین",
-    "billedMonthly": "صورتحساب ماهانه",
-    "billed": "صورتحساب",
-    "every6Months": "هر ۶ ماه",
-    "perYear": "در سال",
-    "save": "صرفه‌جویی",
-    "allFeaturesIncluded": "تمام ویژگی‌ها در هر پلن شامل می‌شود",
-    "features": {
-      "noLogs": "VPN بدون لاگ",
-      "adBlocker": "مسدودکننده تبلیغات",
-      "categoryFilter": "فیلتر دسته‌بندی",
-      "customBlocklist": "لیست‌های مسدودسازی",
-      "devices": "۱۰ دستگاه",
-      "support": "پشتیبانی ۲۴/۷"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "شروع دوره آزمایشی رایگان",
-    "cancelAnytime": "هر زمان لغو کنید. بدون سوال.",
-    "guarantee": "ضمانت بازگشت وجه ۳۰ روزه",
-    "pricesIn": "قیمت‌ها نمایش داده شده به"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "سوالات متداول",
@@ -321,6 +338,7 @@
     "subtitle": "در عرض چند دقیقه متصل شوید. دستگاه خود را برای شروع انتخاب کنید.",
     "chooseDevice": "دستگاه خود را انتخاب کنید",
     "backToGuides": "همه راهنماها",
+    "seePricing": "See pricing plans",
     "nextStep": "بعدی",
     "prevStep": "قبلی",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "اشتراک و قیمت‌گذاری",
       "subtitle": "طرح‌ها، کدهای تخفیف، تخفیف‌های ربات تلگرام و نحوه مدیریت اشتراک."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "دانلود",
     "viewSetupGuide": "مشاهده راهنمای نصب",
     "vlessNote": "برای کاربران ربات تلگرام در مناطق محدود"
+  },
+  "servers": {
+    "title": "شبکه سرور جهانی",
+    "subtitle": "از مکان‌های متعدد در سراسر جهان انتخاب کنید. همه سرورها از معماری دو پروتکله پشتیبانی می‌کنند.",
+    "servers": "سرور",
+    "server": "سرور",
+    "protocols": "پروتکل‌ها",
+    "locations": {
+      "frankfurt": {
+        "city": "فرانکفورت",
+        "country": "آلمان"
+      },
+      "moscow": {
+        "city": "مسکو",
+        "country": "روسیه"
+      },
+      "zurich": {
+        "city": "زوریخ",
+        "country": "سوئیس"
+      },
+      "london": {
+        "city": "لندن",
+        "country": "بریتانیا"
+      },
+      "newYork": {
+        "city": "نیویورک",
+        "country": "ایالات متحده"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "همه راهنماها",
+    "title": "پروتکل‌های VPN",
+    "subtitle": "Doppler از دو پروتکل VPN پشتیبانی می‌کند — WireGuard و VLESS-Reality. هر کدام هدف متفاوتی دارند. یکی را انتخاب کنید که مناسب وضعیت شما باشد.",
+    "bestFor": "بهترین برای",
+    "apps": "برنامه‌های پشتیبانی‌شده",
+    "comparison": "مقایسه کنار هم",
+    "tableFeature": "ویژگی",
+    "whichToUse": "کدام را باید استفاده کنم؟",
+    "getApps": "دانلود برنامه‌ها",
+    "viewSubscription": "اشتراک و قیمت‌گذاری",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "توصیه‌شده",
+      "description": "یک پروتکل VPN مدرن و سبک که توسط متخصصان امنیت مورد اعتماد است. WireGuard سریع‌ترین اتصالات، بهترین کارایی باتری و رمزگذاری با درجه نظامی را ارائه می‌دهد. این همان چیزی است که برنامه Doppler VPN به‌طور بومی از آن استفاده می‌کند.",
+      "speed": "حداکثر سرعت — بهتر از OpenVPN و IKEv2",
+      "battery": "مصرف باتری حداقل در دستگاه‌های موبایل",
+      "streaming": "پخش و تماس‌های ویدیویی روان",
+      "everyday": "حریم خصوصی روزمره و مسدود کردن تبلیغات",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "عبور از سانسور",
+      "description": "یک پروتکل پروکسی پیشرفته طراحی شده برای دور زدن بازرسی عمیق بسته‌ها (DPI) و سانسور شبکه. VLESS-Reality ترافیک VPN را به عنوان HTTPS معمولی پنهان می‌کند و آن را تقریباً غیرقابل شناسایی می‌سازد. از طریق ربات تلگرام ما استفاده می‌شود.",
+      "censorship": "دور زدن سانسور اینترنت دولتی",
+      "stealth": "ترافیک غیرقابل شناسایی — به نظر می‌رسد HTTPS معمولی است",
+      "deepPacket": "دور زدن بازرسی عمیق بسته‌ها (DPI)",
+      "restricted": "دسترسی به اینترنت در روسیه، چین، ایران و سایر مناطق محدود",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "سرعت اتصال",
+        "wireguard": "عالی — سریع‌ترین موجود",
+        "vless": "خوب — کمی بار اضافی از پنهان‌سازی"
+      },
+      "battery": {
+        "label": "تأثیر بر باتری",
+        "wireguard": "حداقل — کارایی در سطح هسته",
+        "vless": "متوسط — در فضای کاربر اجرا می‌شود"
+      },
+      "censorship": {
+        "label": "عبور از سانسور",
+        "wireguard": "پایه‌ای — ممکن است توسط DPI مسدود شود",
+        "vless": "عالی — غیرقابل شناسایی توسط DPI"
+      },
+      "setup": {
+        "label": "سختی راه‌اندازی",
+        "wireguard": "یک‌ضربه‌ای — در برنامه Doppler گنجانده شده است",
+        "vless": "دستی — پیکربندی از ربات تلگرام"
+      },
+      "platforms": {
+        "label": "پلتفرم‌ها",
+        "wireguard": "iOS، Android",
+        "vless": "iOS، Android، Windows، macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "از WireGuard استفاده کنید اگر...",
+      "desc": "شما می‌خواهید ساده‌ترین تجربه را با بهترین عملکرد داشته باشید. فقط برنامه Doppler VPN را دانلود کنید و روی اتصال ضربه بزنید — نیازی به پیکربندی نیست. عالی برای مرور روزمره، پخش و حریم خصوصی."
+    },
+    "useVless": {
+      "title": "از VLESS-Reality استفاده کنید اگر...",
+      "desc": "شما در کشوری با سانسور اینترنت (روسیه، چین، ایران و غیره) هستید یا ارائه‌دهنده اینترنت شما اتصالات VPN را مسدود می‌کند. پیکربندی خود را از ربات تلگرام ما @dopplercreatebot بگیرید و از یک برنامه کلاینت شخص ثالث استفاده کنید."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "همه راهنماها",
+    "title": "اشتراک و قیمت‌گذاری",
+    "subtitle": "همه چیز درباره برنامه‌های VPN Doppler، قیمت‌گذاری در پلتفرم‌ها، کدهای تخفیف و نحوه مدیریت اشتراک شما.",
+    "promo": {
+      "title": "تخفیف راه‌اندازی — ۲۰٪ تخفیف بر روی همه برنامه‌ها",
+      "desc": "از کد LAUNCH20 در پرداخت در ربات تلگرام استفاده کنید تا ۲۰٪ تخفیف بر روی هر برنامه اشتراکی بگیرید. برای همه کاربران جدید و موجود در دسترس است."
+    },
+    "pricingSection": "قیمت‌گذاری بر اساس پلتفرم",
+    "tableHeaders": {
+      "plan": "برنامه",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "ربات تلگرام"
+    },
+    "plans": {
+      "monthly": "۱ ماه",
+      "sixMonth": "۶ ماه",
+      "annual": "۱ سال"
+    },
+    "pricingNote": "قیمت‌های ربات تلگرام پایین‌تر است زیرا کمیسیون‌های فروشگاه اپلیکیشن وجود ندارد. همه برنامه‌ها شامل ویژگی‌های Premium یکسان هستند.",
+    "howToSubscribe": "چگونه اشتراک بگیرید",
+    "appStoreMethod": {
+      "title": "از طریق App Store (iOS)",
+      "step1": "برنامه Doppler VPN را در آیفون یا آی‌پد خود باز کنید",
+      "step2": "به تب پروفایل بروید و روی \"ارتقاء به Premium\" ضربه بزنید",
+      "step3": "برنامه خود را انتخاب کنید و با Face ID یا Apple ID تأیید کنید"
+    },
+    "googlePlayMethod": {
+      "title": "از طریق Google Play (Android)",
+      "step1": "برنامه Doppler VPN را در دستگاه Android خود باز کنید",
+      "step2": "به تب پروفایل بروید و روی \"ارتقاء به Premium\" ضربه بزنید",
+      "step3": "برنامه خود را انتخاب کنید و با پرداخت Google Play تأیید کنید"
+    },
+    "telegramMethod": {
+      "title": "از طریق ربات تلگرام",
+      "savings": "تا ۳۵٪ در مقایسه با فروشگاه‌های اپلیکیشن صرفه‌جویی کنید",
+      "step1": "ربات @dopplercreatebot را در تلگرام باز کنید",
+      "step2": "روی \"اشتراک\" ضربه بزنید و برنامه خود را انتخاب کنید",
+      "step3": "به‌طور ایمن از طریق Stripe پرداخت کنید — از کد LAUNCH20 برای ۲۰٪ تخفیف استفاده کنید"
+    },
+    "manageSection": "مدیریت اشتراک شما",
+    "manage": {
+      "restore": {
+        "title": "بازیابی خریدها",
+        "desc": "اگر ویژگی‌های Premium شما پس از خرید نمایش داده نمی‌شود، برنامه را باز کنید → پروفایل → اشتراک → بازیابی خریدها. این اشتراک شما را با سرورهای ما همگام‌سازی می‌کند."
+      },
+      "cancel": {
+        "title": "لغو اشتراک",
+        "desc": "برای App Store: تنظیمات → Apple ID → اشتراک‌ها → Doppler VPN → لغو. برای Google Play: Google Play → حساب → اشتراک‌ها → لغو. دسترسی شما تا پایان دوره صورتحساب ادامه دارد."
+      },
+      "switch": {
+        "title": "تغییر برنامه‌ها",
+        "desc": "شما می‌توانید در هر زمان از طریق همان پلتفرمی که اشتراک گرفته‌اید، برنامه خود را ارتقاء یا کاهش دهید. تغییر در دوره صورتحساب بعدی اعمال می‌شود."
+      },
+      "crossPlatform": {
+        "title": "اشتراک‌های چندپلتفرمی",
+        "desc": "اشتراک‌های خریداری‌شده از طریق App Store فقط در iOS کار می‌کنند. اشتراک‌های Google Play فقط در Android کار می‌کنند. برای دسترسی چندپلتفرمی، از طریق ربات تلگرام اشتراک بگیرید — در همه جا کار می‌کند."
+      }
+    },
+    "getApp": "برنامه را دانلود کنید",
+    "openBot": "ربات تلگرام را باز کنید",
+    "viewProtocols": "راهنمای پروتکل‌های VPN"
   }
 }

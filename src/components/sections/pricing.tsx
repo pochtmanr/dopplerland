@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 
 type Duration = "monthly" | "sixMonth" | "annual";
-type Region = "US" | "EU";
 
 interface PriceData {
   total: number;
@@ -17,71 +17,33 @@ interface PriceData {
   savings: number | null;
 }
 
-const PRICES: Record<Region, Record<Duration, PriceData>> = {
-  US: {
-    monthly: { total: 7.99, monthly: 7.99, savings: null },
-    sixMonth: { total: 29.99, monthly: 5.0, savings: 38 },
-    annual: { total: 39.99, monthly: 3.33, savings: 58 },
-  },
-  EU: {
-    monthly: { total: 8.99, monthly: 8.99, savings: null },
-    sixMonth: { total: 34.99, monthly: 5.83, savings: 35 },
-    annual: { total: 44.99, monthly: 3.75, savings: 58 },
-  },
+const PRICES: Record<Duration, PriceData> = {
+  monthly: { total: 4, monthly: 4, savings: null },
+  sixMonth: { total: 20, monthly: 3.33, savings: 17 },
+  annual: { total: 35, monthly: 2.92, savings: 27 },
 };
 
-const CURRENCY_SYMBOLS: Record<Region, string> = {
-  US: "$",
-  EU: "€",
-};
+function formatPrice(amount: number): string {
+  return `$${amount.toFixed(2)}`;
+}
 
-const featureKeys = [
+const freeFeatureKeys = [
+  "servers",
+  "data",
+  "protocols",
+  "devices",
   "noLogs",
+] as const;
+
+const plusFeatureKeys = [
+  "everything",
   "adBlocker",
   "categoryFilter",
   "customBlocklist",
   "devices",
   "support",
+  "smartVpn",
 ] as const;
-
-function detectRegion(): Region {
-  if (typeof window === "undefined") return "US";
-
-  const language = navigator.language || "";
-  const euLocales = [
-    "de",
-    "fr",
-    "it",
-    "es",
-    "nl",
-    "pt",
-    "pl",
-    "el",
-    "cs",
-    "sk",
-    "hu",
-    "ro",
-    "bg",
-    "hr",
-    "sl",
-    "et",
-    "lv",
-    "lt",
-    "fi",
-    "sv",
-    "da",
-  ];
-
-  const langCode = language.split("-")[0].toLowerCase();
-  if (euLocales.includes(langCode)) return "EU";
-
-  return "US";
-}
-
-function formatPrice(amount: number, region: Region): string {
-  const symbol = CURRENCY_SYMBOLS[region];
-  return `${symbol}${amount.toFixed(2)}`;
-}
 
 interface DurationSelectorProps {
   selected: Duration;
@@ -90,7 +52,7 @@ interface DurationSelectorProps {
 }
 
 function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
-  const durations: Duration[] = ["monthly", "sixMonth", "annual"];
+  const durations = useMemo<Duration[]>(() => ["monthly", "sixMonth", "annual"], []);
   const selectedIndex = durations.indexOf(selected);
 
   const handleKeyDown = useCallback(
@@ -159,14 +121,17 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
             <span className="relative z-10 flex items-center justify-center gap-1.5">
               {t(`durations.${duration}`)}
               {isAnnual && (
-                <span className={`
+                <span
+                  className={`
                   hidden sm:inline text-[10px] uppercase tracking-wider font-bold
                   px-1.5 py-0.5 rounded-full
-                  ${isSelected
-                    ? "bg-bg-primary/20 text-bg-primary"
-                    : "bg-accent-teal/15 text-accent-teal"
+                  ${
+                    isSelected
+                      ? "bg-bg-primary/20 text-bg-primary"
+                      : "bg-accent-teal/15 text-accent-teal"
                   }
-                `}>
+                `}
+                >
                   {t("bestValue")}
                 </span>
               )}
@@ -180,27 +145,26 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
 
 interface PriceDisplayProps {
   duration: Duration;
-  region: Region;
   t: ReturnType<typeof useTranslations>;
 }
 
-function PriceDisplay({ duration, region, t }: PriceDisplayProps) {
-  const priceData = PRICES[region][duration];
-  const monthlyBase = PRICES[region].monthly.monthly;
+function PriceDisplay({ duration, t }: PriceDisplayProps) {
+  const priceData = PRICES[duration];
+  const monthlyBase = PRICES.monthly.monthly;
 
   return (
     <div className="flex flex-col items-center gap-2 transition-opacity duration-150">
       {/* Strikethrough original price (for multi-month plans) */}
       {priceData.savings && (
         <span className="text-lg text-text-muted line-through">
-          {formatPrice(monthlyBase, region)}/mo
+          {formatPrice(monthlyBase)}/mo
         </span>
       )}
 
       {/* Main price */}
       <div className="flex items-baseline gap-1">
         <span className="font-display text-5xl md:text-6xl font-bold text-text-primary">
-          {formatPrice(priceData.monthly, region)}
+          {formatPrice(priceData.monthly)}
         </span>
         <span className="text-xl text-text-muted">/mo</span>
       </div>
@@ -211,7 +175,7 @@ function PriceDisplay({ duration, region, t }: PriceDisplayProps) {
           t("billedMonthly")
         ) : (
           <>
-            {t("billed")} {formatPrice(priceData.total, region)}{" "}
+            {t("billed")} {formatPrice(priceData.total)}{" "}
             {duration === "sixMonth" ? t("every6Months") : t("perYear")}
           </>
         )}
@@ -227,93 +191,168 @@ function PriceDisplay({ duration, region, t }: PriceDisplayProps) {
   );
 }
 
+function CheckIcon({ className }: { className: string }) {
+  return (
+    <svg
+      className={`w-4 h-4 flex-shrink-0 ${className}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m4.5 12.75 6 6 9-13.5"
+      />
+    </svg>
+  );
+}
+
 export function Pricing() {
   const t = useTranslations("pricing");
   const [selectedDuration, setSelectedDuration] = useState<Duration>("annual");
-  const [region, setRegion] = useState<Region>("US");
-
-  useEffect(() => {
-    setRegion(detectRegion());
-  }, []);
 
   return (
     <Section id="pricing" className="bg-bg-secondary/30">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <Reveal className="max-w-lg mx-auto">
-        <Card
-          className="relative border-accent-teal/30 bg-gradient-to-b from-accent-teal/5 to-transparent"
-          padding="lg"
-        >
-          {/* Header */}
-          <div className="text-center mb-6">
-            <Badge variant="teal" className="mb-4">
-              {t("plusBadge")}
-            </Badge>
-            <h3 className="font-display text-2xl font-semibold text-text-primary mb-2">
-              {t("cardTitle")}
-            </h3>
-            <p className="text-text-muted text-sm">{t("cardSubtitle")}</p>
-          </div>
+      <Reveal className="max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {/* Free Card */}
+          <div className="order-last md:order-first md:col-span-2">
+            <Card padding="lg" className="h-full">
+              <div className="text-center mb-6">
+                <Badge variant="default" className="mb-4">
+                  {t("freeBadge")}
+                </Badge>
+                <h3 className="font-display text-2xl font-semibold text-text-primary mb-2">
+                  {t("freeTitle")}
+                </h3>
+                <p className="text-text-muted text-sm">
+                  {t("freeSubtitle")}
+                </p>
+              </div>
 
-          {/* Duration Selector */}
-          <div className="mb-8">
-            <DurationSelector
-              selected={selectedDuration}
-              onSelect={setSelectedDuration}
-              t={t}
-            />
-          </div>
+              {/* Free Price */}
+              <div className="text-center mb-8">
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="font-display text-5xl md:text-6xl font-bold text-text-primary">
+                    {t("freePrice")}
+                  </span>
+                  <span className="text-xl text-text-muted">
+                    /{t("freePeriod")}
+                  </span>
+                </div>
+              </div>
 
-          {/* Price Display */}
-          <div className="text-center mb-8 min-h-[140px] flex items-center justify-center">
-            <PriceDisplay
-              duration={selectedDuration}
-              region={region}
-              t={t}
-            />
-          </div>
-
-          {/* Feature assurance */}
-          <div className="space-y-3 mb-8">
-            <p className="text-accent-teal text-sm font-medium text-center mb-4">
-              {t("allFeaturesIncluded")}
-            </p>
-            <ul className="grid grid-cols-2 gap-2">
-              {featureKeys.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-2 text-text-muted text-sm"
-                >
-                  <svg
-                    className="w-4 h-4 text-accent-teal flex-shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
+              {/* Free Features */}
+              <ul className="space-y-3 mb-8">
+                {freeFeatureKeys.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-2 text-text-muted text-sm"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m4.5 12.75 6 6 9-13.5"
-                    />
-                  </svg>
-                  {t(`features.${feature}`)}
-                </li>
-              ))}
-            </ul>
+                    <CheckIcon className="text-text-muted" />
+                    {t(`freeFeatures.${feature}`)}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Free CTA */}
+              <Button
+                variant="outline"
+                className="w-full"
+                size="lg"
+                href="/apps"
+              >
+                {t("freeCta")}
+              </Button>
+            </Card>
           </div>
 
-          {/* CTA Button */}
-          <Button variant="primary" className="w-full" size="lg" href="https://t.me/dopplercreatebot" external>
-            {t("cta")}
-          </Button>
+          {/* Plus Card */}
+          <div className="order-first md:order-last md:col-span-3">
+            <Card
+              padding="lg"
+              className="h-full border-accent-teal/30 bg-gradient-to-b from-accent-teal/5 to-transparent"
+            >
+              <div className="text-center mb-6">
+                <Badge variant="teal" className="mb-4">
+                  {t("plusBadge")}
+                </Badge>
+                <h3 className="font-display text-2xl font-semibold text-text-primary mb-2">
+                  {t("plusTitle")}
+                </h3>
+                <p className="text-text-muted text-sm">
+                  {t("plusSubtitle")}
+                </p>
+              </div>
 
-          {/* Cancel anytime note */}
-          <p className="text-center text-text-muted text-xs mt-4">
-            {t("cancelAnytime")}
-          </p>
-        </Card>
+              {/* Duration Selector */}
+              <div className="mb-8">
+                <DurationSelector
+                  selected={selectedDuration}
+                  onSelect={setSelectedDuration}
+                  t={t}
+                />
+              </div>
+
+              {/* Price Display */}
+              <div className="text-center mb-8 min-h-[140px] flex items-center justify-center">
+                <PriceDisplay duration={selectedDuration} t={t} />
+              </div>
+
+              {/* Plus Features */}
+              <ul className="space-y-3 mb-8">
+                {plusFeatureKeys.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-2 text-text-muted text-sm"
+                  >
+                    <CheckIcon className="text-accent-teal" />
+                    {t(`plusFeatures.${feature}`)}
+                    {feature === "smartVpn" && (
+                      <Badge
+                        variant="teal"
+                        className="ms-1.5 text-[10px] px-1.5 py-0.5"
+                      >
+                        {t("comingSoon")}
+                      </Badge>
+                    )}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Plus CTA */}
+              <Button
+                variant="primary"
+                className="w-full"
+                size="lg"
+                href="https://t.me/dopplercreatebot"
+                external
+              >
+                {t("plusCta")}
+              </Button>
+
+              {/* Trial note */}
+              <p className="text-center text-text-muted text-xs mt-4">
+                {t("trialNote")}
+              </p>
+
+              {/* Platform note */}
+              <p className="text-center text-text-muted/70 text-xs mt-3">
+                {t("platformNote")}{" "}
+                <Link
+                  href="/guide/subscription"
+                  className="text-accent-teal hover:underline"
+                >
+                  {t("platformLink")}
+                </Link>
+              </p>
+            </Card>
+          </div>
+        </div>
       </Reveal>
 
       {/* Money-back guarantee */}
@@ -335,11 +374,6 @@ export function Pricing() {
           {t("guarantee")}
         </p>
       </Reveal>
-
-      {/* Region indicator (optional, can be removed) */}
-      <p className="text-center text-text-muted/50 text-xs mt-4">
-        {t("pricesIn")} {region === "US" ? "USD" : "EUR"}
-      </p>
     </Section>
   );
 }

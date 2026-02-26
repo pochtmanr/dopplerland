@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "सरल, पारदर्शी मूल्य",
-    "subtitle": "7-दिन के मुफ्त ट्रायल से शुरू करें। कभी भी रद्द करें।",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "सभी प्रीमियम फीचर्स शामिल",
-    "cardSubtitle": "वही शक्तिशाली फीचर्स, अपनी प्रतिबद्धता चुनें",
-    "durationSelector": "सब्सक्रिप्शन अवधि चुनें",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 महीना",
-      "sixMonth": "6 महीने",
-      "annual": "साल"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "सर्वश्रेष्ठ",
-    "billedMonthly": "मासिक बिलिंग",
-    "billed": "बिल",
-    "every6Months": "हर 6 महीने",
-    "perYear": "प्रति वर्ष",
-    "save": "बचाएं",
-    "allFeaturesIncluded": "हर प्लान में सभी फीचर्स शामिल",
-    "features": {
-      "noLogs": "ज़ीरो-लॉग VPN",
-      "adBlocker": "ऐड ब्लॉकर",
-      "categoryFilter": "कैटेगरी फिल्टर",
-      "customBlocklist": "ब्लॉकलिस्ट",
-      "devices": "10 डिवाइस",
-      "support": "24/7 सपोर्ट"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "मुफ्त ट्रायल शुरू करें",
-    "cancelAnytime": "कभी भी रद्द करें। कोई सवाल नहीं।",
-    "guarantee": "30-दिन की मनी-बैक गारंटी",
-    "pricesIn": "मूल्य दिखाए गए हैं"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "अक्सर पूछे जाने वाले सवाल",
@@ -321,6 +338,7 @@
     "subtitle": "कुछ ही मिनटों में कनेक्ट हों। शुरू करने के लिए अपना डिवाइस चुनें।",
     "chooseDevice": "अपना डिवाइस चुनें",
     "backToGuides": "सभी गाइड",
+    "seePricing": "See pricing plans",
     "nextStep": "अगला",
     "prevStep": "पिछला",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "सब्सक्रिप्शन और प्राइसिंग",
       "subtitle": "प्लान, प्रोमो कोड, Telegram बॉट डिस्काउंट और सब्सक्रिप्शन प्रबंधन।"
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "डाउनलोड",
     "viewSetupGuide": "सेटअप गाइड देखें",
     "vlessNote": "प्रतिबंधित क्षेत्रों में Telegram बॉट उपयोगकर्ताओं के लिए"
+  },
+  "servers": {
+    "title": "वैश्विक सर्वर नेटवर्क",
+    "subtitle": "दुनिया भर के कई स्थानों में से चुनें। सभी सर्वर डुअल-प्रोटोकॉल आर्किटेक्चर को सपोर्ट करते हैं।",
+    "servers": "सर्वर",
+    "server": "सर्वर",
+    "protocols": "प्रोटोकॉल",
+    "locations": {
+      "frankfurt": {
+        "city": "फ्रैंकफर्ट",
+        "country": "जर्मनी"
+      },
+      "moscow": {
+        "city": "मॉस्को",
+        "country": "रूस"
+      },
+      "zurich": {
+        "city": "ज़्यूरिख",
+        "country": "स्विट्ज़रलैंड"
+      },
+      "london": {
+        "city": "लंदन",
+        "country": "यूनाइटेड किंगडम"
+      },
+      "newYork": {
+        "city": "न्यूयॉर्क",
+        "country": "संयुक्त राज्य अमेरिका"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "सभी गाइड",
+    "title": "VPN प्रोटोकॉल",
+    "subtitle": "Doppler दो VPN प्रोटोकॉल का समर्थन करता है — WireGuard और VLESS-Reality। प्रत्येक का एक अलग उद्देश्य है। उस प्रोटोकॉल का चयन करें जो आपकी स्थिति के लिए उपयुक्त हो।",
+    "bestFor": "के लिए सबसे अच्छा",
+    "apps": "समर्थित ऐप्स",
+    "comparison": "साइड-बाय-साइड तुलना",
+    "tableFeature": "विशेषता",
+    "whichToUse": "मुझे कौन सा उपयोग करना चाहिए?",
+    "getApps": "ऐप्स डाउनलोड करें",
+    "viewSubscription": "सदस्यता और मूल्य निर्धारण",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "सिफारिश की गई",
+      "description": "एक आधुनिक, हल्का VPN प्रोटोकॉल जिसे सुरक्षा पेशेवरों द्वारा विश्वसनीय माना जाता है। WireGuard सबसे तेज़ कनेक्शन, सर्वश्रेष्ठ बैटरी दक्षता और सैन्य-ग्रेड एन्क्रिप्शन प्रदान करता है। यही Doppler VPN ऐप का मूल रूप से उपयोग करता है।",
+      "speed": "अधिकतम गति — OpenVPN और IKEv2 से बेहतर",
+      "battery": "मोबाइल उपकरणों पर न्यूनतम बैटरी खपत",
+      "streaming": "स्मूद स्ट्रीमिंग और वीडियो कॉल",
+      "everyday": "हर दिन की गोपनीयता और विज्ञापन अवरोधन",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "सेंसरशिप बाईपास",
+      "description": "एक उन्नत प्रॉक्सी प्रोटोकॉल जिसे गहरे पैकेट निरीक्षण (DPI) और नेटवर्क सेंसरशिप को बाईपास करने के लिए डिज़ाइन किया गया है। VLESS-Reality VPN ट्रैफ़िक को सामान्य HTTPS के रूप में छुपाता है, जिससे इसे लगभग पहचानना असंभव हो जाता है। इसे हमारे Telegram बॉट के माध्यम से उपयोग किया जाता है।",
+      "censorship": "सरकारी इंटरनेट सेंसरशिप को बाईपास करना",
+      "stealth": "अज्ञात ट्रैफ़िक — सामान्य HTTPS जैसा दिखता है",
+      "deepPacket": "गहरे पैकेट निरीक्षण (DPI) से बचना",
+      "restricted": "रूस, चीन, ईरान और अन्य प्रतिबंधित क्षेत्रों में इंटरनेट तक पहुंचना",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "कनेक्शन गति",
+        "wireguard": "उत्कृष्ट — सबसे तेज़ उपलब्ध",
+        "vless": "अच्छा — मास्किंग से थोड़ा ओवरहेड"
+      },
+      "battery": {
+        "label": "बैटरी प्रभाव",
+        "wireguard": "न्यूनतम — कर्नेल-स्तरीय दक्षता",
+        "vless": "मध्यम — उपयोगकर्ता स्थान में चलता है"
+      },
+      "censorship": {
+        "label": "सेंसरशिप बाईपास",
+        "wireguard": "बुनियादी — DPI द्वारा अवरुद्ध किया जा सकता है",
+        "vless": "उत्कृष्ट — DPI द्वारा पहचानने योग्य नहीं"
+      },
+      "setup": {
+        "label": "सेटअप की कठिनाई",
+        "wireguard": "एक-टैप — Doppler ऐप में निर्मित",
+        "vless": "हाथ से — Telegram बॉट से कॉन्फ़िग"
+      },
+      "platforms": {
+        "label": "प्लेटफार्म",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "यदि आप WireGuard का उपयोग करें...",
+      "desc": "आप सबसे सरल अनुभव और सर्वश्रेष्ठ प्रदर्शन चाहते हैं। बस Doppler VPN ऐप डाउनलोड करें और कनेक्ट पर टैप करें — कोई कॉन्फ़िगरेशन की आवश्यकता नहीं। हर दिन की ब्राउज़िंग, स्ट्रीमिंग और गोपनीयता के लिए आदर्श।"
+    },
+    "useVless": {
+      "title": "यदि आप VLESS-Reality का उपयोग करें...",
+      "desc": "आप एक ऐसे देश में हैं जहाँ इंटरनेट सेंसरशिप है (रूस, चीन, ईरान, आदि) या आपका ISP VPN कनेक्शन को ब्लॉक करता है। हमारे Telegram बॉट @dopplercreatebot से अपनी कॉन्फ़िग प्राप्त करें और एक तृतीय-पक्ष क्लाइंट ऐप का उपयोग करें।"
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "सभी गाइड",
+    "title": "सदस्यता और मूल्य निर्धारण",
+    "subtitle": "Doppler VPN योजनाओं, प्लेटफार्मों में मूल्य निर्धारण, प्रमो कोड और अपनी सदस्यता प्रबंधित करने के बारे में सब कुछ।",
+    "promo": {
+      "title": "लॉन्च प्रमो — सभी योजनाओं पर 20% छूट",
+      "desc": "किसी भी सदस्यता योजना पर 20% छूट पाने के लिए Telegram बॉट में चेकआउट पर कोड LAUNCH20 का उपयोग करें। सभी नए और मौजूदा उपयोगकर्ताओं के लिए उपलब्ध।"
+    },
+    "pricingSection": "प्लेटफार्म द्वारा मूल्य निर्धारण",
+    "tableHeaders": {
+      "plan": "योजना",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram बॉट"
+    },
+    "plans": {
+      "monthly": "1 माह",
+      "sixMonth": "6 महीने",
+      "annual": "1 वर्ष"
+    },
+    "pricingNote": "Telegram बॉट की कीमतें कम हैं क्योंकि ऐप स्टोर कमीशन नहीं हैं। सभी योजनाओं में समान Premium सुविधाएँ शामिल हैं।",
+    "howToSubscribe": "कैसे सदस्यता लें",
+    "appStoreMethod": {
+      "title": "App Store के माध्यम से (iOS)",
+      "step1": "अपने iPhone या iPad पर Doppler VPN ऐप खोलें",
+      "step2": "प्रोफ़ाइल टैब पर जाएं और \"Premium में अपग्रेड करें\" पर टैप करें",
+      "step3": "अपनी योजना चुनें और Face ID या Apple ID से पुष्टि करें"
+    },
+    "googlePlayMethod": {
+      "title": "Google Play के माध्यम से (Android)",
+      "step1": "अपने Android डिवाइस पर Doppler VPN ऐप खोलें",
+      "step2": "प्रोफ़ाइल टैब पर जाएं और \"Premium में अपग्रेड करें\" पर टैप करें",
+      "step3": "अपनी योजना चुनें और Google Play भुगतान से पुष्टि करें"
+    },
+    "telegramMethod": {
+      "title": "Telegram बॉट के माध्यम से",
+      "savings": "ऐप स्टोर्स की तुलना में 35% तक बचत करें",
+      "step1": "Telegram में @dopplercreatebot खोलें",
+      "step2": "\"सदस्यता लें\" पर टैप करें और अपनी योजना चुनें",
+      "step3": "Stripe के माध्यम से सुरक्षित रूप से भुगतान करें — 20% छूट के लिए कोड LAUNCH20 का उपयोग करें"
+    },
+    "manageSection": "अपनी सदस्यता प्रबंधित करना",
+    "manage": {
+      "restore": {
+        "title": "खरीदारी पुनर्स्थापित करें",
+        "desc": "यदि आपकी Premium सुविधाएँ खरीदारी के बाद दिखाई नहीं दे रही हैं, तो ऐप खोलें → प्रोफ़ाइल → सदस्यता → खरीदारी पुनर्स्थापित करें। यह आपकी सदस्यता को हमारे सर्वरों के साथ फिर से समन्वयित करता है।"
+      },
+      "cancel": {
+        "title": "सदस्यता रद्द करें",
+        "desc": "App Store के लिए: सेटिंग्स → Apple ID → सदस्यताएँ → Doppler VPN → रद्द करें। Google Play के लिए: Google Play → खाता → सदस्यताएँ → रद्द करें। आपकी पहुँच बिलिंग अवधि के अंत तक जारी रहती है।"
+      },
+      "switch": {
+        "title": "योजनाएँ बदलें",
+        "desc": "आप कभी भी उसी प्लेटफार्म के माध्यम से अपनी योजना को अपग्रेड या डाउनग्रेड कर सकते हैं जिस पर आपने सदस्यता ली थी। परिवर्तन अगली बिलिंग चक्र में प्रभावी होता है।"
+      },
+      "crossPlatform": {
+        "title": "क्रॉस-प्लेटफार्म सदस्यताएँ",
+        "desc": "App Store के माध्यम से खरीदी गई सदस्यताएँ केवल iOS पर काम करती हैं। Google Play सदस्यताएँ केवल Android पर काम करती हैं। क्रॉस-प्लेटफार्म पहुँच के लिए, Telegram बॉट के माध्यम से सदस्यता लें — यह हर जगह काम करता है।"
+      }
+    },
+    "getApp": "ऐप डाउनलोड करें",
+    "openBot": "Telegram बॉट खोलें",
+    "viewProtocols": "VPN प्रोटोकॉल गाइड"
   }
 }

@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "מחירים פשוטים ושקופים",
-    "subtitle": "התחל עם תקופת ניסיון חינם של 7 ימים. בטל בכל עת.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "כל תכונות הפרימיום כלולות",
-    "cardSubtitle": "אותן תכונות עוצמתיות, בחר את המחויבות שלך",
-    "durationSelector": "בחר משך מנוי",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "חודש",
-      "sixMonth": "6 חודשים",
-      "annual": "שנה"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "הכי משתלם",
-    "billedMonthly": "חיוב חודשי",
-    "billed": "חיוב של",
-    "every6Months": "כל 6 חודשים",
-    "perYear": "לשנה",
-    "save": "חסוך",
-    "allFeaturesIncluded": "כל התכונות כלולות בכל תוכנית",
-    "features": {
-      "noLogs": "VPN ללא יומנים",
-      "adBlocker": "חוסם פרסומות",
-      "categoryFilter": "סינון קטגוריות",
-      "customBlocklist": "רשימות חסימה",
-      "devices": "10 מכשירים",
-      "support": "תמיכה 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "התחל תקופת ניסיון חינם",
-    "cancelAnytime": "בטל בכל עת. ללא שאלות.",
-    "guarantee": "אחריות החזר כספי 30 יום",
-    "pricesIn": "המחירים מוצגים ב-"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "שאלות נפוצות",
@@ -321,6 +338,7 @@
     "subtitle": "התחברו תוך דקות. בחרו את המכשיר שלכם כדי להתחיל.",
     "chooseDevice": "בחרו את המכשיר שלכם",
     "backToGuides": "כל המדריכים",
+    "seePricing": "See pricing plans",
     "nextStep": "הבא",
     "prevStep": "הקודם",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "מנוי ותמחור",
       "subtitle": "תוכניות, קודי הנחה, הנחות בוט טלגרם וניהול מנוי."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "הורדה",
     "viewSetupGuide": "צפה במדריך ההתקנה",
     "vlessNote": "למשתמשי בוט טלגרם באזורים מוגבלים"
+  },
+  "servers": {
+    "title": "רשת שרתים גלובלית",
+    "subtitle": "בחר ממיקומים רבים ברחבי העולם. כל השרתים תומכים בארכיטקטורת פרוטוקול כפול.",
+    "servers": "שרתים",
+    "server": "שרת",
+    "protocols": "פרוטוקולים",
+    "locations": {
+      "frankfurt": {
+        "city": "פרנקפורט",
+        "country": "גרמניה"
+      },
+      "moscow": {
+        "city": "מוסקבה",
+        "country": "רוסיה"
+      },
+      "zurich": {
+        "city": "ציריך",
+        "country": "שוויץ"
+      },
+      "london": {
+        "city": "לונדון",
+        "country": "בריטניה"
+      },
+      "newYork": {
+        "city": "ניו יורק",
+        "country": "ארצות הברית"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "כל המדריכים",
+    "title": "פרוטוקולי VPN",
+    "subtitle": "Doppler תומך בשני פרוטוקולי VPN — WireGuard ו-VLESS-Reality. כל אחד מהם משמש למטרה שונה. בחר את זה שמתאים למצב שלך.",
+    "bestFor": "הכי טוב עבור",
+    "apps": "אפליקציות נתמכות",
+    "comparison": "השוואה צד לצד",
+    "tableFeature": "תכונה",
+    "whichToUse": "איזה כדאי לי להשתמש?",
+    "getApps": "הורד אפליקציות",
+    "viewSubscription": "מנוי ומחירים",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "מומלץ",
+      "description": "פרוטוקול VPN מודרני וקל משקל, מהימן על ידי אנשי מקצוע בתחום האבטחה. WireGuard מציע את החיבורים המהירים ביותר, את היעילות הטובה ביותר בסוללה, והצפנה ברמה צבאית. זה מה שהאפליקציה של Doppler VPN משתמשת בו באופן מקורי.",
+      "speed": "מהירות מקסימלית — מהיר יותר מ-OpenVPN ו-IKEv2",
+      "battery": "פריקה מינימלית של סוללה במכשירים ניידים",
+      "streaming": "זרימה חלקה ושיחות וידאו",
+      "everyday": "פרטיות יומיומית וחסימת פרסומות",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "עקיפת צנזורה",
+      "description": "פרוטוקול פרוקסי מתקדם שנועד לעקוף בדיקות חבילות עמוקות (DPI) וצנזורה ברשת. VLESS-Reality מחפש את תעבורת ה-VPN כתעבורת HTTPS רגילה, מה שהופך אותה כמעט לבלתי ניתנת לגילוי. משתמשים בו דרך הבוט שלנו ב-Telegram.",
+      "censorship": "עקיפת צנזורה ממשלתית באינטרנט",
+      "stealth": "תעבורה בלתי ניתנת לגילוי — נראית כמו HTTPS רגיל",
+      "deepPacket": "עקיפת בדיקות חבילות עמוקות (DPI)",
+      "restricted": "גישה לאינטרנט ברוסיה, סין, איראן ואזורים מוגבלים אחרים",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "מהירות חיבור",
+        "wireguard": "מצוין — המהיר ביותר הזמין",
+        "vless": "טוב — מעט עלות נוספת מהסוואה"
+      },
+      "battery": {
+        "label": "השפעה על הסוללה",
+        "wireguard": "מינימלית — יעילות ברמת הליבה",
+        "vless": "מתונה — פועל במרחב המשתמש"
+      },
+      "censorship": {
+        "label": "עקיפת צנזורה",
+        "wireguard": "בסיסית — עשויה להיחסם על ידי DPI",
+        "vless": "מצוין — בלתי ניתנת לגילוי על ידי DPI"
+      },
+      "setup": {
+        "label": "קושי בהגדרה",
+        "wireguard": "לחיצה אחת — מובנה באפליקציית Doppler",
+        "vless": "ידני — הגדרה מבוט Telegram"
+      },
+      "platforms": {
+        "label": "פלטפורמות",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "השתמש ב-WireGuard אם...",
+      "desc": "אתה רוצה את החוויה הפשוטה ביותר עם הביצועים הטובים ביותר. פשוט הורד את אפליקציית Doppler VPN ולחץ על התחבר — אין צורך בהגדרה. מושלם לגלישה יומיומית, סטרימינג ופרטיות."
+    },
+    "useVless": {
+      "title": "השתמש ב-VLESS-Reality אם...",
+      "desc": "אתה נמצא במדינה עם צנזורה באינטרנט (רוסיה, סין, איראן וכו') או שה-SPI שלך חוסם חיבורי VPN. קבל את ההגדרה שלך מהבוט שלנו ב-Telegram @dopplercreatebot והשתמש באפליקציית לקוח צד שלישי."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "כל המדריכים",
+    "title": "מנוי ומחירים",
+    "subtitle": "כל מה שצריך לדעת על תוכניות Doppler VPN, מחירים בפלטפורמות שונות, קודי קידום, ואיך לנהל את המנוי שלך.",
+    "promo": {
+      "title": "קידום השקה — 20% הנחה על כל התוכניות",
+      "desc": "השתמש בקוד LAUNCH20 בקופה בבוט Telegram כדי לקבל 20% הנחה על כל תוכנית מנוי. זמין לכל המשתמשים החדשים והקיימים."
+    },
+    "pricingSection": "מחירים לפי פלטפורמה",
+    "tableHeaders": {
+      "plan": "תוכנית",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "בוט Telegram"
+    },
+    "plans": {
+      "monthly": "1 חודש",
+      "sixMonth": "6 חודשים",
+      "annual": "1 שנה"
+    },
+    "pricingNote": "מחירי הבוט ב-Telegram נמוכים יותר כי אין עמלות מחנות האפליקציות. כל התוכניות כוללות את אותן תכונות Premium.",
+    "howToSubscribe": "איך להירשם",
+    "appStoreMethod": {
+      "title": "דרך App Store (iOS)",
+      "step1": "פתח את אפליקציית Doppler VPN על האייפון או האייפד שלך",
+      "step2": "עבור ללשונית פרופיל ולחץ על \"שדרג ל-Premium\"",
+      "step3": "בחר את התוכנית שלך ואשר עם Face ID או Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "דרך Google Play (Android)",
+      "step1": "פתח את אפליקציית Doppler VPN על המכשיר האנדרואידי שלך",
+      "step2": "עבור ללשונית פרופיל ולחץ על \"שדרג ל-Premium\"",
+      "step3": "בחר את התוכנית שלך ואשר עם תשלום Google Play"
+    },
+    "telegramMethod": {
+      "title": "דרך בוט Telegram",
+      "savings": "חסוך עד 35% לעומת חנויות האפליקציות",
+      "step1": "פתח את @dopplercreatebot ב-Telegram",
+      "step2": "לחץ על \"מנוי\" ובחר את התוכנית שלך",
+      "step3": "שלם בבטחה דרך Stripe — השתמש בקוד LAUNCH20 כדי לקבל 20% הנחה"
+    },
+    "manageSection": "ניהול המנוי שלך",
+    "manage": {
+      "restore": {
+        "title": "שחזור רכישות",
+        "desc": "אם תכונות ה-Premium שלך לא מופיעות לאחר הרכישה, פתח את האפליקציה → פרופיל → מנוי → שחזור רכישות. זה מסנכרן מחדש את המנוי שלך עם השרתים שלנו."
+      },
+      "cancel": {
+        "title": "ביטול מנוי",
+        "desc": "ל-App Store: הגדרות → Apple ID → מנויים → Doppler VPN → ביטול. ל-Google Play: Google Play → חשבון → מנויים → ביטול. הגישה שלך נמשכת עד סוף תקופת החיוב."
+      },
+      "switch": {
+        "title": "שינוי תוכניות",
+        "desc": "אתה יכול לשדרג או להקטין את התוכנית שלך בכל עת דרך אותה פלטפורמה שעליה נרשמת. השינוי ייכנס לתוקף במחזור החיוב הבא."
+      },
+      "crossPlatform": {
+        "title": "מנויים בין פלטפורמות",
+        "desc": "מנויים שנרכשו דרך ה-App Store פועלים רק על iOS. מנויי Google Play פועלים רק על Android. לגישה בין פלטפורמות, הירשם דרך הבוט ב-Telegram — זה עובד בכל מקום."
+      }
+    },
+    "getApp": "הורד את האפליקציה",
+    "openBot": "פתח את בוט Telegram",
+    "viewProtocols": "מדריך פרוטוקולי VPN"
   }
 }

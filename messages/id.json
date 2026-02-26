@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Harga sederhana dan transparan",
-    "subtitle": "Mulai dengan uji coba gratis 7 hari. Batalkan kapan saja.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Semua fitur Premium termasuk",
-    "cardSubtitle": "Fitur kuat yang sama, pilih komitmen Anda",
-    "durationSelector": "Pilih durasi langganan",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Bulan",
-      "sixMonth": "6 Bulan",
-      "annual": "Tahunan"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "Terbaik",
-    "billedMonthly": "Ditagih bulanan",
-    "billed": "Ditagih",
-    "every6Months": "setiap 6 bulan",
-    "perYear": "per tahun",
-    "save": "Hemat",
-    "allFeaturesIncluded": "Semua fitur termasuk di setiap paket",
-    "features": {
-      "noLogs": "VPN tanpa log",
-      "adBlocker": "Pemblokir iklan",
-      "categoryFilter": "Filter kategori",
-      "customBlocklist": "Daftar blokir",
-      "devices": "10 perangkat",
-      "support": "Dukungan 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "Mulai Uji Coba Gratis",
-    "cancelAnytime": "Batalkan kapan saja. Tanpa pertanyaan.",
-    "guarantee": "Jaminan uang kembali 30 hari",
-    "pricesIn": "Harga ditampilkan dalam"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Pertanyaan yang sering diajukan",
@@ -321,6 +338,7 @@
     "subtitle": "Terhubung dalam hitungan menit. Pilih perangkat Anda untuk memulai.",
     "chooseDevice": "Pilih perangkat Anda",
     "backToGuides": "Semua Panduan",
+    "seePricing": "See pricing plans",
     "nextStep": "Berikutnya",
     "prevStep": "Sebelumnya",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Langganan & Harga",
       "subtitle": "Paket, kode promo, diskon bot Telegram, dan cara mengelola langganan."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "Unduh",
     "viewSetupGuide": "Lihat panduan pengaturan",
     "vlessNote": "Untuk pengguna bot Telegram di wilayah terbatas"
+  },
+  "servers": {
+    "title": "Jaringan Server Global",
+    "subtitle": "Pilih dari berbagai lokasi di seluruh dunia. Semua server mendukung arsitektur dual-protokol.",
+    "servers": "server",
+    "server": "server",
+    "protocols": "Protokol",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Jerman"
+      },
+      "moscow": {
+        "city": "Moskow",
+        "country": "Rusia"
+      },
+      "zurich": {
+        "city": "Zurich",
+        "country": "Swiss"
+      },
+      "london": {
+        "city": "London",
+        "country": "Inggris"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "Amerika Serikat"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Semua Panduan",
+    "title": "Protokol VPN",
+    "subtitle": "Doppler mendukung dua protokol VPN — WireGuard dan VLESS-Reality. Masing-masing memiliki tujuan yang berbeda. Pilih yang sesuai dengan situasi Anda.",
+    "bestFor": "Terbaik untuk",
+    "apps": "Aplikasi yang didukung",
+    "comparison": "Perbandingan berdampingan",
+    "tableFeature": "Fitur",
+    "whichToUse": "Mana yang harus saya gunakan?",
+    "getApps": "Unduh aplikasi",
+    "viewSubscription": "Langganan & harga",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Direkomendasikan",
+      "description": "Protokol VPN modern dan ringan yang dipercaya oleh para profesional keamanan. WireGuard menawarkan koneksi tercepat, efisiensi baterai terbaik, dan enkripsi tingkat militer. Ini adalah yang digunakan secara native oleh aplikasi Doppler VPN.",
+      "speed": "Kecepatan maksimum — lebih cepat dari OpenVPN dan IKEv2",
+      "battery": "Drain baterai minimal pada perangkat seluler",
+      "streaming": "Streaming dan panggilan video yang lancar",
+      "everyday": "Privasi sehari-hari dan pemblokiran iklan",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Menghindari sensor",
+      "description": "Protokol proxy canggih yang dirancang untuk menghindari pemeriksaan paket dalam (DPI) dan sensor jaringan. VLESS-Reality menyamarkan lalu lintas VPN sebagai HTTPS biasa, sehingga hampir tidak terdeteksi. Digunakan melalui bot Telegram kami.",
+      "censorship": "Menghindari sensor internet pemerintah",
+      "stealth": "Lalu lintas tidak terdeteksi — terlihat seperti HTTPS normal",
+      "deepPacket": "Menghindari pemeriksaan paket dalam (DPI)",
+      "restricted": "Mengakses internet di Rusia, China, Iran, dan wilayah terbatas lainnya",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Kecepatan koneksi",
+        "wireguard": "Luar biasa — tercepat yang tersedia",
+        "vless": "Baik — sedikit overhead dari penyamaran"
+      },
+      "battery": {
+        "label": "Dampak baterai",
+        "wireguard": "Minimal — efisiensi tingkat kernel",
+        "vless": "Sedang — berjalan di ruang pengguna"
+      },
+      "censorship": {
+        "label": "Menghindari sensor",
+        "wireguard": "Dasar — dapat diblokir oleh DPI",
+        "vless": "Luar biasa — tidak terdeteksi oleh DPI"
+      },
+      "setup": {
+        "label": "Kesulitan pengaturan",
+        "wireguard": "Satu ketukan — terintegrasi dalam aplikasi Doppler",
+        "vless": "Manual — konfigurasi dari bot Telegram"
+      },
+      "platforms": {
+        "label": "Platform",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Gunakan WireGuard jika...",
+      "desc": "Anda menginginkan pengalaman yang paling sederhana dengan kinerja terbaik. Cukup unduh aplikasi Doppler VPN dan ketuk sambungkan — tidak perlu konfigurasi. Sempurna untuk browsing sehari-hari, streaming, dan privasi."
+    },
+    "useVless": {
+      "title": "Gunakan VLESS-Reality jika...",
+      "desc": "Anda berada di negara dengan sensor internet (Rusia, China, Iran, dll.) atau ISP Anda memblokir koneksi VPN. Dapatkan konfigurasi Anda dari bot Telegram kami @dopplercreatebot dan gunakan aplikasi klien pihak ketiga."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Semua Panduan",
+    "title": "Langganan & Harga",
+    "subtitle": "Semua tentang rencana Doppler VPN, harga di berbagai platform, kode promo, dan cara mengelola langganan Anda.",
+    "promo": {
+      "title": "Promo peluncuran — diskon 20% untuk semua rencana",
+      "desc": "Gunakan kode LAUNCH20 saat checkout di bot Telegram untuk mendapatkan diskon 20% untuk rencana langganan apa pun. Tersedia untuk semua pengguna baru dan yang sudah ada."
+    },
+    "pricingSection": "Harga berdasarkan platform",
+    "tableHeaders": {
+      "plan": "Rencana",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Bot Telegram"
+    },
+    "plans": {
+      "monthly": "1 Bulan",
+      "sixMonth": "6 Bulan",
+      "annual": "1 Tahun"
+    },
+    "pricingNote": "Harga bot Telegram lebih rendah karena tidak ada komisi dari toko aplikasi. Semua rencana mencakup fitur Premium yang sama.",
+    "howToSubscribe": "Cara berlangganan",
+    "appStoreMethod": {
+      "title": "Via App Store (iOS)",
+      "step1": "Buka aplikasi Doppler VPN di iPhone atau iPad Anda",
+      "step2": "Masuk ke tab Profil dan ketuk \"Tingkatkan ke Premium\"",
+      "step3": "Pilih rencana Anda dan konfirmasi dengan Face ID atau Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Via Google Play (Android)",
+      "step1": "Buka aplikasi Doppler VPN di perangkat Android Anda",
+      "step2": "Masuk ke tab Profil dan ketuk \"Tingkatkan ke Premium\"",
+      "step3": "Pilih rencana Anda dan konfirmasi dengan pembayaran Google Play"
+    },
+    "telegramMethod": {
+      "title": "Via Bot Telegram",
+      "savings": "Hemat hingga 35% dibandingkan toko aplikasi",
+      "step1": "Buka @dopplercreatebot di Telegram",
+      "step2": "Ketuk \"Berlangganan\" dan pilih rencana Anda",
+      "step3": "Bayar dengan aman melalui Stripe — gunakan kode LAUNCH20 untuk diskon 20%"
+    },
+    "manageSection": "Mengelola langganan Anda",
+    "manage": {
+      "restore": {
+        "title": "Pulihkan pembelian",
+        "desc": "Jika fitur Premium Anda tidak muncul setelah pembelian, buka aplikasi → Profil → Langganan → Pulihkan Pembelian. Ini akan menyinkronkan ulang langganan Anda dengan server kami."
+      },
+      "cancel": {
+        "title": "Batalkan langganan",
+        "desc": "Untuk App Store: Pengaturan → Apple ID → Langganan → Doppler VPN → Batalkan. Untuk Google Play: Google Play → Akun → Langganan → Batalkan. Akses Anda akan berlanjut hingga akhir periode penagihan."
+      },
+      "switch": {
+        "title": "Beralih rencana",
+        "desc": "Anda dapat meningkatkan atau menurunkan rencana Anda kapan saja melalui platform yang sama tempat Anda berlangganan. Perubahan akan berlaku pada siklus penagihan berikutnya."
+      },
+      "crossPlatform": {
+        "title": "Langganan lintas platform",
+        "desc": "Langganan yang dibeli melalui App Store hanya berfungsi di iOS. Langganan Google Play hanya berfungsi di Android. Untuk akses lintas platform, berlangganan melalui bot Telegram — itu berfungsi di mana saja."
+      }
+    },
+    "getApp": "Unduh aplikasi",
+    "openBot": "Buka Bot Telegram",
+    "viewProtocols": "Panduan Protokol VPN"
   }
 }

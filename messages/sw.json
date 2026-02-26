@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Bei rahisi na wazi",
-    "subtitle": "Anza na jaribio la bure la siku 7. Sitisha wakati wowote.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Vipengele vyote vya Premium vimejumuishwa",
-    "cardSubtitle": "Vipengele sawa vyenye nguvu, chagua ahadi yako",
-    "durationSelector": "Chagua muda wa usajili",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "Mwezi 1",
-      "sixMonth": "Miezi 6",
-      "annual": "Mwaka"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "Bora",
-    "billedMonthly": "Unatozwa kila mwezi",
-    "billed": "Unatozwa",
-    "every6Months": "kila miezi 6",
-    "perYear": "kwa mwaka",
-    "save": "Okoa",
-    "allFeaturesIncluded": "Vipengele vyote vimejumuishwa katika kila mpango",
-    "features": {
-      "noLogs": "VPN bila kumbukumbu",
-      "adBlocker": "Kizuia matangazo",
-      "categoryFilter": "Kichujio cha kategoria",
-      "customBlocklist": "Orodha za kuzuia",
-      "devices": "Vifaa 10",
-      "support": "Msaada 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "Anza Jaribio la Bure",
-    "cancelAnytime": "Sitisha wakati wowote. Hakuna maswali.",
-    "guarantee": "Dhamana ya kurudishiwa pesa siku 30",
-    "pricesIn": "Bei zinaonyeshwa kwa"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Maswali yanayoulizwa mara kwa mara",
@@ -401,6 +418,7 @@
       "miniAppDesc": "Jiandikishe na usimamie mpango wako kupitia Mini App yetu ya Telegram na malipo salama ya Stripe."
     },
     "backToGuides": "Miongozo Yote",
+    "seePricing": "See pricing plans",
     "nextStep": "Ifuatayo",
     "prevStep": "Iliyopita",
     "downloadApps": "Pakua programu",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Usajili na bei",
       "subtitle": "Mipango, misimbo ya promo, punguzo za boti ya Telegram na usimamizi wa usajili."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "Pakua",
     "viewSetupGuide": "Angalia mwongozo wa usanidi",
     "vlessNote": "Kwa watumiaji wa boti ya Telegram katika maeneo yaliyozuiliwa"
+  },
+  "servers": {
+    "title": "Mtandao wa Seva Duniani",
+    "subtitle": "Chagua kutoka maeneo mengi duniani kote. Seva zote zinasaidia itifaki mbili.",
+    "servers": "seva",
+    "server": "seva",
+    "protocols": "Itifaki",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Ujerumani"
+      },
+      "moscow": {
+        "city": "Moscow",
+        "country": "Urusi"
+      },
+      "zurich": {
+        "city": "Zurich",
+        "country": "Uswisi"
+      },
+      "london": {
+        "city": "London",
+        "country": "Uingereza"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "Marekani"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Miongozo Yote",
+    "title": "Protokali za VPN",
+    "subtitle": "Doppler inasaidia protokali mbili za VPN — WireGuard na VLESS-Reality. Kila moja ina kusudi tofauti. Chagua ile inayofaa hali yako.",
+    "bestFor": "Inafaa kwa",
+    "apps": "Mifumo inayoungwa mkono",
+    "comparison": "Ulinganisho wa upande kwa upande",
+    "tableFeature": "Kipengele",
+    "whichToUse": "Ninapaswa kutumia ipi?",
+    "getApps": "Pakua mifumo",
+    "viewSubscription": "Usajili & bei",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Inapendekezwa",
+      "description": "Protokali ya VPN ya kisasa na nyepesi inayotegemewa na wataalamu wa usalama. WireGuard inatoa muunganisho wa haraka zaidi, ufanisi bora wa betri, na usimbaji wa kiwango cha kijeshi. Hii ndiyo inayo tumika kwa asili katika programu ya Doppler VPN.",
+      "speed": "Kasi ya juu — inashinda OpenVPN na IKEv2",
+      "battery": "Kuchoma betri kidogo kwenye vifaa vya rununu",
+      "streaming": "Kuangalia kwa urahisi na simu za video",
+      "everyday": "Faragha ya kila siku na kuzuia matangazo",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Kupita cenzorship",
+      "description": "Protokali ya proxy ya kisasa iliyoundwa ili kupita ukaguzi wa kina wa pakiti (DPI) na cenzorship ya mtandao. VLESS-Reality inaficha trafiki ya VPN kama HTTPS ya kawaida, na kuifanya kuwa vigumu kugundua. Inatumika kupitia bot yetu ya Telegram.",
+      "censorship": "Kupita cenzorship ya mtandao ya serikali",
+      "stealth": "Trafiki isiyoonekana — inaonekana kama HTTPS ya kawaida",
+      "deepPacket": "Kuepuka ukaguzi wa kina wa pakiti (DPI)",
+      "restricted": "Kupata mtandao nchini Urusi, China, Iran, na maeneo mengine yaliyopigwa marufuku",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Kasi ya muunganisho",
+        "wireguard": "Nzuri — haraka zaidi inayopatikana",
+        "vless": "Nzuri — mzigo mdogo kutokana na kuficha"
+      },
+      "battery": {
+        "label": "Athari ya betri",
+        "wireguard": "Kidogo — ufanisi wa kiwango cha kernel",
+        "vless": "Kati — inafanya kazi katika nafasi ya mtumiaji"
+      },
+      "censorship": {
+        "label": "Kupita cenzorship",
+        "wireguard": "Msingi — inaweza kuzuiawa na DPI",
+        "vless": "Nzuri — haiwezi kugunduliwa na DPI"
+      },
+      "setup": {
+        "label": "Ugumu wa kuweka",
+        "wireguard": "Kugusa moja — imejumuishwa katika programu ya Doppler",
+        "vless": "Mikono — usanidi kutoka kwa bot ya Telegram"
+      },
+      "platforms": {
+        "label": "Mifumo",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Tumia WireGuard ikiwa...",
+      "desc": "Unataka uzoefu rahisi zaidi na utendaji bora. Pakua tu programu ya Doppler VPN na uguse kuungana — hakuna usanidi unahitajika. Inafaa kwa kuvinjari kila siku, kuangalia, na faragha."
+    },
+    "useVless": {
+      "title": "Tumia VLESS-Reality ikiwa...",
+      "desc": "Uko katika nchi yenye cenzorship ya mtandao (Urusi, China, Iran, nk.) au ISP yako inazuia muunganisho wa VPN. Pata usanidi wako kutoka kwa bot yetu ya Telegram @dopplercreatebot na tumia programu ya mteja wa upande wa tatu."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Miongozo Yote",
+    "title": "Usajili & Bei",
+    "subtitle": "Kila kitu kuhusu mipango ya Doppler VPN, bei katika mifumo, nambari za matangazo, na jinsi ya kusimamia usajili wako.",
+    "promo": {
+      "title": "Matangazo ya uzinduzi — punguzo la 20% kwa mipango yote",
+      "desc": "Tumia nambari LAUNCH20 wakati wa malipo katika bot ya Telegram ili kupata punguzo la 20% kwa mpango wowote wa usajili. Inapatikana kwa watumiaji wote wapya na waliopo."
+    },
+    "pricingSection": "Bei kwa mfumo",
+    "tableHeaders": {
+      "plan": "Mpango",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Bot ya Telegram"
+    },
+    "plans": {
+      "monthly": "1 Mwezi",
+      "sixMonth": "6 Miezi",
+      "annual": "1 Mwaka"
+    },
+    "pricingNote": "Bei za bot ya Telegram ni za chini kwa sababu hakuna kamisheni za duka la programu. Mipango yote inajumuisha vipengele sawa vya Premium.",
+    "howToSubscribe": "Jinsi ya kujiandikisha",
+    "appStoreMethod": {
+      "title": "Kupitia App Store (iOS)",
+      "step1": "Fungua programu ya Doppler VPN kwenye iPhone au iPad yako",
+      "step2": "Nenda kwenye tab ya Profaili na uguse \"Boresha kuwa Premium\"",
+      "step3": "Chagua mpango wako na kuthibitisha kwa Face ID au Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Kupitia Google Play (Android)",
+      "step1": "Fungua programu ya Doppler VPN kwenye kifaa chako cha Android",
+      "step2": "Nenda kwenye tab ya Profaili na uguse \"Boresha kuwa Premium\"",
+      "step3": "Chagua mpango wako na kuthibitisha kwa malipo ya Google Play"
+    },
+    "telegramMethod": {
+      "title": "Kupitia Bot ya Telegram",
+      "savings": "Hifadhi hadi 35% ikilinganishwa na maduka ya programu",
+      "step1": "Fungua @dopplercreatebot katika Telegram",
+      "step2": "Gusa \"Jiunge\" na uchague mpango wako",
+      "step3": "Lipa kwa usalama kupitia Stripe — tumia nambari LAUNCH20 kwa punguzo la 20%"
+    },
+    "manageSection": "Kusimamia usajili wako",
+    "manage": {
+      "restore": {
+        "title": "Rejesha ununuzi",
+        "desc": "Ikiwa vipengele vyako vya Premium havionekani baada ya ununuzi, fungua programu → Profaili → Usajili → Rejesha Ununuzi. Hii inarejesha usajili wako na seva zetu."
+      },
+      "cancel": {
+        "title": "Ghairi usajili",
+        "desc": "Kwa App Store: Mipangilio → Apple ID → Usajili → Doppler VPN → Ghairi. Kwa Google Play: Google Play → Akaunti → Usajili → Ghairi. Ufikiaji wako unaendelea hadi mwisho wa kipindi cha malipo."
+      },
+      "switch": {
+        "title": "Badilisha mipango",
+        "desc": "Unaweza kuboresha au kupunguza mpango wako wakati wowote kupitia mfumo ule ule uliojiandikisha. Mabadiliko yanaanza kutumika katika mzunguko ujao wa malipo."
+      },
+      "crossPlatform": {
+        "title": "Usajili wa mifumo tofauti",
+        "desc": "Usajili ulionunuliwa kupitia App Store unafanya kazi tu kwenye iOS. Usajili wa Google Play unafanya kazi tu kwenye Android. Kwa ufikiaji wa mifumo tofauti, jiandikishe kupitia bot ya Telegram — inafanya kazi kila mahali."
+      }
+    },
+    "getApp": "Pakua programu",
+    "openBot": "Fungua Bot ya Telegram",
+    "viewProtocols": "Mwongozo wa Protokali za VPN"
   }
 }

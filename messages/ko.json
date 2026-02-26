@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "간단하고 투명한 가격",
-    "subtitle": "7일 무료 체험으로 시작하세요. 언제든지 취소 가능.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "모든 프리미엄 기능 포함",
-    "cardSubtitle": "같은 강력한 기능, 원하는 기간을 선택하세요",
-    "durationSelector": "구독 기간 선택",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1개월",
-      "sixMonth": "6개월",
-      "annual": "연간"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "최고",
-    "billedMonthly": "월별 청구",
-    "billed": "청구",
-    "every6Months": "6개월마다",
-    "perYear": "연간",
-    "save": "절약",
-    "allFeaturesIncluded": "모든 플랜에 모든 기능 포함",
-    "features": {
-      "noLogs": "무로그 VPN",
-      "adBlocker": "광고 차단기",
-      "categoryFilter": "카테고리 필터",
-      "customBlocklist": "차단 목록",
-      "devices": "10대 기기",
-      "support": "24/7 지원"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "무료 체험 시작",
-    "cancelAnytime": "언제든지 취소. 질문 없음.",
-    "guarantee": "30일 환불 보장",
-    "pricesIn": "표시 통화"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "자주 묻는 질문",
@@ -321,6 +338,7 @@
     "subtitle": "몇 분 만에 연결하세요. 시작하려면 기기를 선택하세요.",
     "chooseDevice": "기기 선택",
     "backToGuides": "모든 가이드",
+    "seePricing": "See pricing plans",
     "nextStep": "다음",
     "prevStep": "이전",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "구독 및 가격",
       "subtitle": "요금제, 프로모 코드, Telegram 봇 할인, 구독 관리 방법."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "다운로드",
     "viewSetupGuide": "설정 가이드 보기",
     "vlessNote": "제한 지역의 Telegram 봇 사용자용"
+  },
+  "servers": {
+    "title": "글로벌 서버 네트워크",
+    "subtitle": "전 세계 여러 위치에서 선택하세요. 모든 서버가 듀얼 프로토콜 아키텍처를 지원합니다.",
+    "servers": "서버",
+    "server": "서버",
+    "protocols": "프로토콜",
+    "locations": {
+      "frankfurt": {
+        "city": "프랑크푸르트",
+        "country": "독일"
+      },
+      "moscow": {
+        "city": "모스크바",
+        "country": "러시아"
+      },
+      "zurich": {
+        "city": "취리히",
+        "country": "스위스"
+      },
+      "london": {
+        "city": "런던",
+        "country": "영국"
+      },
+      "newYork": {
+        "city": "뉴욕",
+        "country": "미국"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "모든 가이드",
+    "title": "VPN 프로토콜",
+    "subtitle": "Doppler는 두 가지 VPN 프로토콜 — WireGuard와 VLESS-Reality를 지원합니다. 각각은 다른 목적을 가지고 있습니다. 상황에 맞는 것을 선택하세요.",
+    "bestFor": "최고의 선택",
+    "apps": "지원되는 앱",
+    "comparison": "나란히 비교",
+    "tableFeature": "기능",
+    "whichToUse": "어떤 것을 사용해야 하나요?",
+    "getApps": "앱 다운로드",
+    "viewSubscription": "구독 및 가격",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "추천",
+      "description": "보안 전문가들이 신뢰하는 현대적이고 경량의 VPN 프로토콜입니다. WireGuard는 가장 빠른 연결, 최고의 배터리 효율성 및 군사 등급 암호화를 제공합니다. 이는 Doppler VPN 앱이 기본적으로 사용하는 것입니다.",
+      "speed": "최대 속도 — OpenVPN 및 IKEv2보다 우수",
+      "battery": "모바일 기기에서 최소한의 배터리 소모",
+      "streaming": "매끄러운 스트리밍 및 영상 통화",
+      "everyday": "일상적인 프라이버시 및 광고 차단",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "검열 우회",
+      "description": "딥 패킷 검사(DPI) 및 네트워크 검열을 우회하도록 설계된 고급 프록시 프로토콜입니다. VLESS-Reality는 VPN 트래픽을 일반 HTTPS처럼 위장하여 거의 감지할 수 없게 만듭니다. Telegram 봇을 통해 사용됩니다.",
+      "censorship": "정부 인터넷 검열 우회",
+      "stealth": "감지 불가능한 트래픽 — 일반 HTTPS처럼 보임",
+      "deepPacket": "딥 패킷 검사(DPI) 회피",
+      "restricted": "러시아, 중국, 이란 및 기타 제한된 지역에서 인터넷 접근",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "연결 속도",
+        "wireguard": "우수 — 가장 빠름",
+        "vless": "양호 — 마스킹으로 인한 약간의 오버헤드"
+      },
+      "battery": {
+        "label": "배터리 영향",
+        "wireguard": "최소 — 커널 수준의 효율성",
+        "vless": "보통 — 사용자 공간에서 실행"
+      },
+      "censorship": {
+        "label": "검열 우회",
+        "wireguard": "기본 — DPI에 의해 차단될 수 있음",
+        "vless": "우수 — DPI에 의해 감지되지 않음"
+      },
+      "setup": {
+        "label": "설치 난이도",
+        "wireguard": "원터치 — Doppler 앱에 내장",
+        "vless": "수동 — Telegram 봇에서 설정"
+      },
+      "platforms": {
+        "label": "플랫폼",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "WireGuard를 사용해야 하는 경우...",
+      "desc": "가장 간단한 경험과 최고의 성능을 원하실 때입니다. Doppler VPN 앱을 다운로드하고 연결을 탭하세요 — 설정이 필요 없습니다. 일상적인 브라우징, 스트리밍 및 프라이버시에 완벽합니다."
+    },
+    "useVless": {
+      "title": "VLESS-Reality를 사용해야 하는 경우...",
+      "desc": "인터넷 검열이 있는 국가(러시아, 중국, 이란 등)에 있거나 ISP가 VPN 연결을 차단하는 경우입니다. Telegram 봇 @dopplercreatebot에서 설정을 받고 서드파티 클라이언트 앱을 사용하세요."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "모든 가이드",
+    "title": "구독 및 가격",
+    "subtitle": "Doppler VPN 계획, 플랫폼별 가격, 프로모션 코드 및 구독 관리 방법에 대한 모든 정보.",
+    "promo": {
+      "title": "런칭 프로모션 — 모든 계획 20% 할인",
+      "desc": "Telegram 봇에서 체크아웃 시 코드 LAUNCH20을 사용하여 모든 구독 계획에서 20% 할인을 받으세요. 모든 신규 및 기존 사용자에게 제공됩니다."
+    },
+    "pricingSection": "플랫폼별 가격",
+    "tableHeaders": {
+      "plan": "계획",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram 봇"
+    },
+    "plans": {
+      "monthly": "1개월",
+      "sixMonth": "6개월",
+      "annual": "1년"
+    },
+    "pricingNote": "Telegram 봇 가격은 앱 스토어 수수료가 없기 때문에 더 저렴합니다. 모든 계획은 동일한 Premium 기능을 포함합니다.",
+    "howToSubscribe": "구독하는 방법",
+    "appStoreMethod": {
+      "title": "App Store를 통해 (iOS)",
+      "step1": "iPhone 또는 iPad에서 Doppler VPN 앱을 엽니다.",
+      "step2": "프로필 탭으로 가서 \"프리미엄으로 업그레이드\"를 탭합니다.",
+      "step3": "계획을 선택하고 Face ID 또는 Apple ID로 확인합니다."
+    },
+    "googlePlayMethod": {
+      "title": "Google Play를 통해 (Android)",
+      "step1": "Android 기기에서 Doppler VPN 앱을 엽니다.",
+      "step2": "프로필 탭으로 가서 \"프리미엄으로 업그레이드\"를 탭합니다.",
+      "step3": "계획을 선택하고 Google Play 결제로 확인합니다."
+    },
+    "telegramMethod": {
+      "title": "Telegram 봇을 통해",
+      "savings": "앱 스토어 대비 최대 35% 절약",
+      "step1": "Telegram에서 @dopplercreatebot을 엽니다.",
+      "step2": "\"구독\"을 탭하고 계획을 선택합니다.",
+      "step3": "Stripe를 통해 안전하게 결제하세요 — 20% 할인을 위해 코드 LAUNCH20을 사용하세요."
+    },
+    "manageSection": "구독 관리",
+    "manage": {
+      "restore": {
+        "title": "구매 복원",
+        "desc": "구매 후 프리미엄 기능이 표시되지 않는 경우, 앱 → 프로필 → 구독 → 구매 복원으로 이동하세요. 이는 구독을 서버와 재동기화합니다."
+      },
+      "cancel": {
+        "title": "구독 취소",
+        "desc": "App Store의 경우: 설정 → Apple ID → 구독 → Doppler VPN → 취소. Google Play의 경우: Google Play → 계정 → 구독 → 취소. 청구 기간이 끝날 때까지 접근이 계속됩니다."
+      },
+      "switch": {
+        "title": "계획 변경",
+        "desc": "구독한 플랫폼을 통해 언제든지 계획을 업그레이드하거나 다운그레이드할 수 있습니다. 변경 사항은 다음 청구 주기에 적용됩니다."
+      },
+      "crossPlatform": {
+        "title": "크로스 플랫폼 구독",
+        "desc": "App Store를 통해 구매한 구독은 iOS에서만 작동합니다. Google Play 구독은 Android에서만 작동합니다. 크로스 플랫폼 접근을 원하시면 Telegram 봇을 통해 구독하세요 — 모든 곳에서 작동합니다."
+      }
+    },
+    "getApp": "앱 다운로드",
+    "openBot": "Telegram 봇 열기",
+    "viewProtocols": "VPN 프로토콜 가이드"
   }
 }

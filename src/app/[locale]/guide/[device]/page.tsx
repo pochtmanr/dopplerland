@@ -249,6 +249,16 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                   </div>
                 </div>
               </section>
+
+              {/* Pricing link */}
+              <div className="mt-10 flex items-center gap-4">
+                <Link
+                  href="/#pricing"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-overlay/10 text-text-muted text-sm font-medium hover:border-accent-teal/20 hover:text-text-primary transition-colors"
+                >
+                  {t("seePricing")} &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>

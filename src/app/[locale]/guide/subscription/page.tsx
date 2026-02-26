@@ -82,21 +82,21 @@ export default async function SubscriptionGuidePage({ params }: PageProps) {
                   <tbody className="divide-y divide-overlay/5">
                     <tr>
                       <td className="p-4 text-text-primary font-medium">{t("plans.monthly")}</td>
-                      <td className="p-4 text-text-muted">$2.99/mo</td>
-                      <td className="p-4 text-text-muted">$2.99/mo</td>
-                      <td className="p-4 text-accent-teal font-medium">$1.99/mo</td>
+                      <td className="p-4 text-text-muted">$6.99/mo</td>
+                      <td className="p-4 text-text-muted">$6.99/mo</td>
+                      <td className="p-4 text-accent-teal font-medium">$4/mo</td>
                     </tr>
                     <tr>
                       <td className="p-4 text-text-primary font-medium">{t("plans.sixMonth")}</td>
-                      <td className="p-4 text-text-muted">$11.99</td>
-                      <td className="p-4 text-text-muted">$11.99</td>
-                      <td className="p-4 text-accent-teal font-medium">$8.99</td>
+                      <td className="p-4 text-text-muted">$29.99</td>
+                      <td className="p-4 text-text-muted">$29.99</td>
+                      <td className="p-4 text-accent-teal font-medium">$20</td>
                     </tr>
                     <tr>
                       <td className="p-4 text-text-primary font-medium">{t("plans.annual")}</td>
-                      <td className="p-4 text-text-muted">$19.99</td>
-                      <td className="p-4 text-text-muted">$19.99</td>
-                      <td className="p-4 text-accent-teal font-medium">$14.99</td>
+                      <td className="p-4 text-text-muted">$39.99</td>
+                      <td className="p-4 text-text-muted">$39.99</td>
+                      <td className="p-4 text-accent-teal font-medium">$35</td>
                     </tr>
                   </tbody>
                 </table>

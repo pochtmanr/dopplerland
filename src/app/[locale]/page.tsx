@@ -5,6 +5,7 @@ import {
   Hero,
   Features,
   HowItWorks,
+  Servers,
   Pricing,
   FAQ,
   CTA,
@@ -108,6 +109,7 @@ export default async function HomePage({ params }: PageProps) {
         <Hero />
         <Features />
         <HowItWorks />
+        <Servers />
         <Pricing />
         <FAQ />
         <CTA />

@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "ราคาเรียบง่ายและโปร่งใส",
-    "subtitle": "เริ่มต้นด้วยทดลองใช้ฟรี 7 วัน ยกเลิกได้ตลอดเวลา",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "รวมคุณสมบัติ Premium ทั้งหมด",
-    "cardSubtitle": "คุณสมบัติทรงพลังเหมือนกัน เลือกแผนของคุณ",
-    "durationSelector": "เลือกระยะเวลาสมัครสมาชิก",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 เดือน",
-      "sixMonth": "6 เดือน",
-      "annual": "ปี"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "ดีที่สุด",
-    "billedMonthly": "เรียกเก็บรายเดือน",
-    "billed": "เรียกเก็บ",
-    "every6Months": "ทุก 6 เดือน",
-    "perYear": "ต่อปี",
-    "save": "ประหยัด",
-    "allFeaturesIncluded": "รวมคุณสมบัติทั้งหมดในทุกแผน",
-    "features": {
-      "noLogs": "VPN ไม่มีบันทึก",
-      "adBlocker": "ตัวบล็อกโฆษณา",
-      "categoryFilter": "ตัวกรองหมวดหมู่",
-      "customBlocklist": "รายการบล็อก",
-      "devices": "10 อุปกรณ์",
-      "support": "สนับสนุน 24/7"
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
     },
-    "cta": "เริ่มทดลองใช้ฟรี",
-    "cancelAnytime": "ยกเลิกได้ตลอดเวลา ไม่ต้องตอบคำถาม",
-    "guarantee": "รับประกันคืนเงิน 30 วัน",
-    "pricesIn": "ราคาแสดงเป็น"
+    "plusFeatures": {
+      "everything": "Everything in Free",
+      "adBlocker": "Ad blocker",
+      "categoryFilter": "Category filter",
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
+    },
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "คำถามที่พบบ่อย",
@@ -321,6 +338,7 @@
     "subtitle": "เชื่อมต่อได้ในไม่กี่นาที เลือกอุปกรณ์ของคุณเพื่อเริ่มต้น",
     "chooseDevice": "เลือกอุปกรณ์ของคุณ",
     "backToGuides": "คู่มือทั้งหมด",
+    "seePricing": "See pricing plans",
     "nextStep": "ถัดไป",
     "prevStep": "ก่อนหน้า",
     "android": {
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "การสมัครสมาชิกและราคา",
       "subtitle": "แผน รหัสโปรโมชั่น ส่วนลดบอท Telegram และการจัดการการสมัครสมาชิก"
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "ดาวน์โหลด",
     "viewSetupGuide": "ดูคู่มือการตั้งค่า",
     "vlessNote": "สำหรับผู้ใช้บอท Telegram ในภูมิภาคที่ถูกจำกัด"
+  },
+  "servers": {
+    "title": "เครือข่ายเซิร์ฟเวอร์ทั่วโลก",
+    "subtitle": "เลือกจากหลายสถานที่ทั่วโลก เซิร์ฟเวอร์ทั้งหมดรองรับสถาปัตยกรรมสองโปรโตคอล",
+    "servers": "เซิร์ฟเวอร์",
+    "server": "เซิร์ฟเวอร์",
+    "protocols": "โปรโตคอล",
+    "locations": {
+      "frankfurt": {
+        "city": "แฟรงก์เฟิร์ต",
+        "country": "เยอรมนี"
+      },
+      "moscow": {
+        "city": "มอสโก",
+        "country": "รัสเซีย"
+      },
+      "zurich": {
+        "city": "ซูริค",
+        "country": "สวิตเซอร์แลนด์"
+      },
+      "london": {
+        "city": "ลอนดอน",
+        "country": "สหราชอาณาจักร"
+      },
+      "newYork": {
+        "city": "นิวยอร์ก",
+        "country": "สหรัฐอเมริกา"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "คู่มือทั้งหมด",
+    "title": "โปรโตคอล VPN",
+    "subtitle": "Doppler รองรับโปรโตคอล VPN สองตัว — WireGuard และ VLESS-Reality แต่ละตัวมีวัตถุประสงค์ที่แตกต่างกัน เลือกตัวที่เหมาะกับสถานการณ์ของคุณ",
+    "bestFor": "ดีที่สุดสำหรับ",
+    "apps": "แอปที่รองรับ",
+    "comparison": "การเปรียบเทียบแบบข้างเคียง",
+    "tableFeature": "ฟีเจอร์",
+    "whichToUse": "ควรใช้ตัวไหน?",
+    "getApps": "ดาวน์โหลดแอป",
+    "viewSubscription": "การสมัครสมาชิก & ราคา",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "แนะนำ",
+      "description": "โปรโตคอล VPN ที่ทันสมัยและเบา ซึ่งได้รับความไว้วางใจจากผู้เชี่ยวชาญด้านความปลอดภัย WireGuard มอบการเชื่อมต่อที่เร็วที่สุด ประสิทธิภาพแบตเตอรี่ที่ดีที่สุด และการเข้ารหัสระดับทหาร นี่คือสิ่งที่แอป Doppler VPN ใช้งานโดยตรง",
+      "speed": "ความเร็วสูงสุด — ดีกว่า OpenVPN และ IKEv2",
+      "battery": "การใช้แบตเตอรี่ต่ำสุดบนอุปกรณ์มือถือ",
+      "streaming": "การสตรีมและการโทรวิดีโอที่ราบรื่น",
+      "everyday": "ความเป็นส่วนตัวในชีวิตประจำวันและการบล็อกโฆษณา",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "การข้ามการเซ็นเซอร์",
+      "description": "โปรโตคอลพร็อกซี่ขั้นสูงที่ออกแบบมาเพื่อข้ามการตรวจสอบแพ็กเก็ตลึก (DPI) และการเซ็นเซอร์เครือข่าย VLESS-Reality ปกปิดการจราจร VPN เป็น HTTPS ปกติ ทำให้แทบไม่สามารถตรวจจับได้ ใช้ผ่านบอท Telegram ของเรา",
+      "censorship": "ข้ามการเซ็นเซอร์อินเทอร์เน็ตของรัฐบาล",
+      "stealth": "การจราจรที่ไม่สามารถตรวจจับได้ — ดูเหมือน HTTPS ปกติ",
+      "deepPacket": "หลีกเลี่ยงการตรวจสอบแพ็กเก็ตลึก (DPI)",
+      "restricted": "เข้าถึงอินเทอร์เน็ตในรัสเซีย จีน อิหร่าน และพื้นที่ที่ถูกจำกัดอื่นๆ",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "ความเร็วการเชื่อมต่อ",
+        "wireguard": "ยอดเยี่ยม — เร็วที่สุดที่มีอยู่",
+        "vless": "ดี — มีค่าใช้จ่ายเล็กน้อยจากการปกปิด"
+      },
+      "battery": {
+        "label": "ผลกระทบต่อแบตเตอรี่",
+        "wireguard": "น้อยที่สุด — ประสิทธิภาพระดับเคอร์เนล",
+        "vless": "ปานกลาง — ทำงานในพื้นที่ผู้ใช้"
+      },
+      "censorship": {
+        "label": "การข้ามการเซ็นเซอร์",
+        "wireguard": "พื้นฐาน — อาจถูกบล็อกโดย DPI",
+        "vless": "ยอดเยี่ยม — ไม่สามารถตรวจจับได้โดย DPI"
+      },
+      "setup": {
+        "label": "ความยากในการตั้งค่า",
+        "wireguard": "แตะครั้งเดียว — รวมอยู่ในแอป Doppler",
+        "vless": "Manual — ตั้งค่าจากบอท Telegram"
+      },
+      "platforms": {
+        "label": "แพลตฟอร์ม",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "ใช้ WireGuard หาก...",
+      "desc": "คุณต้องการประสบการณ์ที่ง่ายที่สุดพร้อมประสิทธิภาพที่ดีที่สุด เพียงดาวน์โหลดแอป Doppler VPN และแตะเชื่อมต่อ — ไม่ต้องตั้งค่า เหมาะสำหรับการท่องเว็บ การสตรีม และความเป็นส่วนตัวในชีวิตประจำวัน"
+    },
+    "useVless": {
+      "title": "ใช้ VLESS-Reality หาก...",
+      "desc": "คุณอยู่ในประเทศที่มีการเซ็นเซอร์อินเทอร์เน็ต (รัสเซีย จีน อิหร่าน ฯลฯ) หรือ ISP ของคุณบล็อกการเชื่อมต่อ VPN รับการตั้งค่าจากบอท Telegram ของเรา @dopplercreatebot และใช้แอปไคลเอนต์ของบุคคลที่สาม"
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "คู่มือทั้งหมด",
+    "title": "การสมัครสมาชิก & ราคา",
+    "subtitle": "ทุกอย่างเกี่ยวกับแผน VPN ของ Doppler ราคาในแต่ละแพลตฟอร์ม รหัสโปรโมชั่น และวิธีการจัดการการสมัครสมาชิกของคุณ",
+    "promo": {
+      "title": "โปรโมชั่นเปิดตัว — ลด 20% สำหรับแผนทั้งหมด",
+      "desc": "ใช้รหัส LAUNCH20 ที่หน้าชำระเงินในบอท Telegram เพื่อรับส่วนลด 20% สำหรับแผนการสมัครสมาชิกใดๆ มีให้สำหรับผู้ใช้ใหม่และผู้ใช้เดิมทั้งหมด"
+    },
+    "pricingSection": "ราคาโดยแพลตฟอร์ม",
+    "tableHeaders": {
+      "plan": "แผน",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "บอท Telegram"
+    },
+    "plans": {
+      "monthly": "1 เดือน",
+      "sixMonth": "6 เดือน",
+      "annual": "1 ปี"
+    },
+    "pricingNote": "ราคาบอท Telegram ต่ำกว่าเนื่องจากไม่มีค่าคอมมิชชั่นจากแอปสโตร์ แผนทั้งหมดรวมฟีเจอร์ Premium เดียวกัน",
+    "howToSubscribe": "วิธีการสมัครสมาชิก",
+    "appStoreMethod": {
+      "title": "ผ่าน App Store (iOS)",
+      "step1": "เปิดแอป Doppler VPN บน iPhone หรือ iPad ของคุณ",
+      "step2": "ไปที่แท็บโปรไฟล์และแตะ \"อัปเกรดเป็น Premium\"",
+      "step3": "เลือกแผนของคุณและยืนยันด้วย Face ID หรือ Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "ผ่าน Google Play (Android)",
+      "step1": "เปิดแอป Doppler VPN บนอุปกรณ์ Android ของคุณ",
+      "step2": "ไปที่แท็บโปรไฟล์และแตะ \"อัปเกรดเป็น Premium\"",
+      "step3": "เลือกแผนของคุณและยืนยันด้วยการชำระเงิน Google Play"
+    },
+    "telegramMethod": {
+      "title": "ผ่านบอท Telegram",
+      "savings": "ประหยัดสูงสุด 35% เมื่อเทียบกับแอปสโตร์",
+      "step1": "เปิด @dopplercreatebot ใน Telegram",
+      "step2": "แตะ \"สมัครสมาชิก\" และเลือกแผนของคุณ",
+      "step3": "ชำระเงินอย่างปลอดภัยผ่าน Stripe — ใช้รหัส LAUNCH20 เพื่อรับส่วนลด 20%"
+    },
+    "manageSection": "การจัดการการสมัครสมาชิกของคุณ",
+    "manage": {
+      "restore": {
+        "title": "กู้คืนการซื้อ",
+        "desc": "หากฟีเจอร์ Premium ของคุณไม่แสดงหลังจากการซื้อ ให้เปิดแอป → โปรไฟล์ → การสมัครสมาชิก → กู้คืนการซื้อ นี่จะทำการซิงค์การสมัครสมาชิกของคุณกับเซิร์ฟเวอร์ของเราอีกครั้ง"
+      },
+      "cancel": {
+        "title": "ยกเลิกการสมัครสมาชิก",
+        "desc": "สำหรับ App Store: การตั้งค่า → Apple ID → การสมัครสมาชิก → Doppler VPN → ยกเลิก สำหรับ Google Play: Google Play → บัญชี → การสมัครสมาชิก → ยกเลิก การเข้าถึงของคุณจะดำเนินต่อไปจนถึงสิ้นสุดรอบการเรียกเก็บเงิน"
+      },
+      "switch": {
+        "title": "เปลี่ยนแผน",
+        "desc": "คุณสามารถอัปเกรดหรือดาวน์เกรดแผนของคุณได้ตลอดเวลาผ่านแพลตฟอร์มเดียวกันที่คุณสมัครสมาชิก การเปลี่ยนแปลงจะมีผลในรอบการเรียกเก็บเงินถัดไป"
+      },
+      "crossPlatform": {
+        "title": "การสมัครสมาชิกข้ามแพลตฟอร์ม",
+        "desc": "การสมัครสมาชิกที่ซื้อผ่าน App Store ใช้งานได้เฉพาะบน iOS การสมัครสมาชิก Google Play ใช้งานได้เฉพาะบน Android สำหรับการเข้าถึงข้ามแพลตฟอร์ม ให้สมัครสมาชิกผ่านบอท Telegram — ใช้งานได้ทุกที่"
+      }
+    },
+    "getApp": "ดาวน์โหลดแอป",
+    "openBot": "เปิดบอท Telegram",
+    "viewProtocols": "คู่มือโปรโตคอล VPN"
   }
 }

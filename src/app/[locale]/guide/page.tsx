@@ -145,6 +145,26 @@ export default async function GuidePage({ params }: PageProps) {
               </div>
             </section>
 
+            {/* Pricing Banner */}
+            <div className="rounded-2xl border border-accent-teal/20 bg-accent-teal/5 p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="w-10 h-10 rounded-xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal shrink-0">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6Z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-text-primary mb-0.5">{t("pricingBanner.title")}</h3>
+                <p className="text-sm text-text-muted">{t("pricingBanner.desc")}</p>
+              </div>
+              <Link
+                href="/#pricing"
+                className="sm:ms-auto px-4 py-2 rounded-lg bg-accent-teal/15 text-accent-teal font-semibold text-sm whitespace-nowrap hover:bg-accent-teal/25 transition-colors"
+              >
+                {t("pricingBanner.cta")} &rarr;
+              </Link>
+            </div>
+
             {/* Telegram Section */}
             <section>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">

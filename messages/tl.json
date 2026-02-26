@@ -84,36 +84,53 @@
     }
   },
   "pricing": {
-    "title": "Simple at transparent na presyo",
-    "subtitle": "Magsimula sa 7-araw na libreng trial. Kanselahin anumang oras.",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Full VPN for free. Upgrade for premium features.",
+    "freeBadge": "Free",
     "plusBadge": "Doppler Plus",
-    "cardTitle": "Lahat ng Premium feature ay kasama",
-    "cardSubtitle": "Parehong makapangyarihang features, piliin ang iyong commitment",
-    "durationSelector": "Pumili ng tagal ng subscription",
+    "freeTitle": "Doppler VPN",
+    "freeSubtitle": "Everything you need to stay private",
+    "plusTitle": "Doppler Plus",
+    "plusSubtitle": "Premium protection & control",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "durationSelector": "Choose subscription duration",
     "durations": {
-      "monthly": "1 Buwan",
-      "sixMonth": "6 na Buwan",
-      "annual": "Taon"
+      "monthly": "1 Mo",
+      "sixMonth": "6 Mo",
+      "annual": "12 Mo"
     },
-    "bestValue": "Pinakamahusay",
-    "billedMonthly": "Bina-bill monthly",
-    "billed": "Bina-bill",
-    "every6Months": "tuwing 6 na buwan",
-    "perYear": "bawat taon",
-    "save": "Makatipid",
-    "allFeaturesIncluded": "Lahat ng feature ay kasama sa bawat plan",
-    "features": {
-      "noLogs": "Zero-log VPN",
+    "bestValue": "Best",
+    "billedMonthly": "Billed monthly",
+    "billed": "Billed",
+    "every6Months": "every 6 months",
+    "perYear": "per year",
+    "save": "Save",
+    "freeFeatures": {
+      "servers": "All server locations",
+      "data": "Unlimited data",
+      "protocols": "WireGuard + VLESS",
+      "devices": "3 devices",
+      "noLogs": "Zero-log policy"
+    },
+    "plusFeatures": {
+      "everything": "Everything in Free",
       "adBlocker": "Ad blocker",
       "categoryFilter": "Category filter",
-      "customBlocklist": "Mga blocklist",
-      "devices": "10 device",
-      "support": "24/7 support"
+      "customBlocklist": "Custom blocklists",
+      "devices": "10 devices",
+      "support": "24/7 support",
+      "smartVpn": "Smart VPN"
     },
-    "cta": "Simulan ang Libreng Trial",
-    "cancelAnytime": "Kanselahin anumang oras. Walang tanong.",
-    "guarantee": "30-araw na money-back guarantee",
-    "pricesIn": "Presyo ay ipinapakita sa"
+    "comingSoon": "Soon",
+    "freeCta": "Download App",
+    "plusCta": "Start Free Trial",
+    "trialNote": "7-day free trial included",
+    "platformNote": "Prices shown for Telegram Bot. App Store & Google Play prices may vary.",
+    "platformLink": "See all platform prices",
+    "cancelAnytime": "Cancel anytime. No questions asked.",
+    "guarantee": "30-day money-back guarantee",
+    "pricesIn": "Prices shown in"
   },
   "faq": {
     "title": "Mga madalas itanong",
@@ -401,6 +418,7 @@
       "miniAppDesc": "Mag-subscribe at pamahalaan ang iyong plan sa pamamagitan ng aming Telegram Mini App na may secure na Stripe payments."
     },
     "backToGuides": "Lahat ng Gabay",
+    "seePricing": "See pricing plans",
     "nextStep": "Susunod",
     "prevStep": "Nakaraan",
     "downloadApps": "I-download ang app",
@@ -412,6 +430,11 @@
     "subscriptionCard": {
       "title": "Subscription at presyo",
       "subtitle": "Mga plano, promo code, diskwento sa Telegram bot at pamamahala ng subscription."
+    },
+    "pricingBanner": {
+      "title": "Free VPN, premium optional",
+      "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
+      "cta": "See plans"
     }
   },
   "cookie": {
@@ -477,5 +500,169 @@
     "download": "I-download",
     "viewSetupGuide": "Tingnan ang gabay sa pag-setup",
     "vlessNote": "Para sa mga gumagamit ng Telegram bot sa mga pinaghihigpitang rehiyon"
+  },
+  "servers": {
+    "title": "Global na Network ng Server",
+    "subtitle": "Pumili mula sa maraming lokasyon sa buong mundo. Lahat ng server ay sumusuporta sa dual-protocol architecture.",
+    "servers": "server",
+    "server": "server",
+    "protocols": "Mga Protocol",
+    "locations": {
+      "frankfurt": {
+        "city": "Frankfurt",
+        "country": "Germany"
+      },
+      "moscow": {
+        "city": "Moscow",
+        "country": "Russia"
+      },
+      "zurich": {
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      "london": {
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "newYork": {
+        "city": "New York",
+        "country": "United States"
+      }
+    }
+  },
+  "guideProtocols": {
+    "backToGuides": "Lahat ng Gabay",
+    "title": "VPN Protocols",
+    "subtitle": "Sinusuportahan ng Doppler ang dalawang VPN protocols — WireGuard at VLESS-Reality. Bawat isa ay may iba't ibang layunin. Pumili ng akma sa iyong sitwasyon.",
+    "bestFor": "Pinakamainam para sa",
+    "apps": "Sinusuportahang apps",
+    "comparison": "Paghahambing ng magkatabi",
+    "tableFeature": "Tampok",
+    "whichToUse": "Alin ang dapat kong gamitin?",
+    "getApps": "I-download ang mga app",
+    "viewSubscription": "Subscription at presyo",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Inirerekomenda",
+      "description": "Isang modernong, magaan na VPN protocol na pinagkakatiwalaan ng mga propesyonal sa seguridad. Nag-aalok ang WireGuard ng pinakamabilis na koneksyon, pinakamahusay na kahusayan ng baterya, at encryption na pang-militar. Ito ang ginagamit ng Doppler VPN app nang katutubo.",
+      "speed": "Maksimum na bilis — mas mabilis kaysa sa OpenVPN at IKEv2",
+      "battery": "Minimal na pag-drain ng baterya sa mga mobile device",
+      "streaming": "Maayos na streaming at tawag sa video",
+      "everyday": "Pang-araw-araw na privacy at pag-block ng ads",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Pagbypass ng censorship",
+      "description": "Isang advanced na proxy protocol na dinisenyo upang makaiwas sa deep packet inspection (DPI) at censorship ng network. Itinatago ng VLESS-Reality ang VPN traffic bilang regular na HTTPS, na ginagawang halos hindi matukoy. Ginagamit sa pamamagitan ng aming Telegram bot.",
+      "censorship": "Pagbypass sa censorship ng internet ng gobyerno",
+      "stealth": "Hindi matutukoy na traffic — mukhang normal na HTTPS",
+      "deepPacket": "Pag-iwas sa deep packet inspection (DPI)",
+      "restricted": "Pag-access sa internet sa Russia, China, Iran, at iba pang mga restricted na rehiyon",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Bilis ng koneksyon",
+        "wireguard": "Mahusay — pinakamabilis na magagamit",
+        "vless": "Maganda — kaunting overhead mula sa masking"
+      },
+      "battery": {
+        "label": "Epekto sa baterya",
+        "wireguard": "Minimal — kahusayan sa kernel level",
+        "vless": "Katamtaman — tumatakbo sa userspace"
+      },
+      "censorship": {
+        "label": "Pagbypass ng censorship",
+        "wireguard": "Pangunahing — maaaring ma-block ng DPI",
+        "vless": "Mahusay — hindi matutukoy ng DPI"
+      },
+      "setup": {
+        "label": "Kahirapan sa setup",
+        "wireguard": "Isang tap — nakabuilt-in sa Doppler app",
+        "vless": "Manu-manong — config mula sa Telegram bot"
+      },
+      "platforms": {
+        "label": "Mga Platforma",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Gumamit ng WireGuard kung...",
+      "desc": "Nais mo ng pinakasimpleng karanasan na may pinakamahusay na pagganap. I-download lamang ang Doppler VPN app at i-tap ang connect — walang kinakailangang configuration. Perpekto para sa pang-araw-araw na pag-browse, streaming, at privacy."
+    },
+    "useVless": {
+      "title": "Gumamit ng VLESS-Reality kung...",
+      "desc": "Nasa isang bansa ka na may censorship ng internet (Russia, China, Iran, atbp.) o ang iyong ISP ay nagba-block ng mga koneksyon sa VPN. Kunin ang iyong config mula sa aming Telegram bot @dopplercreatebot at gumamit ng third-party client app."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "Lahat ng Gabay",
+    "title": "Subscription at Presyo",
+    "subtitle": "Lahat tungkol sa mga plano ng Doppler VPN, presyo sa iba't ibang platform, promo codes, at kung paano pamahalaan ang iyong subscription.",
+    "promo": {
+      "title": "Launch promo — 20% off sa lahat ng plano",
+      "desc": "Gumamit ng code na LAUNCH20 sa checkout sa Telegram bot upang makakuha ng 20% off sa anumang subscription plan. Available para sa lahat ng bagong at umiiral na mga user."
+    },
+    "pricingSection": "Presyo ayon sa platform",
+    "tableHeaders": {
+      "plan": "Plano",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram Bot"
+    },
+    "plans": {
+      "monthly": "1 Buwan",
+      "sixMonth": "6 Buwan",
+      "annual": "1 Taon"
+    },
+    "pricingNote": "Mas mababa ang presyo sa Telegram bot dahil walang komisyon sa app store. Lahat ng plano ay may parehong Premium na tampok.",
+    "howToSubscribe": "Paano mag-subscribe",
+    "appStoreMethod": {
+      "title": "Sa pamamagitan ng App Store (iOS)",
+      "step1": "Buksan ang Doppler VPN app sa iyong iPhone o iPad",
+      "step2": "Pumunta sa Profile tab at i-tap ang \"Upgrade to Premium\"",
+      "step3": "Pumili ng iyong plano at kumpirmahin gamit ang Face ID o Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Sa pamamagitan ng Google Play (Android)",
+      "step1": "Buksan ang Doppler VPN app sa iyong Android device",
+      "step2": "Pumunta sa Profile tab at i-tap ang \"Upgrade to Premium\"",
+      "step3": "Pumili ng iyong plano at kumpirmahin gamit ang Google Play payment"
+    },
+    "telegramMethod": {
+      "title": "Sa pamamagitan ng Telegram Bot",
+      "savings": "Makatipid ng hanggang 35% kumpara sa mga app store",
+      "step1": "Buksan ang @dopplercreatebot sa Telegram",
+      "step2": "I-tap ang \"Subscribe\" at pumili ng iyong plano",
+      "step3": "Magbayad nang secure sa pamamagitan ng Stripe — gamitin ang code na LAUNCH20 para sa 20% off"
+    },
+    "manageSection": "Pamamahala ng iyong subscription",
+    "manage": {
+      "restore": {
+        "title": "Ibalik ang mga pagbili",
+        "desc": "Kung ang iyong mga Premium na tampok ay hindi lumalabas pagkatapos ng pagbili, buksan ang app → Profile → Subscription → Ibalik ang mga Pagbili. Ito ay muling nag-synchronize ng iyong subscription sa aming mga server."
+      },
+      "cancel": {
+        "title": "I-cancel ang subscription",
+        "desc": "Para sa App Store: Mga Setting → Apple ID → Mga Subscription → Doppler VPN → I-cancel. Para sa Google Play: Google Play → Account → Mga Subscription → I-cancel. Magpapatuloy ang iyong access hanggang sa katapusan ng billing period."
+      },
+      "switch": {
+        "title": "Palitan ang mga plano",
+        "desc": "Maaari mong i-upgrade o i-downgrade ang iyong plano anumang oras sa pamamagitan ng parehong platform na iyong sinubscribe-an. Ang pagbabago ay magkakabisa sa susunod na billing cycle."
+      },
+      "crossPlatform": {
+        "title": "Cross-platform na mga subscription",
+        "desc": "Ang mga subscription na binili sa pamamagitan ng App Store ay gumagana lamang sa iOS. Ang mga subscription sa Google Play ay gumagana lamang sa Android. Para sa cross-platform na access, mag-subscribe sa pamamagitan ng Telegram bot — ito ay gumagana saanman."
+      }
+    },
+    "getApp": "I-download ang app",
+    "openBot": "Buksan ang Telegram Bot",
+    "viewProtocols": "Gabay sa VPN Protocols"
   }
 }
