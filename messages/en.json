@@ -29,7 +29,17 @@
       "unlimited": "Unlimited Bandwidth",
       "wireguard": "WireGuard Encryption"
     },
-    "openTelegram": "Telegram Bot"
+    "openTelegram": "Telegram Bot",
+    "seePrices": "See Prices",
+    "getAndroid": "Get for Android",
+    "androidNote": "Android app coming soon. Purchase via Telegram or iOS.",
+    "downloadMac": "Download for Mac",
+    "downloadWindows": "Download for Windows",
+    "downloadDesktop": "All Downloads",
+    "desktopNote": "Subscription available via Telegram or iOS app.",
+    "downloadIosLabel": "Download Doppler VPN on the App Store",
+    "promoDiscount": "{percent}% off",
+    "promoCopyLabel": "Copy promo code {code}"
   },
   "features": {
     "title": "Designed for Complete Privacy",
