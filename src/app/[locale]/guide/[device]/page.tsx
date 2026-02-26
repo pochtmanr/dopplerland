@@ -18,6 +18,91 @@ export function generateStaticParams() {
   );
 }
 
+/* ── Icons ────────────────────────────────────────────────────────── */
+
+function DownloadIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+    </svg>
+  );
+}
+
+/* ── Download options per device ──────────────────────────────────── */
+
+interface DownloadOption {
+  nameKey: string;
+  descKey: string;
+  href: string;
+  protocol?: "wireguard" | "vless";
+  comingSoon?: boolean;
+}
+
+const DOWNLOAD_OPTIONS: Record<Device, DownloadOption[]> = {
+  ios: [
+    {
+      nameKey: "ios.dlDoppler",
+      descKey: "ios.dlDopplerDesc",
+      href: "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773",
+    },
+    {
+      nameKey: "ios.dlStreisand",
+      descKey: "ios.dlStreisandDesc",
+      href: "https://apps.apple.com/app/streisand/id6450534064",
+      protocol: "vless",
+    },
+  ],
+  mac: [
+    {
+      nameKey: "mac.dlMacStore",
+      descKey: "mac.dlMacStoreDesc",
+      href: "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773",
+    },
+    {
+      nameKey: "mac.dlV2rayNSilicon",
+      descKey: "mac.dlV2rayNSiliconDesc",
+      href: "https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-macos-arm64.dmg",
+      protocol: "vless",
+    },
+    {
+      nameKey: "mac.dlV2rayNIntel",
+      descKey: "mac.dlV2rayNIntelDesc",
+      href: "https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-macos-64.dmg",
+      protocol: "vless",
+    },
+  ],
+  windows: [
+    {
+      nameKey: "windows.dlV2rayNx64",
+      descKey: "windows.dlV2rayNx64Desc",
+      href: "https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-windows-64.zip",
+      protocol: "vless",
+    },
+    {
+      nameKey: "windows.dlV2rayNArm",
+      descKey: "windows.dlV2rayNArmDesc",
+      href: "https://github.com/2dust/v2rayN/releases/download/7.18.0/v2rayN-windows-arm64.zip",
+      protocol: "vless",
+    },
+  ],
+  android: [
+    {
+      nameKey: "android.dlDoppler",
+      descKey: "android.dlDopplerDesc",
+      href: "https://play.google.com/store/apps/details?id=com.dopplervpn.android",
+      comingSoon: true,
+    },
+    {
+      nameKey: "android.dlV2rayNG",
+      descKey: "android.dlV2rayNGDesc",
+      href: "https://github.com/2dust/v2rayNG/releases/download/1.10.32/v2rayNG_1.10.32_universal.apk",
+      protocol: "vless",
+    },
+  ],
+};
+
+/* ── Sidebar nav ──────────────────────────────────────────────────── */
+
 const deviceNav: { id: Device; icon: React.ReactNode }[] = [
   {
     id: "android",
@@ -53,6 +138,8 @@ const deviceNav: { id: Device; icon: React.ReactNode }[] = [
   },
 ];
 
+/* ── Page ─────────────────────────────────────────────────────────── */
+
 export default async function DeviceGuidePage({ params }: PageProps) {
   const { locale, device } = await params;
   setRequestLocale(locale);
@@ -77,6 +164,8 @@ export default async function DeviceGuidePage({ params }: PageProps) {
     t(`${d}.troubleshoot3`),
   ];
 
+  const downloadOptions = DOWNLOAD_OPTIONS[d];
+
   return (
     <>
       <Navbar />
@@ -99,12 +188,12 @@ export default async function DeviceGuidePage({ params }: PageProps) {
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Sidebar */}
             <aside className="lg:w-56 shrink-0">
-              <nav className="lg:sticky lg:top-28 flex lg:flex-col gap-2">
+              <nav className="lg:sticky lg:top-28 flex lg:flex-col gap-2 overflow-x-auto">
                 {deviceNav.map((item) => (
                   <Link
                     key={item.id}
                     href={`/guide/${item.id}`}
-                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap ${
                       item.id === d
                         ? "bg-accent-teal/10 text-accent-teal border border-accent-teal/30"
                         : "text-text-muted hover:text-text-primary hover:bg-overlay/5 border border-transparent"
@@ -135,7 +224,72 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                 </p>
               </div>
 
-              {/* Steps */}
+              {/* ── Download Options ─────────────────────────────── */}
+              <section className="mb-14">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
+                  {t("downloadOptions")}
+                </h2>
+                <div className="space-y-3">
+                  {downloadOptions.map((opt) => (
+                    <div key={opt.nameKey}>
+                      {opt.comingSoon ? (
+                        <div className="flex items-center justify-between rounded-xl border border-overlay/10 bg-bg-secondary/50 px-4 py-3 opacity-60">
+                          <div className="flex items-center gap-3">
+                            <DownloadIcon className="w-4 h-4 text-text-muted shrink-0" />
+                            <div>
+                              <div className="text-sm font-medium text-text-primary">
+                                {t(opt.nameKey)}
+                              </div>
+                              <div className="text-xs text-text-muted">
+                                {t(opt.descKey)}
+                              </div>
+                            </div>
+                          </div>
+                          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-text-muted shrink-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-text-muted/50" />
+                            {t("comingSoon")}
+                          </span>
+                        </div>
+                      ) : (
+                        <a
+                          href={opt.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center justify-between rounded-xl border border-overlay/10 bg-bg-secondary/50 px-4 py-3 hover:border-accent-teal/30 hover:bg-accent-teal/5 transition-all"
+                        >
+                          <div className="flex items-center gap-3">
+                            <DownloadIcon className="w-4 h-4 text-text-muted group-hover:text-accent-teal transition-colors shrink-0" />
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm font-medium text-text-primary">
+                                  {t(opt.nameKey)}
+                                </span>
+                                {opt.protocol && (
+                                  <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider ${
+                                    opt.protocol === "wireguard"
+                                      ? "bg-accent-teal/10 text-accent-teal"
+                                      : "bg-accent-gold/15 text-accent-gold"
+                                  }`}>
+                                    {opt.protocol === "wireguard" ? "WireGuard" : "VLESS"}
+                                  </span>
+                                )}
+                              </div>
+                              <div className="text-xs text-text-muted">
+                                {t(opt.descKey)}
+                              </div>
+                            </div>
+                          </div>
+                          <span className="text-text-muted text-xs group-hover:text-accent-teal transition-colors shrink-0">
+                            {t("download")} &rarr;
+                          </span>
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* ── Setup Steps ──────────────────────────────────── */}
               <div className="space-y-5 mb-14">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
                   {t("title")}
@@ -155,14 +309,19 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                       <p className="text-sm text-text-muted leading-relaxed">
                         {step.desc}
                       </p>
-                      {step.num === 1 && (
+                      {step.num === 2 && (
                         <div className="mt-3">
-                          <Link
-                            href="/apps"
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent-teal/10 border border-accent-teal/20 text-accent-teal font-medium rounded-xl hover:bg-accent-teal/15 hover:border-accent-teal/40 transition-all text-sm"
+                          <a
+                            href="https://t.me/dopplercreatebot"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#2AABEE]/10 border border-[#2AABEE]/20 text-[#2AABEE] font-medium rounded-xl hover:bg-[#2AABEE]/15 hover:border-[#2AABEE]/40 transition-all text-sm"
                           >
-                            {t("downloadApps")} &rarr;
-                          </Link>
+                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                            {t("openBot")} &rarr;
+                          </a>
                         </div>
                       )}
                     </div>
@@ -170,7 +329,35 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                 ))}
               </div>
 
-              {/* Troubleshooting */}
+              {/* ── Transparency Block ───────────────────────────── */}
+              <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 sm:p-6 mb-14">
+                <div className="flex items-start gap-3">
+                  <span className="shrink-0 w-8 h-8 rounded-lg bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal text-sm">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                    </svg>
+                  </span>
+                  <div className="text-sm text-text-muted leading-relaxed space-y-1">
+                    {(d === "ios" || d === "mac") ? (
+                      <p>{t("transparency.subscriptionApp")}</p>
+                    ) : (
+                      <p>{t("transparency.subscription")}</p>
+                    )}
+                    <p>{t("transparency.crossPlatform")}</p>
+                    <p>{t("transparency.freeTrial")}</p>
+                    <p className="pt-1">
+                      <Link
+                        href="/guide/subscription"
+                        className="text-accent-teal hover:text-accent-teal-light transition-colors font-medium"
+                      >
+                        {t("subscriptionDetails")} &rarr;
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── Troubleshooting ──────────────────────────────── */}
               <div className="mb-14">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
                   {t(`${d}.troubleshootTitle`)}
@@ -192,7 +379,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Telegram Section */}
+              {/* ── Telegram Section ─────────────────────────────── */}
               <section>
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
                   {t("telegramSection.title")}
@@ -234,7 +421,12 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                       {t("telegramSection.supportBotDesc")}
                     </p>
                   </a>
-                  <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 opacity-60">
+                  <a
+                    href="https://doppler-miniapp.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 hover:border-accent-teal/30 transition-all"
+                  >
                     <div className="w-8 h-8 rounded-lg bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-3">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
@@ -246,7 +438,7 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                     <p className="text-xs text-text-muted">
                       {t("telegramSection.miniAppDesc")}
                     </p>
-                  </div>
+                  </a>
                 </div>
               </section>
 

@@ -211,7 +211,7 @@ export default async function SubscriptionGuidePage({ params }: PageProps) {
           {/* CTA */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/apps"
+              href="/downloads"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-teal/15 text-accent-teal text-sm font-medium hover:bg-accent-teal/25 transition-colors"
             >
               {t("getApp")} &rarr;

@@ -9,10 +9,9 @@
     "faq": "Perguntas",
     "blog": "Blog",
     "download": "Baixar",
-    "guide": "Guia",
-    "apps": "Apps",
-    "seeAllApps": "Ver todos os apps",
-    "seeAllGuides": "Ver todos os guias"
+    "downloads": "Downloads",
+    "seeAllDownloads": "Ver todos os downloads",
+    "guides": "Guias"
   },
   "hero": {
     "tagline": "VPN com privacidade em primeiro lugar. Grátis para sempre.",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "Solução de problemas",
       "troubleshoot1": "Se a conexão falhar, tente um servidor diferente no bot.",
       "troubleshoot2": "Certifique-se de que a otimização de bateria esteja desativada para o V2RayNG.",
-      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas."
+      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "Configuração iOS",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "Solução de problemas",
       "troubleshoot1": "Se o VPN não conectar, tente remover e reimportar a configuração.",
       "troubleshoot2": "Certifique-se de que o Streisand tenha permissão para adicionar configurações VPN em Ajustes > Geral > VPN.",
-      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas."
+      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Configuração Windows",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "Solução de problemas",
       "troubleshoot1": "Certifique-se de que o Windows Defender ou seu antivírus não esteja bloqueando o v2rayN.",
       "troubleshoot2": "Tente executar o v2rayN como Administrador.",
-      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas."
+      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "Configuração macOS",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "Solução de problemas",
       "troubleshoot1": "Se o macOS bloquear o aplicativo, vá em Preferências do Sistema > Privacidade e Segurança e permita-o.",
       "troubleshoot2": "Tente reiniciar o aplicativo se a conexão cair.",
-      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas."
+      "troubleshoot3": "Para ajuda, envie uma mensagem para @DopplerSupportBot no Telegram — nosso suporte com IA está disponível 24 horas.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Integração com Telegram",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "Usamos cookies para melhorar sua experiência. Ao continuar usando este site, você concorda com o uso de cookies.",
@@ -667,8 +703,8 @@
         "desc": "Você pode atualizar ou rebaixar seu plano a qualquer momento através da mesma plataforma em que se inscreveu. A mudança entra em vigor no próximo ciclo de cobrança."
       },
       "crossPlatform": {
-        "title": "Assinaturas multiplataforma",
-        "desc": "Assinaturas adquiridas através da App Store funcionam apenas no iOS. Assinaturas do Google Play funcionam apenas no Android. Para acesso multiplataforma, assine via bot do Telegram — funciona em todos os lugares."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "Baixar o aplicativo",

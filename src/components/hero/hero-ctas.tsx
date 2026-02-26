@@ -50,33 +50,38 @@ export function HeroCTAs({ platform }: HeroCTAsProps) {
     setOS(detectDesktopOS());
   }, []);
 
-  // Primary CTA: platform-aware icon + label, always links to /apps
+  // Primary CTA: platform-aware icon + label
   let primaryIcon: React.ReactNode;
   let primaryLabel: string;
+  let targetHref: string;
+  let isExternal = false;
 
   if (platform === "ios") {
     primaryIcon = <AppleIcon />;
     primaryLabel = t("downloadIos");
+    targetHref = "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773";
+    isExternal = true;
   } else if (platform === "android") {
     primaryIcon = <AndroidIcon />;
     primaryLabel = t("getAndroid");
+    targetHref = "/guide/android";
   } else if (os === "mac") {
     primaryIcon = <MonitorIcon />;
     primaryLabel = t("downloadMac");
+    targetHref = "/guide/mac";
   } else if (os === "windows") {
     primaryIcon = <MonitorIcon />;
     primaryLabel = t("downloadWindows");
+    targetHref = "/guide/windows";
   } else {
     primaryIcon = <MonitorIcon />;
     primaryLabel = t("downloadDesktop");
+    targetHref = "/downloads";
   }
 
-  // iOS: direct App Store link. Everything else: redirect to /apps
-  const isIOS = platform === "ios";
-
-  const primaryButton = isIOS ? (
+  const primaryButton = isExternal ? (
     <a
-      href="https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773"
+      href={targetHref}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("downloadIosLabel")}
@@ -87,7 +92,7 @@ export function HeroCTAs({ platform }: HeroCTAsProps) {
     </a>
   ) : (
     <Link
-      href="/apps"
+      href={targetHref as "/guide/android" | "/guide/mac" | "/guide/windows" | "/downloads"}
       className="inline-flex items-center gap-2 px-5 py-3 bg-accent-teal/20 text-accent-teal hover:bg-accent-teal/30 rounded-lg transition-colors text-sm font-medium"
     >
       {primaryIcon}

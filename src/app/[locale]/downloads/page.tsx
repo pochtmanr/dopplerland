@@ -252,6 +252,13 @@ export default async function AppsPage({ params }: PageProps) {
                       </span>
                     </a>
                   </div>
+
+                  <Link
+                    href="/guide/android"
+                    className="inline-block text-xs text-text-muted hover:text-accent-teal transition-colors"
+                  >
+                    {t("viewSetupGuide")} &rarr;
+                  </Link>
                 </div>
               </div>
             </section>

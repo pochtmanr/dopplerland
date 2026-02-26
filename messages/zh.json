@@ -9,10 +9,9 @@
     "faq": "常见问题",
     "blog": "博客",
     "download": "下载",
-    "guide": "指南",
-    "apps": "应用",
-    "seeAllApps": "查看所有应用",
-    "seeAllGuides": "查看所有指南"
+    "downloads": "下载",
+    "seeAllDownloads": "查看所有下载",
+    "guides": "指南"
   },
   "hero": {
     "tagline": "隐私至上的VPN。永久免费。",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "故障排除",
       "troubleshoot1": "如果连接失败，请在机器人中尝试其他服务器。",
       "troubleshoot2": "确保 V2RayNG 已禁用电池优化。",
-      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。"
+      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "iOS 设置",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "故障排除",
       "troubleshoot1": "如果 VPN 无法连接，请尝试删除并重新导入配置。",
       "troubleshoot2": "确保 Streisand 有权在设置 > 通用 > VPN 中添加 VPN 配置。",
-      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。"
+      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Windows 设置",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "故障排除",
       "troubleshoot1": "确保 Windows Defender 或杀毒软件没有阻止 v2rayN。",
       "troubleshoot2": "尝试以管理员身份运行 v2rayN。",
-      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。"
+      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "macOS 设置",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "故障排除",
       "troubleshoot1": "如果 macOS 阻止应用，请前往系统偏好设置 > 隐私与安全性并允许。",
       "troubleshoot2": "如果连接中断，请尝试重启应用。",
-      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。"
+      "troubleshoot3": "如需帮助，请在 Telegram 上联系 @DopplerSupportBot — 我们的 AI 支持全天候在线。",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Telegram 集成",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "我们使用Cookie来改善您的体验。继续使用本网站即表示您同意使用Cookie。",
@@ -667,8 +703,8 @@
         "desc": "您可以随时通过您订阅的平台升级或降级您的计划。更改将在下一个计费周期生效。"
       },
       "crossPlatform": {
-        "title": "跨平台订阅",
-        "desc": "通过App Store购买的订阅仅适用于iOS。Google Play订阅仅适用于Android。要实现跨平台访问，请通过Telegram机器人订阅 — 它在任何地方都有效。"
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "下载应用",

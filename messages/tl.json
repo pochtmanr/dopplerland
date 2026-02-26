@@ -9,10 +9,9 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "I-download",
-    "guide": "Gabay",
-    "apps": "Apps",
-    "seeAllApps": "Tingnan lahat ng apps",
-    "seeAllGuides": "Tingnan lahat ng gabay"
+    "downloads": "Mga Download",
+    "seeAllDownloads": "Tingnan lahat ng download",
+    "guides": "Mga Gabay"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Libre Magpakailanman.",
@@ -363,7 +362,11 @@
       "troubleshootTitle": "Pag-troubleshoot",
       "troubleshoot1": "Kung hindi makakonekta, subukan ang ibang server location sa bot.",
       "troubleshoot2": "Siguraduhing naka-disable ang battery optimization para sa V2RayNG.",
-      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7."
+      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "iOS Setup",
@@ -380,7 +383,15 @@
       "troubleshootTitle": "Pag-troubleshoot",
       "troubleshoot1": "Kung hindi kumokonekta ang VPN, subukang tanggalin at i-import ulit ang config.",
       "troubleshoot2": "Siguraduhing may permission ang Streisand na mag-add ng VPN configurations sa Settings > General > VPN.",
-      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7."
+      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Windows Setup",
@@ -397,7 +408,13 @@
       "troubleshootTitle": "Pag-troubleshoot",
       "troubleshoot1": "Siguraduhing hindi bini-block ng Windows Defender o ng iyong antivirus ang v2rayN.",
       "troubleshoot2": "Subukang patakbuhin ang v2rayN bilang Administrator.",
-      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7."
+      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "macOS Setup",
@@ -415,7 +432,15 @@
       "troubleshootTitle": "Pag-troubleshoot",
       "troubleshoot1": "Kung bini-block ng macOS ang app, pumunta sa System Preferences > Privacy & Security at payagan ito.",
       "troubleshoot2": "Subukang i-restart ang app kung nawawala ang koneksyon.",
-      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7."
+      "troubleshoot3": "Para sa tulong, mag-message sa @DopplerSupportBot sa Telegram — available ang aming AI support 24/7.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Telegram Integration",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "Gumagamit kami ng cookies para mapabuti ang iyong karanasan. Sa patuloy na paggamit ng site na ito, sumasang-ayon ka sa paggamit ng cookies.",
@@ -667,8 +703,8 @@
         "desc": "Maaari mong i-upgrade o i-downgrade ang iyong plano anumang oras sa pamamagitan ng parehong platform na iyong sinubscribe-an. Ang pagbabago ay magkakabisa sa susunod na billing cycle."
       },
       "crossPlatform": {
-        "title": "Cross-platform na mga subscription",
-        "desc": "Ang mga subscription na binili sa pamamagitan ng App Store ay gumagana lamang sa iOS. Ang mga subscription sa Google Play ay gumagana lamang sa Android. Para sa cross-platform na access, mag-subscribe sa pamamagitan ng Telegram bot — ito ay gumagana saanman."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "I-download ang app",

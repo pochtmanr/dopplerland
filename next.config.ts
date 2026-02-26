@@ -11,12 +11,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/download",
-        destination: "/en/apps",
+        destination: "/en/downloads",
         permanent: true,
       },
       {
         source: "/:locale/download",
-        destination: "/:locale/apps",
+        destination: "/:locale/downloads",
+        permanent: true,
+      },
+      {
+        source: "/:locale/apps",
+        destination: "/:locale/downloads",
         permanent: true,
       },
     ];

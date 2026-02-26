@@ -264,7 +264,7 @@ export function Pricing() {
                 variant="outline"
                 className="w-full"
                 size="lg"
-                href="/apps"
+                href="/downloads"
               >
                 {t("freeCta")}
               </Button>

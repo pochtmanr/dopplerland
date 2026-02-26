@@ -9,10 +9,9 @@
     "faq": "FAQ",
     "blog": "Blog",
     "download": "Tải xuống",
-    "guide": "Hướng dẫn",
-    "apps": "Ứng dụng",
-    "seeAllApps": "Xem tất cả ứng dụng",
-    "seeAllGuides": "Xem tất cả hướng dẫn"
+    "downloads": "Tải xuống",
+    "seeAllDownloads": "Xem tất cả bản tải",
+    "guides": "Hướng dẫn"
   },
   "hero": {
     "tagline": "VPN Ưu Tiên Quyền Riêng Tư. Miễn Phí Mãi Mãi.",
@@ -363,7 +362,11 @@
       "troubleshootTitle": "Khắc phục sự cố",
       "troubleshoot1": "Nếu kết nối thất bại, hãy thử máy chủ khác trong bot.",
       "troubleshoot2": "Đảm bảo tối ưu hóa pin đã được tắt cho V2RayNG.",
-      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7."
+      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "Cài đặt iOS",
@@ -380,7 +383,15 @@
       "troubleshootTitle": "Khắc phục sự cố",
       "troubleshoot1": "Nếu VPN không kết nối, hãy thử xóa và nhập lại cấu hình.",
       "troubleshoot2": "Đảm bảo Streisand có quyền thêm cấu hình VPN trong Cài đặt > Cài đặt chung > VPN.",
-      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7."
+      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Cài đặt Windows",
@@ -397,7 +408,13 @@
       "troubleshootTitle": "Khắc phục sự cố",
       "troubleshoot1": "Đảm bảo Windows Defender hoặc phần mềm diệt virus không chặn v2rayN.",
       "troubleshoot2": "Thử chạy v2rayN với quyền Quản trị viên.",
-      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7."
+      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "Cài đặt macOS",
@@ -415,7 +432,15 @@
       "troubleshootTitle": "Khắc phục sự cố",
       "troubleshoot1": "Nếu macOS chặn ứng dụng, vào System Preferences > Privacy & Security và cho phép.",
       "troubleshoot2": "Thử khởi động lại ứng dụng nếu kết nối bị ngắt.",
-      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7."
+      "troubleshoot3": "Để được hỗ trợ, nhắn tin cho @DopplerSupportBot trên Telegram — hỗ trợ AI của chúng tôi hoạt động 24/7.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Tích hợp Telegram",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. Tiếp tục sử dụng trang web này đồng nghĩa với việc bạn đồng ý sử dụng cookie.",
@@ -667,8 +703,8 @@
         "desc": "Bạn có thể nâng cấp hoặc hạ cấp gói của mình bất kỳ lúc nào thông qua cùng một nền tảng mà bạn đã đăng ký. Thay đổi sẽ có hiệu lực vào chu kỳ thanh toán tiếp theo."
       },
       "crossPlatform": {
-        "title": "Đăng ký đa nền tảng",
-        "desc": "Các đăng ký mua qua App Store chỉ hoạt động trên iOS. Các đăng ký Google Play chỉ hoạt động trên Android. Để truy cập đa nền tảng, hãy đăng ký qua bot Telegram — nó hoạt động ở mọi nơi."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "Tải xuống ứng dụng",

@@ -9,10 +9,9 @@
     "faq": "सवाल",
     "blog": "ब्लॉग",
     "download": "डाउनलोड",
-    "guide": "गाइड",
-    "apps": "ऐप्स",
-    "seeAllApps": "सभी ऐप्स देखें",
-    "seeAllGuides": "सभी गाइड देखें"
+    "downloads": "डाउनलोड",
+    "seeAllDownloads": "सभी डाउनलोड देखें",
+    "guides": "गाइड"
   },
   "hero": {
     "tagline": "प्राइवेसी-फर्स्ट VPN। हमेशा मुफ्त।",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "समस्या निवारण",
       "troubleshoot1": "अगर कनेक्शन विफल होता है, तो बॉट में एक अलग सर्वर लोकेशन आज़माएं।",
       "troubleshoot2": "सुनिश्चित करें कि V2RayNG के लिए बैटरी ऑप्टिमाइज़ेशन अक्षम है।",
-      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।"
+      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "iOS सेटअप",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "समस्या निवारण",
       "troubleshoot1": "अगर VPN कनेक्ट नहीं हो रहा, तो कॉन्फ़िग हटाकर दोबारा इंपोर्ट करें।",
       "troubleshoot2": "सुनिश्चित करें कि Streisand को सेटिंग्स > जनरल > VPN में VPN कॉन्फ़िगरेशन जोड़ने की अनुमति है।",
-      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।"
+      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Windows सेटअप",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "समस्या निवारण",
       "troubleshoot1": "सुनिश्चित करें कि Windows Defender या आपका एंटीवायरस v2rayN को ब्लॉक नहीं कर रहा।",
       "troubleshoot2": "v2rayN को एडमिनिस्ट्रेटर के रूप में चलाने का प्रयास करें।",
-      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।"
+      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "macOS सेटअप",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "समस्या निवारण",
       "troubleshoot1": "अगर macOS ऐप को ब्लॉक करता है, तो System Preferences > Privacy & Security में जाकर अनुमति दें।",
       "troubleshoot2": "अगर कनेक्शन टूट जाए तो ऐप को रीस्टार्ट करें।",
-      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।"
+      "troubleshoot3": "मदद के लिए, Telegram पर @DopplerSupportBot को मैसेज करें — हमारा AI सपोर्ट 24/7 उपलब्ध है।",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Telegram इंटीग्रेशन",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "हम आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करते हैं। इस साइट का उपयोग जारी रखकर, आप कुकीज़ के उपयोग से सहमत होते हैं।",
@@ -667,8 +703,8 @@
         "desc": "आप कभी भी उसी प्लेटफार्म के माध्यम से अपनी योजना को अपग्रेड या डाउनग्रेड कर सकते हैं जिस पर आपने सदस्यता ली थी। परिवर्तन अगली बिलिंग चक्र में प्रभावी होता है।"
       },
       "crossPlatform": {
-        "title": "क्रॉस-प्लेटफार्म सदस्यताएँ",
-        "desc": "App Store के माध्यम से खरीदी गई सदस्यताएँ केवल iOS पर काम करती हैं। Google Play सदस्यताएँ केवल Android पर काम करती हैं। क्रॉस-प्लेटफार्म पहुँच के लिए, Telegram बॉट के माध्यम से सदस्यता लें — यह हर जगह काम करता है।"
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "ऐप डाउनलोड करें",

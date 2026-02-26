@@ -9,10 +9,9 @@
     "faq": "שאלות נפוצות",
     "blog": "בלוג",
     "download": "הורדה",
-    "guide": "מדריך",
-    "apps": "אפליקציות",
-    "seeAllApps": "כל האפליקציות",
-    "seeAllGuides": "כל המדריכים"
+    "downloads": "הורדות",
+    "seeAllDownloads": "כל ההורדות",
+    "guides": "מדריכים"
   },
   "hero": {
     "tagline": "VPN עם פרטיות בראש. חינמי לתמיד.",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "פתרון בעיות",
       "troubleshoot1": "אם החיבור נכשל, נסו מיקום שרת אחר בבוט.",
       "troubleshoot2": "ודאו שאופטימיזציית הסוללה מושבתת עבור V2RayNG.",
-      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7."
+      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "הגדרת iOS",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "פתרון בעיות",
       "troubleshoot1": "אם ה-VPN לא מתחבר, נסו להסיר ולייבא מחדש את ההגדרות.",
       "troubleshoot2": "ודאו ש-Streisand מורשה להוסיף הגדרות VPN בהגדרות > כללי > VPN.",
-      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7."
+      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "הגדרת Windows",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "פתרון בעיות",
       "troubleshoot1": "ודאו ש-Windows Defender או האנטי-וירוס לא חוסמים את v2rayN.",
       "troubleshoot2": "נסו להריץ את v2rayN כמנהל מערכת.",
-      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7."
+      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "הגדרת macOS",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "פתרון בעיות",
       "troubleshoot1": "אם macOS חוסם את האפליקציה, עברו להעדפות מערכת > פרטיות ואבטחה ואשרו אותה.",
       "troubleshoot2": "נסו להפעיל מחדש את האפליקציה אם החיבור נופל.",
-      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7."
+      "troubleshoot3": "לעזרה, שלחו הודעה ל-@DopplerSupportBot ב-Telegram — התמיכה שלנו בבינה מלאכותית זמינה 24/7.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "שילוב עם Telegram",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "אנו משתמשים בעוגיות כדי לשפר את חוויית השימוש שלך. המשך השימוש באתר מהווה הסכמה לשימוש בעוגיות.",
@@ -667,8 +703,8 @@
         "desc": "אתה יכול לשדרג או להקטין את התוכנית שלך בכל עת דרך אותה פלטפורמה שעליה נרשמת. השינוי ייכנס לתוקף במחזור החיוב הבא."
       },
       "crossPlatform": {
-        "title": "מנויים בין פלטפורמות",
-        "desc": "מנויים שנרכשו דרך ה-App Store פועלים רק על iOS. מנויי Google Play פועלים רק על Android. לגישה בין פלטפורמות, הירשם דרך הבוט ב-Telegram — זה עובד בכל מקום."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "הורד את האפליקציה",

@@ -86,7 +86,7 @@ export async function Footer() {
               </li>
               <li>
                 <Link
-                  href="/apps"
+                  href="/downloads"
                   className="text-text-muted hover:text-text-primary transition-colors text-sm"
                 >
                   {t("download")}

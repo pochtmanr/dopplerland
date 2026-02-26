@@ -59,8 +59,8 @@ export function MobileNav() {
   }, [isOpen, close]);
 
   const navItems: { href: string; label: string; isPage?: boolean }[] = [
-    { href: "/apps", label: t("apps"), isPage: true },
-    { href: "/guide", label: t("guide"), isPage: true },
+    { href: "/downloads", label: t("downloads"), isPage: true },
+    { href: "/guide", label: t("guides"), isPage: true },
     { href: "/blog", label: t("blog"), isPage: true },
     { href: "/#pricing", label: t("pricing") },
   ];
@@ -205,7 +205,7 @@ export function MobileNav() {
 
         {/* Download CTA — mobile only */}
         <Link
-          href="/apps"
+          href="/downloads"
           onClick={close}
           className="mt-8 inline-flex items-center justify-center px-8 py-3 rounded-xl bg-accent-gold text-bg-primary font-medium text-base hover:bg-accent-gold/90 transition-colors"
         >

@@ -9,10 +9,9 @@
     "faq": "FAQ",
     "blog": "블로그",
     "download": "다운로드",
-    "guide": "가이드",
-    "apps": "앱",
-    "seeAllApps": "모든 앱 보기",
-    "seeAllGuides": "모든 가이드 보기"
+    "downloads": "다운로드",
+    "seeAllDownloads": "모든 다운로드 보기",
+    "guides": "가이드"
   },
   "hero": {
     "tagline": "프라이버시 우선 VPN. 영원히 무료.",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "문제 해결",
       "troubleshoot1": "연결에 실패하면 봇에서 다른 서버 위치를 시도해 보세요.",
       "troubleshoot2": "V2RayNG의 배터리 최적화가 비활성화되어 있는지 확인하세요.",
-      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다."
+      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "iOS 설정",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "문제 해결",
       "troubleshoot1": "VPN이 연결되지 않으면 설정을 삭제하고 다시 가져와 보세요.",
       "troubleshoot2": "설정 > 일반 > VPN에서 Streisand에 VPN 구성 추가 권한이 있는지 확인하세요.",
-      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다."
+      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Windows 설정",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "문제 해결",
       "troubleshoot1": "Windows Defender나 백신 프로그램이 v2rayN을 차단하고 있지 않은지 확인하세요.",
       "troubleshoot2": "v2rayN을 관리자 권한으로 실행해 보세요.",
-      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다."
+      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "macOS 설정",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "문제 해결",
       "troubleshoot1": "macOS가 앱을 차단하면 시스템 환경설정 > 개인 정보 보호 및 보안에서 허용하세요.",
       "troubleshoot2": "연결이 끊기면 앱을 다시 시작해 보세요.",
-      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다."
+      "troubleshoot3": "도움이 필요하면 Telegram에서 @DopplerSupportBot에 메시지를 보내세요 — AI 지원이 연중무휴 제공됩니다.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Telegram 연동",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "더 나은 경험을 위해 쿠키를 사용합니다. 이 사이트를 계속 사용하면 쿠키 사용에 동의하는 것입니다.",
@@ -667,8 +703,8 @@
         "desc": "구독한 플랫폼을 통해 언제든지 계획을 업그레이드하거나 다운그레이드할 수 있습니다. 변경 사항은 다음 청구 주기에 적용됩니다."
       },
       "crossPlatform": {
-        "title": "크로스 플랫폼 구독",
-        "desc": "App Store를 통해 구매한 구독은 iOS에서만 작동합니다. Google Play 구독은 Android에서만 작동합니다. 크로스 플랫폼 접근을 원하시면 Telegram 봇을 통해 구독하세요 — 모든 곳에서 작동합니다."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "앱 다운로드",

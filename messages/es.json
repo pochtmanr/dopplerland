@@ -9,10 +9,9 @@
     "faq": "Preguntas",
     "blog": "Blog",
     "download": "Descargar",
-    "guide": "Guía",
-    "apps": "Apps",
-    "seeAllApps": "Ver todas las apps",
-    "seeAllGuides": "Ver todas las guías"
+    "downloads": "Descargas",
+    "seeAllDownloads": "Ver todas las descargas",
+    "guides": "Guías"
   },
   "hero": {
     "tagline": "VPN con privacidad primero. Gratis para siempre.",
@@ -367,7 +366,11 @@
       "troubleshootTitle": "Solución de problemas",
       "troubleshoot1": "Si la conexión falla, prueba con una ubicación de servidor diferente en el bot.",
       "troubleshoot2": "Asegúrate de que V2RayNG tenga la optimización de batería desactivada.",
-      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas."
+      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — coming soon",
+      "dlV2rayNG": "v2rayNG",
+      "dlV2rayNGDesc": "APK from GitHub — Universal (93 MB)"
     },
     "ios": {
       "title": "Configuración en iOS",
@@ -384,7 +387,15 @@
       "troubleshootTitle": "Solución de problemas",
       "troubleshoot1": "Si el VPN no se conecta, intenta eliminar y volver a importar la configuración.",
       "troubleshoot2": "Asegúrate de que Streisand tenga permiso para añadir configuraciones VPN en Ajustes > General > VPN.",
-      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas."
+      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas.",
+      "dlDoppler": "Doppler VPN",
+      "dlDopplerDesc": "Official app — iPhone & iPad",
+      "dlMacStore": "Doppler VPN (Mac)",
+      "dlMacStoreDesc": "Runs natively on M-chip Macs via Mac App Store",
+      "dlStreisand": "Streisand",
+      "dlStreisandDesc": "Free VLESS client — App Store",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — App Store"
     },
     "windows": {
       "title": "Configuración en Windows",
@@ -401,7 +412,13 @@
       "troubleshootTitle": "Solución de problemas",
       "troubleshoot1": "Asegúrate de que Windows Defender o tu antivirus no estén bloqueando v2rayN.",
       "troubleshoot2": "Intenta ejecutar v2rayN como Administrador.",
-      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas."
+      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas.",
+      "dlV2rayNx64": "v2rayN — x64",
+      "dlV2rayNx64Desc": ".zip — Intel / AMD 64-bit (143 MB)",
+      "dlV2rayNArm": "v2rayN — ARM64",
+      "dlV2rayNArmDesc": ".zip — Snapdragon (133 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard installer for Windows"
     },
     "mac": {
       "title": "Configuración en macOS",
@@ -419,7 +436,15 @@
       "troubleshootTitle": "Solución de problemas",
       "troubleshoot1": "Si macOS bloquea la aplicación, ve a Preferencias del Sistema > Privacidad y seguridad y permítela.",
       "troubleshoot2": "Intenta reiniciar la aplicación si la conexión se interrumpe.",
-      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas."
+      "troubleshoot3": "Para obtener ayuda, escribe a @DopplerSupportBot en Telegram — nuestro soporte con IA está disponible las 24 horas.",
+      "dlMacStore": "Doppler VPN (Mac App Store)",
+      "dlMacStoreDesc": "Native app for M-chip Macs",
+      "dlV2rayNSilicon": "v2rayN — Apple Silicon",
+      "dlV2rayNSiliconDesc": ".dmg — M1 / M2 / M3 / M4 (105 MB)",
+      "dlV2rayNIntel": "v2rayN — Intel",
+      "dlV2rayNIntelDesc": ".dmg — Intel x86_64 (110 MB)",
+      "dlWireGuard": "WireGuard",
+      "dlWireGuardDesc": "Official WireGuard app — Mac App Store"
     },
     "telegramSection": {
       "title": "Integración con Telegram",
@@ -445,7 +470,18 @@
       "title": "Free VPN, premium optional",
       "desc": "All servers are free. Upgrade to Plus for ad blocking, content filters, and more.",
       "cta": "See plans"
-    }
+    },
+    "downloadOptions": "Download Options",
+    "download": "Download",
+    "comingSoon": "Coming Soon",
+    "transparency": {
+      "subscription": "Subscription is available via our Telegram bot or inside the Doppler app on iOS and Mac.",
+      "freeTrial": "Every new connection includes 3 free days.",
+      "subscriptionApp": "Subscribe inside the Doppler app or via our Telegram bot.",
+      "crossPlatform": "All subscriptions work across platforms — a subscription purchased via Telegram works in the Doppler app, and vice versa."
+    },
+    "openBot": "Open @dopplercreatebot",
+    "subscriptionDetails": "View subscription details"
   },
   "cookie": {
     "message": "Usamos cookies para mejorar tu experiencia. Al continuar usando este sitio, aceptas el uso de cookies.",
@@ -667,8 +703,8 @@
         "desc": "Puedes actualizar o degradar tu plan en cualquier momento a través de la misma plataforma en la que te suscribiste. El cambio entra en vigor en el próximo ciclo de facturación."
       },
       "crossPlatform": {
-        "title": "Suscripciones multiplataforma",
-        "desc": "Las suscripciones compradas a través de la App Store solo funcionan en iOS. Las suscripciones de Google Play solo funcionan en Android. Para acceso multiplataforma, suscríbete a través del bot de Telegram — funciona en todas partes."
+        "title": "Cross-platform subscriptions",
+        "desc": "All subscriptions work across every platform. A subscription purchased via the Telegram bot works in the Doppler app on iOS and Mac, and vice versa. Your account is tied to your device, not the purchase method."
       }
     },
     "getApp": "Descargar la aplicación",
