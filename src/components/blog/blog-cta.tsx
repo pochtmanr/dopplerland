@@ -250,9 +250,19 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [platform, setPlatform] = useState<Platform>("desktop");
+  const [promo, setPromo] = useState<{ code: string; discount: string } | undefined>(undefined);
 
   useEffect(() => {
     setPlatform(detectPlatform());
+
+    fetch("/api/promo/active")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { code: string; discount_percent: number } | null) => {
+        if (data?.code) {
+          setPromo({ code: data.code, discount: `${data.discount_percent}% off` });
+        }
+      })
+      .catch(() => {});
   }, []);
 
   const apps: AppInfo[] = [
@@ -265,7 +275,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       appStoreHref: "https://apps.apple.com/us/app/doppler-vpn-fast-secure/id6757091773",
       playStoreHref: "https://play.google.com/store/apps/details?id=com.dopplervpn.android",
       accentColor: "teal",
-      promo: { code: "FEBRUARY26", discount: "26% off" },
+      promo,
     },
     {
       icon: "/images/iossimnetiqlogo.png",
@@ -276,7 +286,7 @@ export function BlogCta({ title, subtitle, doppler, simnetiq }: BlogCtaProps) {
       appStoreHref: "https://apps.apple.com/gb/app/simnetiq-travel-esim-data/id6755963262",
       playStoreHref: "https://play.google.com/store/apps/details?id=com.simnetiq.storeAndroid&hl=en",
       accentColor: "gold",
-      promo: { code: "FEBRUARY26", discount: "26% off" },
+      promo,
     },
   ];
 

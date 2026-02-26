@@ -16,9 +16,9 @@ export function BlogBreadcrumb({ items, locale }: BlogBreadcrumbProps) {
 
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-2 text-sm text-text-muted">
+      <ol className="flex items-center gap-2 text-sm text-text-muted overflow-hidden">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center gap-2">
+          <li key={index} className={`flex items-center gap-2${!item.href ? " min-w-0" : " shrink-0"}`}>
             {index > 0 && (
               <svg
                 className={`w-4 h-4 text-text-muted/50 ${isRtl ? "rotate-180" : ""}`}
@@ -37,12 +37,12 @@ export function BlogBreadcrumb({ items, locale }: BlogBreadcrumbProps) {
             {item.href ? (
               <Link
                 href={item.href}
-                className="hover:text-accent-teal transition-colors"
+                className="hover:text-accent-teal transition-colors shrink-0"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-text-primary">{item.label}</span>
+              <span className="text-text-primary truncate">{item.label}</span>
             )}
           </li>
         ))}

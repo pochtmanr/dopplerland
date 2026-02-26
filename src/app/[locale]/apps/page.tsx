@@ -212,25 +212,21 @@ export default async function AppsPage({ params }: PageProps) {
                     </div>
                   </div>
 
-                  <a
-                    href={MOBILE.android.doppler.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center justify-between rounded-xl bg-accent-teal/10 border border-accent-teal/20 px-4 py-3 hover:bg-accent-teal/15 hover:border-accent-teal/40 transition-all"
-                  >
-                    <div className="flex items-center gap-3">
-                      <DownloadIcon className="w-4 h-4 text-accent-teal shrink-0" />
+                  {/* Doppler Android — coming soon */}
+                  <div className="rounded-xl bg-overlay/5 border border-overlay/10 px-4 py-3">
+                    <div className="flex items-center justify-between">
                       <div>
                         <div className="text-sm font-semibold text-text-primary">{t("android.doppler")}</div>
                         <div className="text-xs text-text-muted">{t("android.dopplerSub")}</div>
                       </div>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-text-muted shrink-0">
+                        <span className="w-1.5 h-1.5 rounded-full bg-text-muted/50" />
+                        {t("comingSoon")}
+                      </span>
                     </div>
-                    <span className="text-accent-teal text-sm font-medium shrink-0">
-                      Google Play &rarr;
-                    </span>
-                  </a>
+                  </div>
 
-                  {/* VLESS */}
+                  {/* VLESS — direct GitHub APK download */}
                   <div className="rounded-xl border border-overlay/8 bg-bg-primary/40 px-4 py-3 space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="px-1.5 py-0.5 rounded bg-accent-gold/15 text-accent-gold text-[10px] font-semibold uppercase tracking-wider">
@@ -244,12 +240,15 @@ export default async function AppsPage({ params }: PageProps) {
                       rel="noopener noreferrer"
                       className="group flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-overlay/5 transition-colors"
                     >
-                      <div>
-                        <div className="text-sm text-text-primary">{MOBILE.android.vless.name}</div>
-                        <div className="text-[11px] text-text-muted">{MOBILE.android.vless.meta}</div>
+                      <div className="flex items-center gap-3">
+                        <DownloadIcon className="w-4 h-4 text-accent-teal shrink-0" />
+                        <div>
+                          <div className="text-sm text-text-primary">{MOBILE.android.vless.name}</div>
+                          <div className="text-[11px] text-text-muted">{MOBILE.android.vless.meta}</div>
+                        </div>
                       </div>
-                      <span className="text-text-muted text-xs group-hover:text-accent-teal transition-colors">
-                        {t("download")} &rarr;
+                      <span className="text-text-muted text-xs group-hover:text-accent-teal transition-colors shrink-0">
+                        GitHub APK &rarr;
                       </span>
                     </a>
                   </div>
@@ -348,55 +347,43 @@ export default async function AppsPage({ params }: PageProps) {
               </div>
             </section>
 
-            {/* ── Telegram & Web ───────────────────────────────────── */}
+            {/* ── Telegram Bot — Prominent CTA ───────────────────── */}
             <section>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
                 {t("telegramWeb")}
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                {/* Telegram Bot */}
-                <a
-                  href="https://t.me/dopplercreatebot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 hover:border-accent-teal/30 transition-all"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-4">
-                    <TelegramIcon />
-                  </div>
-                  <h3 className="text-base font-semibold text-text-primary mb-1">{t("telegram.title")}</h3>
-                  <p className="text-xs text-text-muted mb-3">{t("telegram.description")}</p>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent-teal">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent-teal" />
-                    {t("available")}
-                  </span>
-                </a>
+              <a
+                href="https://t.me/dopplercreatebot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-5 rounded-2xl border border-[#2AABEE]/30 bg-[#2AABEE]/5 p-6 sm:p-8 hover:border-[#2AABEE]/50 hover:bg-[#2AABEE]/10 transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#2AABEE]/15 border border-[#2AABEE]/25 flex items-center justify-center text-[#2AABEE] shrink-0">
+                  <TelegramIcon className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold text-text-primary mb-0.5">{t("telegram.title")}</h3>
+                  <p className="text-sm text-text-muted">{t("telegram.description")}</p>
+                </div>
+                <span className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2AABEE]/15 text-[#2AABEE] text-sm font-medium shrink-0 group-hover:bg-[#2AABEE]/25 transition-colors">
+                  @dopplercreatebot &rarr;
+                </span>
+              </a>
 
-                {/* Mini App */}
-                <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 opacity-60">
-                  <div className="w-10 h-10 rounded-xl bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-4">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                    </svg>
-                  </div>
-                  <h3 className="text-base font-semibold text-text-primary mb-1">{t("miniApp.title")}</h3>
-                  <p className="text-xs text-text-muted mb-3">{t("miniApp.description")}</p>
+              {/* Coming soon items */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                <div className="rounded-xl border border-overlay/10 bg-bg-secondary/50 p-5 opacity-60">
+                  <h3 className="text-sm font-semibold text-text-primary mb-1">{t("miniApp.title")}</h3>
+                  <p className="text-xs text-text-muted mb-2">{t("miniApp.description")}</p>
                   <span className="inline-flex items-center gap-1.5 text-xs font-medium text-text-muted">
                     <span className="w-1.5 h-1.5 rounded-full bg-text-muted/50" />
                     {t("comingSoon")}
                   </span>
                 </div>
-
-                {/* Extension */}
-                <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 opacity-60">
-                  <div className="w-10 h-10 rounded-xl bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-4">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-base font-semibold text-text-primary mb-1">{t("extension.title")}</h3>
-                  <p className="text-xs text-text-muted mb-3">{t("extension.description")}</p>
+                <div className="rounded-xl border border-overlay/10 bg-bg-secondary/50 p-5 opacity-60">
+                  <h3 className="text-sm font-semibold text-text-primary mb-1">{t("extension.title")}</h3>
+                  <p className="text-xs text-text-muted mb-2">{t("extension.description")}</p>
                   <span className="inline-flex items-center gap-1.5 text-xs font-medium text-text-muted">
                     <span className="w-1.5 h-1.5 rounded-full bg-text-muted/50" />
                     {t("comingSoon")}
