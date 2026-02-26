@@ -17,7 +17,7 @@ export function BlogContent({ content, locale }: BlogContentProps) {
       dir={isRtl ? "rtl" : "ltr"}
       className={`
         prose prose-lg dark:prose-invert max-w-none
-        ${isRtl ? "text-right" : "text-left"}
+        text-start
 
         /* Headings */
         prose-headings:font-semibold prose-headings:text-text-primary prose-headings:tracking-tight
@@ -43,9 +43,9 @@ export function BlogContent({ content, locale }: BlogContentProps) {
         prose-li:mb-2 prose-li:marker:text-accent-teal
 
         /* Blockquotes */
-        prose-blockquote:border-l-4 prose-blockquote:border-accent-teal
+        prose-blockquote:border-s-4 prose-blockquote:border-accent-teal
         prose-blockquote:bg-overlay/5 prose-blockquote:py-4 prose-blockquote:px-6
-        prose-blockquote:rounded-r-xl prose-blockquote:not-italic
+        prose-blockquote:rounded-e-xl prose-blockquote:not-italic
         prose-blockquote:text-text-muted prose-blockquote:my-8
 
         /* Code */
@@ -67,7 +67,7 @@ export function BlogContent({ content, locale }: BlogContentProps) {
         components={{
           table: ({ children }) => (
             <div className="my-10 overflow-x-auto rounded-xl border border-overlay/15">
-              <table className="w-full text-left text-base border-collapse">
+              <table className="w-full text-start text-base border-collapse">
                 {children}
               </table>
             </div>

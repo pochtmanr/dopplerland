@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "@/i18n/navigation";
+import { Arrow } from "@/components/ui/arrow";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -171,7 +172,7 @@ export default async function AppsPage({ params }: PageProps) {
                       </div>
                     </div>
                     <span className="text-accent-teal text-sm font-medium shrink-0">
-                      {t("ios.appStore")} &rarr;
+                      {t("ios.appStore")} <Arrow />
                     </span>
                   </a>
 
@@ -194,7 +195,7 @@ export default async function AppsPage({ params }: PageProps) {
                         <div className="text-[11px] text-text-muted">{MOBILE.ios.vless.store}</div>
                       </div>
                       <span className="text-text-muted text-xs group-hover:text-accent-teal transition-colors">
-                        {t("download")} &rarr;
+                        {t("download")} <Arrow />
                       </span>
                     </a>
                   </div>
@@ -248,7 +249,7 @@ export default async function AppsPage({ params }: PageProps) {
                         </div>
                       </div>
                       <span className="text-text-muted text-xs group-hover:text-accent-teal transition-colors shrink-0">
-                        GitHub APK &rarr;
+                        GitHub APK <Arrow />
                       </span>
                     </a>
                   </div>
@@ -257,7 +258,7 @@ export default async function AppsPage({ params }: PageProps) {
                     href="/guide/android"
                     className="inline-block text-xs text-text-muted hover:text-accent-teal transition-colors"
                   >
-                    {t("viewSetupGuide")} &rarr;
+                    {t("viewSetupGuide")} <Arrow />
                   </Link>
                 </div>
               </div>
@@ -307,7 +308,7 @@ export default async function AppsPage({ params }: PageProps) {
                     href="/guide/windows"
                     className="inline-block text-xs text-text-muted hover:text-accent-teal transition-colors"
                   >
-                    {t("viewSetupGuide")} &rarr;
+                    {t("viewSetupGuide")} <Arrow />
                   </Link>
                 </div>
 
@@ -348,7 +349,7 @@ export default async function AppsPage({ params }: PageProps) {
                     href="/guide/mac"
                     className="inline-block text-xs text-text-muted hover:text-accent-teal transition-colors"
                   >
-                    {t("viewSetupGuide")} &rarr;
+                    {t("viewSetupGuide")} <Arrow />
                   </Link>
                 </div>
               </div>
@@ -374,7 +375,7 @@ export default async function AppsPage({ params }: PageProps) {
                   <p className="text-sm text-text-muted">{t("telegram.description")}</p>
                 </div>
                 <span className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2AABEE]/15 text-[#2AABEE] text-sm font-medium shrink-0 group-hover:bg-[#2AABEE]/25 transition-colors">
-                  @dopplercreatebot &rarr;
+                  @dopplercreatebot <Arrow />
                 </span>
               </a>
 
@@ -408,7 +409,7 @@ export default async function AppsPage({ params }: PageProps) {
                 href="/guide"
                 className="inline-flex items-center gap-2 text-accent-teal hover:text-accent-teal-light font-medium transition-colors"
               >
-                {t("viewGuides")} &rarr;
+                {t("viewGuides")} <Arrow />
               </Link>
             </div>
           </div>

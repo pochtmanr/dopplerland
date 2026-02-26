@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "@/i18n/navigation";
+import { Arrow } from "@/components/ui/arrow";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -28,7 +29,7 @@ export default async function ProtocolsGuidePage({ params }: PageProps) {
             href="/guide"
             className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-accent-teal transition-colors mb-8"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <svg className="w-4 h-4 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>
             {t("backToGuides")}
@@ -177,13 +178,13 @@ export default async function ProtocolsGuidePage({ params }: PageProps) {
               href="/downloads"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-teal/15 text-accent-teal text-sm font-medium hover:bg-accent-teal/25 transition-colors"
             >
-              {t("getApps")} &rarr;
+              {t("getApps")} <Arrow />
             </Link>
             <Link
               href="/guide/subscription"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-overlay/10 text-text-muted text-sm font-medium hover:border-accent-teal/20 hover:text-text-primary transition-colors"
             >
-              {t("viewSubscription")} &rarr;
+              {t("viewSubscription")} <Arrow />
             </Link>
           </div>
         </div>

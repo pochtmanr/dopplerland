@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { localeConfig } from "@/lib/languages";
+import { Arrow } from "@/components/ui/arrow";
 
 type DropdownId = "downloads" | "languages" | null;
 
@@ -264,7 +265,7 @@ export function DesktopNav({ pricingLabel, logo, controls, mobile }: DesktopNavP
                 onClick={close}
                 className="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-medium text-text-muted hover:text-accent-teal transition-colors"
               >
-                {t("seeAllDownloads")} &rarr;
+                {t("seeAllDownloads")} <Arrow />
               </Link>
             </div>
           )}

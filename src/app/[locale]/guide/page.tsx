@@ -90,8 +90,11 @@ export default async function GuidePage({ params }: PageProps) {
                     <p className="text-xs text-text-muted mb-3">
                       {t(`${device.id}.subtitle`)}
                     </p>
-                    <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
-                      {t("chooseDevice")} &rarr;
+                    <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                      {t("chooseDevice")}
+                      <svg className="w-4 h-4 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
                     </span>
                   </Link>
                 ))}
@@ -119,8 +122,11 @@ export default async function GuidePage({ params }: PageProps) {
                   <p className="text-xs text-text-muted mb-3">
                     {t("protocolsCard.subtitle")}
                   </p>
-                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
-                    {t("learnMore")} &rarr;
+                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                    {t("learnMore")}
+                    <svg className="w-4 h-4 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
                   </span>
                 </Link>
                 <Link
@@ -138,8 +144,11 @@ export default async function GuidePage({ params }: PageProps) {
                   <p className="text-xs text-text-muted mb-3">
                     {t("subscriptionCard.subtitle")}
                   </p>
-                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
-                    {t("learnMore")} &rarr;
+                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                    {t("learnMore")}
+                    <svg className="w-4 h-4 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
                   </span>
                 </Link>
               </div>
@@ -161,7 +170,7 @@ export default async function GuidePage({ params }: PageProps) {
                 href="/#pricing"
                 className="sm:ms-auto px-4 py-2 rounded-lg bg-accent-teal/15 text-accent-teal font-semibold text-sm whitespace-nowrap hover:bg-accent-teal/25 transition-colors"
               >
-                {t("pricingBanner.cta")} &rarr;
+                {t("pricingBanner.cta")} <svg className="inline w-4 h-4 rtl:-scale-x-100" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
               </Link>
             </div>
 

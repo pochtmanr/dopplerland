@@ -58,10 +58,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* RTL specific adjustments */
-[dir="rtl"] {
-  text-align: right;
-}
+/* RTL: browser handles text-align via dir attribute — no override needed */
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

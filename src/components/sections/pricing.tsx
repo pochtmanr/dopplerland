@@ -90,7 +90,7 @@ function DurationSelector({ selected, onSelect, t }: DurationSelectorProps) {
       <span
         className="absolute top-1 bottom-1 bg-accent-teal rounded-full transition-all duration-200 ease-out"
         style={{
-          left: `calc(${selectedIndex * (100 / 3)}% + 4px)`,
+          insetInlineStart: `calc(${selectedIndex * (100 / 3)}% + 4px)`,
           width: `calc(${100 / 3}% - 8px)`,
         }}
       />
