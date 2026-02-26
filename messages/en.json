@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Download",
     "guide": "Guide",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "See all apps",
+    "seeAllGuides": "See all guides"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Free Forever.",
@@ -399,6 +401,7 @@
       "miniAppDesc": "Subscribe and manage your plan through our Telegram Mini App with secure Stripe payments."
     },
     "backToGuides": "All Guides",
+    "downloadApps": "Download the app",
     "nextStep": "Next",
     "prevStep": "Previous"
   },
@@ -409,46 +412,52 @@
   },
   "apps": {
     "title": "Get Doppler VPN",
-    "subtitle": "Available on every platform you use",
+    "subtitle": "One-tap privacy on every device. Choose your platform below.",
     "mobileApps": "Mobile Apps",
     "desktopApps": "Desktop Apps",
     "telegramWeb": "Telegram & Web",
     "available": "Available",
     "comingSoon": "Coming Soon",
+    "download": "Download",
+    "viewSetupGuide": "View setup guide",
+    "vlessNote": "For Telegram bot users in restricted regions",
     "ios": {
       "title": "iOS",
-      "description": "Free on the App Store",
-      "action": "Download"
+      "description": "iPhone & iPad",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recommended",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
-      "description": "Free on Google Play",
-      "action": "Download"
+      "description": "Phones & tablets",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recommended",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
-      "description": "Desktop client coming soon",
-      "action": "View Guide"
+      "description": "v2rayN — VLESS client",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
-      "description": "Desktop client coming soon",
-      "action": "View Guide"
+      "description": "v2rayN — VLESS client",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram Bot",
-      "description": "Manage VPN via Telegram",
-      "action": "Open Bot"
+      "description": "Manage VPN via Telegram"
     },
     "miniApp": {
       "title": "Mini App",
-      "description": "Telegram Mini App coming soon",
-      "action": ""
+      "description": "Telegram Mini App coming soon"
     },
     "extension": {
       "title": "Browser Extension",
-      "description": "Chrome & Firefox coming soon",
-      "action": ""
+      "description": "Chrome & Firefox coming soon"
     },
     "needHelp": "Need help setting up?",
     "viewGuides": "View Setup Guides"

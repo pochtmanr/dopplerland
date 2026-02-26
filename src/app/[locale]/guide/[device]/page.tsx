@@ -18,34 +18,39 @@ export function generateStaticParams() {
   );
 }
 
-const DOWNLOAD_LINKS: Record<Device, { label: string; url: string; label2?: string; url2?: string }> = {
-  android: {
-    label: "step1PlayStore",
-    url: "https://play.google.com/store/apps/details?id=com.v2ray.ang",
-    label2: "step1GitHub",
-    url2: "https://github.com/2dust/v2rayNG/releases",
+const deviceNav: { id: Device; icon: React.ReactNode }[] = [
+  {
+    id: "android",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.61 15.15c-.46 0-.84-.37-.84-.83s.38-.83.84-.83c.46 0 .83.37.83.83s-.37.83-.83.83m-9.22 0c-.46 0-.84-.37-.84-.83s.38-.83.84-.83c.46 0 .83.37.83.83s-.37.83-.83.83m9.5-5.09l1.67-2.88a.35.35 0 00-.12-.47.35.35 0 00-.48.12l-1.69 2.93A10.1 10.1 0 0012 8.57c-1.53 0-2.98.34-4.27.95L6.04 6.59a.35.35 0 00-.48-.12.35.35 0 00-.12.47l1.67 2.88C4.44 11.36 2.62 14.09 2.3 17.3h19.4c-.32-3.21-2.14-5.94-4.81-7.24z" />
+      </svg>
+    ),
   },
-  ios: {
-    label: "step1AppStore",
-    url: "https://apps.apple.com/app/streisand/id6450534064",
+  {
+    id: "ios",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+      </svg>
+    ),
   },
-  windows: {
-    label: "step1Download",
-    url: "https://github.com/2dust/v2rayN/releases",
+  {
+    id: "windows",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .08V5.67L20 3zM3 13l6 .09v6.81l-6-1.15V13zm7 .18l10 .08V21l-10-1.76V13.18z" />
+      </svg>
+    ),
   },
-  mac: {
-    label: "step1Download",
-    url: "https://github.com/tzmax/V2RayXS/releases",
-    label2: "step1AppStore",
-    url2: "https://apps.apple.com/app/streisand/id6450534064",
+  {
+    id: "mac",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+      </svg>
+    ),
   },
-};
-
-const deviceNav: { id: Device; icon: string }[] = [
-  { id: "android", icon: "🤖" },
-  { id: "ios", icon: "🍎" },
-  { id: "windows", icon: "🪟" },
-  { id: "mac", icon: "💻" },
 ];
 
 export default async function DeviceGuidePage({ params }: PageProps) {
@@ -75,14 +80,20 @@ export default async function DeviceGuidePage({ params }: PageProps) {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-bg-primary pt-28 pb-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <main className="relative min-h-screen bg-bg-primary pt-28 pb-20">
+        {/* Background blurs */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute -top-10 -start-20 w-[28rem] h-[28rem] bg-accent-teal/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 -end-20 w-[32rem] h-[32rem] bg-accent-gold/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
             href="/guide"
             className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary transition-colors mb-8 text-sm"
           >
-            ← {t("backToGuides")}
+            &larr; {t("backToGuides")}
           </Link>
 
           <div className="flex flex-col lg:flex-row gap-10">
@@ -93,13 +104,19 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                   <Link
                     key={item.id}
                     href={`/guide/${item.id}`}
-                    className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
                       item.id === d
                         ? "bg-accent-teal/10 text-accent-teal border border-accent-teal/30"
                         : "text-text-muted hover:text-text-primary hover:bg-overlay/5 border border-transparent"
                     }`}
                   >
-                    <span>{item.icon}</span>
+                    <span className={`w-8 h-8 rounded-lg border flex items-center justify-center shrink-0 ${
+                      item.id === d
+                        ? "bg-accent-teal/15 border-accent-teal/20 text-accent-teal"
+                        : "bg-overlay/5 border-overlay/10 text-text-muted"
+                    }`}>
+                      {item.icon}
+                    </span>
                     {t(`${item.id}.title`)}
                   </Link>
                 ))}
@@ -109,8 +126,8 @@ export default async function DeviceGuidePage({ params }: PageProps) {
             {/* Content */}
             <div className="flex-1 min-w-0">
               {/* Header */}
-              <div className="mb-12">
-                <h1 className="text-3xl sm:text-4xl font-display font-bold text-text-primary mb-3">
+              <div className="mb-10">
+                <h1 className="text-3xl sm:text-4xl font-display font-bold text-text-primary mb-3 tracking-tight">
                   {t(`${d}.title`)}
                 </h1>
                 <p className="text-lg text-text-muted">
@@ -119,89 +136,83 @@ export default async function DeviceGuidePage({ params }: PageProps) {
               </div>
 
               {/* Steps */}
-              <div className="space-y-8 mb-16">
-                {steps.map((step) => {
-                  const links = step.num === 1 ? DOWNLOAD_LINKS[d] : null;
-                  return (
-                    <div
-                      key={step.num}
-                      className="relative flex gap-6 rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8"
-                    >
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-accent-teal/20 text-accent-teal font-bold flex items-center justify-center text-lg">
-                        {step.num}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h2 className="text-xl font-semibold text-text-primary mb-2">
-                          {step.title}
-                        </h2>
-                        <p className="text-text-muted leading-relaxed">
-                          {step.desc}
-                        </p>
-                        {links && (
-                          <div className="mt-4 flex flex-wrap gap-3">
-                            <a
-                              href={links.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-teal text-bg-primary font-semibold rounded-xl hover:bg-accent-teal/90 transition-colors text-sm"
-                            >
-                              ↓ {t(`${d}.${links.label}`)}
-                            </a>
-                            {links.url2 && links.label2 && (
-                              <a
-                                href={links.url2}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 border border-overlay/20 text-text-primary font-semibold rounded-xl hover:bg-overlay/5 transition-colors text-sm"
-                              >
-                                ↓ {t(`${d}.${links.label2}`)}
-                              </a>
-                            )}
-                          </div>
-                        )}
-                      </div>
+              <div className="space-y-5 mb-14">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
+                  {t("title")}
+                </h2>
+                {steps.map((step) => (
+                  <div
+                    key={step.num}
+                    className="flex gap-5 rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 sm:p-6"
+                  >
+                    <div className="shrink-0 w-8 h-8 rounded-lg bg-overlay/5 border border-overlay/10 text-text-muted font-semibold flex items-center justify-center text-sm">
+                      {step.num}
                     </div>
-                  );
-                })}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-semibold text-text-primary mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-text-muted leading-relaxed">
+                        {step.desc}
+                      </p>
+                      {step.num === 1 && (
+                        <div className="mt-3">
+                          <Link
+                            href="/apps"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-accent-teal/10 border border-accent-teal/20 text-accent-teal font-medium rounded-xl hover:bg-accent-teal/15 hover:border-accent-teal/40 transition-all text-sm"
+                          >
+                            {t("downloadApps")} &rarr;
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Troubleshooting */}
-              <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8 mb-12">
-                <h2 className="text-2xl font-semibold text-text-primary mb-6">
+              <div className="mb-14">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
                   {t(`${d}.troubleshootTitle`)}
                 </h2>
-                <ul className="space-y-4">
-                  {troubleshooting.map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-3 text-text-muted"
-                    >
-                      <span className="text-accent-gold shrink-0">⚠️</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 sm:p-6">
+                  <ul className="space-y-4">
+                    {troubleshooting.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-3 text-sm text-text-muted"
+                      >
+                        <span className="shrink-0 w-5 h-5 rounded bg-accent-gold/10 border border-accent-gold/15 flex items-center justify-center text-accent-gold text-xs">
+                          !
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               {/* Telegram Section */}
-              <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 sm:p-8">
-                <h2 className="text-2xl font-semibold text-text-primary mb-3">
+              <section>
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
                   {t("telegramSection.title")}
                 </h2>
-                <p className="text-text-muted mb-6">
-                  {t("telegramSection.subtitle")}
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   <a
                     href="https://t.me/dopplercreatebot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl border border-overlay/10 p-5 hover:border-accent-teal/50 transition-colors"
+                    className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 hover:border-accent-teal/30 transition-all"
                   >
-                    <h3 className="font-semibold text-text-primary mb-1">
-                      🤖 {t("telegramSection.vpnBot")}
+                    <div className="w-8 h-8 rounded-lg bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-3">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm font-semibold text-text-primary mb-1">
+                      {t("telegramSection.vpnBot")}
                     </h3>
-                    <p className="text-sm text-text-muted">
+                    <p className="text-xs text-text-muted">
                       {t("telegramSection.vpnBotDesc")}
                     </p>
                   </a>
@@ -209,25 +220,35 @@ export default async function DeviceGuidePage({ params }: PageProps) {
                     href="https://t.me/DopplerSupportBot"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl border border-overlay/10 p-5 hover:border-accent-teal/50 transition-colors"
+                    className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 hover:border-accent-teal/30 transition-all"
                   >
-                    <h3 className="font-semibold text-text-primary mb-1">
-                      💬 {t("telegramSection.supportBot")}
+                    <div className="w-8 h-8 rounded-lg bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-3">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm font-semibold text-text-primary mb-1">
+                      {t("telegramSection.supportBot")}
                     </h3>
-                    <p className="text-sm text-text-muted">
+                    <p className="text-xs text-text-muted">
                       {t("telegramSection.supportBotDesc")}
                     </p>
                   </a>
-                  <div className="rounded-xl border border-overlay/10 p-5">
-                    <h3 className="font-semibold text-text-primary mb-1">
-                      📱 {t("telegramSection.miniApp")}
+                  <div className="rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-5 opacity-60">
+                    <div className="w-8 h-8 rounded-lg bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-3">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm font-semibold text-text-primary mb-1">
+                      {t("telegramSection.miniApp")}
                     </h3>
-                    <p className="text-sm text-text-muted">
+                    <p className="text-xs text-text-muted">
                       {t("telegramSection.miniAppDesc")}
                     </p>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
