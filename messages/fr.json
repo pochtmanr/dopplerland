@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Télécharger",
     "guide": "Guide",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "Voir toutes les apps",
+    "seeAllGuides": "Voir tous les guides"
   },
   "hero": {
     "tagline": "VPN axé sur la confidentialité. Gratuit pour toujours.",
@@ -37,10 +39,6 @@
         "title": "Confidentialité sans inscription",
         "description": "Votre appareil sert de compte. Sans e-mail. Sans numéro de téléphone. Sans informations personnelles. La confidentialité commence dès votre connexion."
       },
-      "wireguard": {
-        "title": "Chiffrement WireGuard",
-        "description": "Protocole VPN moderne auquel font confiance les professionnels de la sécurité. Connexions plus rapides, meilleure autonomie de batterie et chiffrement de niveau militaire."
-      },
       "adBlocker": {
         "title": "Bloqueur de publicités intégré",
         "description": "Le blocage au niveau du réseau supprime jusqu'à 75% des publicités, trackers et pop-ups. Chargement des pages plus rapide, moins de données utilisées, navigation plus propre."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Entièrement gratuit",
         "description": "Tous les serveurs sont gratuits avec toutes les fonctionnalités. Chiffrement complet, vitesses élevées, bande passante illimitée. Sans limitation de débit ni plafond de données."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Deux protocoles, un service. WireGuard pour la vitesse et la batterie. VLESS-Reality pour contourner la censure. Nos serveurs supportent les deux — utilisez celui qui convient."
       }
     },
     "getApp": "Télécharger Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Partager cet article",
-    "copyLink": "Copier le lien"
+    "copyLink": "Copier le lien",
+    "copied": "Copié !"
   },
   "guide": {
     "title": "Guide d'installation",
@@ -399,6 +402,16 @@
       "supportBotDesc": "Support IA 24h/24, 7j/7 en 23 langues. Obtenez une aide instantanée pour tout problème.",
       "miniApp": "Mini App d'abonnement",
       "miniAppDesc": "Abonnez-vous et gérez votre forfait via notre Mini App Telegram avec des paiements sécurisés par Stripe."
+    },
+    "downloadApps": "Télécharger l'app",
+    "learnMore": "En savoir plus",
+    "protocolsCard": {
+      "title": "Protocoles VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — quel protocole vous convient et quelles apps le prennent en charge."
+    },
+    "subscriptionCard": {
+      "title": "Abonnement et tarifs",
+      "subtitle": "Plans, codes promo, réductions bot Telegram et gestion d'abonnement."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Gratuit sur l'App Store",
-      "action": "Télécharger"
+      "action": "Télécharger",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recommandé",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Gratuit sur Google Play",
-      "action": "Télécharger"
+      "action": "Télécharger",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recommandé",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Client bureau bientôt",
-      "action": "Voir le guide"
+      "action": "Voir le guide",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Client bureau bientôt",
-      "action": "Voir le guide"
+      "action": "Voir le guide",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Besoin d'aide pour la configuration ?",
-    "viewGuides": "Guides de configuration"
+    "viewGuides": "Guides de configuration",
+    "download": "Télécharger",
+    "viewSetupGuide": "Voir le guide d'installation",
+    "vlessNote": "Pour les utilisateurs du bot Telegram dans les régions restreintes"
   }
 }

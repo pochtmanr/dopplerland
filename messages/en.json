@@ -39,9 +39,9 @@
         "title": "Privacy Without Registration",
         "description": "Your device serves as your account. No email. No phone number. No personal information. Privacy begins the moment you connect."
       },
-      "wireguard": {
-        "title": "WireGuard Encryption",
-        "description": "Modern VPN protocol trusted by security professionals. Faster connections, better battery efficiency, and military-grade encryption."
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Two protocols, one service. WireGuard for speed and battery. VLESS-Reality for bypassing censorship. Our servers support both — use whichever fits your situation."
       },
       "adBlocker": {
         "title": "Built-in Ad Blocker",
@@ -403,7 +403,16 @@
     "backToGuides": "All Guides",
     "downloadApps": "Download the app",
     "nextStep": "Next",
-    "prevStep": "Previous"
+    "prevStep": "Previous",
+    "learnMore": "Learn more",
+    "protocolsCard": {
+      "title": "VPN Protocols",
+      "subtitle": "WireGuard vs VLESS-Reality — which protocol fits your needs and which apps support them."
+    },
+    "subscriptionCard": {
+      "title": "Subscription & Pricing",
+      "subtitle": "Plans, promo codes, Telegram bot discounts, and how to manage your subscription."
+    }
   },
   "cookie": {
     "message": "We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.",
@@ -461,5 +470,140 @@
     },
     "needHelp": "Need help setting up?",
     "viewGuides": "View Setup Guides"
+  },
+  "guideProtocols": {
+    "backToGuides": "All Guides",
+    "title": "VPN Protocols",
+    "subtitle": "Doppler supports two VPN protocols — WireGuard and VLESS-Reality. Each serves a different purpose. Choose the one that fits your situation.",
+    "bestFor": "Best for",
+    "apps": "Supported apps",
+    "comparison": "Side-by-side comparison",
+    "tableFeature": "Feature",
+    "whichToUse": "Which should I use?",
+    "getApps": "Download apps",
+    "viewSubscription": "Subscription & pricing",
+    "wireguard": {
+      "title": "WireGuard",
+      "badge": "Recommended",
+      "description": "A modern, lightweight VPN protocol trusted by security professionals. WireGuard offers the fastest connections, best battery efficiency, and military-grade encryption. This is what the Doppler VPN app uses natively.",
+      "speed": "Maximum speed — outperforms OpenVPN and IKEv2",
+      "battery": "Minimal battery drain on mobile devices",
+      "streaming": "Smooth streaming and video calls",
+      "everyday": "Everyday privacy and ad blocking",
+      "appIos": "Doppler VPN (iOS)",
+      "appAndroid": "Doppler VPN (Android)"
+    },
+    "vless": {
+      "title": "VLESS-Reality",
+      "badge": "Censorship bypass",
+      "description": "An advanced proxy protocol designed to bypass deep packet inspection (DPI) and network censorship. VLESS-Reality disguises VPN traffic as regular HTTPS, making it nearly undetectable. Used via our Telegram bot.",
+      "censorship": "Bypassing government internet censorship",
+      "stealth": "Undetectable traffic — looks like normal HTTPS",
+      "deepPacket": "Evading deep packet inspection (DPI)",
+      "restricted": "Accessing internet in Russia, China, Iran, and other restricted regions",
+      "appIos": "Streisand (iOS)",
+      "appAndroid": "v2rayNG (Android)",
+      "appWindows": "v2rayN (Windows)",
+      "appMac": "v2rayN (macOS)"
+    },
+    "table": {
+      "speed": {
+        "label": "Connection speed",
+        "wireguard": "Excellent — fastest available",
+        "vless": "Good — slight overhead from masking"
+      },
+      "battery": {
+        "label": "Battery impact",
+        "wireguard": "Minimal — kernel-level efficiency",
+        "vless": "Moderate — runs in userspace"
+      },
+      "censorship": {
+        "label": "Censorship bypass",
+        "wireguard": "Basic — can be blocked by DPI",
+        "vless": "Excellent — undetectable by DPI"
+      },
+      "setup": {
+        "label": "Setup difficulty",
+        "wireguard": "One-tap — built into Doppler app",
+        "vless": "Manual — config from Telegram bot"
+      },
+      "platforms": {
+        "label": "Platforms",
+        "wireguard": "iOS, Android",
+        "vless": "iOS, Android, Windows, macOS"
+      }
+    },
+    "useWireguard": {
+      "title": "Use WireGuard if...",
+      "desc": "You want the simplest experience with the best performance. Just download the Doppler VPN app and tap connect — no configuration needed. Perfect for everyday browsing, streaming, and privacy."
+    },
+    "useVless": {
+      "title": "Use VLESS-Reality if...",
+      "desc": "You're in a country with internet censorship (Russia, China, Iran, etc.) or your ISP blocks VPN connections. Get your config from our Telegram bot @dopplercreatebot and use a third-party client app."
+    }
+  },
+  "guideSubscription": {
+    "backToGuides": "All Guides",
+    "title": "Subscription & Pricing",
+    "subtitle": "Everything about Doppler VPN plans, pricing across platforms, promo codes, and how to manage your subscription.",
+    "promo": {
+      "title": "Launch promo — 20% off all plans",
+      "desc": "Use code LAUNCH20 at checkout in the Telegram bot to get 20% off any subscription plan. Available for all new and existing users."
+    },
+    "pricingSection": "Pricing by platform",
+    "tableHeaders": {
+      "plan": "Plan",
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "telegram": "Telegram Bot"
+    },
+    "plans": {
+      "monthly": "1 Month",
+      "sixMonth": "6 Months",
+      "annual": "1 Year"
+    },
+    "pricingNote": "Telegram bot prices are lower because there are no app store commissions. All plans include the same Premium features.",
+    "howToSubscribe": "How to subscribe",
+    "appStoreMethod": {
+      "title": "Via App Store (iOS)",
+      "step1": "Open the Doppler VPN app on your iPhone or iPad",
+      "step2": "Go to Profile tab and tap \"Upgrade to Premium\"",
+      "step3": "Choose your plan and confirm with Face ID or Apple ID"
+    },
+    "googlePlayMethod": {
+      "title": "Via Google Play (Android)",
+      "step1": "Open the Doppler VPN app on your Android device",
+      "step2": "Go to Profile tab and tap \"Upgrade to Premium\"",
+      "step3": "Choose your plan and confirm with Google Play payment"
+    },
+    "telegramMethod": {
+      "title": "Via Telegram Bot",
+      "savings": "Save up to 35% vs app stores",
+      "step1": "Open @dopplercreatebot in Telegram",
+      "step2": "Tap \"Subscribe\" and choose your plan",
+      "step3": "Pay securely via Stripe — use code LAUNCH20 for 20% off"
+    },
+    "manageSection": "Managing your subscription",
+    "manage": {
+      "restore": {
+        "title": "Restore purchases",
+        "desc": "If your Premium features aren't showing after purchase, open the app → Profile → Subscription → Restore Purchases. This re-syncs your subscription with our servers."
+      },
+      "cancel": {
+        "title": "Cancel subscription",
+        "desc": "For App Store: Settings → Apple ID → Subscriptions → Doppler VPN → Cancel. For Google Play: Google Play → Account → Subscriptions → Cancel. Your access continues until the end of the billing period."
+      },
+      "switch": {
+        "title": "Switch plans",
+        "desc": "You can upgrade or downgrade your plan at any time through the same platform you subscribed on. The change takes effect at the next billing cycle."
+      },
+      "crossPlatform": {
+        "title": "Cross-platform subscriptions",
+        "desc": "Subscriptions purchased through the App Store only work on iOS. Google Play subscriptions only work on Android. For cross-platform access, subscribe via the Telegram bot — it works everywhere."
+      }
+    },
+    "getApp": "Download the app",
+    "openBot": "Open Telegram Bot",
+    "viewProtocols": "VPN Protocols guide"
   }
 }

@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "İndir",
     "guide": "Rehber",
-    "apps": "Uygulamalar"
+    "apps": "Uygulamalar",
+    "seeAllApps": "Tüm uygulamaları gör",
+    "seeAllGuides": "Tüm kılavuzları gör"
   },
   "hero": {
     "tagline": "Gizlilik Öncelikli VPN. Sonsuza Kadar Ücretsiz.",
@@ -37,10 +39,6 @@
         "title": "Kayıt Gerektirmeyen Gizlilik",
         "description": "Cihazınız hesabınız olarak çalışır. E-posta yok. Telefon numarası yok. Kişisel bilgi yok. Gizlilik bağlandığınız anda başlar."
       },
-      "wireguard": {
-        "title": "WireGuard Şifreleme",
-        "description": "Güvenlik uzmanlarının güvendiği modern VPN protokolü. Daha hızlı bağlantılar, daha iyi pil verimliliği ve askeri düzeyde şifreleme."
-      },
       "adBlocker": {
         "title": "Yerleşik Reklam Engelleyici",
         "description": "Ağ düzeyinde engelleme, reklamların, izleyicilerin ve açılır pencerelerin %75'ine kadarını kaldırır. Daha hızlı sayfa yükleme, daha az veri kullanımı, daha temiz gezinme."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Tamamen Ücretsiz",
         "description": "Tüm sunucular tam işlevsellik ile ücretsizdir. Tam şifreleme, hızlı bağlantılar, sınırsız bant genişliği. Hız kısıtlama veya veri sınırı yok."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "İki protokol, bir hizmet. Hız ve pil için WireGuard. Sansürü aşmak için VLESS-Reality. Sunucularımız ikisini de destekler — durumunuza uygun olanı kullanın."
       }
     },
     "getApp": "Doppler VPN İndir →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Makaleyi paylaş",
-    "copyLink": "Bağlantıyı kopyala"
+    "copyLink": "Bağlantıyı kopyala",
+    "copied": "Kopyalandı!"
   },
   "guide": {
     "title": "Kurulum Rehberi",
@@ -399,7 +402,17 @@
     },
     "backToGuides": "Tüm Rehberler",
     "nextStep": "İleri",
-    "prevStep": "Geri"
+    "prevStep": "Geri",
+    "downloadApps": "Uygulamayı indir",
+    "learnMore": "Daha fazla bilgi",
+    "protocolsCard": {
+      "title": "VPN Protokolleri",
+      "subtitle": "WireGuard vs VLESS-Reality — hangi protokol size uygun ve hangi uygulamalar destekliyor."
+    },
+    "subscriptionCard": {
+      "title": "Abonelik ve fiyatlandırma",
+      "subtitle": "Planlar, promosyon kodları, Telegram bot indirimleri ve abonelik yönetimi."
+    }
   },
   "cookie": {
     "message": "Deneyiminizi geliştirmek için çerezler kullanıyoruz. Bu siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz.",
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store'da ücretsiz",
-      "action": "İndir"
+      "action": "İndir",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — önerilen",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play'de ücretsiz",
-      "action": "İndir"
+      "action": "İndir",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — önerilen",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Masaüstü istemci yakında",
-      "action": "Kılavuzu gör"
+      "action": "Kılavuzu gör",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Masaüstü istemci yakında",
-      "action": "Kılavuzu gör"
+      "action": "Kılavuzu gör",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram Bot",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Kurulumda yardım mı lazım?",
-    "viewGuides": "Kurulum Kılavuzları"
+    "viewGuides": "Kurulum Kılavuzları",
+    "download": "İndir",
+    "viewSetupGuide": "Kurulum kılavuzunu gör",
+    "vlessNote": "Kısıtlı bölgelerdeki Telegram bot kullanıcıları için"
   }
 }

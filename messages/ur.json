@@ -10,7 +10,9 @@
     "blog": "بلاگ",
     "download": "ڈاؤن لوڈ",
     "guide": "گائیڈ",
-    "apps": "ایپس"
+    "apps": "ایپس",
+    "seeAllApps": "تمام ایپس دیکھیں",
+    "seeAllGuides": "تمام گائیڈز دیکھیں"
   },
   "hero": {
     "tagline": "پرائیویسی فرسٹ VPN۔ ہمیشہ مفت۔",
@@ -37,10 +39,6 @@
         "title": "رجسٹریشن کے بغیر پرائیویسی",
         "description": "آپ کا ڈیوائس آپ کا اکاؤنٹ ہے۔ کوئی ای میل نہیں۔ کوئی فون نمبر نہیں۔ کوئی ذاتی معلومات نہیں۔ پرائیویسی جڑنے کے لمحے سے شروع ہوتی ہے۔"
       },
-      "wireguard": {
-        "title": "WireGuard انکرپشن",
-        "description": "جدید VPN پروٹوکول جس پر سیکیورٹی ماہرین بھروسہ کرتے ہیں۔ تیز تر کنکشن، بہتر بیٹری کارکردگی، اور ملٹری گریڈ انکرپشن۔"
-      },
       "adBlocker": {
         "title": "بلٹ ان ایڈ بلاکر",
         "description": "نیٹ ورک لیول بلاکنگ 75% تک اشتہارات، ٹریکرز، اور پاپ اپس کو ہٹاتی ہے۔ تیز تر صفحات، کم ڈیٹا استعمال، صاف تر براؤزنگ۔"
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "مکمل طور پر مفت",
         "description": "تمام سرورز مکمل فعالیت کے ساتھ مفت ہیں۔ مکمل انکرپشن، تیز رفتار، لامحدود بینڈوڈتھ۔ کوئی تھروٹلنگ یا ڈیٹا کیپ نہیں۔"
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "دو پروٹوکولز، ایک سروس۔ رفتار اور بیٹری کے لیے WireGuard۔ سنسرشپ سے بچنے کے لیے VLESS-Reality۔ ہمارے سرورز دونوں کو سپورٹ کرتے ہیں۔"
       }
     },
     "getApp": "Doppler VPN حاصل کریں →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "مضمون شیئر کریں",
-    "copyLink": "لنک کاپی کریں"
+    "copyLink": "لنک کاپی کریں",
+    "copied": "کاپی ہو گیا!"
   },
   "guide": {
     "title": "سیٹ اپ گائیڈ",
@@ -399,7 +402,17 @@
     },
     "backToGuides": "تمام گائیڈز",
     "nextStep": "اگلا",
-    "prevStep": "پچھلا"
+    "prevStep": "پچھلا",
+    "downloadApps": "ایپ ڈاؤنلوڈ کریں",
+    "learnMore": "مزید جانیں",
+    "protocolsCard": {
+      "title": "VPN پروٹوکولز",
+      "subtitle": "WireGuard بمقابلہ VLESS-Reality — کون سا پروٹوکول آپ کے لیے مناسب ہے اور کون سی ایپس اسے سپورٹ کرتی ہیں۔"
+    },
+    "subscriptionCard": {
+      "title": "سبسکرپشن اور قیمتیں",
+      "subtitle": "پلانز، پرومو کوڈز، ٹیلیگرام بوٹ ڈسکاؤنٹس اور سبسکرپشن کا انتظام۔"
+    }
   },
   "cookie": {
     "message": "ہم آپ کے تجربے کو بہتر بنانے کے لیے کوکیز استعمال کرتے ہیں۔ اس سائٹ کا استعمال جاری رکھ کر، آپ کوکیز کے استعمال سے اتفاق کرتے ہیں۔",
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store پر مفت",
-      "action": "ڈاؤن لوڈ"
+      "action": "ڈاؤن لوڈ",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — تجویز کردہ",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play پر مفت",
-      "action": "ڈاؤن لوڈ"
+      "action": "ڈاؤن لوڈ",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — تجویز کردہ",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "ڈیسک ٹاپ کلائنٹ جلد آ رہا ہے",
-      "action": "گائیڈ دیکھیں"
+      "action": "گائیڈ دیکھیں",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "ڈیسک ٹاپ کلائنٹ جلد آ رہا ہے",
-      "action": "گائیڈ دیکھیں"
+      "action": "گائیڈ دیکھیں",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "ٹیلیگرام بوٹ",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "سیٹ اپ میں مدد چاہیے؟",
-    "viewGuides": "سیٹ اپ گائیڈز"
+    "viewGuides": "سیٹ اپ گائیڈز",
+    "download": "ڈاؤنلوڈ",
+    "viewSetupGuide": "سیٹ اپ گائیڈ دیکھیں",
+    "vlessNote": "محدود علاقوں میں ٹیلیگرام بوٹ صارفین کے لیے"
   }
 }

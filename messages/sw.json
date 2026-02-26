@@ -10,7 +10,9 @@
     "blog": "Blogu",
     "download": "Pakua",
     "guide": "Mwongozo",
-    "apps": "Programu"
+    "apps": "Programu",
+    "seeAllApps": "Angalia programu zote",
+    "seeAllGuides": "Angalia miongozo yote"
   },
   "hero": {
     "tagline": "VPN ya Faragha Kwanza. Bure Milele.",
@@ -37,10 +39,6 @@
         "title": "Faragha Bila Usajili",
         "description": "Kifaa chako ni akaunti yako. Bila barua pepe. Bila nambari ya simu. Bila taarifa za kibinafsi. Faragha inaanza wakati unapounganisha."
       },
-      "wireguard": {
-        "title": "Usimbaji wa WireGuard",
-        "description": "Itifaki ya VPN ya kisasa inayoaminiwa na wataalamu wa usalama. Muunganisho wa haraka zaidi, ufanisi bora wa betri, na usimbaji wa kiwango cha kijeshi."
-      },
       "adBlocker": {
         "title": "Kizuia Matangazo Kilichojengwa Ndani",
         "description": "Kuzuia kiwango cha mtandao kunaondoa hadi 75% ya matangazo, vifuatiliaji, na pop-ups. Kupakia kurasa haraka zaidi, matumizi ya data kidogo, kuvinjari safi zaidi."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Bure Kabisa",
         "description": "Seva zote ni bure na utendakazi kamili. Usimbaji kamili, kasi ya juu, bandwidth bila kikomo. Hakuna kupunguza kasi au vikomo vya data."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Itifaki mbili, huduma moja. WireGuard kwa kasi na betri. VLESS-Reality kwa kupita udhibiti. Seva zetu zinasaidia zote mbili."
       }
     },
     "getApp": "Pakua Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Shiriki makala",
-    "copyLink": "Nakili kiungo"
+    "copyLink": "Nakili kiungo",
+    "copied": "Imenakiliwa!"
   },
   "guide": {
     "title": "Mwongozo wa Usanidi",
@@ -399,7 +402,17 @@
     },
     "backToGuides": "Miongozo Yote",
     "nextStep": "Ifuatayo",
-    "prevStep": "Iliyopita"
+    "prevStep": "Iliyopita",
+    "downloadApps": "Pakua programu",
+    "learnMore": "Jifunze zaidi",
+    "protocolsCard": {
+      "title": "Itifaki za VPN",
+      "subtitle": "WireGuard dhidi ya VLESS-Reality — itifaki ipi inafaa na programu zipi zinazoisaidia."
+    },
+    "subscriptionCard": {
+      "title": "Usajili na bei",
+      "subtitle": "Mipango, misimbo ya promo, punguzo za boti ya Telegram na usimamizi wa usajili."
+    }
   },
   "cookie": {
     "message": "Tunatumia vidakuzi kuboresha uzoefu wako. Kwa kuendelea kutumia tovuti hii, unakubali matumizi ya vidakuzi.",
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Bure kwenye App Store",
-      "action": "Pakua"
+      "action": "Pakua",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — inapendekezwa",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Bure kwenye Google Play",
-      "action": "Pakua"
+      "action": "Pakua",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — inapendekezwa",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Programu ya desktop inakuja",
-      "action": "Tazama mwongozo"
+      "action": "Tazama mwongozo",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Programu ya desktop inakuja",
-      "action": "Tazama mwongozo"
+      "action": "Tazama mwongozo",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot ya Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Unahitaji msaada wa kuanzisha?",
-    "viewGuides": "Miongozo ya Kuanzisha"
+    "viewGuides": "Miongozo ya Kuanzisha",
+    "download": "Pakua",
+    "viewSetupGuide": "Angalia mwongozo wa usanidi",
+    "vlessNote": "Kwa watumiaji wa boti ya Telegram katika maeneo yaliyozuiliwa"
   }
 }

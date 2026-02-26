@@ -10,7 +10,9 @@
     "blog": "ब्लॉग",
     "download": "डाउनलोड",
     "guide": "गाइड",
-    "apps": "ऐप्स"
+    "apps": "ऐप्स",
+    "seeAllApps": "सभी ऐप्स देखें",
+    "seeAllGuides": "सभी गाइड देखें"
   },
   "hero": {
     "tagline": "प्राइवेसी-फर्स्ट VPN। हमेशा मुफ्त।",
@@ -37,10 +39,6 @@
         "title": "बिना रजिस्ट्रेशन के गोपनीयता",
         "description": "आपका डिवाइस आपके अकाउंट के रूप में काम करता है। कोई ईमेल नहीं। कोई फ़ोन नंबर नहीं। कोई व्यक्तिगत जानकारी नहीं। गोपनीयता कनेक्ट करते ही शुरू हो जाती है।"
       },
-      "wireguard": {
-        "title": "WireGuard एन्क्रिप्शन",
-        "description": "सुरक्षा विशेषज्ञों द्वारा विश्वसनीय आधुनिक VPN प्रोटोकॉल। तेज़ कनेक्शन, बेहतर बैटरी दक्षता और सैन्य-स्तर का एन्क्रिप्शन।"
-      },
       "adBlocker": {
         "title": "बिल्ट-इन ऐड ब्लॉकर",
         "description": "नेटवर्क-स्तर ब्लॉकिंग 75% तक विज्ञापन, ट्रैकर्स और पॉप-अप हटाती है। तेज़ पेज लोडिंग, कम डेटा उपयोग, साफ़ ब्राउज़िंग।"
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "पूरी तरह मुफ्त",
         "description": "सभी सर्वर पूर्ण कार्यक्षमता के साथ मुफ्त हैं। पूर्ण एन्क्रिप्शन, तेज़ गति, असीमित बैंडविड्थ। कोई स्पीड थ्रॉटलिंग या डेटा सीमा नहीं।"
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "दो प्रोटोकॉल, एक सेवा। WireGuard स्पीड और बैटरी के लिए। VLESS-Reality सेंसरशिप बायपास के लिए। हमारे सर्वर दोनों को सपोर्ट करते हैं।"
       }
     },
     "getApp": "Doppler VPN प्राप्त करें →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "लेख साझा करें",
-    "copyLink": "लिंक कॉपी करें"
+    "copyLink": "लिंक कॉपी करें",
+    "copied": "कॉपी हो गया!"
   },
   "guide": {
     "title": "सेटअप गाइड",
@@ -399,6 +402,16 @@
       "supportBotDesc": "23 भाषाओं में 24/7 AI-संचालित सपोर्ट। किसी भी समस्या के लिए तुरंत मदद प्राप्त करें।",
       "miniApp": "सब्सक्रिप्शन मिनी ऐप",
       "miniAppDesc": "हमारे Telegram मिनी ऐप के ज़रिए सुरक्षित Stripe भुगतान के साथ सब्सक्राइब करें और अपनी योजना प्रबंधित करें।"
+    },
+    "downloadApps": "ऐप डाउनलोड करें",
+    "learnMore": "और जानें",
+    "protocolsCard": {
+      "title": "VPN प्रोटोकॉल",
+      "subtitle": "WireGuard बनाम VLESS-Reality — कौन सा प्रोटोकॉल आपके लिए है और कौन से ऐप्स इसे सपोर्ट करते हैं।"
+    },
+    "subscriptionCard": {
+      "title": "सब्सक्रिप्शन और प्राइसिंग",
+      "subtitle": "प्लान, प्रोमो कोड, Telegram बॉट डिस्काउंट और सब्सक्रिप्शन प्रबंधन।"
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store पर मुफ्त",
-      "action": "डाउनलोड"
+      "action": "डाउनलोड",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — अनुशंसित",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play पर मुफ्त",
-      "action": "डाउनलोड"
+      "action": "डाउनलोड",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — अनुशंसित",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "डेस्कटॉप क्लाइंट जल्द आ रहा",
-      "action": "गाइड देखें"
+      "action": "गाइड देखें",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "डेस्कटॉप क्लाइंट जल्द आ रहा",
-      "action": "गाइड देखें"
+      "action": "गाइड देखें",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "टेलीग्राम बॉट",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "सेटअप में मदद चाहिए?",
-    "viewGuides": "सेटअप गाइड देखें"
+    "viewGuides": "सेटअप गाइड देखें",
+    "download": "डाउनलोड",
+    "viewSetupGuide": "सेटअप गाइड देखें",
+    "vlessNote": "प्रतिबंधित क्षेत्रों में Telegram बॉट उपयोगकर्ताओं के लिए"
   }
 }

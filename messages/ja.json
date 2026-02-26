@@ -10,7 +10,9 @@
     "blog": "ブログ",
     "download": "ダウンロード",
     "guide": "ガイド",
-    "apps": "アプリ"
+    "apps": "アプリ",
+    "seeAllApps": "すべてのアプリを見る",
+    "seeAllGuides": "すべてのガイドを見る"
   },
   "hero": {
     "tagline": "プライバシー最優先VPN。永久無料。",
@@ -37,10 +39,6 @@
         "title": "登録不要のプライバシー",
         "description": "デバイスがアカウントです。メール不要。電話番号不要。個人情報不要。プライバシーは接続した瞬間から始まります。"
       },
-      "wireguard": {
-        "title": "WireGuard暗号化",
-        "description": "セキュリティ専門家が信頼する最新のVPNプロトコル。より高速な接続、より優れたバッテリー効率、軍事グレードの暗号化。"
-      },
       "adBlocker": {
         "title": "内蔵広告ブロッカー",
         "description": "ネットワークレベルのブロックで広告、トラッカー、ポップアップの最大75%を除去。ページ読み込みが高速化、データ使用量削減、クリーンなブラウジング。"
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "完全無料",
         "description": "すべてのサーバーがフル機能で無料。完全な暗号化、高速、無制限帯域幅。速度制限やデータ制限なし。"
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "2つのプロトコル、1つのサービス。速度とバッテリーにはWireGuard。検閲回避にはVLESS-Reality。サーバーは両方対応 — 状況に合わせて選択。"
       }
     },
     "getApp": "Doppler VPN を入手 →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "記事をシェア",
-    "copyLink": "リンクをコピー"
+    "copyLink": "リンクをコピー",
+    "copied": "コピーしました！"
   },
   "guide": {
     "title": "セットアップガイド",
@@ -399,6 +402,16 @@
       "supportBotDesc": "23言語対応の AI サポートが24時間利用可能。どんな問題でもすぐにサポートを受けられます。",
       "miniApp": "サブスクリプション ミニアプリ",
       "miniAppDesc": "Telegram ミニアプリから安全な Stripe 決済でサブスクリプションの登録・管理ができます。"
+    },
+    "downloadApps": "アプリをダウンロード",
+    "learnMore": "詳しく見る",
+    "protocolsCard": {
+      "title": "VPNプロトコル",
+      "subtitle": "WireGuard vs VLESS-Reality — どのプロトコルが適しているか、どのアプリが対応しているか。"
+    },
+    "subscriptionCard": {
+      "title": "サブスクリプションと料金",
+      "subtitle": "プラン、プロモコード、Telegramボット割引、サブスクリプション管理について。"
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store で無料",
-      "action": "ダウンロード"
+      "action": "ダウンロード",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 推奨",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play で無料",
-      "action": "ダウンロード"
+      "action": "ダウンロード",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 推奨",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "デスクトップ版近日公開",
-      "action": "ガイドを見る"
+      "action": "ガイドを見る",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "デスクトップ版近日公開",
-      "action": "ガイドを見る"
+      "action": "ガイドを見る",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram Bot",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "設定にお困りですか？",
-    "viewGuides": "セットアップガイド"
+    "viewGuides": "セットアップガイド",
+    "download": "ダウンロード",
+    "viewSetupGuide": "セットアップガイドを見る",
+    "vlessNote": "制限地域のTelegramボットユーザー向け"
   }
 }

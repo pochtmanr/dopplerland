@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Herunterladen",
     "guide": "Anleitung",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "Alle Apps anzeigen",
+    "seeAllGuides": "Alle Anleitungen anzeigen"
   },
   "hero": {
     "tagline": "Datenschutz-zuerst VPN. Für immer kostenlos.",
@@ -37,10 +39,6 @@
         "title": "Privatsphäre ohne Registrierung",
         "description": "Dein Gerät dient als dein Konto. Keine E-Mail. Keine Telefonnummer. Keine persönlichen Informationen. Privatsphäre beginnt in dem Moment, in dem du dich verbindest."
       },
-      "wireguard": {
-        "title": "WireGuard-Verschlüsselung",
-        "description": "Modernes VPN-Protokoll, dem Sicherheitsexperten vertrauen. Schnellere Verbindungen, bessere Akku-Effizienz und Verschlüsselung auf Militärniveau."
-      },
       "adBlocker": {
         "title": "Integrierter Werbeblocker",
         "description": "Netzwerk-Blockierung entfernt bis zu 75% der Werbung, Tracker und Pop-ups. Schnellerer Seitenaufbau, weniger Datenverbrauch, saubereres Surfen."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Komplett kostenlos",
         "description": "Alle Server sind kostenlos mit vollem Funktionsumfang. Vollständige Verschlüsselung, hohe Geschwindigkeiten, unbegrenzte Bandbreite. Keine Drosselung oder Datenlimits."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Zwei Protokolle, ein Service. WireGuard für Geschwindigkeit und Akku. VLESS-Reality zur Umgehung von Zensur. Unsere Server unterstützen beides — nutzen Sie, was passt."
       }
     },
     "getApp": "Doppler VPN herunterladen →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Artikel teilen",
-    "copyLink": "Link kopieren"
+    "copyLink": "Link kopieren",
+    "copied": "Kopiert!"
   },
   "guide": {
     "title": "Einrichtungsanleitung",
@@ -399,6 +402,16 @@
       "supportBotDesc": "KI-gestützter Support rund um die Uhr in 23 Sprachen. Erhalte sofortige Hilfe bei jedem Problem.",
       "miniApp": "Abonnement-Mini-App",
       "miniAppDesc": "Abonniere und verwalte deinen Tarif über unsere Telegram-Mini-App mit sicheren Stripe-Zahlungen."
+    },
+    "downloadApps": "App herunterladen",
+    "learnMore": "Mehr erfahren",
+    "protocolsCard": {
+      "title": "VPN-Protokolle",
+      "subtitle": "WireGuard vs. VLESS-Reality — welches Protokoll passt zu Ihnen und welche Apps unterstützen es."
+    },
+    "subscriptionCard": {
+      "title": "Abonnement & Preise",
+      "subtitle": "Pläne, Promo-Codes, Telegram-Bot-Rabatte und Abonnementverwaltung."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Kostenlos im App Store",
-      "action": "Herunterladen"
+      "action": "Herunterladen",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — empfohlen",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Kostenlos bei Google Play",
-      "action": "Herunterladen"
+      "action": "Herunterladen",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — empfohlen",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Desktop-Client kommt bald",
-      "action": "Anleitung"
+      "action": "Anleitung",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Desktop-Client kommt bald",
-      "action": "Anleitung"
+      "action": "Anleitung",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram Bot",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Hilfe bei der Einrichtung?",
-    "viewGuides": "Einrichtungsanleitungen"
+    "viewGuides": "Einrichtungsanleitungen",
+    "download": "Herunterladen",
+    "viewSetupGuide": "Einrichtungsanleitung",
+    "vlessNote": "Für Telegram-Bot-Nutzer in eingeschränkten Regionen"
   }
 }

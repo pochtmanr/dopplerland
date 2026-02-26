@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Baixar",
     "guide": "Guia",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "Ver todos os apps",
+    "seeAllGuides": "Ver todos os guias"
   },
   "hero": {
     "tagline": "VPN com privacidade em primeiro lugar. Grátis para sempre.",
@@ -37,10 +39,6 @@
         "title": "Privacidade sem registro",
         "description": "Seu dispositivo é sua conta. Sem e-mail. Sem número de telefone. Sem informações pessoais. A privacidade começa no momento em que você se conecta."
       },
-      "wireguard": {
-        "title": "Criptografia WireGuard",
-        "description": "Protocolo VPN moderno confiado por profissionais de segurança. Conexões mais rápidas, melhor eficiência de bateria e criptografia de nível militar."
-      },
       "adBlocker": {
         "title": "Bloqueador de anúncios integrado",
         "description": "O bloqueio a nível de rede remove até 75% dos anúncios, rastreadores e pop-ups. Carregamento de páginas mais rápido, menos uso de dados, navegação mais limpa."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Completamente grátis",
         "description": "Todos os servidores são gratuitos com funcionalidade completa. Criptografia completa, velocidades rápidas, largura de banda ilimitada. Sem limitação de velocidade ou limites de dados."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Dois protocolos, um serviço. WireGuard para velocidade e bateria. VLESS-Reality para contornar censura. Nossos servidores suportam ambos — use o que se encaixa."
       }
     },
     "getApp": "Baixar Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Compartilhar artigo",
-    "copyLink": "Copiar link"
+    "copyLink": "Copiar link",
+    "copied": "Copiado!"
   },
   "guide": {
     "title": "Guia de configuração",
@@ -399,6 +402,16 @@
       "supportBotDesc": "Suporte com IA 24 horas em 23 idiomas. Obtenha ajuda instantânea para qualquer problema.",
       "miniApp": "Mini App de assinatura",
       "miniAppDesc": "Assine e gerencie seu plano através do nosso Mini App do Telegram com pagamentos seguros via Stripe."
+    },
+    "downloadApps": "Baixar o app",
+    "learnMore": "Saiba mais",
+    "protocolsCard": {
+      "title": "Protocolos VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — qual protocolo é melhor para você e quais apps o suportam."
+    },
+    "subscriptionCard": {
+      "title": "Assinatura e preços",
+      "subtitle": "Planos, códigos promocionais, descontos do bot Telegram e gerenciamento de assinatura."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Grátis na App Store",
-      "action": "Baixar"
+      "action": "Baixar",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recomendado",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Grátis no Google Play",
-      "action": "Baixar"
+      "action": "Baixar",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recomendado",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Cliente desktop em breve",
-      "action": "Ver guia"
+      "action": "Ver guia",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Cliente desktop em breve",
-      "action": "Ver guia"
+      "action": "Ver guia",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot do Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Precisa de ajuda para configurar?",
-    "viewGuides": "Guias de configuração"
+    "viewGuides": "Guias de configuração",
+    "download": "Baixar",
+    "viewSetupGuide": "Ver guia de configuração",
+    "vlessNote": "Para usuários do bot Telegram em regiões restritas"
   }
 }

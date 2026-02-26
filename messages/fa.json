@@ -10,7 +10,9 @@
     "blog": "وبلاگ",
     "download": "دانلود",
     "guide": "راهنما",
-    "apps": "اپلیکیشن‌ها"
+    "apps": "اپلیکیشن‌ها",
+    "seeAllApps": "مشاهده همه برنامه‌ها",
+    "seeAllGuides": "مشاهده همه راهنماها"
   },
   "hero": {
     "tagline": "VPN با اولویت حریم خصوصی. رایگان برای همیشه.",
@@ -37,10 +39,6 @@
         "title": "حریم خصوصی بدون ثبت‌نام",
         "description": "دستگاه شما به عنوان حساب شما عمل می‌کند. بدون ایمیل. بدون شماره تلفن. بدون اطلاعات شخصی. حریم خصوصی از لحظه اتصال شروع می‌شود."
       },
-      "wireguard": {
-        "title": "رمزنگاری WireGuard",
-        "description": "پروتکل VPN مدرن مورد اعتماد متخصصان امنیت. اتصالات سریع‌تر، کارایی باتری بهتر و رمزنگاری سطح نظامی."
-      },
       "adBlocker": {
         "title": "مسدودکننده تبلیغات داخلی",
         "description": "مسدودسازی در سطح شبکه تا ۷۵٪ از تبلیغات، ردیاب‌ها و پنجره‌های بازشو را حذف می‌کند. بارگذاری سریع‌تر صفحات، مصرف کمتر داده، مرور تمیزتر."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "کاملاً رایگان",
         "description": "تمام سرورها رایگان هستند با عملکرد کامل. رمزنگاری کامل، سرعت بالا، پهنای باند نامحدود. بدون محدودیت سرعت یا سقف داده."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "دو پروتکل، یک سرویس. WireGuard برای سرعت و باتری. VLESS-Reality برای دور زدن سانسور. سرورهای ما هر دو را پشتیبانی می‌کنند."
       }
     },
     "getApp": "دانلود Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "اشتراک‌گذاری مقاله",
-    "copyLink": "کپی لینک"
+    "copyLink": "کپی لینک",
+    "copied": "کپی شد!"
   },
   "guide": {
     "title": "راهنمای راه‌اندازی",
@@ -399,6 +402,16 @@
       "supportBotDesc": "پشتیبانی هوش مصنوعی ۲۴ ساعته به ۲۳ زبان. کمک فوری برای هر مشکلی دریافت کنید.",
       "miniApp": "مینی اپ اشتراک",
       "miniAppDesc": "از طریق مینی اپ Telegram ما با پرداخت‌های امن Stripe اشتراک بگیرید و طرح خود را مدیریت کنید."
+    },
+    "downloadApps": "دانلود برنامه",
+    "learnMore": "بیشتر بدانید",
+    "protocolsCard": {
+      "title": "پروتکل‌های VPN",
+      "subtitle": "WireGuard در مقابل VLESS-Reality — کدام پروتکل مناسب شماست و کدام برنامه‌ها آن را پشتیبانی می‌کنند."
+    },
+    "subscriptionCard": {
+      "title": "اشتراک و قیمت‌گذاری",
+      "subtitle": "طرح‌ها، کدهای تخفیف، تخفیف‌های ربات تلگرام و نحوه مدیریت اشتراک."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "رایگان در App Store",
-      "action": "دانلود"
+      "action": "دانلود",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — پیشنهادی",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "رایگان در Google Play",
-      "action": "دانلود"
+      "action": "دانلود",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — پیشنهادی",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "کلاینت دسکتاپ به زودی",
-      "action": "مشاهده راهنما"
+      "action": "مشاهده راهنما",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "کلاینت دسکتاپ به زودی",
-      "action": "مشاهده راهنما"
+      "action": "مشاهده راهنما",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "ربات تلگرام",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "به کمک برای راه‌اندازی نیاز دارید؟",
-    "viewGuides": "راهنماهای راه‌اندازی"
+    "viewGuides": "راهنماهای راه‌اندازی",
+    "download": "دانلود",
+    "viewSetupGuide": "مشاهده راهنمای نصب",
+    "vlessNote": "برای کاربران ربات تلگرام در مناطق محدود"
   }
 }

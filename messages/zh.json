@@ -10,7 +10,9 @@
     "blog": "博客",
     "download": "下载",
     "guide": "指南",
-    "apps": "应用"
+    "apps": "应用",
+    "seeAllApps": "查看所有应用",
+    "seeAllGuides": "查看所有指南"
   },
   "hero": {
     "tagline": "隐私至上的VPN。永久免费。",
@@ -37,10 +39,6 @@
         "title": "无需注册的隐私保护",
         "description": "您的设备就是您的账户。无需邮箱。无需手机号。无需个人信息。连接的那一刻起隐私即开始。"
       },
-      "wireguard": {
-        "title": "WireGuard加密",
-        "description": "安全专家信赖的现代VPN协议。更快的连接速度、更好的电池效率和军事级加密。"
-      },
       "adBlocker": {
         "title": "内置广告拦截器",
         "description": "网络级拦截可移除多达75%的广告、追踪器和弹窗。更快的页面加载、更少的数据使用、更清爽的浏览体验。"
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "完全免费",
         "description": "所有服务器免费提供完整功能。完整加密、高速连接、无限带宽。无限速或数据上限。"
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "两种协议，一项服务。WireGuard提供速度和省电。VLESS-Reality用于绕过审查。我们的服务器两者都支持——选择适合你的。"
       }
     },
     "getApp": "获取 Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "分享文章",
-    "copyLink": "复制链接"
+    "copyLink": "复制链接",
+    "copied": "已复制！"
   },
   "guide": {
     "title": "设置指南",
@@ -399,6 +402,16 @@
       "supportBotDesc": "24/7 AI 支持，支持 23 种语言。即时获取帮助。",
       "miniApp": "订阅小程序",
       "miniAppDesc": "通过我们的 Telegram 小程序订阅和管理计划，支持安全的 Stripe 支付。"
+    },
+    "downloadApps": "下载应用",
+    "learnMore": "了解更多",
+    "protocolsCard": {
+      "title": "VPN协议",
+      "subtitle": "WireGuard vs VLESS-Reality — 哪种协议适合你，哪些应用支持它。"
+    },
+    "subscriptionCard": {
+      "title": "订阅与定价",
+      "subtitle": "套餐、促销码、Telegram机器人折扣和订阅管理。"
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store 免费下载",
-      "action": "下载"
+      "action": "下载",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 推荐",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play 免费下载",
-      "action": "下载"
+      "action": "下载",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 推荐",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "桌面客户端即将推出",
-      "action": "查看指南"
+      "action": "查看指南",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "桌面客户端即将推出",
-      "action": "查看指南"
+      "action": "查看指南",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram 机器人",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "需要设置帮助？",
-    "viewGuides": "查看设置指南"
+    "viewGuides": "查看设置指南",
+    "download": "下载",
+    "viewSetupGuide": "查看设置指南",
+    "vlessNote": "适用于受限地区的Telegram机器人用户"
   }
 }

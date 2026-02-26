@@ -10,7 +10,9 @@
     "blog": "المدونة",
     "download": "تحميل",
     "guide": "الدليل",
-    "apps": "التطبيقات"
+    "apps": "التطبيقات",
+    "seeAllApps": "جميع التطبيقات",
+    "seeAllGuides": "جميع الأدلة"
   },
   "hero": {
     "tagline": "VPN يضع الخصوصية أولاً. مجاني للأبد.",
@@ -37,10 +39,6 @@
         "title": "خصوصية بدون تسجيل",
         "description": "جهازك يعمل كحسابك. بدون بريد إلكتروني. بدون رقم هاتف. بدون معلومات شخصية. الخصوصية تبدأ من لحظة اتصالك."
       },
-      "wireguard": {
-        "title": "تشفير WireGuard",
-        "description": "بروتوكول VPN حديث يثق به خبراء الأمن. اتصالات أسرع، كفاءة أفضل للبطارية، وتشفير بمستوى عسكري."
-      },
       "adBlocker": {
         "title": "حاجب إعلانات مدمج",
         "description": "الحجب على مستوى الشبكة يزيل حتى 75% من الإعلانات والمتتبعات والنوافذ المنبثقة. تحميل أسرع للصفحات، استخدام أقل للبيانات، تصفح أنظف."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "مجاني بالكامل",
         "description": "جميع السيرفرات مجانية بوظائف كاملة. تشفير كامل، سرعات عالية، عرض نطاق غير محدود. بدون تقييد سرعة أو حدود بيانات."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "بروتوكولان في خدمة واحدة. WireGuard للسرعة والبطارية. VLESS-Reality لتجاوز الرقابة. خوادمنا تدعم كليهما — استخدم ما يناسب وضعك."
       }
     },
     "getApp": "تحميل Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "مشاركة المقال",
-    "copyLink": "نسخ الرابط"
+    "copyLink": "نسخ الرابط",
+    "copied": "تم النسخ!"
   },
   "guide": {
     "title": "دليل الإعداد",
@@ -399,6 +402,16 @@
       "supportBotDesc": "دعم بالذكاء الاصطناعي على مدار الساعة بـ 23 لغة. احصل على مساعدة فورية لأي مشكلة.",
       "miniApp": "تطبيق الاشتراك المصغر",
       "miniAppDesc": "اشترك وأدر خطتك عبر تطبيق Telegram المصغر مع مدفوعات آمنة عبر Stripe."
+    },
+    "downloadApps": "تحميل التطبيق",
+    "learnMore": "اعرف المزيد",
+    "protocolsCard": {
+      "title": "بروتوكولات VPN",
+      "subtitle": "WireGuard مقابل VLESS-Reality — أي بروتوكول يناسب احتياجاتك وأي التطبيقات تدعمه."
+    },
+    "subscriptionCard": {
+      "title": "الاشتراك والأسعار",
+      "subtitle": "الخطط وأكواد الخصم وخصومات بوت تيليجرام وكيفية إدارة اشتراكك."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "مجاني على App Store",
-      "action": "تحميل"
+      "action": "تحميل",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — موصى به",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "مجاني على Google Play",
-      "action": "تحميل"
+      "action": "تحميل",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — موصى به",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "عميل سطح المكتب قريبًا",
-      "action": "عرض الدليل"
+      "action": "عرض الدليل",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "عميل سطح المكتب قريبًا",
-      "action": "عرض الدليل"
+      "action": "عرض الدليل",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "بوت تيليجرام",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "تحتاج مساعدة في الإعداد؟",
-    "viewGuides": "عرض أدلة الإعداد"
+    "viewGuides": "عرض أدلة الإعداد",
+    "download": "تحميل",
+    "viewSetupGuide": "عرض دليل الإعداد",
+    "vlessNote": "لمستخدمي بوت تيليجرام في المناطق المحظورة"
   }
 }

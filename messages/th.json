@@ -10,7 +10,9 @@
     "blog": "บล็อก",
     "download": "ดาวน์โหลด",
     "guide": "คู่มือ",
-    "apps": "แอป"
+    "apps": "แอป",
+    "seeAllApps": "ดูแอปทั้งหมด",
+    "seeAllGuides": "ดูคู่มือทั้งหมด"
   },
   "hero": {
     "tagline": "VPN ที่ให้ความสำคัญกับความเป็นส่วนตัว ฟรีตลอดไป",
@@ -37,10 +39,6 @@
         "title": "ความเป็นส่วนตัวโดยไม่ต้องลงทะเบียน",
         "description": "อุปกรณ์ของคุณคือบัญชีของคุณ ไม่ต้องใช้อีเมล ไม่ต้องใช้เบอร์โทรศัพท์ ไม่ต้องใช้ข้อมูลส่วนตัว ความเป็นส่วนตัวเริ่มต้นตั้งแต่คุณเชื่อมต่อ"
       },
-      "wireguard": {
-        "title": "การเข้ารหัส WireGuard",
-        "description": "โปรโตคอล VPN สมัยใหม่ที่ผู้เชี่ยวชาญด้านความปลอดภัยไว้วางใจ การเชื่อมต่อเร็วขึ้น ประหยัดแบตเตอรี่มากขึ้น และการเข้ารหัสระดับทหาร"
-      },
       "adBlocker": {
         "title": "ตัวบล็อกโฆษณาในตัว",
         "description": "การบล็อกระดับเครือข่ายลบโฆษณา ตัวติดตาม และป๊อปอัปได้ถึง 75% โหลดหน้าเว็บเร็วขึ้น ใช้ข้อมูลน้อยลง ท่องเว็บสะอาดขึ้น"
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "ฟรีทั้งหมด",
         "description": "เซิร์ฟเวอร์ทั้งหมดฟรีพร้อมฟังก์ชันเต็มรูปแบบ การเข้ารหัสเต็มรูปแบบ ความเร็วสูง แบนด์วิดท์ไม่จำกัด ไม่มีการจำกัดความเร็วหรือข้อมูล"
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "สองโปรโตคอล หนึ่งบริการ WireGuard สำหรับความเร็วและแบตเตอรี่ VLESS-Reality สำหรับข้ามการเซ็นเซอร์ เซิร์ฟเวอร์รองรับทั้งคู่"
       }
     },
     "getApp": "ดาวน์โหลด Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "แชร์บทความ",
-    "copyLink": "คัดลอกลิงก์"
+    "copyLink": "คัดลอกลิงก์",
+    "copied": "คัดลอกแล้ว!"
   },
   "guide": {
     "title": "คู่มือการตั้งค่า",
@@ -399,6 +402,16 @@
       "supportBotDesc": "การสนับสนุนด้วย AI ตลอด 24 ชั่วโมงใน 23 ภาษา รับความช่วยเหลือทันทีสำหรับทุกปัญหา",
       "miniApp": "มินิแอปสมัครสมาชิก",
       "miniAppDesc": "สมัครสมาชิกและจัดการแพลนของคุณผ่านมินิแอป Telegram ของเราพร้อมการชำระเงินที่ปลอดภัยผ่าน Stripe"
+    },
+    "downloadApps": "ดาวน์โหลดแอป",
+    "learnMore": "เรียนรู้เพิ่มเติม",
+    "protocolsCard": {
+      "title": "โปรโตคอล VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — โปรโตคอลไหนเหมาะกับคุณและแอปไหนรองรับ"
+    },
+    "subscriptionCard": {
+      "title": "การสมัครสมาชิกและราคา",
+      "subtitle": "แผน รหัสโปรโมชั่น ส่วนลดบอท Telegram และการจัดการการสมัครสมาชิก"
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "ฟรีบน App Store",
-      "action": "ดาวน์โหลด"
+      "action": "ดาวน์โหลด",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — แนะนำ",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "ฟรีบน Google Play",
-      "action": "ดาวน์โหลด"
+      "action": "ดาวน์โหลด",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — แนะนำ",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "แอปเดสก์ท็อปเร็ว ๆ นี้",
-      "action": "ดูคู่มือ"
+      "action": "ดูคู่มือ",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "แอปเดสก์ท็อปเร็ว ๆ นี้",
-      "action": "ดูคู่มือ"
+      "action": "ดูคู่มือ",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "บอท Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "ต้องการความช่วยเหลือในการตั้งค่า?",
-    "viewGuides": "คู่มือการตั้งค่า"
+    "viewGuides": "คู่มือการตั้งค่า",
+    "download": "ดาวน์โหลด",
+    "viewSetupGuide": "ดูคู่มือการตั้งค่า",
+    "vlessNote": "สำหรับผู้ใช้บอท Telegram ในภูมิภาคที่ถูกจำกัด"
   }
 }

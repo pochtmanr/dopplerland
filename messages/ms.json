@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Muat Turun",
     "guide": "Panduan",
-    "apps": "Aplikasi"
+    "apps": "Aplikasi",
+    "seeAllApps": "Lihat semua aplikasi",
+    "seeAllGuides": "Lihat semua panduan"
   },
   "hero": {
     "tagline": "VPN Mengutamakan Privasi. Percuma Selamanya.",
@@ -37,10 +39,6 @@
         "title": "Privasi Tanpa Pendaftaran",
         "description": "Peranti anda ialah akaun anda. Tiada e-mel. Tiada nombor telefon. Tiada maklumat peribadi. Privasi bermula saat anda disambungkan."
       },
-      "wireguard": {
-        "title": "Penyulitan WireGuard",
-        "description": "Protokol VPN moden yang dipercayai oleh profesional keselamatan. Sambungan lebih pantas, kecekapan bateri lebih baik, dan penyulitan gred tentera."
-      },
       "adBlocker": {
         "title": "Penyekat Iklan Terbina Dalam",
         "description": "Penyekatan peringkat rangkaian menghapuskan sehingga 75% iklan, penjejak, dan pop timbul. Pemuatan halaman lebih pantas, penggunaan data kurang, pelayaran lebih bersih."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Percuma Sepenuhnya",
         "description": "Semua pelayan percuma dengan fungsi penuh. Penyulitan penuh, kelajuan tinggi, lebar jalur tanpa had. Tiada pendikit atau had data."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Dua protokol, satu perkhidmatan. WireGuard untuk kelajuan dan bateri. VLESS-Reality untuk memintas penapisan. Pelayan kami menyokong kedua-duanya."
       }
     },
     "getApp": "Muat Turun Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Kongsi artikel",
-    "copyLink": "Salin pautan"
+    "copyLink": "Salin pautan",
+    "copied": "Disalin!"
   },
   "guide": {
     "title": "Panduan Persediaan",
@@ -399,6 +402,16 @@
       "supportBotDesc": "Sokongan AI 24/7 dalam 23 bahasa. Dapatkan bantuan segera untuk sebarang masalah.",
       "miniApp": "Mini App Langganan",
       "miniAppDesc": "Langgan dan urus pelan anda melalui Mini App Telegram kami dengan pembayaran selamat melalui Stripe."
+    },
+    "downloadApps": "Muat turun aplikasi",
+    "learnMore": "Ketahui lebih lanjut",
+    "protocolsCard": {
+      "title": "Protokol VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — protokol mana sesuai dan aplikasi mana yang menyokongnya."
+    },
+    "subscriptionCard": {
+      "title": "Langganan & Harga",
+      "subtitle": "Pelan, kod promo, diskaun bot Telegram dan pengurusan langganan."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Percuma di App Store",
-      "action": "Muat Turun"
+      "action": "Muat Turun",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — disyorkan",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Percuma di Google Play",
-      "action": "Muat Turun"
+      "action": "Muat Turun",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — disyorkan",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Klien desktop akan datang",
-      "action": "Lihat panduan"
+      "action": "Lihat panduan",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Klien desktop akan datang",
-      "action": "Lihat panduan"
+      "action": "Lihat panduan",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Perlukan bantuan untuk persediaan?",
-    "viewGuides": "Panduan Persediaan"
+    "viewGuides": "Panduan Persediaan",
+    "download": "Muat turun",
+    "viewSetupGuide": "Lihat panduan persediaan",
+    "vlessNote": "Untuk pengguna bot Telegram di wilayah terhad"
   }
 }

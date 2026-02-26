@@ -10,7 +10,9 @@
     "blog": "블로그",
     "download": "다운로드",
     "guide": "가이드",
-    "apps": "앱"
+    "apps": "앱",
+    "seeAllApps": "모든 앱 보기",
+    "seeAllGuides": "모든 가이드 보기"
   },
   "hero": {
     "tagline": "프라이버시 우선 VPN. 영원히 무료.",
@@ -37,10 +39,6 @@
         "title": "가입 없는 프라이버시",
         "description": "기기가 곧 계정입니다. 이메일 없이. 전화번호 없이. 개인정보 없이. 프라이버시는 연결하는 순간 시작됩니다."
       },
-      "wireguard": {
-        "title": "WireGuard 암호화",
-        "description": "보안 전문가들이 신뢰하는 최신 VPN 프로토콜. 더 빠른 연결, 더 나은 배터리 효율, 군사 수준 암호화."
-      },
       "adBlocker": {
         "title": "내장 광고 차단기",
         "description": "네트워크 수준 차단으로 광고, 추적기, 팝업의 최대 75%를 제거합니다. 더 빠른 페이지 로딩, 더 적은 데이터 사용, 더 깨끗한 브라우징."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "완전 무료",
         "description": "모든 서버가 전체 기능과 함께 무료입니다. 완전한 암호화, 빠른 속도, 무제한 대역폭. 속도 제한이나 데이터 제한 없음."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "두 가지 프로토콜, 하나의 서비스. 속도와 배터리를 위한 WireGuard. 검열 우회를 위한 VLESS-Reality. 서버는 둘 다 지원합니다."
       }
     },
     "getApp": "Doppler VPN 받기 →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "기사 공유",
-    "copyLink": "링크 복사"
+    "copyLink": "링크 복사",
+    "copied": "복사됨!"
   },
   "guide": {
     "title": "설정 가이드",
@@ -399,6 +402,16 @@
       "supportBotDesc": "23개 언어로 연중무휴 AI 지원. 어떤 문제든 즉시 도움을 받으세요.",
       "miniApp": "구독 미니 앱",
       "miniAppDesc": "Telegram 미니 앱을 통해 안전한 Stripe 결제로 구독하고 플랜을 관리하세요."
+    },
+    "downloadApps": "앱 다운로드",
+    "learnMore": "자세히 알아보기",
+    "protocolsCard": {
+      "title": "VPN 프로토콜",
+      "subtitle": "WireGuard vs VLESS-Reality — 어떤 프로토콜이 적합하고 어떤 앱이 지원하는지."
+    },
+    "subscriptionCard": {
+      "title": "구독 및 가격",
+      "subtitle": "요금제, 프로모 코드, Telegram 봇 할인, 구독 관리 방법."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "App Store에서 무료",
-      "action": "다운로드"
+      "action": "다운로드",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 추천",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Google Play에서 무료",
-      "action": "다운로드"
+      "action": "다운로드",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — 추천",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "데스크톱 클라이언트 곧 출시",
-      "action": "가이드 보기"
+      "action": "가이드 보기",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "데스크톱 클라이언트 곧 출시",
-      "action": "가이드 보기"
+      "action": "가이드 보기",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "텔레그램 봇",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "설정에 도움이 필요하신가요?",
-    "viewGuides": "설정 가이드 보기"
+    "viewGuides": "설정 가이드 보기",
+    "download": "다운로드",
+    "viewSetupGuide": "설정 가이드 보기",
+    "vlessNote": "제한 지역의 Telegram 봇 사용자용"
   }
 }

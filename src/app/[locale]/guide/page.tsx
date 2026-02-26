@@ -98,6 +98,53 @@ export default async function GuidePage({ params }: PageProps) {
               </div>
             </section>
 
+            {/* Learn More */}
+            <section>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">
+                {t("learnMore")}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <Link
+                  href="/guide/protocols"
+                  className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 hover:border-accent-teal/30 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-4">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-text-primary mb-1">
+                    {t("protocolsCard.title")}
+                  </h3>
+                  <p className="text-xs text-text-muted mb-3">
+                    {t("protocolsCard.subtitle")}
+                  </p>
+                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                    {t("learnMore")} &rarr;
+                  </span>
+                </Link>
+                <Link
+                  href="/guide/subscription"
+                  className="group rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 hover:border-accent-teal/30 transition-all"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-overlay/5 border border-overlay/10 flex items-center justify-center text-text-muted mb-4">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-text-primary mb-1">
+                    {t("subscriptionCard.title")}
+                  </h3>
+                  <p className="text-xs text-text-muted mb-3">
+                    {t("subscriptionCard.subtitle")}
+                  </p>
+                  <span className="text-accent-teal text-sm font-medium group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                    {t("learnMore")} &rarr;
+                  </span>
+                </Link>
+              </div>
+            </section>
+
             {/* Telegram Section */}
             <section>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-5">

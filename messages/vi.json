@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Tải xuống",
     "guide": "Hướng dẫn",
-    "apps": "Ứng dụng"
+    "apps": "Ứng dụng",
+    "seeAllApps": "Xem tất cả ứng dụng",
+    "seeAllGuides": "Xem tất cả hướng dẫn"
   },
   "hero": {
     "tagline": "VPN Ưu Tiên Quyền Riêng Tư. Miễn Phí Mãi Mãi.",
@@ -37,10 +39,6 @@
         "title": "Quyền Riêng Tư Không Cần Đăng Ký",
         "description": "Thiết bị của bạn là tài khoản của bạn. Không email. Không số điện thoại. Không thông tin cá nhân. Quyền riêng tư bắt đầu ngay khi bạn kết nối."
       },
-      "wireguard": {
-        "title": "Mã Hóa WireGuard",
-        "description": "Giao thức VPN hiện đại được các chuyên gia bảo mật tin tưởng. Kết nối nhanh hơn, hiệu quả pin tốt hơn và mã hóa cấp quân sự."
-      },
       "adBlocker": {
         "title": "Trình Chặn Quảng Cáo Tích Hợp",
         "description": "Chặn ở cấp mạng loại bỏ tới 75% quảng cáo, trình theo dõi và cửa sổ bật lên. Tải trang nhanh hơn, sử dụng dữ liệu ít hơn, duyệt web sạch hơn."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Hoàn Toàn Miễn Phí",
         "description": "Tất cả máy chủ miễn phí với đầy đủ tính năng. Mã hóa đầy đủ, tốc độ cao, băng thông không giới hạn. Không giảm tốc hoặc giới hạn dữ liệu."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Hai giao thức, một dịch vụ. WireGuard cho tốc độ và pin. VLESS-Reality để vượt kiểm duyệt. Máy chủ hỗ trợ cả hai — dùng cái phù hợp."
       }
     },
     "getApp": "Tải Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Chia sẻ bài viết",
-    "copyLink": "Sao chép liên kết"
+    "copyLink": "Sao chép liên kết",
+    "copied": "Đã sao chép!"
   },
   "guide": {
     "title": "Hướng dẫn cài đặt",
@@ -399,7 +402,17 @@
     },
     "backToGuides": "Tất cả hướng dẫn",
     "nextStep": "Tiếp theo",
-    "prevStep": "Trước"
+    "prevStep": "Trước",
+    "downloadApps": "Tải ứng dụng",
+    "learnMore": "Tìm hiểu thêm",
+    "protocolsCard": {
+      "title": "Giao thức VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — giao thức nào phù hợp và ứng dụng nào hỗ trợ."
+    },
+    "subscriptionCard": {
+      "title": "Đăng ký và giá cả",
+      "subtitle": "Gói cước, mã khuyến mãi, giảm giá bot Telegram và quản lý đăng ký."
+    }
   },
   "cookie": {
     "message": "Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. Tiếp tục sử dụng trang web này đồng nghĩa với việc bạn đồng ý sử dụng cookie.",
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Miễn phí trên App Store",
-      "action": "Tải xuống"
+      "action": "Tải xuống",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — khuyên dùng",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Miễn phí trên Google Play",
-      "action": "Tải xuống"
+      "action": "Tải xuống",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — khuyên dùng",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Ứng dụng desktop sắp ra mắt",
-      "action": "Xem hướng dẫn"
+      "action": "Xem hướng dẫn",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Ứng dụng desktop sắp ra mắt",
-      "action": "Xem hướng dẫn"
+      "action": "Xem hướng dẫn",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Cần trợ giúp cài đặt?",
-    "viewGuides": "Hướng dẫn cài đặt"
+    "viewGuides": "Hướng dẫn cài đặt",
+    "download": "Tải xuống",
+    "viewSetupGuide": "Xem hướng dẫn cài đặt",
+    "vlessNote": "Dành cho người dùng bot Telegram ở vùng bị hạn chế"
   }
 }

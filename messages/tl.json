@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "I-download",
     "guide": "Gabay",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "Tingnan lahat ng apps",
+    "seeAllGuides": "Tingnan lahat ng gabay"
   },
   "hero": {
     "tagline": "Privacy-First VPN. Libre Magpakailanman.",
@@ -37,10 +39,6 @@
         "title": "Privacy na Walang Pagpaparehistro",
         "description": "Ang device mo ang iyong account. Walang email. Walang phone number. Walang personal na impormasyon. Nagsisimula ang privacy sa sandaling kumonekta ka."
       },
-      "wireguard": {
-        "title": "WireGuard Encryption",
-        "description": "Modernong VPN protocol na pinagkakatiwalaan ng mga security professional. Mas mabilis na koneksyon, mas mahusay na baterya, at military-grade encryption."
-      },
       "adBlocker": {
         "title": "Built-in na Ad Blocker",
         "description": "Ang network-level blocking ay nag-aalis ng hanggang 75% ng ads, trackers, at pop-ups. Mas mabilis na pag-load ng page, mas kaunting data usage, mas malinis na browsing."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Ganap na Libre",
         "description": "Lahat ng server ay libre na may buong functionality. Kumpletong encryption, mabilis na bilis, walang limitasyong bandwidth. Walang throttling o data caps."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Dalawang protocol, isang serbisyo. WireGuard para sa bilis at baterya. VLESS-Reality para lampasan ang censorship. Sinusuportahan ng mga server namin ang dalawa."
       }
     },
     "getApp": "Kunin ang Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Ibahagi ang artikulo",
-    "copyLink": "Kopyahin ang link"
+    "copyLink": "Kopyahin ang link",
+    "copied": "Nakopya na!"
   },
   "guide": {
     "title": "Gabay sa Pag-setup",
@@ -399,7 +402,17 @@
     },
     "backToGuides": "Lahat ng Gabay",
     "nextStep": "Susunod",
-    "prevStep": "Nakaraan"
+    "prevStep": "Nakaraan",
+    "downloadApps": "I-download ang app",
+    "learnMore": "Matuto pa",
+    "protocolsCard": {
+      "title": "Mga Protocol ng VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — aling protocol ang para sa iyo at aling apps ang sumusuporta."
+    },
+    "subscriptionCard": {
+      "title": "Subscription at presyo",
+      "subtitle": "Mga plano, promo code, diskwento sa Telegram bot at pamamahala ng subscription."
+    }
   },
   "cookie": {
     "message": "Gumagamit kami ng cookies para mapabuti ang iyong karanasan. Sa patuloy na paggamit ng site na ito, sumasang-ayon ka sa paggamit ng cookies.",
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Libre sa App Store",
-      "action": "I-download"
+      "action": "I-download",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — inirerekomenda",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Libre sa Google Play",
-      "action": "I-download"
+      "action": "I-download",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — inirerekomenda",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Desktop client malapit na",
-      "action": "Tingnan ang gabay"
+      "action": "Tingnan ang gabay",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Desktop client malapit na",
-      "action": "Tingnan ang gabay"
+      "action": "Tingnan ang gabay",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Telegram Bot",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Kailangan ng tulong sa setup?",
-    "viewGuides": "Mga Setup Guide"
+    "viewGuides": "Mga Setup Guide",
+    "download": "I-download",
+    "viewSetupGuide": "Tingnan ang gabay sa pag-setup",
+    "vlessNote": "Para sa mga gumagamit ng Telegram bot sa mga pinaghihigpitang rehiyon"
   }
 }

@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Descargar",
     "guide": "Guía",
-    "apps": "Apps"
+    "apps": "Apps",
+    "seeAllApps": "Ver todas las apps",
+    "seeAllGuides": "Ver todas las guías"
   },
   "hero": {
     "tagline": "VPN con privacidad primero. Gratis para siempre.",
@@ -37,10 +39,6 @@
         "title": "Privacidad sin registro",
         "description": "Tu dispositivo es tu cuenta. Sin correo electrónico. Sin número de teléfono. Sin información personal. La privacidad comienza en el momento en que te conectas."
       },
-      "wireguard": {
-        "title": "Cifrado WireGuard",
-        "description": "Protocolo VPN moderno en el que confían los profesionales de seguridad. Conexiones más rápidas, mejor eficiencia de batería y cifrado de nivel militar."
-      },
       "adBlocker": {
         "title": "Bloqueador de anuncios integrado",
         "description": "El bloqueo a nivel de red elimina hasta el 75% de anuncios, rastreadores y ventanas emergentes. Carga de páginas más rápida, menos uso de datos, navegación más limpia."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Completamente gratis",
         "description": "Todos los servidores son gratuitos con funcionalidad completa. Cifrado completo, velocidades rápidas, ancho de banda ilimitado. Sin limitación de velocidad ni límites de datos."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Dos protocolos, un servicio. WireGuard para velocidad y batería. VLESS-Reality para evadir censura. Nuestros servidores soportan ambos — usa el que se adapte a tu situación."
       }
     },
     "getApp": "Obtener Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Compartir artículo",
-    "copyLink": "Copiar enlace"
+    "copyLink": "Copiar enlace",
+    "copied": "¡Copiado!"
   },
   "guide": {
     "title": "Guía de configuración",
@@ -399,6 +402,16 @@
       "supportBotDesc": "Soporte con IA las 24 horas en 23 idiomas. Obtén ayuda instantánea con cualquier problema.",
       "miniApp": "Mini App de suscripción",
       "miniAppDesc": "Suscríbete y gestiona tu plan a través de nuestra Mini App de Telegram con pagos seguros de Stripe."
+    },
+    "downloadApps": "Descargar la app",
+    "learnMore": "Más información",
+    "protocolsCard": {
+      "title": "Protocolos VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — qué protocolo se adapta a ti y qué apps lo soportan."
+    },
+    "subscriptionCard": {
+      "title": "Suscripción y precios",
+      "subtitle": "Planes, códigos promocionales, descuentos del bot de Telegram y gestión de suscripción."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Gratis en App Store",
-      "action": "Descargar"
+      "action": "Descargar",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recomendado",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Gratis en Google Play",
-      "action": "Descargar"
+      "action": "Descargar",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — recomendado",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Cliente de escritorio próximamente",
-      "action": "Ver guía"
+      "action": "Ver guía",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Cliente de escritorio próximamente",
-      "action": "Ver guía"
+      "action": "Ver guía",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot de Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "¿Necesitas ayuda para configurar?",
-    "viewGuides": "Guías de configuración"
+    "viewGuides": "Guías de configuración",
+    "download": "Descargar",
+    "viewSetupGuide": "Ver guía de configuración",
+    "vlessNote": "Para usuarios del bot de Telegram en regiones restringidas"
   }
 }

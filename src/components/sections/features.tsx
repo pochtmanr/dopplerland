@@ -3,135 +3,105 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
 
-// Visual feature cards with images (Features 1, 2, 3, 5)
-const visualFeatureKeys = [
-  "noRegistration",
-  "wireguard",
-  "adBlocker",
-  "minimalData",
-] as const;
-
-// Text-only feature cards (Features 4, 6)
-const textFeatureKeys = ["contentFilter", "completelyFree"] as const;
-
-// Image paths for visual feature cards
-const featureImages: Record<(typeof visualFeatureKeys)[number], string> = {
-  noRegistration: "/images/features/1.avif",
-  wireguard: "/images/features/3.avif",
-  adBlocker: "/images/features/2.avif",
-  minimalData: "/images/features/4.avif",
-};
-
-// Visual headline text for each feature card (3-style typography like CTA)
-const visualHeadlines: Record<(typeof visualFeatureKeys)[number], { italic: string; middle: string; playful: string }> = {
-  noRegistration: { italic: "Designed", middle: "for", playful: "Privacy" },
-  wireguard: { italic: "Designed", middle: "for", playful: "Security" },
-  adBlocker: { italic: "Designed", middle: "to", playful: "Block" },
-  minimalData: { italic: "Designed for", middle: "Minimal", playful: "Data" },
-};
-
-// Icons for text-only feature cards
-const featureIcons: Record<(typeof textFeatureKeys)[number], React.ReactNode> = {
+/* ─── Feature icons (teal stroke style) ─── */
+const featureIcons: Record<string, React.ReactNode> = {
+  noRegistration: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
+    </svg>
+  ),
+  dualProtocol: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+    </svg>
+  ),
+  adBlocker: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+    </svg>
+  ),
   contentFilter: (
-    <svg
-      className="w-8 h-8"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z"
-      />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+    </svg>
+  ),
+  minimalData: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
     </svg>
   ),
   completelyFree: (
-    <svg
-      className="w-8 h-8"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
-      />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
     </svg>
   ),
 };
 
-// Visual Feature Card Component
-function VisualFeatureCard({
-  featureKey,
-  title,
-  description,
-}: {
-  featureKey: (typeof visualFeatureKeys)[number];
-  title: string;
-  description: string;
-}) {
-  const headline = visualHeadlines[featureKey];
-  const imagePath = featureImages[featureKey];
+/* ─── Bento grid layout ─── */
+const featureLayout: { key: string; colSpan: string; hasImage?: boolean; imagePath?: string; isWide?: boolean }[] = [
+  { key: "noRegistration", colSpan: "md:col-span-2", hasImage: true, imagePath: "/images/features/1.avif" },
+  { key: "dualProtocol", colSpan: "" },
+  { key: "adBlocker", colSpan: "" },
+  { key: "contentFilter", colSpan: "" },
+  { key: "minimalData", colSpan: "" },
+  { key: "completelyFree", colSpan: "md:col-span-3", isWide: true },
+];
 
+/* ─── Standard feature card ─── */
+function FeatureCard({ featureKey, title, description }: { featureKey: string; title: string; description: string }) {
   return (
-    <div className="relative h-full min-h-[320px] rounded-xl overflow-hidden group">
-      {/* Background Image */}
+    <div className="h-full rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 hover:border-accent-teal/20 transition-colors">
+      <div className="w-10 h-10 rounded-xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-4">
+        {featureIcons[featureKey]}
+      </div>
+      <h3 className="text-lg font-semibold text-text-primary mb-1.5">{title}</h3>
+      <p className="text-sm text-text-muted leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+/* ─── Featured card with background image ─── */
+function FeaturedCard({ featureKey, title, description, imagePath }: { featureKey: string; title: string; description: string; imagePath: string }) {
+  return (
+    <div className="relative h-full min-h-[280px] rounded-2xl overflow-hidden border border-overlay/10 group">
       <Image
         src={imagePath}
         alt={title}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        sizes="(max-width: 768px) 100vw, 66vw"
       />
-
-      {/* Gradient Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
-
-      {/* Text Content Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/95 via-bg-primary/60 to-transparent" />
       <div className="absolute inset-0 flex flex-col justify-end p-6">
-        {/* Feature Headline with 3-style Typography Treatment */}
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-3 leading-tight">
-          {/* Instrument Serif Italic */}
-          <span
-            className="italic"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
-            {headline.italic}
-          </span>{" "}
-          {/* Instrument Serif Regular */}
-          <span style={{ fontFamily: "var(--font-serif)" }}>
-            {headline.middle}
-          </span>{" "}
-          {/* FK Raster (playful) with gradient */}
-          <span
-            className="bg-gradient-to-t from-white/50 to-white bg-clip-text text-transparent"
-            style={{ fontFamily: "var(--font-raster)" }}
-          >
-            {headline.playful}
-          </span>
-        </h3>
-
-        {/* Original Feature Title */}
-        <h4 className="text-sm font-medium text-amber-300 uppercase tracking-wider mb-2">
-          {title}
-        </h4>
-
-        {/* Feature Description */}
-        <p className="text-white/70 text-[10px] sm:text-xs leading-relaxed line-clamp-3">
-          {description}
-        </p>
+        <div className="w-10 h-10 rounded-xl bg-accent-teal/15 backdrop-blur-sm border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-3">
+          {featureIcons[featureKey]}
+        </div>
+        <h3 className="text-lg font-semibold text-text-primary mb-1.5">{title}</h3>
+        <p className="text-sm text-text-muted leading-relaxed">{description}</p>
       </div>
     </div>
   );
 }
 
+/* ─── Wide banner card (completelyFree) ─── */
+function WideCard({ featureKey, title, description }: { featureKey: string; title: string; description: string }) {
+  return (
+    <div className="h-full rounded-2xl border border-overlay/10 bg-bg-secondary/50 p-6 flex items-start gap-5 hover:border-accent-teal/20 transition-colors">
+      <div className="w-10 h-10 rounded-xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal shrink-0">
+        {featureIcons[featureKey]}
+      </div>
+      <div className="min-w-0">
+        <h3 className="text-lg font-semibold text-text-primary mb-1.5">{title}</h3>
+        <p className="text-sm text-text-muted leading-relaxed">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Features section ─── */
 export function Features() {
   const t = useTranslations("features");
 
@@ -139,30 +109,29 @@ export function Features() {
     <Section id="features">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      {/* Visual Feature Cards (Features 1, 2, 3, 5) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        {visualFeatureKeys.map((key, i) => (
-          <Reveal key={key} delay={i * 50}>
-            <VisualFeatureCard
-              featureKey={key}
-              title={t(`items.${key}.title`)}
-              description={t(`items.${key}.description`)}
-            />
-          </Reveal>
-        ))}
-      </div>
-
-      {/* Text-Only Feature Cards (Features 4, 6) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {textFeatureKeys.map((key, i) => (
-          <Reveal key={key} delay={i * 50}>
-            <Card hover className="h-full">
-              <div className="text-accent-teal mb-4">{featureIcons[key]}</div>
-              <CardTitle className="mb-2">{t(`items.${key}.title`)}</CardTitle>
-              <CardDescription>
-                {t(`items.${key}.description`)}
-              </CardDescription>
-            </Card>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {featureLayout.map(({ key, colSpan, hasImage, imagePath, isWide }, i) => (
+          <Reveal key={key} delay={i * 50} className={colSpan}>
+            {hasImage && imagePath ? (
+              <FeaturedCard
+                featureKey={key}
+                title={t(`items.${key}.title`)}
+                description={t(`items.${key}.description`)}
+                imagePath={imagePath}
+              />
+            ) : isWide ? (
+              <WideCard
+                featureKey={key}
+                title={t(`items.${key}.title`)}
+                description={t(`items.${key}.description`)}
+              />
+            ) : (
+              <FeatureCard
+                featureKey={key}
+                title={t(`items.${key}.title`)}
+                description={t(`items.${key}.description`)}
+              />
+            )}
           </Reveal>
         ))}
       </div>

@@ -10,7 +10,9 @@
     "blog": "Blog",
     "download": "Unduh",
     "guide": "Panduan",
-    "apps": "Aplikasi"
+    "apps": "Aplikasi",
+    "seeAllApps": "Lihat semua aplikasi",
+    "seeAllGuides": "Lihat semua panduan"
   },
   "hero": {
     "tagline": "VPN Mengutamakan Privasi. Gratis Selamanya.",
@@ -37,10 +39,6 @@
         "title": "Privasi Tanpa Registrasi",
         "description": "Perangkat Anda adalah akun Anda. Tanpa email. Tanpa nomor telepon. Tanpa informasi pribadi. Privasi dimulai saat Anda terhubung."
       },
-      "wireguard": {
-        "title": "Enkripsi WireGuard",
-        "description": "Protokol VPN modern yang dipercaya oleh profesional keamanan. Koneksi lebih cepat, efisiensi baterai lebih baik, dan enkripsi tingkat militer."
-      },
       "adBlocker": {
         "title": "Pemblokir Iklan Bawaan",
         "description": "Pemblokiran tingkat jaringan menghapus hingga 75% iklan, pelacak, dan pop-up. Pemuatan halaman lebih cepat, penggunaan data lebih sedikit, penjelajahan lebih bersih."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "Sepenuhnya Gratis",
         "description": "Semua server gratis dengan fungsionalitas penuh. Enkripsi penuh, kecepatan tinggi, bandwidth tak terbatas. Tanpa throttling atau batas data."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "Dua protokol, satu layanan. WireGuard untuk kecepatan dan baterai. VLESS-Reality untuk melewati sensor. Server kami mendukung keduanya."
       }
     },
     "getApp": "Unduh Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "Bagikan artikel",
-    "copyLink": "Salin tautan"
+    "copyLink": "Salin tautan",
+    "copied": "Tersalin!"
   },
   "guide": {
     "title": "Panduan Pengaturan",
@@ -399,6 +402,16 @@
       "supportBotDesc": "Dukungan AI 24/7 dalam 23 bahasa. Dapatkan bantuan instan untuk masalah apa pun.",
       "miniApp": "Mini App Langganan",
       "miniAppDesc": "Berlangganan dan kelola paket Anda melalui Mini App Telegram kami dengan pembayaran aman melalui Stripe."
+    },
+    "downloadApps": "Unduh aplikasi",
+    "learnMore": "Pelajari lebih lanjut",
+    "protocolsCard": {
+      "title": "Protokol VPN",
+      "subtitle": "WireGuard vs VLESS-Reality — protokol mana yang cocok dan aplikasi mana yang mendukungnya."
+    },
+    "subscriptionCard": {
+      "title": "Langganan & Harga",
+      "subtitle": "Paket, kode promo, diskon bot Telegram, dan cara mengelola langganan."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "Gratis di App Store",
-      "action": "Unduh"
+      "action": "Unduh",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — direkomendasikan",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "Gratis di Google Play",
-      "action": "Unduh"
+      "action": "Unduh",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — direkomendasikan",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "Klien desktop segera hadir",
-      "action": "Lihat panduan"
+      "action": "Lihat panduan",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "Klien desktop segera hadir",
-      "action": "Lihat panduan"
+      "action": "Lihat panduan",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "Bot Telegram",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "Butuh bantuan pengaturan?",
-    "viewGuides": "Panduan Pengaturan"
+    "viewGuides": "Panduan Pengaturan",
+    "download": "Unduh",
+    "viewSetupGuide": "Lihat panduan pengaturan",
+    "vlessNote": "Untuk pengguna bot Telegram di wilayah terbatas"
   }
 }

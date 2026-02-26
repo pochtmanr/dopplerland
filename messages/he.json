@@ -10,7 +10,9 @@
     "blog": "בלוג",
     "download": "הורדה",
     "guide": "מדריך",
-    "apps": "אפליקציות"
+    "apps": "אפליקציות",
+    "seeAllApps": "כל האפליקציות",
+    "seeAllGuides": "כל המדריכים"
   },
   "hero": {
     "tagline": "VPN עם פרטיות בראש. חינמי לתמיד.",
@@ -37,10 +39,6 @@
         "title": "פרטיות ללא רישום",
         "description": "המכשיר שלך משמש כחשבון שלך. ללא אימייל. ללא מספר טלפון. ללא מידע אישי. הפרטיות מתחילה ברגע שאתה מתחבר."
       },
-      "wireguard": {
-        "title": "הצפנת WireGuard",
-        "description": "פרוטוקול VPN מודרני שמומחי אבטחה סומכים עליו. חיבורים מהירים יותר, יעילות סוללה טובה יותר והצפנה ברמה צבאית."
-      },
       "adBlocker": {
         "title": "חוסם פרסומות מובנה",
         "description": "חסימה ברמת הרשת מסירה עד 75% מהפרסומות, העוקבים והחלונות הקופצים. טעינת דפים מהירה יותר, פחות שימוש בנתונים, גלישה נקייה."
@@ -56,6 +54,10 @@
       "completelyFree": {
         "title": "חינמי לחלוטין",
         "description": "כל השרתים חינמיים עם פונקציונליות מלאה. הצפנה מלאה, מהירויות גבוהות, רוחב פס ללא הגבלה. ללא חנק מהירות או מגבלות נתונים."
+      },
+      "dualProtocol": {
+        "title": "WireGuard + VLESS-Reality",
+        "description": "שני פרוטוקולים, שירות אחד. WireGuard למהירות וסוללה. VLESS-Reality לעקיפת צנזורה. השרתים שלנו תומכים בשניהם — השתמש במה שמתאים."
       }
     },
     "getApp": "הורד את Doppler VPN →"
@@ -311,7 +313,8 @@
       }
     },
     "share": "שתפו את המאמר",
-    "copyLink": "העתקת קישור"
+    "copyLink": "העתקת קישור",
+    "copied": "הועתק!"
   },
   "guide": {
     "title": "מדריך הגדרה",
@@ -399,6 +402,16 @@
       "supportBotDesc": "תמיכה בבינה מלאכותית 24/7 ב-23 שפות. קבלו עזרה מיידית בכל בעיה.",
       "miniApp": "מיני אפ מנויים",
       "miniAppDesc": "הירשמו למנוי ונהלו את התוכנית שלכם דרך מיני האפ שלנו ב-Telegram עם תשלומים מאובטחים של Stripe."
+    },
+    "downloadApps": "הורד את האפליקציה",
+    "learnMore": "למד עוד",
+    "protocolsCard": {
+      "title": "פרוטוקולי VPN",
+      "subtitle": "WireGuard מול VLESS-Reality — איזה פרוטוקול מתאים לך ואילו אפליקציות תומכות בו."
+    },
+    "subscriptionCard": {
+      "title": "מנוי ותמחור",
+      "subtitle": "תוכניות, קודי הנחה, הנחות בוט טלגרם וניהול מנוי."
     }
   },
   "cookie": {
@@ -417,22 +430,32 @@
     "ios": {
       "title": "iOS",
       "description": "חינם ב-App Store",
-      "action": "הורדה"
+      "action": "הורדה",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — מומלץ",
+      "appStore": "App Store"
     },
     "android": {
       "title": "Android",
       "description": "חינם ב-Google Play",
-      "action": "הורדה"
+      "action": "הורדה",
+      "doppler": "Doppler VPN",
+      "dopplerSub": "WireGuard — מומלץ",
+      "googlePlay": "Google Play"
     },
     "windows": {
       "title": "Windows",
       "description": "לקוח שולחני בקרוב",
-      "action": "צפה במדריך"
+      "action": "צפה במדריך",
+      "x64": "Windows x64",
+      "arm64": "Windows ARM64"
     },
     "mac": {
       "title": "macOS",
       "description": "לקוח שולחני בקרוב",
-      "action": "צפה במדריך"
+      "action": "צפה במדריך",
+      "appleSilicon": "Apple Silicon",
+      "intel": "Intel Mac"
     },
     "telegram": {
       "title": "בוט טלגרם",
@@ -450,6 +473,9 @@
       "action": ""
     },
     "needHelp": "צריך עזרה בהגדרה?",
-    "viewGuides": "מדריכי הגדרה"
+    "viewGuides": "מדריכי הגדרה",
+    "download": "הורדה",
+    "viewSetupGuide": "צפה במדריך ההתקנה",
+    "vlessNote": "למשתמשי בוט טלגרם באזורים מוגבלים"
   }
 }
