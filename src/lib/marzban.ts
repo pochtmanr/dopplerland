@@ -70,6 +70,7 @@ async function getToken(server: MarzbanServerConfig): Promise<string> {
       ...(server.apiKey ? { "X-Marzban-Key": server.apiKey } : {}),
     },
     body: `username=${encodeURIComponent(server.adminUser)}&password=${encodeURIComponent(server.adminPass)}`,
+    signal: AbortSignal.timeout(10_000),
   });
 
   if (!res.ok) throw new Error(`Marzban ${server.label} auth failed: ${res.status}`);

@@ -18,7 +18,7 @@ interface VpnUserRow {
 }
 
 export async function GET(request: NextRequest) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
@@ -31,8 +31,8 @@ export async function GET(request: NextRequest) {
     const offset = parseInt(params.get("offset") || "0");
     const limit = Math.min(parseInt(params.get("limit") || "50"), 200);
 
-    // Get server lookup map
-    const { data: serverList } = await supabase
+    // Get server lookup map (service role bypasses RLS)
+    const { data: serverList } = await adminClient
       .from("vpn_servers")
       .select("id, name, country_code")
       .returns<Array<{ id: string; name: string; country_code: string }>>();
@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
 
     // Build filtered query — use any to bypass missing generated types for vpn_users
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let query: any = supabase
+    let query: any = adminClient
       .from("vpn_users")
       .select(
         "id, backend_username, backend_type, platform, protocol, status, server_id, used_traffic_bytes, data_limit_bytes, expires_at, last_online_at, account_id, created_at",

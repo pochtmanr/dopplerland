@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { AdminLoader } from "@/components/admin/admin-loader";
+import { VpnStats } from "@/components/admin/vpn-stats";
 
 interface ServerInfo {
   id: string;
@@ -76,17 +77,59 @@ const platformLabels: Record<string, string> = {
   unknown: "Unknown",
 };
 
+function detectPlatform(u: VpnUserRow): string {
+  if (u.platform !== "unknown") return u.platform;
+  if (u.backend_username.startsWith("tg_")) return "telegram";
+  if (u.backend_username.startsWith("ios_")) return "ios";
+  return "unknown";
+}
+
 function displayPlatform(u: VpnUserRow): string {
-  if (u.platform !== "unknown") return platformLabels[u.platform] || u.platform;
-  if (u.backend_username.startsWith("tg_")) return "Telegram";
-  return "Unknown";
+  return platformLabels[detectPlatform(u)] || detectPlatform(u);
 }
 
 function displayPlatformColor(u: VpnUserRow): string {
-  if (u.platform !== "unknown")
-    return platformColors[u.platform] || platformColors.unknown;
-  if (u.backend_username.startsWith("tg_")) return platformColors.telegram;
-  return platformColors.unknown;
+  return platformColors[detectPlatform(u)] || platformColors.unknown;
+}
+
+type SortKey = "platform" | "status" | "traffic" | "expires" | null;
+type SortDir = "asc" | "desc";
+
+const statusOrder: Record<string, number> = {
+  active: 0,
+  limited: 1,
+  expired: 2,
+  disabled: 3,
+  on_hold: 4,
+};
+
+function sortUsers(users: VpnUserRow[], key: SortKey, dir: SortDir): VpnUserRow[] {
+  if (!key) return users;
+  const sorted = [...users].sort((a, b) => {
+    let cmp = 0;
+    switch (key) {
+      case "platform": {
+        const pa = detectPlatform(a);
+        const pb = detectPlatform(b);
+        cmp = pa.localeCompare(pb);
+        break;
+      }
+      case "status":
+        cmp = (statusOrder[a.status] ?? 99) - (statusOrder[b.status] ?? 99);
+        break;
+      case "traffic":
+        cmp = (a.used_traffic_bytes || 0) - (b.used_traffic_bytes || 0);
+        break;
+      case "expires": {
+        const ta = a.expires_at ? new Date(a.expires_at).getTime() : 0;
+        const tb = b.expires_at ? new Date(b.expires_at).getTime() : 0;
+        cmp = ta - tb;
+        break;
+      }
+    }
+    return dir === "asc" ? cmp : -cmp;
+  });
+  return sorted;
 }
 
 export default function VpnUsersPage() {
@@ -99,6 +142,8 @@ export default function VpnUsersPage() {
   const [usersLoading, setUsersLoading] = useState(true);
   const [usersError, setUsersError] = useState("");
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [sortKey, setSortKey] = useState<SortKey>(null);
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
 
   const serverId = searchParams.get("server_id") || "";
   const platform = searchParams.get("platform") || "";
@@ -191,8 +236,23 @@ export default function VpnUsersPage() {
     }
   }
 
+  function toggleSort(key: SortKey) {
+    if (sortKey === key) {
+      setSortDir(sortDir === "asc" ? "desc" : "asc");
+    } else {
+      setSortKey(key);
+      setSortDir(key === "traffic" ? "desc" : "asc");
+    }
+  }
+
+  const sortedUsers = sortUsers(users, sortKey, sortDir);
   const totalPages = Math.ceil(usersTotal / limit);
   const hasUserFilters = serverId || platform || protocol || status || search;
+
+  function SortIcon({ col }: { col: SortKey }) {
+    if (sortKey !== col) return <span className="text-text-muted/30 ml-1">&#8597;</span>;
+    return <span className="text-accent-teal ml-1">{sortDir === "asc" ? "\u2191" : "\u2193"}</span>;
+  }
 
   return (
     <div className="space-y-6">
@@ -219,6 +279,9 @@ export default function VpnUsersPage() {
           {usersError}
         </div>
       )}
+
+      {/* VPN Stats Dashboard */}
+      <VpnStats />
 
       {/* Filters */}
       <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 mb-6">
@@ -308,17 +371,25 @@ export default function VpnUsersPage() {
                 <tr className="border-b border-overlay/10 text-text-muted text-left">
                   <th className="px-4 py-3 font-medium">Username</th>
                   <th className="px-4 py-3 font-medium">Server</th>
-                  <th className="px-4 py-3 font-medium">Platform</th>
+                  <th className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary transition-colors" onClick={() => toggleSort("platform")}>
+                    Platform<SortIcon col="platform" />
+                  </th>
                   <th className="px-4 py-3 font-medium">Protocol</th>
-                  <th className="px-4 py-3 font-medium">Status</th>
-                  <th className="px-4 py-3 font-medium">Traffic</th>
-                  <th className="px-4 py-3 font-medium">Expires</th>
+                  <th className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary transition-colors" onClick={() => toggleSort("status")}>
+                    Status<SortIcon col="status" />
+                  </th>
+                  <th className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary transition-colors" onClick={() => toggleSort("traffic")}>
+                    Traffic<SortIcon col="traffic" />
+                  </th>
+                  <th className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary transition-colors" onClick={() => toggleSort("expires")}>
+                    Expires<SortIcon col="expires" />
+                  </th>
                   <th className="px-4 py-3 font-medium">Last Online</th>
                   <th className="px-4 py-3 font-medium text-right">Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {users.map((u) => (
+                {sortedUsers.map((u) => (
                   <tr
                     key={u.id}
                     className="border-b border-overlay/5 hover:bg-overlay/[0.02]"
@@ -372,7 +443,7 @@ export default function VpnUsersPage() {
                     </td>
                   </tr>
                 ))}
-                {users.length === 0 && (
+                {sortedUsers.length === 0 && (
                   <tr>
                     <td
                       colSpan={9}
@@ -392,10 +463,10 @@ export default function VpnUsersPage() {
       <div className="md:hidden space-y-3">
         {usersLoading ? (
           <AdminLoader />
-        ) : users.length === 0 ? (
+        ) : sortedUsers.length === 0 ? (
           <p className="text-center text-text-muted py-8">No users found</p>
         ) : (
-          users.map((u) => (
+          sortedUsers.map((u) => (
             <div
               key={u.id}
               className="bg-bg-secondary border border-overlay/10 rounded-lg p-4 space-y-2"

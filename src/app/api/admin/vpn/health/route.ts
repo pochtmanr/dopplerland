@@ -72,11 +72,11 @@ async function checkServer(
 }
 
 export async function GET() {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
-    const { data: servers, error: srvErr } = await supabase
+    const { data: servers, error: srvErr } = await adminClient
       .from("vpn_servers")
       .select("id, name, country_code, ip_address, marzban_api_url, is_active")
       .eq("is_active", true)
@@ -86,7 +86,7 @@ export async function GET() {
     if (srvErr) throw new Error(srvErr.message);
 
     // Load Marzban configs from Supabase (credentials included)
-    const marzbanConfigs = await loadMarzbanServers(supabase);
+    const marzbanConfigs = await loadMarzbanServers(adminClient);
     const byServerId = new Map(marzbanConfigs.map((mc) => [mc.serverId, mc]));
 
     const settled = await Promise.allSettled(

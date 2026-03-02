@@ -1,5 +1,6 @@
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export type AdminRole = "admin" | "editor";
 
@@ -14,11 +15,13 @@ type RequireAdminResult =
   | {
       admin: AdminRecord;
       supabase: Awaited<ReturnType<typeof createClient>>;
+      adminClient: ReturnType<typeof createAdminClient>;
       error: null;
     }
   | {
       admin: null;
       supabase: Awaited<ReturnType<typeof createClient>>;
+      adminClient: ReturnType<typeof createAdminClient>;
       error: string;
     };
 
@@ -27,11 +30,15 @@ type RequireAdminResult =
  * 1. Valid Supabase session (JWT verified server-side via getUser())
  * 2. Corresponding row in admins table matched by user_id (NOT email)
  * 3. Optionally checks minimum required role
+ *
+ * Returns both the session-bound client (supabase) and a service-role
+ * client (adminClient) that bypasses RLS for data queries.
  */
 export async function requireAdmin(
   minimumRole?: AdminRole
 ): Promise<RequireAdminResult> {
   const supabase = await createClient();
+  const adminClient = createAdminClient();
 
   const {
     data: { user },
@@ -39,7 +46,7 @@ export async function requireAdmin(
   } = await supabase.auth.getUser();
 
   if (authError || !user) {
-    return { admin: null, supabase, error: "Not authenticated" };
+    return { admin: null, supabase, adminClient, error: "Not authenticated" };
   }
 
   const { data: admin } = await supabase
@@ -49,12 +56,12 @@ export async function requireAdmin(
     .single<AdminRecord>();
 
   if (!admin) {
-    return { admin: null, supabase, error: "Not authorized" };
+    return { admin: null, supabase, adminClient, error: "Not authorized" };
   }
 
   if (minimumRole === "admin" && admin.role !== "admin") {
-    return { admin: null, supabase, error: "Insufficient permissions" };
+    return { admin: null, supabase, adminClient, error: "Insufficient permissions" };
   }
 
-  return { admin, supabase, error: null };
+  return { admin, supabase, adminClient, error: null };
 }

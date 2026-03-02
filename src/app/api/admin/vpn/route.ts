@@ -3,7 +3,7 @@ import { requireAdmin } from "@/lib/admin-auth";
 import { loadMarzbanServers, createMarzbanClient } from "@/lib/marzban";
 
 export async function GET(request: NextRequest) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get("limit") || "50");
     const serverId = searchParams.get("server_id");
 
-    const servers = await loadMarzbanServers(supabase);
+    const servers = await loadMarzbanServers(adminClient);
     const server = serverId
       ? servers.find((s) => s.serverId === serverId || s.id === serverId)
       : servers[0];
@@ -28,14 +28,14 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
     const body = await request.json();
     const serverId = body.server_id;
 
-    const servers = await loadMarzbanServers(supabase);
+    const servers = await loadMarzbanServers(adminClient);
     const server = serverId
       ? servers.find((s) => s.serverId === serverId || s.id === serverId)
       : servers[0];

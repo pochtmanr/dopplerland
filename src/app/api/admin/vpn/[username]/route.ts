@@ -5,13 +5,13 @@ import { loadMarzbanServers, createMarzbanClient } from "@/lib/marzban";
 type Ctx = { params: Promise<{ username: string }> };
 
 export async function GET(req: NextRequest, ctx: Ctx) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
   try {
     const { username } = await ctx.params;
     const serverId = req.nextUrl.searchParams.get("server_id");
 
-    const servers = await loadMarzbanServers(supabase);
+    const servers = await loadMarzbanServers(adminClient);
     const server = serverId
       ? servers.find((s) => s.serverId === serverId || s.id === serverId)
       : servers[0];
@@ -27,14 +27,14 @@ export async function GET(req: NextRequest, ctx: Ctx) {
 }
 
 export async function PUT(request: NextRequest, ctx: Ctx) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
   try {
     const { username } = await ctx.params;
     const body = await request.json();
     const serverId = body.server_id;
 
-    const servers = await loadMarzbanServers(supabase);
+    const servers = await loadMarzbanServers(adminClient);
     const server = serverId
       ? servers.find((s) => s.serverId === serverId || s.id === serverId)
       : servers[0];
@@ -50,13 +50,13 @@ export async function PUT(request: NextRequest, ctx: Ctx) {
 }
 
 export async function DELETE(req: NextRequest, ctx: Ctx) {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
   try {
     const { username } = await ctx.params;
     const serverId = req.nextUrl.searchParams.get("server_id");
 
-    const servers = await loadMarzbanServers(supabase);
+    const servers = await loadMarzbanServers(adminClient);
     const server = serverId
       ? servers.find((s) => s.serverId === serverId || s.id === serverId)
       : servers[0];

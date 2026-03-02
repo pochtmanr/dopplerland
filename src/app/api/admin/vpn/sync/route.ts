@@ -3,11 +3,11 @@ import { requireAdmin } from "@/lib/admin-auth";
 import { loadMarzbanServers, createMarzbanClient } from "@/lib/marzban";
 
 export async function POST() {
-  const { admin, supabase, error } = await requireAdmin();
+  const { admin, adminClient, error } = await requireAdmin();
   if (!admin) return NextResponse.json({ error }, { status: 401 });
 
   try {
-    const marzbanServers = await loadMarzbanServers(supabase);
+    const marzbanServers = await loadMarzbanServers(adminClient);
     const results: Array<{ server: string; synced: number; errors: number }> = [];
 
     for (const ms of marzbanServers) {
@@ -54,7 +54,11 @@ export async function POST() {
             server_id: ms.serverId,
             backend_username: user.username,
             backend_type: "marzban" as const,
-            platform: user.username.startsWith("tg_") ? "telegram" as const : "unknown" as const,
+            platform: user.username.startsWith("tg_")
+              ? "telegram" as const
+              : user.username.startsWith("ios_")
+                ? "ios" as const
+                : "unknown" as const,
             protocol,
             status: user.status || "active",
             used_traffic_bytes: user.used_traffic || 0,
@@ -65,7 +69,7 @@ export async function POST() {
           };
 
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const { error: upsertErr } = await (supabase.from("vpn_users") as any)
+          const { error: upsertErr } = await (adminClient.from("vpn_users") as any)
             .upsert(row, { onConflict: "server_id,backend_username,backend_type" });
 
           if (upsertErr) {
