@@ -46,11 +46,8 @@ interface ServerData {
 
 async function getServers() {
   const supabase = await createClient();
-  const { data } = await supabase
-    .from("vpn_servers")
-    .select("name, country, country_code, city, protocol, is_premium")
-    .eq("is_active", true)
-    .order("country_code");
+  const { data, error } = await supabase.rpc("get_public_servers");
+  if (error) console.error("[getServers]", error);
   return (data as ServerData[]) || [];
 }
 
